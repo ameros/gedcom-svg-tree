@@ -152,7 +152,7 @@ svg {
     content: "\f0c0";
 }
 #editForm::before {
-    content: "\f4ff";
+    content: "\f007";
 }
 #people::before {
     content: "\f002";
@@ -177,7 +177,6 @@ svg {
 }
 input[type=text], textarea, select:disabled {
     font-size: 1.2em;
-    border-radius: 1em;
     font-family: "Poppins";
 }
 form label, legend {

@@ -1421,6 +1421,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                         extraInput.setAttribute("type", "text");
                         extraInput.setAttribute("name", inputName);
                         extraInput.setAttribute("class", "active");
+                        extraInput.setAttribute("disabled", "");
                         extraInput.value = value;
                         _formSection.querySelector('#extraFamilyFields').appendChild(extraInput);
                     }
@@ -1679,18 +1680,18 @@ NodeFamily.Tree = function() {
             }
             node.rx = node.ry = 10;
             if (value.SEX && value.SEX[NF_VALUE] == "M") {
-                node.style = "fill: #fff;stroke: " + COLOR_MALE + "; stroke-width: 2px";
+                node.style = "fill: var(--filling, #fff);stroke: var(--info-male, #99e6ff); stroke-width: 2px";
             } else if (value.SEX && value.SEX[NF_VALUE] == "F") {
-                node.style = "fill: #fff;stroke: " + COLOR_FEMALE + "; stroke-width: 2px";
+                node.style = "fill: var(--filling, #fff);stroke: var(--info-female, #ffaaa6); stroke-width: 2px";
             } else {
-                node.style = "fill: #fff";
+                node.style = "fill: var(--filling, #fff); stroke: var(--outline, #CCC8D3); stroke-width: 2px";
             }
             if (id == startPoint) {
-                node.style = "fill: " + COLOR_SELECTED + "; stroke-width: 2px";
+                node.style = "fill: var(--secondary, #c3d500); stroke-width: 2px";
             }
             if (!isPerson) {
                 node.shape = "circle";
-                node.style = "fill: #fff;stroke: " + COLOR_FAMILY + "; stroke-width: 2px";
+                node.style = "fill: var(--filling, #fff);stroke: var(--info-family, #f9d700); stroke-width: 2px";
             }
             graphlib.setNode(id, node);
         });

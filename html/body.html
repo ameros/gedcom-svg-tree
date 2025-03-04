@@ -8,31 +8,31 @@
         <div class="C C2">
             <div class="B">
                 <div class="button tooltip">
-                    <label class="gray" for="gedcomFileInput" id="gedcomFileLabel"></label><input type="file" id="gedcomFileInput" accept=".ged" />
+                    <label class="icon" for="gedcomFileInput" id="gedcomFileLabel"></label><input type="file" id="gedcomFileInput" accept=".ged" />
                     <span class="tooltiptext t9n" t9n-key="gedcomFileInputLabel"></span>
                 </div>
                 <div class="button tooltip">
-                    <label class="gray" id="toggleControls"></label>
+                    <label class="icon" id="toggleControls"></label>
                     <span class="tooltiptext t9n" t9n-key="displayOptions"></span>
                 </div>
                 <div class="button tooltip">
-                    <label class="gray switch" for="orientation"></label><input type="checkbox" id="orientation">
+                    <label class="icon switch" for="orientation"></label><input type="checkbox" id="orientation">
                     <span class="tooltiptext t9n" t9n-key="toggleOrientation"></span>
                 </div>
                 <div class="button tooltip">
-                    <label class="gray" id="toggleForm"></label>
+                    <label class="icon" id="toggleForm"></label>
                     <span class="tooltiptext t9n" t9n-key="editData"></span>
                 </div>
                 <div class="button tooltip">
-                    <label class="gray" id="togglePersonList"></label>
+                    <label class="icon" id="togglePersonList"></label>
                     <span class="tooltiptext t9n" t9n-key="togglePersonList"></span>
                 </div>
                 <div class="button tooltip">
-                    <label class="gray" id="toggleExportForm"></label>
+                    <label class="icon" id="toggleExportForm"></label>
                     <span class="tooltiptext t9n" t9n-key="exportData"></span>
                 </div>
                 <div class="button">
-                    <label class="gray" id="toggleSearch"></label>
+                    <label class="icon" id="toggleSearch"></label>
                 </div>
             </div>
             <div class="B" id="controls">
@@ -381,7 +381,7 @@
                             <option value="DEC" class="t9n" t9n-key="dec"></option>
                         </select>
                         <input id="MARR.DATE.YYYY" name="MARR-DATE-YYYY" type="text" maxlength="4" size="4" placeholder="YYYY" style="width:auto"
-                               onchange="NodeFamily.form.changeDate('MARR.DATE')">
+                               onchange="NodeFamily.form.changeDate('MARR.DATE')" disabled>
                         <input class="data" type="hidden" name="MARR.DATE.nfValue"/>
                     </div>
             </div>
@@ -405,11 +405,11 @@
                   <option value="DEC" class="t9n" t9n-key="dec"></option>
                 </select>
                 <input id="MARR.DATE.AND.YYYY" name="MARR-DATE-AND-YYYY" type="text" maxlength="4" size="4" placeholder="YYYY" style="width:auto"
-                       onchange="NodeFamily.form.changeDate('MARR.DATE')">
+                       onchange="NodeFamily.form.changeDate('MARR.DATE')" disabled>
               </div>
             <div class="B">
                     <label class="t9n" t9n-key="marriagePlace"></label>
-                    <input class="data"  type="text" name="MARR.PLAC.nfValue"/>
+                    <input class="data"  type="text" name="MARR.PLAC.nfValue" disabled/>
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="photoFile"></label>

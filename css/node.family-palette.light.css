@@ -1,18 +1,17 @@
 :root {
   --primary: #5ea40c;
   --on-primary: #fff;
-  --inverse-primary: #c3d500;
+  --secondary: #c3d500;
   --filling: #fff;
   --on-filling: #1f2328;
-  --filling2: #ecf2b1;
-  --on-filling2: #333;
-  --filling3: #f5f5f5;
-  --outline: #eee;
-  --accent: #1f2328;
-  --accent-container: #ecf2b1;
-  --header-shadow: #b3aca78c;
-  --arrow-stroke: #ddd;
-  --arrow-fill: #aaa;
+  --filling2: #f5f5f5;
+  --filling3: #ecf2b1;
+  --on-filling3: #1f2328;
+  --info-male: #99e6ff;
+  --info-female: #ffaaa6;
+  --info-family: #f9d700;
+  --outline: #CCC8D3;
+  --shadow: #b3aca78c;
 }
 a, a:hover, a:visited {
     color: var(--primary);
@@ -24,7 +23,7 @@ button, .button a, .button label {
     background-color: var(--primary);
 }
 .tooltip .tooltiptext, #familyName ~ .tooltiptext {
-    background-color: var(--accent-container);
+    background-color: var(--filling3);
     border: 1px solid var(--primary);
 }
 .node:hover rect, .node:hover circle {
@@ -56,22 +55,22 @@ fieldset {
     border: 1px dashed var(--on-primary);
 }
 #editForm, #exportForm, #editFamilyForm, #personList {
-    background-color: var(--filling2);
-    color: var(--on-filling2);
+    background-color: var(--filling3);
+    color: var(--on-filling3);
 }
 #editForm::before, #editFamilyForm::before, #exportForm::before, #personList::before {
-    color: var(--on-filling);
+    color: var(--on-filling3);
     opacity: 15%;
 }
 .button a:hover, .button label:hover,   button:hover {
     background-color: var(--primary);
 }
-.button label.gray:hover {
+.button label.icon:hover {
     color: var(--primary);
     opacity: 100%;
 }
 .R#credits h2, .B h1, .B h3 {
-    color: 	var(--accent);
+    color: 	var(--on-filling3);
 }
 #footer, #footer a.home {
     color: #ccc;
@@ -88,13 +87,13 @@ fieldset {
 }
 
 .R#about, .R.mono {
-    background-color: var(--filling2);
+    background-color: var(--filling3);
 }
 .R#credits, .R#contactForm, .R#privacy-terms, svg {
-    background-color: var(--filling3);
+    background-color: var(--filling2);
 }
 .R#content {
-    background-color: var(--filling3);
+    background-color: var(--filling2);
 }
 
 .R.enhanced {
@@ -106,29 +105,35 @@ fieldset {
 input:checked + .slider {
     background-color: #ccc;
 }
-.button label.gray {
+.button label.icon {
     background-color: var(--filling);
     color: var(--on-filling);
     opacity: 60%;
 }
 #header {
     position: relative;
-    box-shadow: 0 0 15px -4px var(--header-shadow);
+    box-shadow: 0 0 15px -4px var(--shadow);
 
 }
 #header p.logo img, #footer p.logo img {
     border-color: var(--filling);
 }
 .edgePath path {
-    stroke: var(--arrow-stroke);
-    fill: var(--arrow-fill);
+    stroke: var(--outline);
+    fill: var(--outline);
 }
 input[type="search"] {
     background-color: var(--filling);
     border: 1px solid var(--outline);
+    color: var(--on-filling);
+}
+#personList input[type="search"] {
+    background-color: var(--filling);
+    border: 0px;
+    color: var(--on-filling);
 }
 .legend {
-    background-color: var(--accent-container);
+    background-color: var(--filling3);
 }
 #personList ul li {
     border-bottom: 1px dashed var(--on-primary);
@@ -137,18 +142,19 @@ input, textarea {
     border: 0px;
 }
 input:read-only {
-    color: var(--on-filling);
+    color: var(--on-filling3);
     border-bottom: 0;
 }
 input:hover, select:disabled:hover, #personList ul li:hover  {
     background-color: var(--on-primary);
+    border-radius: 1em;
 }
 #editForm h3, #exportForm h3, #editFamilyForm h3, #personList h3 {
     text-transform: uppercase;
     opacity: 15%;
 }
 .fa-tags {
-    color: var(--on-filling);
+    color: var(--on-filling3);
     opacity: 15%;
 }
 select {
@@ -159,8 +165,8 @@ select:disabled {
     border: 0px;
 }
 input, textarea, select:disabled {
-    background-color: var(--filling2);
-    color: var(--on-filling);
+    background-color: var(--filling3);
+    color: var(--on-filling3);
 }
 input:focus, select:focus {
     outline: none;
