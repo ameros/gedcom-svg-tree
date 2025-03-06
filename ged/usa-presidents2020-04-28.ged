@@ -36,7 +36,10 @@
 0 @SUB2@ SUBM
 1 NAME Michał Amerek
 0 @I1@ INDI
-1 NAME William Jefferson /CLINTON/
+1 NAME William /Clinton/
+2 NICK Bill
+2 GIVN William Jefferson
+2 SURN Blythe
 1 SEX M
 1 OCCU US President No. 42
 1 BIRT
@@ -55,7 +58,9 @@
 2 TITL Bill CLinton / Bob McNeely, The White House / Public domain
 1 WWW https://en.wikipedia.org/wiki/Bill_Clinton
 0 @I2@ INDI
-1 NAME Hillary /RODHAM/
+1 NAME Hillary /Clinton/
+2 GIVN Hillary Diane
+2 SURN Rodham
 1 SEX F
 1 BIRT
 2 DATE 26 OCT 1947

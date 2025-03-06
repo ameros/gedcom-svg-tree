@@ -117,7 +117,7 @@
             <form name="personForm" style="padding:1em; line-height:1.5em">
             <div class="B">
                     <label class="t9n" t9n-key="ID"></label>
-                    <input type="text" name="id" readonly class="active"/>
+                    <input type="text" name="id" readonly class="active"  style="opacity: 20%"/>
                     <input type="hidden" name="nfType"/>
             </div>
             <div class="B">
@@ -129,16 +129,16 @@
                     <input class="data" type="text" name="NAME.nfValue" readonly/>
             </div>
             <div class="B">
+                <label class="t9n" t9n-key="nick"></label>
+                <input class="data" type="text" name="NAME.NICK.nfValue" readonly/>
+            </div>
+            <div class="B">
                     <label class="t9n" t9n-key="given"></label>
                     <input class="data" type="text" name="NAME.GIVN.nfValue" readonly/>
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="surname"></label>
                     <input class="data" type="text" name="NAME.SURN.nfValue" readonly/>
-            </div>
-            <div class="B">
-                    <label class="t9n" t9n-key="nick"></label>
-                    <input class="data" type="text" name="NAME.NICK.nfValue" readonly/>
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="sex">Sex</label>
@@ -163,8 +163,8 @@
                             <option value="EST" class="t9n" t9n-key="est"></option>
                             <option value="BET" class="t9n" t9n-key="bet"></option>
                         </select>
-                        <input id="BIRT.DATE.DD" name="BIRT-DATE-DD" type="text" maxlength="2" size="2" placeholder="dd" style="width:auto"
-                               onchange="NodeFamily.form.changeDate('BIRT.DATE')">
+                        <input id="BIRT.DATE.DD" name="BIRT-DATE-DD" type="text" maxlength="2" size="2" style="width:auto"
+                               onchange="NodeFamily.form.changeDate('BIRT.DATE')" disabled>
                         <select id="BIRT.DATE.MM" onchange="NodeFamily.form.changeDate('BIRT.DATE')" disabled>
                             <option value=""></option>
                             <option value="JAN" class="t9n" t9n-key="jan"></option>
@@ -180,14 +180,14 @@
                             <option value="NOV" class="t9n" t9n-key="nov"></option>
                             <option value="DEC" class="t9n" t9n-key="dec"></option>
                         </select>
-                        <input id="BIRT.DATE.YYYY" name="BIRT-DATE-YYYY" type="text" maxlength="4" size="4" placeholder="YYYY" style="width:auto"
-                               onchange="NodeFamily.form.changeDate('BIRT.DATE')">
+                        <input id="BIRT.DATE.YYYY" name="BIRT-DATE-YYYY" type="text" maxlength="4" size="4" style="width:auto"
+                               onchange="NodeFamily.form.changeDate('BIRT.DATE')" disabled>
                         <input class="data" type="hidden" name="BIRT.DATE.nfValue"/>
                     </div>
             </div>
             <div class="B" id="BIRT-DATE-AND">
                 <label class="t9n" t9n-key="and"></label>
-                <input id="BIRT.DATE.AND.DD" name="BIRT-DATE-AND-DD" type="text" maxlength="2" size="2" placeholder="dd" style="width:auto"
+                <input id="BIRT.DATE.AND.DD" name="BIRT-DATE-AND-DD" type="text" maxlength="2" size="2" style="width:auto"
                        onchange="NodeFamily.form.changeDate('BIRT.DATE')" readonly>
                 <select id="BIRT.DATE.AND.MM" onchange="NodeFamily.form.changeDate('BIRT.DATE')" disabled>
                     <option value=""></option>
@@ -204,7 +204,7 @@
                     <option value="NOV" class="t9n" t9n-key="nov"></option>
                     <option value="DEC" class="t9n" t9n-key="dec"></option>
                 </select>
-                <input id="BIRT.DATE.AND.YYYY" name="BIRT-DATE-AND-YYYY" type="text" maxlength="4" size="4" placeholder="YYYY" style="width:auto"
+                <input id="BIRT.DATE.AND.YYYY" name="BIRT-DATE-AND-YYYY" type="text" maxlength="4" size="4" style="width:auto"
                        onchange="NodeFamily.form.changeDate('BIRT.DATE')" readonly>
             </div>
             <div class="B">
@@ -232,7 +232,7 @@
                             <option value="EST" class="t9n" t9n-key="est"></option>
                             <option value="BET" class="t9n" t9n-key="bet"></option>
                         </select>
-                        <input id="DEAT.DATE.DD" name="DEAT-DATE-DD" type="text" maxlength="2" size="2" placeholder="dd" style="width:auto"
+                        <input id="DEAT.DATE.DD" name="DEAT-DATE-DD" type="text" maxlength="2" size="2" style="width:auto"
                                onchange="NodeFamily.form.changeDate('DEAT.DATE')" readonly>
                         <select id="DEAT.DATE.MM" onchange="NodeFamily.form.changeDate('DEAT.DATE')" disabled>
                             <option value=""></option>
@@ -249,14 +249,14 @@
                             <option value="NOV" class="t9n" t9n-key="nov"></option>
                             <option value="DEC" class="t9n" t9n-key="dec"></option>
                         </select>
-                        <input id="DEAT.DATE.YYYY" name="DEAT-DATE-YYYY" type="text" maxlength="4" size="4" placeholder="YYYY" style="width:auto"
+                        <input id="DEAT.DATE.YYYY" name="DEAT-DATE-YYYY" type="text" maxlength="4" size="4" style="width:auto"
                                onchange="NodeFamily.form.changeDate('DEAT.DATE')" readonly>
                         <input class="data" type="hidden" name="DEAT.DATE.nfValue"/>
                     </div>
                 </div>
                 <div class="B" id="DEAT-DATE-AND">
                         <label class="t9n" t9n-key="and">and</label>
-                        <input id="DEAT.DATE.AND.DD" name="DEAT-DATE-AND-DD" type="text" maxlength="2" size="2" placeholder="dd" style="width:auto"
+                        <input id="DEAT.DATE.AND.DD" name="DEAT-DATE-AND-DD" type="text" maxlength="2" size="2" style="width:auto"
                                onchange="NodeFamily.form.changeDate('DEAT.DATE')" readonly>
                         <select id="DEAT.DATE.AND.MM" onchange="NodeFamily.form.changeDate('DEAT.DATE')" disabled>
                             <option value=""></option>
@@ -273,7 +273,7 @@
                             <option value="NOV" class="t9n" t9n-key="nov"></option>
                             <option value="DEC" class="t9n" t9n-key="dec"></option>
                         </select>
-                        <input id="DEAT.DATE.AND.YYYY" name="DEAT-DATE-AND-YYYY" type="text" maxlength="4" size="4" placeholder="YYYY" style="width:auto"
+                        <input id="DEAT.DATE.AND.YYYY" name="DEAT-DATE-AND-YYYY" type="text" maxlength="4" size="4" style="width:auto"
                                onchange="NodeFamily.form.changeDate('DEAT.DATE')" readonly>
                     </div>
                 <div class="B">
@@ -297,12 +297,12 @@
                     <label class="t9n" t9n-key="occupation"></label>
                     <input class="data" type="text" name="OCCU.nfValue" readonly/>
             </div>
-            <div class="B">
+            <div class="B" style="display:none">
                     <label class="t9n" t9n-key="photoFile"></label>
                     <input class="data" type="text" name="OBJE.FILE.nfValue" id="photoFile" readonly/>
                     <input class="data" type="text" name="OBJE.0.FILE.nfValue" id="photoFileColl" style="display: none" readonly/>
             </div>
-            <div class="B">
+            <div class="B" style="display:none">
                     <label class="t9n" t9n-key="photoCaption"></label>
                     <input class="data" type="text" name="OBJE.TITL.nfValue" id="photoTitl" readonly/>
                     <input class="data" type="text" name="OBJE.0.TITL.nfValue" id="photoTitlColl" style="display: none" readonly/>
@@ -348,7 +348,7 @@
             <form name="familyForm" style="padding:1em; line-height:1.5em">
             <div class="B">
                     <label class="t9n" t9n-key="ID"></label>
-                    <input type="text" name="id" readonly class="active"/>
+                    <input type="text" name="id" readonly class="active" style="opacity: 20%"/>
             </div>
             <div class="B">
                     <input type="hidden" name="nfType"/>

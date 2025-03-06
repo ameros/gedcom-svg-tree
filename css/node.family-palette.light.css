@@ -145,7 +145,7 @@ input:read-only {
     color: var(--on-filling3);
     border-bottom: 0;
 }
-input:hover, select:disabled:hover, #personList ul li:hover  {
+input:hover, select:disabled:hover, #personList ul li:hover, textarea:hover  {
     background-color: var(--on-primary);
     border-radius: 1em;
 }
@@ -165,7 +165,7 @@ select:disabled {
     border: 0px;
 }
 input, textarea, select:disabled {
-    background-color: var(--filling3);
+    background-color: transparent;
     color: var(--on-filling3);
 }
 input:focus, select:focus {
@@ -183,3 +183,7 @@ input:read-only:focus {
 .R.workspace .C {
     scrollbar-color: #ddd var(--filling);
  }
+figure img {
+    box-shadow: 0px 0px 10px 5px #fff;
+    border-radius: 1em;
+}

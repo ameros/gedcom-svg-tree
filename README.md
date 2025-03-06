@@ -42,12 +42,12 @@ The tool makes use of such GEDCOM records and tags:
     - PLAC
   - FAMC
   - FAMS
-  - GIVN
-  - NAME
-  - NICK
+  - GIVN - _to indicate (more) names given at birth_
+  - NAME - _no multiple tags_ 
+  - NICK - _to indicate nick or also-known-as_
   - OCCU
   - SEX
-  - SURN
+  - SURN - _to indicate surname at birth_
   - TITL
 - FAM:
   - CHIL

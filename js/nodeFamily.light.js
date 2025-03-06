@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.3.5 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.3.6 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -963,6 +963,9 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                     inputElement.classList.add("active");
                     NodeFamily.form.fillPhoto("photo", inputName, value);
                     inputElement.value = value;
+                    if (inputName == "NAME.nfValue") {
+                        inputElement.value = value.replace(/\/(.+?)\//g,(match) => match.toUpperCase()).replace(/\//g, "");
+                    }
                     if (inputName == "BIRT.DATE.nfValue") {
                           NodeFamily.form.fillDatePhrase("BIRT.DATE", value);
                     }
@@ -1240,7 +1243,7 @@ NodeFamily.form.fillPhoto = function(prefix, dataKey, value) {
             const caption = document.querySelector("#" + prefix + " figcaption");
             const img = document.querySelector("#" + prefix + ' img');
             if (img) {
-                img.setAttribute("alt", value);
+//                img.setAttribute("alt", value);
                 caption.innerHTML = value;
             }
         }
