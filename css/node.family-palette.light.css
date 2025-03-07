@@ -41,9 +41,6 @@ body, #header a.home {
 .button a, .button label, button {
     color: var(--on-primary);
 }
-#personWww::after {
-    color: var(--primary);
-}
 #footer {
     background-color: var(--on-filling);
 }

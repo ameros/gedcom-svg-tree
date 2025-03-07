@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.3.6 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.3.7 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -941,6 +941,9 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         while (spouses.children.length > 1) {
             spouses.removeChild(spouses.children[1]);
         }
+        const wwwLink = _formSection.querySelector('#personWww');
+        wwwLink.removeAttribute("href");
+        wwwLink.innerHTML =  "";
         const el = _form['DEAT.nfValue'];
         el.value = "Y";
         el.dispatchEvent(new Event('change'));
@@ -970,7 +973,9 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                           NodeFamily.form.fillDatePhrase("BIRT.DATE", value);
                     }
                     if (inputName == "WWW.nfValue" && value && value.trim() != "") {
-//                        _formSection.querySelector('#personWww').setAttribute("href", value);
+                        const wwwLink = _formSection.querySelector('#personWww');
+                        wwwLink.setAttribute("href", value);
+                        wwwLink.innerHTML =  value;
                     }
                     if (inputName == "DEAT.nfValue") {
                         const el = _form['DEAT.nfValue'];

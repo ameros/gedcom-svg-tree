@@ -60,7 +60,6 @@ form button {
 }
 a, a:hover, a:visited, .button a, .button label, #footer a:hover {
     text-decoration:none;
-    text-transform: uppercase;
 }
 ul {
     list-style: none;
@@ -170,11 +169,6 @@ svg {
 #exportForm::before {
     content: "\f019";
 }
-#personWww::after {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: "\f360";
-}
 input[type=text], textarea, select:disabled {
     font-size: 1.2em;
     font-family: "Poppins";
@@ -195,4 +189,7 @@ form label, legend {
     font-weight: 900;
     content: "\f0eb";
 }
-
+#personWww {
+    vertical-align: sub;
+    padding-left: 0.4em;
+}
