@@ -1,9 +1,9 @@
 # gedcom-svg-tree
-It is simple, yet UNIQUE way of presenting family tree. Each parents become a node of the tree.
+This is simple, yet UNIQUE way of presenting family tree. Each parents become a node of the tree.
 
 ![](img/vertical.png)
 
-## Purpose
+## PURPOSE
 The idea initially was as simple as:
 - to visualize own family tree
 - quite privately without passing data to any online system out there
@@ -11,6 +11,21 @@ The idea initially was as simple as:
 
 This is a completely secure tool. Visualization is done on the client (your) side, in the browser, using JavaScript, without transferring data to any server.
 There is no backend that holds, manipulate or process any data. It does not look for, match, examine, track or even collect any person data from your tree.
+
+## DESIGN ASSUMPTIONS
+
+### 1. FOCUS ON DATA
+- first of all on that **INFORMATION** important from the point of view of graphical presentation of the tree and relationships _(title, names, birth and death data)_
+- secondly making this data more important (**EMPHASE**) than any graphical presentation
+
+### 2. RESPECTING STRUCTURE
+- where, in GEDCOM, both person and relationship constitute a separate unique entity, both semantic and technical (**NODE**), carrying information meaningful in their own common context
+- enabling exploration of relationships through intuitive navigation between them
+
+### 3. LOSSLESS CONVERSION
+finally, due to the lack of consensus on the standard, and due to the extension of the GEDCOM format with interpreter and version-specific properties,
+it is important to accept everything in the input and **NOT LOSE** anything in the output _(the so-called "more tags" section on the displayed data card)_,
+which is quite a unique approach
 
 ## HOW TO USE IT
 - Just go to [live version](https://ameros.github.io/gedcom-svg-tree/) (or choose [its polish version](https://ameros.github.io/gedcom-svg-tree/?lang=pl)) and open the GEDCOM file

@@ -7,7 +7,7 @@
 2 VERS 5.5.1
 2 FORM LINEAGE-LINKED
 1 CHAR UTF-8
-1 DATE 7 May 2020
+1 DATE 7 Mar 2025
 1 SUBM @SUB1@
 2 NAME Brian Tompsett
 1 FILE usa-presidents-2020-05-07.ged
@@ -40,8 +40,8 @@
 2 NICK Bill
 2 GIVN William Jefferson
 2 SURN Blythe
+1 TITL 42nd President of the United States
 1 SEX M
-1 OCCU US President No. 42
 1 BIRT
 2 DATE 19 AUG 1946
 2 PLAC Hope, Hempstead Co., AR
@@ -12925,10 +12925,12 @@
 1 SEX F
 1 FAMS @F798@
 0 @I1604@ INDI
-1 NAME John Fitzgerald /Kennedy/
+1 NAME John F. /Kennedy/
+2 NICK JFK
+2 GIVN John Fitzgerald
 1 SEX M
-1 OCCU US President No. 35
-1 TITL President of USA
+1 EDUC Harvard University (AB)
+1 TITL 35th President of the United States
 1 BIRT
 2 DATE 29 MAY 1917
 2 PLAC Brookline, Massachusetts
@@ -12993,6 +12995,7 @@
 2 DATE 25 NOV 1960
 2 PLAC Washington D.C.
 1 FAMC @F799@
+1 DEAT
 0 @I1609@ INDI
 1 NAME Patrick Bouvier /Kennedy/
 1 SEX M
