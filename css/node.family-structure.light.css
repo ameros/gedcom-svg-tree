@@ -269,7 +269,7 @@ input[type="search"] {
    appearance: none; /* rest */
 }
 input, textarea {
-    width: 68%;
+    width: 78%;
     display: inline-block;
     padding: 1%;
     border-left: 0px;
@@ -340,7 +340,7 @@ aside input.active, aside textarea.active, aside select.active {
 }
 #editForm form label, #editFamilyForm form label, #exportForm form label{
     display: inline-block;
-    width: 30%;
+    width: 20%;
     float: left;
     text-align: right;
     padding: 1%;
