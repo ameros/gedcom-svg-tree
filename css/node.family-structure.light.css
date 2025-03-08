@@ -307,7 +307,7 @@ form input[type=checkbox] {
     padding: 0.5em;
     position: absolute;
     z-index: 2;
-    top: 3em;
+    top: 2.2em;
     right: 0px;
     opacity: 1;
     font-size: smaller;
@@ -318,7 +318,7 @@ form input[type=checkbox] {
 .tooltip .tooltiptext::after {
     content: " ";
     position: absolute;
-    bottom: 100%;
+    bottom: 104%;
     right: 0.7em;
     border-width: 5px;
 }

@@ -2,10 +2,11 @@
   --primary: #5ea40c;
   --on-primary: #fff;
   --secondary: #c3d500;
+  --accent: #e7294eff;
   --filling: #fff;
   --on-filling: #1f2328;
-  --filling2: #f5f5f5;
-  --filling3: #ecf2b1;
+  --filling2: linear-gradient(65deg, rgb(234, 250, 255) 0%, rgb(255, 248, 248) 100%);
+  --filling3: linear-gradient(65deg, #ecf2b1 0%, #e4f2b1 100%);
   --on-filling3: #1f2328;
   --info-male: #99e6ff;
   --info-female: #ffaaa6;
@@ -23,7 +24,7 @@ button, .button a, .button label {
     background-color: var(--primary);
 }
 .tooltip .tooltiptext, #familyName ~ .tooltiptext {
-    background-color: var(--filling3);
+    background: var(--filling3);
     border: 1px solid var(--primary);
 }
 .node:hover rect, .node:hover circle {
@@ -52,12 +53,12 @@ fieldset {
     border: 1px dashed var(--on-primary);
 }
 #editForm, #exportForm, #editFamilyForm, #personList {
-    background-color: var(--filling3);
+    background: var(--filling3);
     color: var(--on-filling3);
 }
 #editForm::before, #editFamilyForm::before, #exportForm::before, #personList::before {
-    color: var(--on-filling3);
-    opacity: 15%;
+    color: var(--secondary);
+    opacity: 40%;
 }
 .button a:hover, .button label:hover,   button:hover {
     background-color: var(--primary);
@@ -66,8 +67,11 @@ fieldset {
     color: var(--primary);
     opacity: 100%;
 }
-.R#credits h2, .B h1, .B h3 {
-    color: 	var(--on-filling3);
+h1 {
+    color: var(--accent);
+}
+.R#credits h2, .B h3 {
+    color: 	var(--secondary);
 }
 #footer, #footer a.home {
     color: #ccc;
@@ -87,10 +91,11 @@ fieldset {
     background-color: var(--filling3);
 }
 .R#credits, .R#contactForm, .R#privacy-terms, svg {
-    background-color: var(--filling2);
+    background-color: transparent;
 }
-.R#content {
-    background-color: var(--filling2);
+.R#content, .R#intro {
+    background: var(--filling2);
+    background: linear-gradient(65deg, rgb(234, 250, 255) 0%, rgb(255, 248, 248) 100%);
 }
 
 .R.enhanced {
@@ -148,11 +153,11 @@ input:hover, select:disabled:hover, #personList ul li:hover, textarea:hover  {
 }
 #editForm h3, #exportForm h3, #editFamilyForm h3, #personList h3 {
     text-transform: uppercase;
-    opacity: 15%;
+    opacity: 60%;
 }
 .fa-tags {
-    color: var(--on-filling3);
-    opacity: 15%;
+    color: var(--secondary);
+    opacity: 70%;
 }
 select {
     border-image: none;
