@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.3.7 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.0 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -395,6 +395,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
           _inner.attr("transform", d3.event.transform);
         });
     let _startPersonId;
+    let _startFamilyId;
     let _config = { numberOfParentGens: 1, numberOfChildGens: 1, numberOfOtherGens: 1 };
     let _personForm;
     let _exportForm;
@@ -461,7 +462,11 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
             _exportForm.hide();
             _familyForm.hide();
             _personList.hide();
-            _personForm.show();
+            if (_startFamilyId) {
+                _familyForm.show();
+            } else {
+                _personForm.show();
+            }
         }
     }
 
@@ -526,20 +531,28 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
                 _familyForm.reset();
                 this.toggleFamilyForm();
                 _familyForm.fill(start, _familyData[start]);
-                document.querySelectorAll(".child").forEach(element => element.addEventListener('click', this.editNode.bind(this), true));
+                if (startPoint) {
+                    _startFamilyId = startPoint;
+                    _startPersonId = null;
+                }
+                start = _startFamilyId;
             }
-            return;
         }
-        if (startPoint) {
-            _startPersonId = startPoint;
+        if (_familyData[start][NF_TYPE] == 'INDI') {
+            if (_personForm) {
+                _personForm.reset();
+                this.togglePersonForm();
+                _personForm.fill(start, _familyData[start]);
+            }
+            if (startPoint) {
+                _startPersonId = startPoint;
+                _startFamilyId = null;
+            }
+            start = _startPersonId;
         }
-        start = _startPersonId;
-        // reset
         _d3.select("svg > g > *").remove();
         _svg.call(_zoom.transform, _d3.zoomIdentity.scale(1));
         _subTree.removeNodes(_graphlib);
-        _personForm.reset();
-        this.togglePersonForm();
         let tree = new NodeFamily.Tree();
         tree.pushNode(start);
         NodeFamily.addChildren(_familyData, start, _config, tree);
@@ -572,15 +585,11 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         nodes.on('click', function (nodeId) {
             that.visualize(nodeId);
         });
-        const personId = document.querySelector('form[name="personForm"] input[name="id"]');
-        if (!personId) {
-            return;
-        }
-        _personForm.fill(start, _familyData[start]);
         if (_exportForm) {
             _exportForm.fill(_familyData.HEAD);
         }
         document.querySelectorAll(".spouse").forEach(element => element.addEventListener('click', this.editNode.bind(this), true));
+        document.querySelectorAll(".child").forEach(element => element.addEventListener('click', this.editNode.bind(this), true));
     }
 
     const fillPersonDropdown = function(event) {
@@ -611,7 +620,8 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
             numberOfOtherGens: document.getElementById('numberOfOtherGens').value
         }
         this.setConfig(config);
-        this.visualize();
+        const start = _startFamilyId ? _startFamilyId : _startPersonId;
+        this.visualize(start);
     }
 
     const formToObj = (obj, arr, val) => {
@@ -1509,14 +1519,34 @@ NodeFamily.addParentsWithSiblings = function(data, startPoint, config, tree) {
             }
         }
     }
+    if (data[startPoint] && data[startPoint].HUSB) {
+        const parentId = data[startPoint].HUSB[NF_VALUE];
+        NodeFamily.addVectorWithFrom(parentId, startPoint, tree);
+        if (numberOfParentGens > 1) {
+            const cfg = Object.assign({}, config);
+            cfg.numberOfParentGens = numberOfParentGens - 1;
+            cfg.numberOfOtherGens = numberOfOtherGens - 1;
+            NodeFamily.addParentsWithSiblings(data, parentId, cfg, tree);
+        }
+    }
+    if (data[startPoint] && data[startPoint].WIFE) {
+        const parentId = data[startPoint].WIFE[NF_VALUE];
+        NodeFamily.addVectorWithFrom(parentId, startPoint, tree);
+        if (numberOfParentGens > 1) {
+            const cfg = Object.assign({}, config);
+            cfg.numberOfParentGens = numberOfParentGens - 1;
+            cfg.numberOfOtherGens = numberOfOtherGens - 1;
+            NodeFamily.addParentsWithSiblings(data, parentId, cfg, tree);
+        }
+    }
 }
 
 NodeFamily.addChildren = function(data, startPoint, config, tree) {
     const numberOfChildGens = config.numberOfChildGens || 0;
-    const spouses = data[startPoint] && data[startPoint].FAMS || [];
     if (numberOfChildGens == 0) {
         return;
     }
+    const spouses = data[startPoint] && data[startPoint].FAMS || [];
     spouses.forEach(function(spouseData) {
         const spouseId = spouseData[NF_VALUE];
         const spouse = data[spouseData[NF_VALUE]];
@@ -1534,6 +1564,21 @@ NodeFamily.addChildren = function(data, startPoint, config, tree) {
                 NodeFamily.addChildren(data, childrenId[NF_VALUE], cfg, tree);
             }
         });
+    });
+    const children = data[startPoint] && data[startPoint].CHIL || [];
+    children.forEach(function(childData) {
+        const childId = childData[NF_VALUE];
+        const child = data[childData[NF_VALUE]];
+        if (!child) {
+            return;
+        }
+        tree.pushNode(childId);
+        NodeFamily.addVectorWithFrom(startPoint, childId, tree);
+        if (numberOfChildGens >= 1) {
+            const cfg = Object.assign({}, config);
+            cfg.numberOfChildGens = numberOfChildGens - 1;
+            NodeFamily.addChildren(data, childId, cfg, tree);
+        }
     });
 }
 
@@ -1694,12 +1739,12 @@ NodeFamily.Tree = function() {
             } else {
                 node.style = "fill: var(--filling, #fff); stroke: var(--outline, #CCC8D3); stroke-width: 2px";
             }
-            if (id == startPoint) {
-                node.style = "fill: var(--secondary, #c3d500); stroke-width: 2px";
-            }
             if (!isPerson) {
                 node.shape = "circle";
                 node.style = "fill: var(--filling, #fff);stroke: var(--info-family, #f9d700); stroke-width: 2px";
+            }
+            if (id == startPoint) {
+                node.style = "fill: var(--secondary, #c3d500); stroke-width: 2px";
             }
             graphlib.setNode(id, node);
         });
