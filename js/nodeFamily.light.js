@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.1 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.2 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1738,7 +1738,7 @@ NodeFamily.Tree = function() {
             } else if (value.SEX && value.SEX[NF_VALUE] == "F") {
                 node.style = "fill: var(--filling, #fff);stroke: var(--info-female, #ffaaa6); stroke-width: 2px";
             } else {
-                node.style = "fill: var(--filling, #fff); stroke: var(--outline, #CCC8D3); stroke-width: 2px";
+                node.style = "fill: var(--filling, #fff); stroke: url(#gender); stroke-width: 2px";
             }
             if (!isPerson) {
                 node.shape = "circle";

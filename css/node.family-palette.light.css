@@ -30,7 +30,7 @@ button, .button a, .button label {
 .node:hover rect, .node:hover circle {
     stroke: var(--primary) !important;
 }
-#editForm .fa-times-circle::before, #exportForm .fa-times-circle::before, #editFamilyForm .fa-times-circle::before, #personList .fa-times-circle::before {
+#editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
     color: var(--primary);
 }
 .switch.active:before {

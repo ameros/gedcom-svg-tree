@@ -118,7 +118,7 @@ svg {
     font-weight: 900;
     content: '\f0c0';
 }
-#editForm .fa-times-circle::before, #exportForm .fa-times-circle::before, #editFamilyForm .fa-times-circle::before, #personList .fa-times-circle::before {
+#editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
     position: absolute;
     left: 31.3%;
     cursor: pointer;
@@ -129,7 +129,7 @@ svg {
     content: 'Gedcom SVG Tree';
 }
 @media only screen and (max-width: 1023px) {
-    #editForm .fa-times-circle::before, #exportForm .fa-times-circle::before, #editFamilyForm .fa-times-circle::before, #personList .fa-times-circle::before {
+    #editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
         right: 0;
         left: 95%;
     }
