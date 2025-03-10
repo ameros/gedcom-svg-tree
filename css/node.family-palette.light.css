@@ -30,7 +30,7 @@ button, .button a, .button label {
 .node:hover rect, .node:hover circle {
     stroke: var(--primary) !important;
 }
-#editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
+#editForm .fa-times-circle::before, #exportForm .fa-times-circle::before, #editFamilyForm .fa-times-circle::before, #personList .fa-times-circle::before {
     color: var(--primary);
 }
 .switch.active:before {
@@ -64,6 +64,10 @@ fieldset {
     background-color: var(--primary);
 }
 .button label.icon:hover {
+    color: var(--primary);
+    opacity: 100%;
+}
+#gedcomFileLabel {
     color: var(--primary);
     opacity: 100%;
 }
@@ -129,7 +133,7 @@ input[type="search"] {
     border: 1px solid var(--outline);
     color: var(--on-filling);
 }
-#personList input[type="search"] {
+#personList input[type="search"], #exportForm input {
     background-color: var(--filling);
     border: 0px;
     color: var(--on-filling);
@@ -147,7 +151,7 @@ input:read-only {
     color: var(--on-filling3);
     border-bottom: 0;
 }
-input:hover, select:disabled:hover, #personList ul li:hover, textarea:hover  {
+input:hover, select:disabled:hover, #personList ul li:hover, textarea:hover, #exportForm input  {
     background-color: var(--on-primary);
     border-radius: 1em;
 }

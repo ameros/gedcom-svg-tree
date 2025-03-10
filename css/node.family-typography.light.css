@@ -10,7 +10,7 @@ h1 {
     font-size: 3em;
 }
 h2, .B h2, .B h3 {
-    font-size: 1.75em;
+    font-size: 1.5em;
     text-transform: none;
 }
 p.logo {
@@ -95,7 +95,7 @@ svg {
 #toggleForm:before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    content: '\f2c2';
+    content: '\f2bb';
 }
 #children div, #spouses div {
     padding-left:30%;
@@ -118,9 +118,9 @@ svg {
     font-weight: 900;
     content: '\f0c0';
 }
-#editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
+#editForm .fa-times-circle::before, #exportForm .fa-times-circle::before, #editFamilyForm .fa-times-circle::before, #personList .fa-times-circle::before {
     position: absolute;
-    left: 31%;
+    left: 31.3%;
     cursor: pointer;
     padding-top: 0.5em;
     padding-right: 0.5em;
@@ -129,7 +129,7 @@ svg {
     content: 'Gedcom SVG Tree';
 }
 @media only screen and (max-width: 1023px) {
-    #editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
+    #editForm .fa-times-circle::before, #exportForm .fa-times-circle::before, #editFamilyForm .fa-times-circle::before, #personList .fa-times-circle::before {
         right: 0;
         left: 95%;
     }
@@ -192,4 +192,29 @@ form label, legend {
 #personWww {
     vertical-align: sub;
     padding-left: 0.4em;
+}
+.switch:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f205';
+}
+.switch.active:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f205';
+}
+#toggleControls:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f1de';
+}
+#exportImage:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f030';
+}
+#gedcomFileLabel::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f07c';
 }

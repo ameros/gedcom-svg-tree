@@ -116,16 +116,6 @@ ul {
     border: 1px solid transparent;
     border-radius: 1em;
 }
-#toggleControls:before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f1de';
-}
-#exportImage:before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f030';
-}
 #toggleSearch {
     display: none;
 }
@@ -172,11 +162,6 @@ p.logo {
     vertical-align:bottom;
     border-width: 0.1em;
     border-style: solid;
-}
-#gedcomFileLabel::before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f07c';
 }
 @media only screen and (max-width: 1023px) {
    .R .S, .R .S .C.C1, .R .S .C.C2, .R .S .C.C3{
@@ -249,16 +234,6 @@ div.buttonsWrapper .button {
   display: none;
   width: 0;
   height: 0;
-}
-.switch:before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f204';
-}
-.switch.active:before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f205';
 }
 input[type="search"] {
     line-height: 1.75em;

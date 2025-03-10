@@ -1,10 +1,10 @@
 {
   "gedcomFileInputLabel": "open GEDCOM",
   "toggleOrientation": "toggle orientation",
-  "displayOptions": "display options",
-  "editData": "person / family data",
+  "displayOptions": "show options",
+  "editData": "show data",
   "exportData": "save data",
-  "togglePersonList": "person list",
+  "togglePersonList": "list persons",
   "donate": "Donate",
   "lang": "polski",
   "lang-title": "Zmień język na polski",
