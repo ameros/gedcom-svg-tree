@@ -75,7 +75,7 @@
                 <i class="fas fa-desktop"></i> <i class="fas fa-tablet-alt"></i> <i class="fas fa-mobile-alt"></i>
                 <p><i style="font-size: smaller">Responsive Design</i></p>
                 <hr/>
-                <p><a href="https://github.com/ameros/gedcom-svg-tree" title="Read Me"><i class="fab fa-readme"></i></a></p>
+                <p><a href="https://github.com/ameros/gedcom-svg-tree" title="Read Me"><i class="fas fa-question-circle"></i></a></p>
             </div>
         </div>
     </div>
@@ -106,9 +106,10 @@
         <aside class="C C2" id="editForm">
             <div class="B">
                 <span class="fas fa-times" onclick='document.getElementById("editForm").classList.toggle("active")'>&nbsp;</span>
-                <h3 class="t9n" t9n-key="person"></h3>
+                <h3 class="t9n" t9n-key="person" id="personHeader"></h3>
                 <div class="B">
                     <figure id="photo">
+                        <i class="fas fa-user" style="color: #f9ffd8;font-size:10em"></i>
                         <img src="" width="60%"/>
                         <figcaption></figcaption>
                     </figure>
@@ -116,15 +117,10 @@
             </div>
             <form name="personForm" style="padding:1em; line-height:1.5em">
             <div class="B">
-                    <label class="t9n" t9n-key="ID"></label>
-                    <input type="text" name="id" readonly class="active"  style="opacity: 20%"/>
-                    <input type="hidden" name="nfType"/>
-            </div>
-            <div class="B">
                     <label class="t9n" t9n-key="title"></label>
                     <input class="data" type="text" name="TITL.nfValue" readonly/>
             </div>
-            <div class="B">
+            <div class="B" style="display: none">
                     <label class="t9n" t9n-key="name"></label>
                     <input class="data" type="text" name="NAME.nfValue" readonly/>
             </div>
@@ -297,12 +293,12 @@
                     <label class="t9n" t9n-key="occupation"></label>
                     <input class="data" type="text" name="OCCU.nfValue" readonly/>
             </div>
-            <div class="B" style="display:none">
+            <div class="B">
                     <label class="t9n" t9n-key="photoFile"></label>
                     <input class="data" type="text" name="OBJE.FILE.nfValue" id="photoFile" readonly/>
                     <input class="data" type="text" name="OBJE.0.FILE.nfValue" id="photoFileColl" style="display: none" readonly/>
             </div>
-            <div class="B" style="display:none">
+            <div class="B">
                     <label class="t9n" t9n-key="photoCaption"></label>
                     <input class="data" type="text" name="OBJE.TITL.nfValue" id="photoTitl" readonly/>
                     <input class="data" type="text" name="OBJE.0.TITL.nfValue" id="photoTitlColl" style="display: none" readonly/>
@@ -330,6 +326,11 @@
                     </fieldset>
             </div>
             <div class="B">
+                <label class="t9n" t9n-key="ID"></label>
+                <input type="text" name="id" readonly class="active"  style="opacity: 20%"/>
+                <input type="hidden" name="nfType"/>
+            </div>
+            <div class="B">
                     <label class="t9n" t9n-key="submitterId"></label>
                         <input class="data" type="text" name="SUBM.nfValue" size="10" style="width:auto" readonly/>
                         <span id="submitterName" style="font-size:smaller"></span>
@@ -340,17 +341,14 @@
         <aside class="C C2" style="z-index:1; flex-direction:column" id="editFamilyForm">
             <div class="B">
                 <span class="fas fa-times" onclick='document.getElementById("editFamilyForm").classList.toggle("active")'>&nbsp;</span>
-                <h3 class="t9n" t9n-key="family"></h3>
+                <h3 class="t9n" t9n-key="family" id="familyHeader"></h3>
                 <figure id="photoFamily">
+                    <i class="fas fa-user-friends" style="color: #f9ffd8;font-size:10em"></i>
                     <img src=""  width="60%"/>
                     <figcaption></figcaption>
                 </figure>
             </div>
             <form name="familyForm" style="padding:1em; line-height:1.5em">
-            <div class="B">
-                    <label class="t9n" t9n-key="ID"></label>
-                    <input type="text" name="id" readonly class="active" style="opacity: 20%"/>
-            </div>
             <div class="B">
                     <input type="hidden" name="nfType"/>
                     <label class="t9n" t9n-key="marriageDate"></label>
@@ -415,12 +413,12 @@
             <div class="B">
                     <label class="t9n" t9n-key="photoFile"></label>
                     <input class="data" type="text" name="OBJE.FILE.nfValue" id="photoFamilyFile" readonly/>
-                    <!--                        <input class="data" type="text" name="OBJE.0.FILE.nfValue" id="photoFamilyFileColl" style="display: none"/>-->
+                    <input class="data" type="text" name="OBJE.0.FILE.nfValue" id="photoFamilyFileColl" style="display: none"/>
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="photoCaption"></label>
                     <input class="data" type="text" name="OBJE.TITL.nfValue" id="photoFamilyTitl" readonly/>
-                    <!--                        <input class="data" type="text" name="OBJE.0.TITL.nfValue" id="photoFamilyTitlColl" style="display: none"/>-->
+                    <input class="data" type="text" name="OBJE.0.TITL.nfValue" id="photoFamilyTitlColl" style="display: none"/>
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="wife"></label>
@@ -445,6 +443,10 @@
                     <fieldset id="extraFamilyFields">
                         <legend class="t9n" t9n-key="extraTags"></legend>
                     </fieldset>
+            </div>
+            <div class="B">
+                <label class="t9n" t9n-key="ID"></label>
+                <input type="text" name="id" readonly class="active" style="opacity: 20%"/>
             </div>
             </form>
         </aside>

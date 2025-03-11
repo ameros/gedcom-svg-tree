@@ -98,7 +98,7 @@ svg {
     content: '\f2bb';
 }
 #children div, #spouses div {
-    padding-left:30%;
+    padding-left:22%;
 }
 #husbandName, #wifeName, #familyName, #spouses legend, #children legend, .spouse, .child {
     cursor: pointer;
@@ -150,9 +150,6 @@ svg {
 #personList::before {
     content: "\f0c0";
 }
-#editForm::before {
-    content: "\f007";
-}
 #people::before {
     content: "\f002";
 }
@@ -162,9 +159,6 @@ svg {
     text-align: center;
     width: 100%;
     line-height: 1.2em;
-}
-#editFamilyForm::before {
-    content: "\f500";
 }
 #exportForm::before {
     content: "\f019";

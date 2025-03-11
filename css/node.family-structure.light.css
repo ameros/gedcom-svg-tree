@@ -104,6 +104,9 @@ ul {
     margin: 0px;
     margin-bottom: 1em;
 }
+#editForm h3, #editFamilyForm h3 {
+    padding: 1em;
+}
 .B#controls.active, .B#search.active  {
     display: block;
 }
@@ -342,6 +345,9 @@ svg {
 #personList .legend {
     padding: 1em;
     margin-top: 2em;
+}
+fieldset {
+    padding: 0;
 }
 .legend {
     padding-bottom: 1em;

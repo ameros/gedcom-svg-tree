@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.2 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.3 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -242,22 +242,11 @@ Gedcom.Tag.Record.collection = function(tag, parentRecord, context) {
     if (tag.getTag() !== "CONT") {
         value = value.replace(/@/g, "");
     }
-    if (tag.getTag() === "CHIL") {
-//        value = "INDI-" + value;
-    }
     parentContext[tag.getTag()] = parentContext[tag.getTag()] || [];
-//    if (tag.getTag() == "FAMS" || tag.getTag() === "FAMC") {
-//        // it became object lately
-//        const obj = {};
-////        obj.id = "FAM-" + value;
-//        obj.id = value;
-//        parentContext[tag.getTag()].push(obj);
-//    } else {
-        const obj = {};
-        obj[NF_VALUE] = value;
-        obj[NF_RECORD] = tag.getLevel() + " " + tag.getTag() + " " + tag.getValue();
-        parentContext[tag.getTag()].push(obj);
-//    }
+    const obj = {};
+    obj[NF_VALUE] = value;
+    obj[NF_RECORD] = tag.getLevel() + " " + tag.getTag() + " " + tag.getValue();
+    parentContext[tag.getTag()].push(obj);
     return new Gedcom.Tag.Record(tag, parentRecord, {});
 }
 
@@ -898,10 +887,6 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         } else {
             input.checked = false;
             input.value = "Y";
-//            _form['DEAT.DATE.nfValue'].disabled = false;
-//            _form['DEAT.PLAC.nfValue'].disabled = false;
-//            _form['BURI.nfValue'].disabled = false;
-//            _form['BURI.PLAC.nfValue'].disabled = false;
             deatSection.classList.add('active');
         }
     }
@@ -918,8 +903,6 @@ NodeFamily.PersonForm = function(presenter, formSection) {
             input.checked = true;
             input.value = "Y";
             buriSection.classList.add('active');
-//            _form['BURI.nfValue'].disabled = false;
-//            _form['BURI.PLAC.nfValue'].disabled = false;
         }
     }
 
@@ -942,6 +925,8 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         }
         const img = _formSection.querySelector('figure img');
         img.style.display = "none";
+        const icon = _formSection.querySelector('figure i');
+        icon.style.display = "block";
         const caption = _formSection.querySelector('figure figcaption');
         caption.innerHTML = "";
         _formSection.querySelector("#submitterName").innerHTML = "";
@@ -978,7 +963,9 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                     NodeFamily.form.fillPhoto("photo", inputName, value);
                     inputElement.value = value;
                     if (inputName == "NAME.nfValue") {
-                        inputElement.value = value.replace(/\/(.+?)\//g,(match) => match.toUpperCase()).replace(/\//g, "");
+                        const name = value.replace(/\/(.+?)\//g,(match) => match.toUpperCase()).replace(/\//g, "");
+                        inputElement.value = name;
+                        document.getElementById("personHeader").innerHTML = name;
                     }
                     if (inputName == "BIRT.DATE.nfValue") {
                           NodeFamily.form.fillDatePhrase("BIRT.DATE", value);
@@ -1003,11 +990,6 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                         el.dispatchEvent(new Event('change'));
                         _formSection.querySelector("#isBURI").value = value;
                     }
-//                    if (inputName == "BURI.PLAC.nfValue") {
-//                        const el = _form['BURI.nfValue'];
-//                        el.value = "";
-//                        el.dispatchEvent(new Event('change'));
-//                    }
                     if (inputName == "SEX.nfValue") {
                         _formSection.querySelector("#SEX").value = value;
                         _formSection.querySelector("#SEX").classList.add("active");
@@ -1046,7 +1028,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                 }
             } else if (!Array.isArray(value)) {
                 fillData(value, inputName);
-            } else {//if (key != "FAMC" && key != "FAMS"){
+            } else {
                 for (let i = 0; i < value.length; i++) {
                     fillData(value[i], inputName + "." + i);
                 }
@@ -1204,42 +1186,28 @@ NodeFamily.form.changeDate = function(dateName) {
 NodeFamily.form.fillPhoto = function(prefix, dataKey, value) {
     if (dataKey == "OBJE.0.FILE.nfValue") {
         const photoInput = document.getElementById(prefix + "File");
-//        photoInput.setAttribute("disabled", true);
-//        photoInput.setAttribute("readonly", true);
         photoInput.style.display = "none";
         const photoInputColl = document.getElementById(prefix + "FileColl");
-//        photoInputColl.removeAttribute("disabled");
-//        photoInputColl.removeAttribute("readonly");
         photoInputColl.style.display = "";
     }
     if (dataKey == "OBJE.FILE.nfValue") {
         const photoInput = document.getElementById(prefix + "File");
-//        photoInput.removeAttribute("disabled");
-//        photoInput.removeAttribute("readonly");
         photoInput.style.display = "";
         const photoInputColl = document.getElementById(prefix + "FileColl");
-//        photoInputColl.setAttribute("disabled", true);
-//        photoInputColl.setAttribute("readonly", true);
         photoInputColl.style.display = "none";
+        const icon = document.querySelector("#editForm figure i");
+        icon.style.display = "none";
     }
     if (dataKey == "OBJE.0.TITL.nfValue") {
         const photoCaptionInput = document.getElementById(prefix + "Titl");
-//        photoCaptionInput.setAttribute("disabled", true);
-//        photoCaptionInput.setAttribute("readonly", true);
         photoCaptionInput.style.display = "none";
         const photoCaptionInputColl = document.getElementById(prefix + "TitlColl");
-//        photoCaptionInputColl.removeAttribute("disabled");
-//        photoCaptionInputColl.removeAttribute("readonly");
         photoCaptionInputColl.style.display = "";
     }
     if (dataKey == "OBJE.TITL.nfValue") {
         const photoCaptionInputColl = document.getElementById(prefix + "TitlColl");
-//        photoCaptionInputColl.setAttribute("disabled", true);
-//        photoCaptionInputColl.setAttribute("readonly", true);
         photoCaptionInputColl.style.display = "none";
         const photoCaptionInput = document.getElementById(prefix + "Titl");
-//        photoCaptionInput.removeAttribute("disabled");
-//        photoCaptionInput.removeAttribute("readonly");
         photoCaptionInput.style.display = "";
     }
     const inputElement = document.querySelector("input[name='" + dataKey + "']");
@@ -1249,6 +1217,7 @@ NodeFamily.form.fillPhoto = function(prefix, dataKey, value) {
             if (!document.getElementById(value)) {
                 const img = document.createElement("img");
                 img.setAttribute("src", value);
+                img.setAttribute("onerror", "this.src = ''")
                 img.setAttribute("id", value);
                 document.body.appendChild(img);
             }
@@ -1259,7 +1228,6 @@ NodeFamily.form.fillPhoto = function(prefix, dataKey, value) {
             const caption = document.querySelector("#" + prefix + " figcaption");
             const img = document.querySelector("#" + prefix + ' img');
             if (img) {
-//                img.setAttribute("alt", value);
                 caption.innerHTML = value;
             }
         }
@@ -1368,6 +1336,8 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
         }
         const img = _formSection.querySelector('figure img');
         img.style.display = "none";
+        const icon = _formSection.querySelector('figure i');
+        icon.style.display = "block";
         const caption = _formSection.querySelector('figure figcaption');
         caption.innerHTML = "";
         const wifeName = _formSection.querySelector("#wifeName");
@@ -1399,14 +1369,17 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                     NodeFamily.form.fillPhoto("photoFamily", inputName, value);
                     inputElement.value = value;
                     inputElement.classList.add("active");
+                    const header = document.getElementById("familyHeader");
                     if (inputName == "HUSB.nfValue") {
                         const husbandName = _formSection.querySelector('#husbandName')
+                        header.innerHTML = _presenter.getName(value);
                         husbandName.innerHTML = _presenter.getName(value);
                         husbandName.classList.add("filled")
                         husbandName.setAttribute("data-id", value);
                     }
                     if (inputName == "WIFE.nfValue") {
                         const wifeName = _formSection.querySelector('#wifeName')
+                        header.innerHTML = header.innerHTML + " & " + _presenter.getName(value);
                         wifeName.innerHTML = _presenter.getName(value);
                         wifeName.classList.add("filled");
                         wifeName.setAttribute("data-id", value);
@@ -1447,7 +1420,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                 }
             } else if (!Array.isArray(value)) {
                 fillData(value, inputName);
-            } else {  // if (key != "CHIL"){
+            } else {
                 for (let i = 0; i < value.length; i++) {
                     fillData(value, inputName);
                 }
@@ -1682,7 +1655,6 @@ NodeFamily.Tree = function() {
                     node.label += " " + value.BIRT.PLAC[NF_VALUE];
                 }
                 if (value.DEAT) {
-                    // &#xf4d6
                     node.label += "<br/><span class='' style=\"font-family:'font-awesome'\">&#xf4d6</span>";
                 }
                 if (value.DEAT && value.DEAT.DATE) {

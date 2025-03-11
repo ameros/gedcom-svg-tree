@@ -56,7 +56,7 @@ fieldset {
     background: var(--filling3);
     color: var(--on-filling3);
 }
-#editForm::before, #editFamilyForm::before, #exportForm::before, #personList::before {
+#editFamilyForm::before, #exportForm::before, #personList::before {
     color: var(--secondary);
     opacity: 40%;
 }
@@ -76,6 +76,9 @@ h1 {
 }
 .R#credits h2, .B h3 {
     color: 	var(--secondary);
+}
+#editForm h3, #editFamilyForm h3 {
+    color: 	var(--on-filling3);
 }
 #footer, #footer a.home {
     color: #ccc;
@@ -155,7 +158,7 @@ input:hover, select:disabled:hover, #personList ul li:hover, textarea:hover, #ex
     background-color: var(--on-primary);
     border-radius: 1em;
 }
-#editForm h3, #exportForm h3, #editFamilyForm h3, #personList h3 {
+#exportForm h3, #personList h3 {
     text-transform: uppercase;
     opacity: 60%;
 }
