@@ -137,11 +137,6 @@ input[type="search"] {
     border: 1px solid var(--outline);
     color: var(--on-filling);
 }
-#personList input[type="search"], #exportForm input {
-    background-color: var(--filling);
-    border: 0px;
-    color: var(--on-filling);
-}
 .legend {
     background-color: var(--filling3);
 }
