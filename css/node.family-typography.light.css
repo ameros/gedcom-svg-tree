@@ -45,6 +45,9 @@ text {
 h1, h2, h3, .R#credits, .R#credits h2, figcaption, .label, .B h3, .enhanced .B, div.buttonsWrapper, #aboutPage h1, #aboutPage h2  {
     text-align: center;
 }
+#editForm h3, #editFamilyForm h3 {
+    font-weight: bolder;
+}
 #header .C.C1, #footer .C.C3:first-child  {
     text-align: center;
 }
@@ -147,9 +150,6 @@ svg {
     padding-top: 0.5em;
     padding-left: 0.5em;
 }
-#personList::before {
-    content: "\f0c0";
-}
 #people::before {
     content: "\f002";
 }
@@ -159,9 +159,6 @@ svg {
     text-align: center;
     width: 100%;
     line-height: 1.2em;
-}
-#exportForm::before {
-    content: "\f019";
 }
 input[type=text], textarea, select:disabled {
     font-size: 1.2em;
@@ -211,4 +208,7 @@ form label, legend {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: '\f07c';
+}
+.fa-user::before, .fa-user-friends::before {
+    font-size: 10em;
 }

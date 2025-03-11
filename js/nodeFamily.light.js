@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.3 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.4 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1369,17 +1369,14 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                     NodeFamily.form.fillPhoto("photoFamily", inputName, value);
                     inputElement.value = value;
                     inputElement.classList.add("active");
-                    const header = document.getElementById("familyHeader");
                     if (inputName == "HUSB.nfValue") {
-                        const husbandName = _formSection.querySelector('#husbandName')
-                        header.innerHTML = _presenter.getName(value);
+                        const husbandName = _formSection.querySelector('#husbandName');
                         husbandName.innerHTML = _presenter.getName(value);
                         husbandName.classList.add("filled")
                         husbandName.setAttribute("data-id", value);
                     }
                     if (inputName == "WIFE.nfValue") {
-                        const wifeName = _formSection.querySelector('#wifeName')
-                        header.innerHTML = header.innerHTML + " & " + _presenter.getName(value);
+                        const wifeName = _formSection.querySelector('#wifeName');
                         wifeName.innerHTML = _presenter.getName(value);
                         wifeName.classList.add("filled");
                         wifeName.setAttribute("data-id", value);
@@ -1431,6 +1428,16 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
     this.fill = function(id, personNode) {
         _form["id"].value = id;
         fillData(personNode);
+        const header = document.getElementById("familyHeader");
+        if (personNode.WIFE) {
+            header.innerHTML = _presenter.getName(personNode.WIFE[NF_VALUE]);
+        }
+        if (personNode.WIFE && personNode.HUSB) {
+            header.innerHTML = header.innerHTML + "<br/>&<br/>";
+        }
+        if (personNode.HUSB) {
+            header.innerHTML = header.innerHTML + _presenter.getName(personNode.HUSB[NF_VALUE]);
+        }
     }
 }
 

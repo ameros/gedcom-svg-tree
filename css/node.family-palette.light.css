@@ -6,7 +6,7 @@
   --filling: #fff;
   --on-filling: #1f2328;
   --filling2: linear-gradient(65deg, rgb(234, 250, 255) 0%, rgb(255, 248, 248) 100%);
-  --filling3: linear-gradient(65deg, #ecf2b1 0%, #e4f2b1 100%);
+  --filling3: #ecf2b1;
   --on-filling3: #1f2328;
   --info-male: #99e6ff;
   --info-female: #ffaaa6;
@@ -53,8 +53,9 @@ fieldset {
     border: 1px dashed var(--on-primary);
 }
 #editForm, #exportForm, #editFamilyForm, #personList {
-    background: var(--filling3);
-    color: var(--on-filling3);
+    background: var(--filling);
+    color: var(--on-filling);
+    box-shadow: 0px 0px 6px 0px var(--shadow);
 }
 #editFamilyForm::before, #exportForm::before, #personList::before {
     color: var(--secondary);
@@ -160,7 +161,6 @@ input:hover, select:disabled:hover, #personList ul li:hover, textarea:hover, #ex
 }
 #exportForm h3, #personList h3 {
     text-transform: uppercase;
-    opacity: 60%;
 }
 .fa-tags {
     color: var(--secondary);
@@ -193,6 +193,9 @@ input:read-only:focus {
     scrollbar-color: #ddd var(--filling);
  }
 figure img {
-    box-shadow: 0px 0px 10px 5px #fff;
     border-radius: 1em;
+    border: 1px solid #eee;
+}
+.fa-user::before, .fa-user-friends::before {
+    color: var(--filling3);
 }
