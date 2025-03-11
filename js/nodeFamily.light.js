@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.4 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.5 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -923,11 +923,11 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         while (fieldset.children.length > 1) {
             fieldset.removeChild(fieldset.children[1]);
         }
-        const img = _formSection.querySelector('figure img');
+        const img = _formSection.querySelector('#photo img');
         img.style.display = "none";
-        const icon = _formSection.querySelector('figure i');
+        const icon = _formSection.querySelector('#photo i');
         icon.style.display = "block";
-        const caption = _formSection.querySelector('figure figcaption');
+        const caption = _formSection.querySelector('#photo figcaption');
         caption.innerHTML = "";
         _formSection.querySelector("#submitterName").innerHTML = "";
         const familyName = _formSection.querySelector("#familyName");
@@ -1195,8 +1195,10 @@ NodeFamily.form.fillPhoto = function(prefix, dataKey, value) {
         photoInput.style.display = "";
         const photoInputColl = document.getElementById(prefix + "FileColl");
         photoInputColl.style.display = "none";
-        const icon = document.querySelector("#editForm figure i");
-        icon.style.display = "none";
+        const icon = document.querySelector("#" + prefix + " i");
+        if (icon) {
+            icon.style.display = "none";
+        }
     }
     if (dataKey == "OBJE.0.TITL.nfValue") {
         const photoCaptionInput = document.getElementById(prefix + "Titl");
@@ -1334,11 +1336,11 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
         while (fieldset.children.length > 1) {
             fieldset.removeChild(fieldset.children[1]);
         }
-        const img = _formSection.querySelector('figure img');
+        const img = _formSection.querySelector('#photoFamily img');
         img.style.display = "none";
-        const icon = _formSection.querySelector('figure i');
+        const icon = _formSection.querySelector('#photoFamily i');
         icon.style.display = "block";
-        const caption = _formSection.querySelector('figure figcaption');
+        const caption = _formSection.querySelector('#photoFamily figcaption');
         caption.innerHTML = "";
         const wifeName = _formSection.querySelector("#wifeName");
         wifeName.innerHTML = "";
