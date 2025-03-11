@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.5 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.6 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1431,15 +1431,17 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
         _form["id"].value = id;
         fillData(personNode);
         const header = document.getElementById("familyHeader");
+        let names = "";
         if (personNode.WIFE) {
-            header.innerHTML = _presenter.getName(personNode.WIFE[NF_VALUE]);
+            names = names + _presenter.getName(personNode.WIFE[NF_VALUE]);
         }
         if (personNode.WIFE && personNode.HUSB) {
-            header.innerHTML = header.innerHTML + "<br/>&<br/>";
+            names = names + "<br/>&<br/>";
         }
         if (personNode.HUSB) {
-            header.innerHTML = header.innerHTML + _presenter.getName(personNode.HUSB[NF_VALUE]);
+            names = names + _presenter.getName(personNode.HUSB[NF_VALUE]);
         }
+        header.innerHTML = names;
     }
 }
 
