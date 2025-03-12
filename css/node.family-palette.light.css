@@ -132,7 +132,7 @@ input:checked + .slider {
     stroke: var(--outline);
     fill: var(--outline);
 }
-input[type="search"] {
+input[type="search"], #exportForm input {
     background-color: var(--filling);
     border: 1px solid var(--outline);
     color: var(--on-filling);
