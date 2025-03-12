@@ -973,7 +973,8 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                     if (inputName == "WWW.nfValue" && value && value.trim() != "") {
                         const wwwLink = _formSection.querySelector('#personWww');
                         wwwLink.setAttribute("href", value);
-                        wwwLink.innerHTML =  value.slice(0,35) + "(...)";
+                        const name = value.length > 34 ? value.slice(0,35) + "(...)" : value;
+                        wwwLink.innerHTML =  name;
                     }
                     if (inputName == "DEAT.nfValue") {
                         const el = _form['DEAT.nfValue'];
