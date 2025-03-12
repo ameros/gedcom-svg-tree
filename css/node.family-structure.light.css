@@ -322,6 +322,9 @@ aside input.active, aside textarea.active, aside select.active {
     text-align: right;
     padding: 1%;
 }
+#exportForm form label{
+    text-align: left;
+}
 .R.workspace .C {
     max-height: 100%;
     overflow: auto;
