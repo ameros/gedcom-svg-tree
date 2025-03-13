@@ -96,10 +96,13 @@
   "saveBack":  "&#9758 w końcu, zachowaj drzewo jako obrazek web (.SVG) lub pod arkusz kalkulacyjny (.TSV)",
   "no": "nie",
   "yes": "tak",
+  "SOUR": "Źródło:",
   "BIRT.SOUR": "Narodziny (źródło):",
   "BURI.SOUR": "Pochówek (źródło):",
   "DEAT.SOUR": "Śmierć (źródło):",
   "DEAT.CAUS": "Przyczyna śmierci:",
   "DEAT.AGE": "Śmierć (wiek):",
-  "MARR.SOUR": "Ślub (źródło):"
+  "MARR.SOUR": "Ślub (źródło):",
+  "MARR.HUSB.AGE": "Wiek męża:",
+  "MARR.WIFE.AGE": "Wiek żony:"
 }

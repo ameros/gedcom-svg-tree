@@ -95,10 +95,13 @@
   "saveBack":  "&#9758 finally, save a tree back as a web image (.SVG) or for spreadsheet (.TSV)",
   "no": "no",
   "yes": "yes",
+  "SOUR": "Source:",
   "BIRT.SOUR": "Birth source:",
   "BURI.SOUR": "Burial source:",
   "DEAT.SOUR": "Death source:",
   "DEAT.CAUS": "Death cause:",
   "DEAT.AGE": "Death age:",
-  "MARR.SOUR": "Marriage source:"
+  "MARR.SOUR": "Marriage source:",
+  "MARR.HUSB.AGE": "Husband age:",
+  "MARR.WIFE.AGE": "Wife age:"
 }
