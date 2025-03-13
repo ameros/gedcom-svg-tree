@@ -103,5 +103,6 @@
   "DEAT.AGE": "Death age:",
   "MARR.SOUR": "Marriage source:",
   "MARR.HUSB.AGE": "Husband age:",
-  "MARR.WIFE.AGE": "Wife age:"
+  "MARR.WIFE.AGE": "Wife age:",
+  "OBJE.FILE.FORM": "File extension:"
 }
