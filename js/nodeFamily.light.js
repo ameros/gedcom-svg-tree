@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.6 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.7 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -394,6 +394,13 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
     this.getName = function(id) {
         if (_familyData[id] && _familyData[id].NAME) {
             return _familyData[id].NAME[NF_VALUE].replace(/\//g, " ");
+        }
+        return "";
+    }
+
+    this.getSource = function(id) {
+        if (_familyData[id] && _familyData[id].OBJE && _familyData[id].OBJE.TITL) {
+            return _familyData[id].OBJE.TITL[NF_VALUE];
         }
         return "";
     }
@@ -1016,14 +1023,23 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                         _formSection.querySelector('#spouses').appendChild(div);
                     } else {
                         let label = document.createElement("label");
-                        label.innerHTML = inputName.replace(".nfValue", "");
+                        let labelValue = inputName.replace(".nfValue", "");
+                        if (dict[labelValue]) {
+                            labelValue = dict[labelValue];
+                        }
+                        label.innerHTML = labelValue;
                         _formSection.querySelector('#extraGedcomFields').appendChild(label);
                         let extraInput = document.createElement("textarea");
                         extraInput.setAttribute("readonly", "");
                         extraInput.setAttribute("type", "text");
                         extraInput.setAttribute("name", inputName);
                         extraInput.setAttribute("class", "active");
-                        extraInput.value = value;
+                        let val = value;
+                        if (val.includes("@")) {
+                            const sour = _presenter.getSource(val.replaceAll("@", ""));
+                            val = val + " (" + sour + ")";
+                        }
+                        extraInput.value = val;
                         _formSection.querySelector('#extraGedcomFields').appendChild(extraInput);
                     }
                 }
@@ -1407,14 +1423,23 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                         _formSection.querySelector('#children').appendChild(div);
                     } else {
                         let label = document.createElement("label");
-                        label.innerHTML = inputName.replace(".nfValue", "");
+                        let labelValue = inputName.replace(".nfValue", "");
+                        if (dict[labelValue]) {
+                            labelValue = dict[labelValue];
+                        }
+                        label.innerHTML = labelValue;
                         _formSection.querySelector('#extraFamilyFields').appendChild(label);
                         let extraInput = document.createElement("input");
                         extraInput.setAttribute("type", "text");
                         extraInput.setAttribute("name", inputName);
                         extraInput.setAttribute("class", "active");
                         extraInput.setAttribute("disabled", "");
-                        extraInput.value = value;
+                        let val = value;
+                        if (val.includes("@")) {
+                            const sour = _presenter.getSource(val.replaceAll("@", ""));
+                            val = val + " (" + sour + ")";
+                        }
+                        extraInput.value = val;
                         _formSection.querySelector('#extraFamilyFields').appendChild(extraInput);
                     }
                 }

@@ -95,5 +95,11 @@
   "useOptions":  "&#9758 wykorzystuj opcje z górnego paska by na przykład znaleźć osobę lub zmienić kontekst widoku",
   "saveBack":  "&#9758 w końcu, zachowaj drzewo jako obrazek web (.SVG) lub pod arkusz kalkulacyjny (.TSV)",
   "no": "nie",
-  "yes": "tak"
+  "yes": "tak",
+  "BIRT.SOUR": "Narodziny (źródło):",
+  "BURI.SOUR": "Pochówek (źródło):",
+  "DEAT.SOUR": "Śmierć (źródło):",
+  "DEAT.CAUS": "Przyczyna śmierci:",
+  "DEAT.AGE": "Śmierć (wiek):",
+  "MARR.SOUR": "Ślub (źródło):"
 }
