@@ -106,5 +106,9 @@
   "MARR.HUSB.AGE": "Wiek męża:",
   "MARR.WIFE.AGE": "Wiek żony:",
   "OBJE.FILE.FORM": "Typ pliku:",
-  "EDUC": "Wykształcenie:"
+  "EDUC": "Wykształcenie:",
+  "FACT": "Fakt:",
+  "FACT.TYPE": "Rodzaj faktu:",
+  "FACT.DATE": "Data faktu:",
+  "FACT.SOUR": "Źródło faktu:"
 }

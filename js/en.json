@@ -105,5 +105,9 @@
   "MARR.HUSB.AGE": "Husband age:",
   "MARR.WIFE.AGE": "Wife age:",
   "OBJE.FILE.FORM": "File extension:",
-  "EDUC": "Education:"
+  "EDUC": "Education:",
+  "FACT": "Fact:",
+  "FACT.TYPE": "Kind of fact:",
+  "FACT.DATE": "Date of fact:",
+  "FACT.SOUR": "Source of fact:"
 }

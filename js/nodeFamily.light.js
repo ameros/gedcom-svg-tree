@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.7 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.8 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -399,8 +399,13 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
     }
 
     this.getSource = function(id) {
-        if (_familyData[id] && _familyData[id].OBJE && _familyData[id].OBJE.TITL) {
-            return _familyData[id].OBJE.TITL[NF_VALUE];
+        if (_familyData[id]) {
+            if (_familyData[id].TITL) {
+                return _familyData[id].TITL[NF_VALUE];
+            }
+            if (_familyData[id].OBJE && _familyData[id].OBJE.TITL) {
+                return _familyData[id].OBJE.TITL[NF_VALUE];
+            }
         }
         return "";
     }
@@ -1026,6 +1031,11 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                         let labelValue = inputName.replace(".nfValue", "");
                         if (dict[labelValue]) {
                             labelValue = dict[labelValue];
+                        } else {
+                            const collLabel = labelValue.replace(/.\d/g, "")
+                            if (dict[collLabel]) {
+                                labelValue = dict[collLabel];
+                            }
                         }
                         label.innerHTML = labelValue;
                         _formSection.querySelector('#extraGedcomFields').appendChild(label);
