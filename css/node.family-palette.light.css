@@ -96,6 +96,9 @@ select {
 .button label.icon {
     opacity: 60%;
 }
+.button label.icon:hover {
+    opacity: 100%;
+}
 input, textarea, select:disabled {
     background-color: transparent;
 }
