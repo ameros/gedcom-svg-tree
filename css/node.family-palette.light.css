@@ -15,7 +15,7 @@
   --outline: #eee;
   --shadow: #b3aca78c;
 }
-a, a:hover, a:visited, .fa-times::before, .switch.active:before, .button label.icon:hover, #gedcomFileLabel, #familyName.filled, #husbandName.filled, #wifeName.filled, .spouse, .child {
+a, a:hover, a:visited, .fa-times::before, .switch.active:before, .button label.icon:hover, #gedcomFileLabel, #familyName.filled, #husbandName.filled, #wifeName.filled, .spouse, .child, #personList ul li:hover {
     color: var(--primary);
 }
 a.run, button, button:hover, .button a, .button label, .button a:hover, .button label:hover {
