@@ -165,42 +165,6 @@ p.logo {
     border-width: 0.1em;
     border-style: solid;
 }
-@media only screen and (max-width: 1023px) {
-   .R .S, .R .S .C.C1, .R .S .C.C2, .R .S .C.C3{
-      width: 100%;
-   }
-   #editForm.active, #exportForm.active, #editFamilyForm.active, #personList.active {
-        width: 93%;
-        position: absolute;
-        z-index: 1;
-    }
-    #header .C.C1 {
-      width: 40%;
-    }
-    #header .C.C2 {
-      width: 60%;
-    }
-    #toggleSearch {
-        display: inline-block;
-    }
-    .B#search {
-        display: none;
-    }
-    #header .C.C2 .B {
-      padding-top: 1em;
-    }
-}
-@media only screen and (orientation: portrait) {
-   .R .S, .R .S .C.C1, .R .S .C.C2, .R .S .C.C3{
-      width: 100%;
-   }
-    #header .C.C1 {
-      width: 25%;
-    }
-    #header .C.C2 {
-      width: 75%;
-    }
-}
 p {
     padding-left: 2em;
     padding-right: 2em;
@@ -356,4 +320,63 @@ fieldset {
 }
 #orientation {
     display: none;
+}
+#children div, #spouses div {
+    padding-left:22%;
+}
+#personWww {
+    vertical-align: sub;
+    padding-left: 0.4em;
+}
+#editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
+    position: absolute;
+    left: 31.3%;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+}
+#personList ul li {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+@media only screen and (max-width: 1023px) {
+   .R .S, .R .S .C.C1, .R .S .C.C2, .R .S .C.C3{
+      width: 100%;
+   }
+   #editForm.active, #exportForm.active, #editFamilyForm.active, #personList.active {
+        width: 93%;
+        position: absolute;
+        z-index: 1;
+    }
+    #header .C.C1 {
+      width: 40%;
+    }
+    #header .C.C2 {
+      width: 60%;
+    }
+    #toggleSearch {
+        display: inline-block;
+    }
+    .B#search {
+        display: none;
+    }
+    #header .C.C2 .B {
+      padding-top: 1em;
+    }
+}
+@media only screen and (orientation: portrait) {
+   .R .S, .R .S .C.C1, .R .S .C.C2, .R .S .C.C3{
+      width: 100%;
+   }
+    #header .C.C1 {
+      width: 25%;
+    }
+    #header .C.C2 {
+      width: 75%;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    #editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
+        right: 0;
+        left: 95%;
+    }
 }

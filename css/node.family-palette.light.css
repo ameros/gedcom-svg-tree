@@ -6,191 +6,117 @@
   --filling: #fff;
   --on-filling: #1f2328;
   --filling2: linear-gradient(65deg, rgb(234, 250, 255) 0%, rgb(255, 248, 248) 100%);
+  --on-filling2: #CCC8D3;
   --filling3: #ecf2b1;
   --on-filling3: #1f2328;
   --info-male: #99e6ff;
   --info-female: #ffaaa6;
   --info-family: #f9d700;
-  --outline: #CCC8D3;
+  --outline: #eee;
   --shadow: #b3aca78c;
 }
-a, a:hover, a:visited {
+a, a:hover, a:visited, .fa-times::before, .switch.active:before, .button label.icon:hover, #gedcomFileLabel, #familyName.filled, #husbandName.filled, #wifeName.filled, .spouse, .child {
     color: var(--primary);
 }
-a.run, .button label {
+a.run, button, button:hover, .button a, .button label, .button a:hover, .button label:hover {
     background-color: var(--primary);
-}
-button, .button a, .button label {
-    background-color: var(--primary);
+    color: var(--on-primary);
 }
 .tooltip .tooltiptext, #familyName ~ .tooltiptext {
-    background: var(--filling3);
     border: 1px solid var(--primary);
 }
 .node:hover rect, .node:hover circle {
     stroke: var(--primary) !important;
 }
-#editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
-    color: var(--primary);
+fieldset {
+    border: 1px dashed var(--on-primary);
 }
-.switch.active:before {
-    color: var(--primary);
+.R#credits h2, .B h3, .fa-tags {
+    color: 	var(--secondary);
 }
-body, #header a.home {
+h1 {
+    color: var(--accent);
+}
+input:hover, select:disabled:hover, #personList ul li:hover, textarea:hover, #exportForm input  {
+    background-color: var(--filling);
+    border-radius: 1em;
+}
+#editForm, #exportForm, #editFamilyForm, #personList, .R, .R#faq, #footer p.logo img, .R.enhanced, .slider:before, .button label.icon, input[type="search"], #exportForm input {
+    background-color: var(--filling);
     color: var(--on-filling);
 }
-.button a, .button label, button {
-    color: var(--on-primary);
+#header p.logo img, #footer p.logo img {
+    border-color: var(--filling);
 }
-#footer {
-    background-color: var(--on-filling);
+.R.workspace .C {
+    scrollbar-color: #ddd var(--filling);
+}
+body, #header a.home, input, textarea, select:disabled, #editForm h3, #editFamilyForm h3, input:read-only {
+    color: var(--on-filling);
 }
 .tooltip .tooltiptext::after {
     border-style: solid;
     border-color: transparent transparent var(--on-filling) transparent;
 }
-fieldset {
-    border: 1px dashed var(--on-primary);
-}
-#editForm, #exportForm, #editFamilyForm, #personList {
-    background: var(--filling);
-    color: var(--on-filling);
-    box-shadow: 0px 0px 6px 0px var(--shadow);
-}
-#editFamilyForm::before, #exportForm::before, #personList::before {
-    color: var(--secondary);
-    opacity: 40%;
-}
-.button a:hover, .button label:hover,   button:hover {
-    background-color: var(--primary);
-}
-.button label.icon:hover {
-    color: var(--primary);
-    opacity: 100%;
-}
-#gedcomFileLabel {
-    color: var(--primary);
-    opacity: 100%;
-}
-h1 {
-    color: var(--accent);
-}
-.R#credits h2, .B h3 {
-    color: 	var(--secondary);
-}
-#editForm h3, #editFamilyForm h3 {
-    color: 	var(--on-filling3);
-}
-#footer, #footer a.home {
-    color: #ccc;
-}
-#footer a:hover {
-    color: var(--primary);
-}
-#search a {
-    color: var(--primary);
-}
-
-.R, .R#faq, #footer p.logo img {
-    background-color: var(--filling);
-}
-
-.R#about, .R.mono {
-    background-color: var(--filling3);
-}
-.R#credits, .R#contactForm, .R#privacy-terms, svg {
-    background-color: transparent;
-}
 .R#content, .R#intro {
     background: var(--filling2);
-    background: linear-gradient(65deg, rgb(234, 250, 255) 0%, rgb(255, 248, 248) 100%);
-}
-
-.R.enhanced {
-    background-color: vae(--filling);
-}
-.slider:before {
-    background-color: var(--filling);
-}
-input:checked + .slider {
-    background-color: #ccc;
-}
-.button label.icon {
-    background-color: var(--filling);
-    color: var(--on-filling);
-    opacity: 60%;
-}
-#header {
-    position: relative;
-    box-shadow: 0 0 15px -4px var(--shadow);
-
-}
-#header p.logo img, #footer p.logo img {
-    border-color: var(--filling);
 }
 .edgePath path {
-    stroke: var(--outline);
-    fill: var(--outline);
+    stroke: var(--on-filling2);
+    fill: var(--on-filling2);
+}
+.tooltip .tooltiptext, #familyName ~ .tooltiptext, .legend {
+    background-color: var(--filling3);
+    color: var(--on-filling3);
+}
+.fa-user::before, .fa-user-friends::before {
+    color: var(--filling3);
+}
+figure img {
+    border-radius: 1em;
+    border: 1px solid var(--outline);
 }
 input[type="search"], #exportForm input {
-    background-color: var(--filling);
     border: 1px solid var(--outline);
-    color: var(--on-filling);
-}
-.legend {
-    background-color: var(--filling3);
-}
-#personList ul li {
-    border-bottom: 1px dashed var(--on-primary);
-}
-input, textarea {
-    border: 0px;
-}
-input:read-only {
-    color: var(--on-filling3);
-    border-bottom: 0;
-}
-input:hover, select:disabled:hover, #personList ul li:hover, textarea:hover, #exportForm input  {
-    background-color: var(--on-primary);
-    border-radius: 1em;
-}
-#exportForm h3, #personList h3 {
-    text-transform: uppercase;
-}
-.fa-tags {
-    color: var(--secondary);
-    opacity: 70%;
 }
 select {
     border-image: none;
     border: 1px solid var(--outline);
 }
-select:disabled {
-    border: 0px;
+#editForm, #exportForm, #editFamilyForm, #personList {
+    box-shadow: 0px 0px 6px 0px var(--shadow);
+}
+#header {
+    position: relative;
+    box-shadow: 0 0 15px -4px var(--shadow);
+}
+.fa-tags {
+    opacity: 70%;
+}
+.button label.icon {
+    opacity: 60%;
 }
 input, textarea, select:disabled {
     background-color: transparent;
-    color: var(--on-filling3);
+}
+#gedcomFileLabel {
+    opacity: 100%;
+}
+.R#credits, .R#contactForm, .R#privacy-terms, svg {
+    background-color: transparent;
+}
+input, textarea {
+    border: 0px;
+}
+input:read-only {
+    border-bottom: 0;
+}
+select:disabled {
+    border: 0px;
 }
 input:focus, select:focus {
     outline: none;
 }
 input:read-only:focus {
     border: 0;
-}
-.swal-button, .swal-button:not([disabled]):hover {
-    background-color: var(--primary);
-}
-#familyName.filled, #husbandName.filled, #wifeName.filled, .spouse, .child {
-    color: var(--primary);
-}
-.R.workspace .C {
-    scrollbar-color: #ddd var(--filling);
- }
-figure img {
-    border-radius: 1em;
-    border: 1px solid #eee;
-}
-.fa-user::before, .fa-user-friends::before {
-    color: var(--filling3);
 }
