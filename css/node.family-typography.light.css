@@ -1,11 +1,56 @@
+/* Typography
+--------------------------------- */
 body {
     font-family: "Poppins";
     font-size: 14px;
 }
-input[type=text], textarea, select:disabled {
-    font-size: 1.2em;
-    font-family: "Poppins";
+/* Typography => Paragraphs
+--------------------------------- */
+p.logo {
+    font-size: 2em;
+    text-transform: none;
 }
+p {
+    font-size:1.2em;
+    line-height:1.4em;
+}
+text {
+    font-size: 14px;
+}
+.legend p {
+    font-size: smaller;
+}
+/* Typography => Anchors
+--------------------------------- */
+a, a:hover, a:visited, .button a, .button label {
+    text-decoration:none;
+}
+/* Typography => Headings
+--------------------------------- */
+body, h1, h2, text, .B h3, h4 {
+    font-weight: 300;
+}
+h1 {
+    font-size: 3em;
+}
+h2, .B h2, .B h3 {
+    font-size: 1.5em;
+    text-transform: none;
+}
+h4 {
+    font-size: 1.5em;
+}
+h1, h2, h3, figcaption, .label, .B h3, div.buttonsWrapper  {
+    text-align: center;
+}
+#editForm h3, #editFamilyForm h3 {
+    font-weight: bolder;
+}
+#exportForm h3, #personList h3 {
+    text-transform: uppercase;
+}
+/* Typography => Divisions
+--------------------------------- */
 #toggleForm:before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
@@ -57,54 +102,34 @@ input[type=text], textarea, select:disabled {
 .logo::after {
     content: 'Gedcom SVG Tree';
 }
-body, h1, h2, text, .B h3, h4 {
-    font-weight: 300;
-}
-h1 {
-    font-size: 3em;
-}
-h2, .B h2, .B h3 {
-    font-size: 1.5em;
-    text-transform: none;
-}
-p.logo {
-    font-size: 2em;
-    text-transform: none;
-}
-h4 {
-    font-size: 1.5em;
-}
-p {
-    font-size:1.2em;
-    line-height:1.4em;
-}
-text {
-    font-size: 14px;
-}
-h1, h2, h3, figcaption, .label, .B h3, div.buttonsWrapper  {
-    text-align: center;
-}
-#editForm h3, #editFamilyForm h3 {
-    font-weight: bolder;
-}
 #header .C.C1  {
     text-align: center;
 }
 #header .C.C2 {
     text-align: right;
 }
-button {
-    font-size: 1em;
+svg {
+    cursor: zoom-in;
 }
-form button {
-    text-align: center;
+#husbandName, #wifeName, #familyName, #spouses legend, #children legend, .spouse, .child {
+    cursor: pointer;
 }
-a, a:hover, a:visited, .button a, .button label {
-    text-decoration:none;
+#editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
+    cursor: pointer;
 }
+.fa-user::before, .fa-user-friends::before {
+    font-size: 10em;
+}
+/* Typography => Lists
+--------------------------------- */
 ul {
     list-style: none;
 }
+#personList ul li {
+    cursor: pointer;
+}
+/* Typography => Images
+--------------------------------- */
 #header p.logo img {
     vertical-align: top;
 }
@@ -112,6 +137,15 @@ h1 img {
     vertical-align: bottom;
     margin-right: 0.3em;
 }
+#editForm figure figcaption {
+    font-style: italic;
+    font-size: smaller;
+    text-align: center;
+    width: 100%;
+    line-height: 1.2em;
+}
+/* Typography => Cursors
+--------------------------------- */
 .wait {
     cursor: wait;
 }
@@ -124,36 +158,20 @@ h1 img {
 .contextMenu {
     cursor: context-menu;
 }
-svg {
-    cursor: zoom-in;
+/* Typography => Forms
+--------------------------------- */
+input[type=text], textarea, select:disabled {
+    font-size: 1.2em;
+    font-family: "Poppins";
 }
-#husbandName, #wifeName, #familyName, #spouses legend, #children legend, .spouse, .child {
-    cursor: pointer;
+button {
+    font-size: 1em;
 }
-#editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
-    cursor: pointer;
-}
-#editForm figure figcaption {
-    font-style: italic;
-    font-size: smaller;
+form button {
     text-align: center;
-    width: 100%;
-    line-height: 1.2em;
 }
 form label, legend {
     font-size: 0.75em;
-}
-#personList ul li {
-    cursor: pointer;
-}
-.legend p {
-    font-size: smaller;
-}
-.fa-user::before, .fa-user-friends::before {
-    font-size: 10em;
-}
-#exportForm h3, #personList h3 {
-    text-transform: uppercase;
 }
 @media only screen and (orientation: portrait) {
     .logo::after {
