@@ -71,32 +71,23 @@ p.logo {
     font-size: 2em;
     text-transform: none;
 }
-h4, .R#about h2, .enhanced ul {
+h4 {
     font-size: 1.5em;
 }
-p, #footer {
+p {
     font-size:1.2em;
     line-height:1.4em;
-}
-#footer p.logo {
-    font-size: 1em;
-}
-h1 sup, #copyright {
-    font-size: 0.6em;
 }
 text {
     font-size: 14px;
 }
-.R#faq, .R#about, .R#contactForm, #faq h3, #footer {
-    text-align: left;
-}
-h1, h2, h3, .R#credits, .R#credits h2, figcaption, .label, .B h3, .enhanced .B, div.buttonsWrapper, #aboutPage h1, #aboutPage h2  {
+h1, h2, h3, figcaption, .label, .B h3, div.buttonsWrapper  {
     text-align: center;
 }
 #editForm h3, #editFamilyForm h3 {
     font-weight: bolder;
 }
-#header .C.C1, #footer .C.C3:first-child  {
+#header .C.C1  {
     text-align: center;
 }
 #header .C.C2 {
@@ -108,19 +99,13 @@ button {
 form button {
     text-align: center;
 }
-a, a:hover, a:visited, .button a, .button label, #footer a:hover {
+a, a:hover, a:visited, .button a, .button label {
     text-decoration:none;
 }
 ul {
     list-style: none;
 }
-#faq ul {
-    list-style: inside circle;
-}
 #header p.logo img {
-    vertical-align: top;
-}
-#footer p.logo img {
     vertical-align: top;
 }
 h1 img {

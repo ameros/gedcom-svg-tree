@@ -13,21 +13,6 @@ h1 img {
 .R#header {
     padding-bottom: 1em;
 }
-.R#about h1 {
-    padding: 0;
-}
-.R#credits {
-    height: auto;
-}
-.R#credits .C.C1 {
-    padding-top:0;
-}
-#footer {
-    height: auto;
-}
-#copyright {
-    padding-top: 3em;
-}
 figure {
   display: inline-block;
   vertical-align: top;
@@ -141,7 +126,6 @@ ul {
 .R .S {
     height: 100%;
 }
-
 .R.enhanced {
     line-height: 1.75em;
 }
@@ -154,16 +138,6 @@ p.logo {
 }
 #header p.logo img {
     height: 38px;
-}
-#footer p.logo {
-    padding-top: 1.9em;
-}
-#footer p.logo img {
-    width: 23px;
-    border-radius:15px;
-    vertical-align:bottom;
-    border-width: 0.1em;
-    border-style: solid;
 }
 p {
     padding-left: 2em;
@@ -178,19 +152,6 @@ div.buttonsWrapper .button {
 }
 #gedcom .C .B .button {
     display: inline-flex;
-}
-#about .C.C2:first-child {
-    width: 30%;
-}
-#about .C.C2:nth-child(2) {
-    width: 70%;
-}
-#aboutPage h1, #aboutPage h2 {
-    padding-left:0px;
-    padding-right:0px;
-}
-#contactForm .C.C1 {
-    width: 100%;
 }
 .switch {
   position: relative;

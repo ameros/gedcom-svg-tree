@@ -15,7 +15,12 @@
   --outline: #eee;
   --shadow: #b3aca78c;
 }
-a, a:hover, a:visited, .fa-times::before, .switch.active:before, .button label.icon:hover, #gedcomFileLabel, #familyName.filled, #husbandName.filled, #wifeName.filled, .spouse, .child, #personList ul li:hover {
+a, a:hover, a:visited, .fa-times::before,
+.switch.active:before,
+.button label.icon:hover,
+#gedcomFileLabel,
+.filled, .spouse, .child,
+#personList ul li:hover {
     color: var(--primary);
 }
 a.run, button, button:hover, .button a, .button label, .button a:hover, .button label:hover {
@@ -41,11 +46,11 @@ input:hover, select:disabled:hover, #personList ul li:hover, textarea:hover, #ex
     background-color: var(--filling);
     border-radius: 1em;
 }
-#editForm, #exportForm, #editFamilyForm, #personList, .R, .R#faq, #footer p.logo img, .R.enhanced, .slider:before, .button label.icon, input[type="search"], #exportForm input {
+#editForm, #exportForm, #editFamilyForm, #personList, .R, .slider:before, .button label.icon, input[type="search"], #exportForm input {
     background-color: var(--filling);
     color: var(--on-filling);
 }
-#header p.logo img, #footer p.logo img {
+#header p.logo img {
     border-color: var(--filling);
 }
 .R.workspace .C {
