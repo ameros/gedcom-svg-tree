@@ -1,3 +1,5 @@
+/* Palette
+--------------------------------- */
 :root {
   --primary: #5ea40c;
   --on-primary: #fff;
@@ -15,71 +17,62 @@
   --outline: #eee;
   --shadow: #b3aca78c;
 }
-a, a:hover, a:visited, .fa-times::before,
-.switch.active:before,
-.button label.icon:hover,
-#gedcomFileLabel,
-.filled, .spouse, .child,
-#personList ul li:hover {
+body {
+    color: var(--on-filling);
+}
+/* Palette => Paragraphs
+--------------------------------- */
+
+/* Palette => Anchors
+--------------------------------- */
+a, a:hover, a:visited {
     color: var(--primary);
 }
-a.run, button, button:hover, .button a, .button label, .button a:hover, .button label:hover {
+.button a, .button a:hover {
     background-color: var(--primary);
     color: var(--on-primary);
 }
-.tooltip .tooltiptext, #familyName ~ .tooltiptext {
-    border: 1px solid var(--primary);
+#header a.home {
+    color: var(--on-filling);
 }
-.node:hover rect, .node:hover circle {
-    stroke: var(--primary) !important;
-}
-fieldset {
-    border: 1px dashed var(--on-primary);
-}
-.R#credits h2, .B h3, .fa-tags {
-    color: 	var(--secondary);
-}
+/* Palette => Headings
+--------------------------------- */
 h1 {
     color: var(--accent);
 }
-input:hover, select:disabled:hover, #personList ul li:hover, textarea:hover, #exportForm input  {
-    background-color: var(--filling);
-    border-radius: 1em;
+.B h3 {
+    color: 	var(--secondary);
 }
-#editForm, #exportForm, #editFamilyForm, #personList, .R, .slider:before, .button label.icon, input[type="search"], #exportForm input {
-    background-color: var(--filling);
+#editForm h3, #editFamilyForm h3 {
     color: var(--on-filling);
 }
+/* Palette => Lists
+--------------------------------- */
+#personList ul li:hover {
+    color: var(--primary);
+}
+/* Palette => Images
+--------------------------------- */
 #header p.logo img {
     border-color: var(--filling);
-}
-.R.workspace .C {
-    scrollbar-color: #ddd var(--filling);
-}
-body, #header a.home, input, textarea, select:disabled, #editForm h3, #editFamilyForm h3, input:read-only {
-    color: var(--on-filling);
-}
-.tooltip .tooltiptext::after {
-    border-style: solid;
-    border-color: transparent transparent var(--on-filling) transparent;
-}
-.R#content, .R#intro {
-    background: var(--filling2);
-}
-.edgePath path {
-    stroke: var(--on-filling2);
-    fill: var(--on-filling2);
-}
-.tooltip .tooltiptext, #familyName ~ .tooltiptext, .legend {
-    background-color: var(--filling3);
-    color: var(--on-filling3);
-}
-.fa-user::before, .fa-user-friends::before {
-    color: var(--filling3);
 }
 figure img {
     border-radius: 1em;
     border: 1px solid var(--outline);
+}
+/* Palette => Forms
+--------------------------------- */
+fieldset {
+    border: 1px dashed var(--on-primary);
+}
+#exportForm input  {
+    background-color: var(--filling);
+    border-radius: 1em;
+}
+input, textarea, select:disabled, input:read-only {
+    background-color: transparent;
+    color: var(--on-filling);
+    border: 0px;
 }
 input[type="search"], #exportForm input {
     border: 1px solid var(--outline);
@@ -88,43 +81,76 @@ select {
     border-image: none;
     border: 1px solid var(--outline);
 }
-#editForm, #exportForm, #editFamilyForm, #personList {
-    box-shadow: 0px 0px 6px 0px var(--shadow);
+input:focus, select:focus, textarea:focus {
+    outline: none;
 }
-#header {
-    position: relative;
-    box-shadow: 0 0 15px -4px var(--shadow);
+button, button:hover, .button label, .button label:hover {
+    background-color: var(--primary);
+    color: var(--on-primary);
 }
-.fa-tags {
-    opacity: 70%;
+.button label.icon, input[type="search"] {
+    background-color: var(--filling);
+    color: var(--on-filling);
 }
 .button label.icon {
     opacity: 60%;
 }
 .button label.icon:hover {
     opacity: 100%;
+    color: var(--primary);
 }
-input, textarea, select:disabled {
-    background-color: transparent;
+/* Palette => Divisions
+--------------------------------- */
+.R.workspace .C {
+    scrollbar-color: #ddd var(--filling);
+}
+.R#content, .R#intro {
+    background: var(--filling2);
+}
+#editForm, #exportForm, #editFamilyForm, #personList, .R, .slider:before {
+    background-color: var(--filling);
+    color: var(--on-filling);
+}
+#editForm, #exportForm, #editFamilyForm, #personList {
+    box-shadow: 0px 0px 6px 0px var(--shadow);
+}
+#gedcomFileLabel,
+.fa-times::before, .switch.active:before,
+.filled, .spouse, .child {
+    color: var(--primary);
+}
+#header {
+    position: relative;
+    box-shadow: 0 0 15px -4px var(--shadow);
 }
 #gedcomFileLabel {
     opacity: 100%;
 }
-.R#credits, .R#contactForm, .R#privacy-terms, svg {
+.tooltip .tooltiptext, #familyName ~ .tooltiptext, .legend {
+    background-color: var(--filling3);
+    color: var(--on-filling3);
+}
+.tooltip .tooltiptext, #familyName ~ .tooltiptext {
+    border: 1px solid var(--primary);
+}
+.tooltip .tooltiptext::after {
+    border-style: solid;
+    border-color: transparent transparent var(--on-filling) transparent;
+}
+.fa-tags {
+    color: 	var(--secondary);
+    opacity: 70%;
+}
+.fa-user::before, .fa-user-friends::before {
+    color: var(--filling3);
+}
+svg {
     background-color: transparent;
 }
-input, textarea {
-    border: 0px;
+.node:hover rect, .node:hover circle {
+    stroke: var(--primary) !important;
 }
-input:read-only {
-    border-bottom: 0;
-}
-select:disabled {
-    border: 0px;
-}
-input:focus, select:focus {
-    outline: none;
-}
-input:read-only:focus {
-    border: 0;
+.edgePath path {
+    stroke: var(--on-filling2);
+    fill: var(--on-filling2);
 }
