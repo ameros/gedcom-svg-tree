@@ -34,7 +34,7 @@ input[type="file"] {
     display: none;
 }
 button, .button label {
-    padding: 0.4em;
+    padding: 0.5em;
     border-radius: 1.2em;
     cursor: pointer;
     border: 0px;
