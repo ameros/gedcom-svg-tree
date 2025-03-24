@@ -11,7 +11,7 @@ h1 img {
   margin-right: 0.3em;
 }
 .R#header {
-    padding-bottom: 1em;
+    padding-bottom: 0.6em;
 }
 figure {
   display: inline-block;
@@ -34,7 +34,7 @@ input[type="file"] {
     display: none;
 }
 button, .button label {
-    padding: 0.6em;
+    padding: 0.4em;
     border-radius: 1.2em;
     cursor: pointer;
     border: 0px;
@@ -51,19 +51,19 @@ ul {
     padding-left: 1em;
 }
 #header .C.C1 .B, #header .C.C2 .B {
-    padding-top: 1em;
+    padding-top: 0.4em;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
 }
 #header .C.C2 .B {
-    padding-top: 1.5em;
+    padding-top: 1em;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
 }
 #header .C.C3 .B {
-    padding-top: 0.9em;
+    padding-top: 0.6em;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
@@ -321,7 +321,7 @@ fieldset {
         display: none;
     }
     #header .C.C2 .B {
-      padding-top: 1em;
+      padding-top: 0.4em;
     }
 }
 @media only screen and (orientation: portrait) {

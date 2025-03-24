@@ -93,7 +93,7 @@ button, button:hover, .button label, .button label:hover {
     color: var(--on-filling);
 }
 .button label.icon {
-    opacity: 60%;
+    opacity: 50%;
 }
 .button label.icon:hover {
     opacity: 100%;

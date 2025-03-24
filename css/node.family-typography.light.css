@@ -173,6 +173,9 @@ form button {
 form label, legend {
     font-size: 0.75em;
 }
+.button label.icon {
+    font-size: 1.2em;
+}
 @media only screen and (orientation: portrait) {
     .logo::after {
         content: 'GST';
