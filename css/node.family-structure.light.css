@@ -221,7 +221,7 @@ form input[type=checkbox] {
     content: " ";
     position: absolute;
     bottom: 104%;
-    right: 0.7em;
+    right: 1em;
     border-width: 5px;
 }
 aside input, aside textarea, aside select {
