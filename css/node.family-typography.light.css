@@ -118,6 +118,7 @@ svg {
 #husbandName, #wifeName, #familyName, #spouses legend, #children legend, .spouse, .child {
     cursor: pointer;
     font-weight: bolder;
+    font-size: 1.2em;
 }
 #editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
     cursor: pointer;
