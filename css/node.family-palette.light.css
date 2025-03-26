@@ -8,13 +8,13 @@
   --filling: #fff;
   --on-filling: #1f2328;
   --filling2: linear-gradient(65deg, rgb(234, 250, 255) 0%, rgb(255, 248, 248) 100%);
-  --on-filling2: #CCC8D3;
+  --on-filling2: #A19BAA;
   --filling3: #ecf2b1;
   --on-filling3: #1f2328;
   --info-male: #99e6ff;
   --info-female: #ffaaa6;
   --info-family: #f9d700;
-  --outline: #eee;
+  --outline: #EFEAF4;
   --shadow: #b3aca78c;
 }
 body {
@@ -88,15 +88,15 @@ button, button:hover, .button label, .button label:hover {
     background-color: var(--primary);
     color: var(--on-primary);
 }
-.button label.icon, input[type="search"] {
+.button label.icon {
+    background-color: var(--filling);
+    color: var(--on-filling2);
+}
+input[type="search"] {
     background-color: var(--filling);
     color: var(--on-filling);
 }
-.button label.icon {
-    opacity: 50%;
-}
 .button label.icon:hover {
-    opacity: 100%;
     color: var(--primary);
 }
 /* Palette => Divisions
