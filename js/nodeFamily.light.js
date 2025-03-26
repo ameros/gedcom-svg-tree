@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.9 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.10 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -900,10 +900,6 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         if (input.value == "Y") {
             input.checked = true;
             input.value = "";
-            _form['DEAT.DATE.nfValue'].disabled = true;
-            _form['DEAT.PLAC.nfValue'].disabled = true;
-            _form['BURI.nfValue'].disabled = true;
-            _form['BURI.PLAC.nfValue'].disabled = true;
             deatSection.classList.remove('active');
             _formSection.querySelector('#BURI').classList.remove('active');
         } else {
@@ -920,7 +916,6 @@ NodeFamily.PersonForm = function(presenter, formSection) {
             input.checked = false;
             input.value = "";
             buriSection.classList.remove('active');
-            _form['BURI.PLAC.nfValue'].disabled = true;
         } else {
             input.checked = true;
             input.value = "Y";

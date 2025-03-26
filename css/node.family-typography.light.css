@@ -115,7 +115,7 @@ h1, h2, h3, figcaption, .label, .B h3, div.buttonsWrapper  {
 svg {
     cursor: zoom-in;
 }
-#husbandName, #wifeName, #familyName, #spouses legend, #children legend, .spouse, .child {
+#husbandName, #wifeName, #familyName, .spouse, .child {
     cursor: pointer;
     font-weight: bolder;
     font-size: 1.2em;
