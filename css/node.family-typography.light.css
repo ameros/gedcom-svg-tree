@@ -26,6 +26,9 @@ a, a:hover, a:visited, .button a, .button label {
     text-decoration:none;
     font-weight: bolder;
 }
+#header a.home {
+    font-weight: 300;
+}
 /* Typography => Headings
 --------------------------------- */
 body, h1, h2, text, .B h3, h4 {
