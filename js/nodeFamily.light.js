@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.8 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.9 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -820,6 +820,13 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         select.classList.remove("active");
     }
 
+    this.startAndShow = function(event) {
+        event.target.parentElement.childNodes.forEach(el=>el.classList.remove("active"));
+        event.target.classList.add("active");
+        this.startFrom(event);
+        this.openDataCard();
+    }
+
     this.editNode = function(event) {
         const id = event.target.getAttribute("data-id");
         this.visualize(id);
@@ -1120,7 +1127,7 @@ NodeFamily.PersonList = function(presenter, personListSection) {
             element.innerHTML = label;
             element.setAttribute("data-id", _persons[i][0]);
             _personListElement.appendChild(element);
-            element.addEventListener('click', _presenter.startFrom.bind(_presenter), true);
+            element.addEventListener('click', _presenter.startAndShow.bind(_presenter), true);
         }
         _personListSection.querySelector("#searchSize").innerHTML = "- " + _persons.length + " -";
         if (_persons.length < _offset) {

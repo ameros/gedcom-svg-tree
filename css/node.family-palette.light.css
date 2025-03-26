@@ -48,8 +48,10 @@ h1 {
 }
 /* Palette => Lists
 --------------------------------- */
-#personList ul li:hover {
+#personList ul li:hover, #personList ul li.active {
     color: var(--primary);
+    background-color: #FAF7FD;
+    border-radius: 1em;
 }
 /* Palette => Images
 --------------------------------- */
