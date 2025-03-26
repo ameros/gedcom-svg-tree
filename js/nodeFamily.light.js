@@ -821,7 +821,10 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
     }
 
     this.startAndShow = function(event) {
-        event.target.parentElement.childNodes.forEach(el=>el.classList.remove("active"));
+        const active = document.querySelector("#personList ul li.active");
+        if (active) {
+            active.classList.remove("active");
+        }
         event.target.classList.add("active");
         this.startFrom(event);
         this.openDataCard();
