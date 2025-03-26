@@ -8,6 +8,7 @@
   --filling: #fff;
   --on-filling: #1f2328;
   --filling2: linear-gradient(65deg, rgb(234, 250, 255) 0%, rgb(255, 248, 248) 100%);
+  --filling2b: #FAF7FD;
   --on-filling2: #A19BAA;
   --filling3: #ecf2b1;
   --on-filling3: #1f2328;
@@ -49,8 +50,8 @@ h1 {
 /* Palette => Lists
 --------------------------------- */
 #personList ul li:hover, #personList ul li.active {
+    background-color: var(--filling2b);
     color: var(--primary);
-    background-color: #FAF7FD;
     border-radius: 1em;
 }
 /* Palette => Images
