@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.10 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.4.11 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -422,6 +422,9 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
 
     this.getFamilyNames = function(id) {
         let names = "";
+        if (typeof _familyData[id] === 'undefined') {
+            return names;
+        }
         const wifeId = _familyData[id].WIFE;
         const husbandId = _familyData[id].HUSB;
         if (wifeId && _familyData[wifeId[NF_VALUE]].NAME) {
