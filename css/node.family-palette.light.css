@@ -1,25 +1,47 @@
 /* Palette
 --------------------------------- */
 :root {
-  --primary: #5ea40c;
-  --on-primary: #fff;
-  --secondary: #c3d500;
-  --accent: #e7294eff;
-  --filling: #fff;
-  --on-filling: #1f2328;
-  --filling2: linear-gradient(65deg, rgb(234, 250, 255) 0%, rgb(255, 248, 248) 100%);
-  --filling2b: #FAF7FD;
-  --on-filling2: #A19BAA;
-  --filling3: #ecf2b1;
-  --on-filling3: #1f2328;
-  --info-male: #99e6ff;
-  --info-female: #ffaaa6;
-  --info-family: #f9d700;
-  --outline: #EFEAF4;
-  --shadow: #b3aca78c;
+  --primary: 88, 86%;
+  --secondary: 64;
+  --tertiary: 348, 80%;
+
+  --green: hsla(var(--primary), 35%, 100%);
+  --greenLighter: hsla(var(--secondary), 100%, 42%, 100%);
+  --greenLighter2: hsla(var(--secondary), 70%, 82%, 100%);
+  --rose: hsla(var(--tertiary), 53%, 100%);
+  --roseLighter: hsla(var(--tertiary), 83%, 100%);
+  --roseLighter2: hsla(var(--tertiary), 98%, 100%);
+
+  --white: hsla(0, 0%, 100%, 100%);
+  --blue: hsla(195, 100%, 80%, 100%);
+  --blueLighter: hsla(194, 100%, 96%, 100%);
+  --yellow: hsla(52, 100%, 49%, 100%);
+  --black: hsla(213, 13%, 14%, 100%);
+  --gray: hsla(264, 8%, 64%, 100%);
+  --grayLighter: hsla(270, 31%, 94%, 100%);
+  --grayLighter2: hsla(25, 7%, 68%, 55%);
+
+  --auraTree: linear-gradient(65deg, var(--blueLighter) 0%, var(--roseLighter2) 100%);
+  --on-auraTree: var(--gray);
+  --auraData: var(--white);
+  --on-auraData: var(--black);
+  --auraInfo: var(--greenLighter2);
+  --on-auraInfo: var(--black);
+  --action: var(--green);
+  --actionFade: var(--gray);
+  --actionHover: var(--roseLighter2);
+  --on-action: var(--white);
+  --accent: var(--rose);
+  --accent2: var(--greenLighter);
+  --accentMale: var(--blue);
+  --accentFemale: var(--roseLighter);
+  --accentFamily: var(--yellow);
+  --accentOutline: var(--grayLighter);
+  --accentShadow: var(--grayLighter2);
+
 }
 body {
-    color: var(--on-filling);
+    color: var(--on-auraData);
 }
 /* Palette => Paragraphs
 --------------------------------- */
@@ -27,14 +49,14 @@ body {
 /* Palette => Anchors
 --------------------------------- */
 a, a:hover, a:visited {
-    color: var(--primary);
+    color: var(--action);
 }
 .button a, .button a:hover {
-    background-color: var(--primary);
-    color: var(--on-primary);
+    background-color: var(--action);
+    color: var(--on-action);
 }
 #header a.home {
-    color: var(--on-filling);
+    color: var(--on-auraData);
 }
 /* Palette => Headings
 --------------------------------- */
@@ -42,119 +64,119 @@ h1 {
     color: var(--accent);
 }
 .B h3 {
-    color: 	var(--secondary);
+    color: 	var(--accent2);
 }
 #editForm h3, #editFamilyForm h3 {
-    color: var(--on-filling);
+    color: var(--on-auraData);
 }
 /* Palette => Lists
 --------------------------------- */
 #personList ul li:hover, #personList ul li.active {
-    background-color: var(--filling2b);
-    color: var(--primary);
+    background-color: var(--actionHover);
+    color: var(--action);
     border-radius: 1em;
 }
 /* Palette => Images
 --------------------------------- */
 #header p.logo img {
-    border-color: var(--filling);
+    border-color: var(--auraData);
 }
 figure img {
     border-radius: 1em;
-    border: 1px solid var(--outline);
+    border: 1px solid var(--accentOutline);
 }
 /* Palette => Forms
 --------------------------------- */
 fieldset {
-    border: 1px dashed var(--on-primary);
+    border: 1px dashed var(--on-action);
 }
 #exportForm input  {
-    background-color: var(--filling);
+    background-color: var(--auraData);
     border-radius: 1em;
 }
 input, textarea, select:disabled, input:read-only {
     background-color: transparent;
-    color: var(--on-filling);
+    color: var(--on-auraData);
     border: 0px;
 }
 input[type="search"], #exportForm input {
-    border: 1px solid var(--outline);
+    border: 1px solid var(--accentOutline);
 }
 select {
     border-image: none;
-    border: 1px solid var(--outline);
+    border: 1px solid var(--accentOutline);
 }
 input:focus, select:focus, textarea:focus {
     outline: none;
 }
 button, button:hover, .button label, .button label:hover {
-    background-color: var(--primary);
-    color: var(--on-primary);
+    background-color: var(--action);
+    color: var(--on-action);
 }
 .button label.icon {
-    background-color: var(--filling);
-    color: var(--on-filling2);
+    background-color: var(--auraData);
+    color: var(--actionFade);
 }
 input[type="search"] {
-    background-color: var(--filling);
-    color: var(--on-filling);
+    background-color: var(--auraData);
+    color: var(--on-auraData);
 }
 .button label.icon:hover {
-    background-color: var(--filling2b);
-    color: var(--primary);
+    background-color: var(--actionHover);
+    color: var(--action);
 }
 /* Palette => Divisions
 --------------------------------- */
 .R.workspace .C {
-    scrollbar-color: #ddd var(--filling);
+    scrollbar-color: #ddd var(--auraData);
 }
 .R#content, .R#intro {
-    background: var(--filling2);
+    background: var(--auraTree);
 }
 #editForm, #exportForm, #editFamilyForm, #personList, .R, .slider:before {
-    background-color: var(--filling);
-    color: var(--on-filling);
+    background-color: var(--auraData);
+    color: var(--on-auraData);
 }
 #editForm, #exportForm, #editFamilyForm, #personList {
-    box-shadow: 0px 0px 6px 0px var(--shadow);
+    box-shadow: 0px 0px 6px 0px var(--accentShadow);
 }
 #gedcomFileLabel,
 .fa-times::before, .switch.active:before,
 .filled, .spouse, .child {
-    color: var(--primary);
+    color: var(--action);
 }
 #header {
     position: relative;
-    box-shadow: 0 0 15px -4px var(--shadow);
+    box-shadow: 0 0 15px -4px var(--accentShadow);
 }
 #gedcomFileLabel {
     opacity: 100%;
 }
 .tooltip .tooltiptext, #familyName ~ .tooltiptext, .legend {
-    background-color: var(--filling3);
-    color: var(--on-filling3);
+    background-color: var(--auraInfo);
+    color: var(--on-auraInfo);
 }
 .tooltip .tooltiptext, #familyName ~ .tooltiptext {
-    border: 1px solid var(--primary);
+    border: 1px solid var(--action);
 }
 .tooltip .tooltiptext::after {
     border-style: solid;
-    border-color: transparent transparent var(--on-filling) transparent;
+    border-color: transparent transparent var(--on-auraData) transparent;
 }
 .fa-tags {
-    color: 	var(--secondary);
+    color: 	var(--accent2);
     opacity: 70%;
 }
 .fa-user::before, .fa-user-friends::before {
-    color: var(--filling3);
+    color: var(--auraInfo);
 }
 svg {
     background-color: transparent;
 }
 .node:hover rect, .node:hover circle {
-    stroke: var(--primary) !important;
+    stroke: var(--action) !important;
 }
 .edgePath path {
-    stroke: var(--on-filling2);
-    fill: var(--on-filling2);
+    stroke: var(--on-auraTree);
+    fill: var(--on-auraTree);
 }
