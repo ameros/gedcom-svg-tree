@@ -138,6 +138,7 @@ p.logo {
 }
 #header p.logo img {
     height: 38px;
+    border-radius: 19px;
 }
 p {
     padding-left: 2em;
