@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.5 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.5.1 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1701,7 +1701,7 @@ NodeFamily.Tree = function() {
                     node.label += "<br/>(" + value.NAME.NICK[NF_VALUE] + ")";
                 }
                 if (value.BIRT) {
-                    node.label += "<br/> &#9829;";
+                    node.label += "<br/><span class='' style=\"font-size: smaller;font-family:'font-awesome'\">&#xf004</span>";
                 }
                 if (value.BIRT && value.BIRT.DATE) {
                     node.label += " " + NodeFamily.Tree.changeDate(value.BIRT.DATE[NF_VALUE]) + ",";
@@ -1710,7 +1710,7 @@ NodeFamily.Tree = function() {
                     node.label += " " + value.BIRT.PLAC[NF_VALUE];
                 }
                 if (value.DEAT) {
-                    node.label += "<br/><span class='' style=\"font-family:'font-awesome'\">&#xf4d6</span>";
+                    node.label += "<br/><span class='' style=\"font-size: smaller;font-family:'font-awesome'\">&#xf4ba</span>";
                 }
                 if (value.DEAT && value.DEAT.DATE) {
                     node.label += " " + NodeFamily.Tree.changeDate(value.DEAT.DATE[NF_VALUE]);
