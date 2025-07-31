@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.4.12 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.5 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1761,18 +1761,18 @@ NodeFamily.Tree = function() {
             }
             node.rx = node.ry = 10;
             if (value.SEX && value.SEX[NF_VALUE] == "M") {
-                node.style = "fill: var(--auraData, #fff);stroke: var(--accentMale, hsla(195, 100%, 80%, 100%)); stroke-width: 2px";
+                node.style = "fill: var(--auraData, hsl(0, 0%, 100%));stroke: var(--accentMale, hsl(195, 100%, 80%)); stroke-width: 2px";
             } else if (value.SEX && value.SEX[NF_VALUE] == "F") {
-                node.style = "fill: var(--auraData, #fff);stroke: var(--accentFemale, hsla(var(--tertiary), 83%, 100%)); stroke-width: 2px";
+                node.style = "fill: var(--auraData, hsl(0, 0%, 100%));stroke: var(--accentFemale, hsl(348, 80%, 83%)); stroke-width: 2px";
             } else {
-                node.style = "fill: var(--auraData, #fff); stroke: url(#gender); stroke-width: 2px";
+                node.style = "fill: var(--auraData, hsl(0, 0%, 100%)); stroke: url(#gender); stroke-width: 2px";
             }
             if (!isPerson) {
                 node.shape = "circle";
-                node.style = "fill: var(--auraData, #fff);stroke: var(--accentFamily, hsla(52, 100%, 49%, 100%)); stroke-width: 2px";
+                node.style = "fill: var(--auraData, hsl(0, 0%, 100%));stroke: var(--accentFamily, hsl(52, 100%, 49%)); stroke-width: 2px";
             }
             if (id == startPoint) {
-                node.style = "fill: var(--accent2, hsla(var(--secondary), 42%, 100%)); stroke-width: 2px";
+                node.style = "fill: var(--accent2, hsl(64, 100%, 42%)); stroke-width: 2px";
             }
             graphlib.setNode(id, node);
         });

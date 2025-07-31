@@ -1,45 +1,5 @@
 /* Palette
 --------------------------------- */
-:root {
-  --primary: 88, 86%;
-  --secondary: 64;
-  --tertiary: 348, 80%;
-
-  --green: hsla(var(--primary), 35%, 100%);
-  --greenLighter: hsla(var(--secondary), 100%, 42%, 100%);
-  --greenLighter2: hsla(var(--secondary), 70%, 82%, 100%);
-  --rose: hsla(var(--tertiary), 53%, 100%);
-  --roseLighter: hsla(var(--tertiary), 83%, 100%);
-  --roseLighter2: hsla(var(--tertiary), 98%, 100%);
-
-  --white: hsla(0, 0%, 100%, 100%);
-  --blue: hsla(195, 100%, 80%, 100%);
-  --blueLighter: hsla(194, 100%, 96%, 100%);
-  --yellow: hsla(52, 100%, 49%, 100%);
-  --black: hsla(213, 13%, 14%, 100%);
-  --gray: hsla(264, 8%, 64%, 100%);
-  --grayLighter: hsla(270, 31%, 94%, 100%);
-  --grayLighter2: hsla(25, 7%, 68%, 55%);
-
-  --auraTree: linear-gradient(65deg, var(--blueLighter) 0%, var(--roseLighter2) 100%);
-  --on-auraTree: var(--gray);
-  --auraData: var(--white);
-  --on-auraData: var(--black);
-  --auraInfo: var(--greenLighter2);
-  --on-auraInfo: var(--black);
-  --action: var(--green);
-  --actionFade: var(--gray);
-  --actionHover: var(--roseLighter2);
-  --on-action: var(--white);
-  --accent: var(--rose);
-  --accent2: var(--greenLighter);
-  --accentMale: var(--blue);
-  --accentFemale: var(--roseLighter);
-  --accentFamily: var(--yellow);
-  --accentOutline: var(--grayLighter);
-  --accentShadow: var(--grayLighter2);
-
-}
 body {
     color: var(--on-auraData);
 }
@@ -128,7 +88,7 @@ input[type="search"] {
 /* Palette => Divisions
 --------------------------------- */
 .R.workspace .C {
-    scrollbar-color: #ddd var(--auraData);
+    scrollbar-color: var(--accentOutline) var(--auraData);
 }
 .R#content, .R#intro {
     background: var(--auraTree);

@@ -1,0 +1,73 @@
+/* Palette
+--------------------------------- */
+:root {
+  --green-h: 88;
+  --lime-h: 64;
+  --rose-h: 348;
+  --blue-h: 195;
+
+  --green: hsl(var(--green-h), 86%, 35%);
+  --greenLighter: hsl(var(--lime-h), 100%, 42%);
+  --greenLighter2: hsl(var(--lime-h), 70%, 82%);
+  --rose: hsl(var(--rose-h), 80%, 53%);
+  --roseLighter: hsl(var(--rose-h), 80%, 83%);
+  --roseLighter2: hsl(var(--rose-h), 80%, 98%);
+
+  --black: hsl(213, 13%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --blue: hsl(var(--blue-h), 100%, 80%);
+  --blueLighter: hsl(var(--blue-h), 100%, 96%);
+  --yellow: hsl(52, 100%, 49%);
+  --gray: hsl(264, 8%, 64%);
+  --grayLighter: hsl(270, 31%, 94%);
+  --grayLighter2: hsl(25, 7%, 68%, 55%);
+
+  --auraTree: linear-gradient(65deg, var(--blueLighter) 0%, var(--roseLighter2) 100%);
+  --on-auraTree: var(--gray);
+  --auraData: var(--white);
+  --on-auraData: var(--black);
+  --auraInfo: var(--greenLighter2);
+  --on-auraInfo: var(--black);
+  --action: var(--green);
+  --actionFade: var(--gray);
+  --actionHover: var(--roseLighter2);
+  --on-action: var(--white);
+  --accent: var(--rose);
+  --accent2: var(--greenLighter);
+  --accentMale: var(--blue);
+  --accentFemale: var(--roseLighter);
+  --accentSexNN: red;
+  --accentFamily: var(--yellow);
+  --accentOutline: var(--grayLighter);
+  --accentShadow: var(--grayLighter2);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --green: hsl(var(--green-h), 56%, 35%);
+      --greenLighter: hsl(var(--lime-h), 70%, 35%);
+      --greenLighter2: hsl(var(--lime-h), 40%, 22%);
+      --rose: hsl(var(--rose-h), 50%, 53%);
+      --roseLighter: hsl(var(--rose-h), 70%, 83%);
+      --roseLighter2: hsl(var(--rose-h), 50%, 98%);
+
+      --black: hsl(213, 13%, 14%);
+      --white: hsl(0, 0%, 85%);
+      --blue: hsl(var(--blue-h), 70%, 80%);
+      --blueLighter: hsl(var(--blue-h), 70%, 96%);
+      --yellow: hsl(52, 70%, 49%);
+      --gray: hsl(264, 8%, 64%);
+      --grayLighter: hsl(270, 31%, 4%);
+      --grayLighter2: hsl(25, 7%, 8%);
+
+      --auraTree: black;
+      --auraData: var(--black);
+      --on-auraData: var(--white);
+      --on-auraInfo: var(--white);
+      --actionHover: var(--grayLighter);
+      --on-action: var(--black);
+    }
+    img {
+        filter: brightness(.8) contrast(1.2);
+    }
+}
