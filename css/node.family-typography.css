@@ -103,7 +103,7 @@ h1, h2, h3, figcaption, .label, .B h3, div.buttonsWrapper  {
     font-weight: 900;
     content: '\f07c';
 }
-.logo::after {
+#header .logo::after {
     content: 'Gedcom SVG Tree';
 }
 #header .C.C1  {
