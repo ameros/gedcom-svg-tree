@@ -186,7 +186,7 @@ form label, legend {
     font-size: 1.2em;
 }
 @media only screen and (orientation: portrait) {
-    .logo::after {
+    #header .logo::after {
         content: 'GST';
     }
 }
