@@ -1,71 +1,78 @@
 /* Palette
 --------------------------------- */
 :root {
-  --green-h: 88;
-  --lime-h: 64;
-  --rose-h: 348;
-  --blue-h: 195;
+/* presets
+--------------------------------- */
+  --_green-h: 88;
+  --_lime-h: 64;
+  --_rose-h: 348;
+  --_blue-h: 195;
+  --_yellow-h: 52;
 
-  --green: hsl(var(--green-h), 86%, 35%);
-  --greenLighter: hsl(var(--lime-h), 100%, 42%);
-  --greenLighter2: hsl(var(--lime-h), 70%, 82%);
-  --rose: hsl(var(--rose-h), 80%, 53%);
-  --roseLighter: hsl(var(--rose-h), 80%, 83%);
-  --roseLighter2: hsl(var(--rose-h), 80%, 98%);
+  --_gray: hsl(264, 8%, 64%);
+  --_grayLighter-hs: 270, 31%;
+  --_grayLighter2-hs: 25, 7%;
 
-  --black: hsl(213, 13%, 14%);
-  --white: hsl(0, 0%, 100%);
-  --blue: hsl(var(--blue-h), 100%, 80%);
-  --blueLighter: hsl(var(--blue-h), 100%, 96%);
-  --yellow: hsl(52, 100%, 49%);
-  --gray: hsl(264, 8%, 64%);
-  --grayLighter: hsl(270, 31%, 94%);
-  --grayLighter2: hsl(25, 7%, 68%, 55%);
-
-  --auraTree: linear-gradient(65deg, var(--blueLighter) 0%, var(--roseLighter2) 100%);
-  --on-auraTree: var(--gray);
-  --auraData: var(--white);
-  --on-auraData: var(--black);
-  --auraInfo: var(--greenLighter2);
-  --on-auraInfo: var(--black);
-  --action: var(--green);
-  --actionFade: var(--gray);
-  --actionHover: var(--roseLighter2);
-  --on-action: var(--white);
-  --accent: var(--rose);
-  --accent2: var(--greenLighter);
-  --accentMale: var(--blue);
-  --accentFemale: var(--roseLighter);
-  --accentFamily: var(--yellow);
-  --accentOutline: var(--grayLighter);
-  --accentShadow: var(--grayLighter2);
+  --_background: hsl(0, 0%, 100%);
+  --_foreground: hsl(213, 13%, 14%);
+ /* colors
+ --------------------------------- */
+  --_yellow: hsl(var(--_yellow-h), 100%, 49%);
+  --_grayLighter: hsl(var(--_grayLighter-hs), 94%);
+  --_grayLighter2: hsl(var(--_grayLighter2-hs), 68%);
+  --_green: hsl(var(--_green-h), 86%, 35%);
+  --_greenLighter: hsl(var(--_lime-h), 100%, 42%);
+  --_greenLighter2: hsl(var(--_lime-h), 70%, 82%);
+  --_rose: hsl(var(--_rose-h), 80%, 53%);
+  --_roseLighter: hsl(var(--_rose-h), 80%, 83%);
+  --_roseLighter2: hsl(var(--_rose-h), 80%, 98%);
+  --_blue: hsl(var(--_blue-h), 100%, 80%);
+  --_blueLighter: hsl(var(--_blue-h), 100%, 96%);
+ /* functions - aura,action,accent
+ --------------------------------- */
+  --auraTree: linear-gradient(65deg, var(--_blueLighter) 0%, var(--_roseLighter2) 100%);
+  --on-auraTree: var(--_gray);
+  --auraData: var(--_background);
+  --on-auraData: var(--_foreground);
+  --auraInfo: var(--_greenLighter2);
+  --on-auraInfo: var(--_foreground);
+  --action: var(--_green);
+  --actionFade: var(--_gray);
+  --actionHover: var(--_roseLighter2);
+  --on-action: var(--_background);
+  --accent: var(--_rose);
+  --accent2: var(--_greenLighter);
+  --accentMale: var(--_blue);
+  --accentFemale: var(--_roseLighter);
+  --accentFamily: var(--_yellow);
+  --accentOutline: var(--_grayLighter);
+  --accentShadow: var(--_grayLighter2);
 }
-
 @media (prefers-color-scheme: dark) {
     :root {
-      --green: hsl(var(--green-h), 56%, 35%);
-      --greenLighter: hsl(var(--lime-h), 70%, 35%);
-      --greenLighter2: hsl(var(--lime-h), 40%, 22%);
-      --rose: hsl(var(--rose-h), 50%, 53%);
-      --roseLighter: hsl(var(--rose-h), 70%, 83%);
-      --roseLighter2: hsl(var(--rose-h), 50%, 98%);
-
-      --black: hsl(213, 13%, 14%);
-      --white: hsl(0, 0%, 85%);
-      --blue: hsl(var(--blue-h), 70%, 80%);
-      --blueLighter: hsl(var(--blue-h), 70%, 96%);
-      --yellow: hsl(52, 70%, 49%);
-      --gray: hsl(264, 8%, 64%);
-      --grayLighter: hsl(270, 31%, 4%);
-      --grayLighter2: hsl(25, 7%, 8%);
-
-      --auraTree: black;
-      --auraData: var(--black);
-      --on-auraData: var(--white);
-      --on-auraInfo: var(--white);
-      --actionHover: var(--grayLighter);
-      --on-action: var(--black);
+/* presets
+--------------------------------- */
+      --_background: hsl(213, 13%, 14%);
+      --_foreground: hsl(0, 0%, 85%);
+/* colors
+--------------------------------- */
+      --_yellow: hsl(var(--_yellow-h), 70%, 49%);
+      --_grayLighter: hsl(var(--grayLighter-hs), 4%);
+      --_grayLighter2: hsl(var(--_grayLighter2-hs), 8%);
+      --_green: hsl(var(--_green-h), 56%, 35%);
+      --_greenLighter: hsl(var(--_lime-h), 70%, 35%);
+      --_greenLighter2: hsl(var(--_lime-h), 40%, 22%);
+      --_rose: hsl(var(--_rose-h), 50%, 53%);
+      --_roseLighter: hsl(var(--_rose-h), 70%, 83%);
+      --_roseLighter2: hsl(var(--_rose-h), 50%, 98%);
+      --_blue: hsl(var(--_blue-h), 70%, 80%);
+      --_blueLighter: hsl(var(--_blue-h), 70%, 96%);
+ /* functions
+ --------------------------------- */
+      --auraTree: hsl(0, 0%, 0%);
+      --actionHover: var(--_grayLighter);
     }
+
     img {
         filter: brightness(.8) contrast(1.2);
     }
