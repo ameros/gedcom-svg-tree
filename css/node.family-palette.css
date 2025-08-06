@@ -24,7 +24,7 @@ h1 {
     color: var(--accent);
 }
 .B h3 {
-    color: 	var(--accent2);
+    color: 	var(--accentMarkers);
 }
 #editForm h3, #editFamilyForm h3 {
     color: var(--on-auraData);
@@ -124,7 +124,7 @@ input[type="search"] {
     border-color: transparent transparent var(--on-auraData) transparent;
 }
 .fa-tags {
-    color: 	var(--accent2);
+    color: 	var(--accentMarkers);
     opacity: 70%;
 }
 .fa-user::before, .fa-user-friends::before {

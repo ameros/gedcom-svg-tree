@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.5.1 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.5.2 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1772,7 +1772,8 @@ NodeFamily.Tree = function() {
                 node.style = "fill: var(--auraData, hsl(0, 0%, 100%));stroke: var(--accentFamily, hsl(52, 100%, 49%)); stroke-width: 2px";
             }
             if (id == startPoint) {
-                node.style = "fill: var(--accent2, hsl(64, 100%, 42%)); stroke-width: 2px";
+                node.style = "fill: var(--auraNodeCurrent, hsl(64, 100%, 42%)); stroke-width: 2px";
+                node.labelStyle = "color: var(--on-auraNodeCurrent, hsl(213, 13%, 14%))";
             }
             graphlib.setNode(id, node);
         });
