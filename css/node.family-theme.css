@@ -21,8 +21,8 @@
   --_grayLighter: hsl(var(--_grayLighter-hs), 94%);
   --_grayLighter2: hsl(var(--_grayLighter2-hs), 68%);
   --_green: hsl(var(--_green-h), 86%, 35%);
-  --_greenLighter: hsl(var(--_lime-h), 100%, 42%);
-  --_greenLighter2: hsl(var(--_lime-h), 70%, 82%);
+  --_limeLighter: hsl(var(--_lime-h), 100%, 42%);
+  --_limeLighter2: hsl(var(--_lime-h), 70%, 82%);
   --_rose: hsl(var(--_rose-h), 80%, 53%);
   --_roseLighter: hsl(var(--_rose-h), 80%, 83%);
   --_roseLighter2: hsl(var(--_rose-h), 80%, 98%);
@@ -34,21 +34,21 @@
   --on-auraTree: var(--_gray);
   --auraData: var(--_background);
   --on-auraData: var(--_foreground);
-  --auraInfo: var(--_greenLighter2);
+  --auraInfo: var(--_limeLighter2);
   --on-auraInfo: var(--_foreground);
   --action: var(--_green);
   --actionFade: var(--_gray);
   --actionHover: var(--_roseLighter2);
   --on-action: var(--_background);
   --accent: var(--_rose);
-  --auraNodeCurrent: var(--_greenLighter);
+  --auraNodeCurrent: var(--_limeLighter);
   --on-auraNodeCurrent: var(--_foreground);
   --accentMale: var(--_blue);
   --accentFemale: var(--_roseLighter);
   --accentFamily: var(--_yellow);
   --accentOutline: var(--_grayLighter);
   --accentShadow: var(--_grayLighter2);
-  --accentMarkers: var(--_greenLighter);
+  --accentMarkers: var(--_limeLighter);
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -62,8 +62,8 @@
       --_grayLighter: hsl(var(--grayLighter-hs), 4%);
       --_grayLighter2: hsl(var(--_grayLighter2-hs), 8%);
       --_green: hsl(var(--_green-h), 56%, 35%);
-      --_greenLighter: hsl(var(--_lime-h), 70%, 43%);
-      --_greenLighter2: hsl(var(--_lime-h), 40%, 22%);
+      --_limeLighter: hsl(var(--_lime-h), 70%, 43%);
+      --_limeLighter2: hsl(var(--_lime-h), 40%, 22%);
       --_rose: hsl(var(--_rose-h), 50%, 53%);
       --_roseLighter: hsl(var(--_rose-h), 70%, 83%);
       --_roseLighter2: hsl(var(--_rose-h), 50%, 98%);
@@ -72,6 +72,7 @@
  /* functions
  --------------------------------- */
       --auraTree: hsl(0, 0%, 0%);
+      --accentOutline: var(--auraTree);
       --actionHover: var(--_grayLighter);
       --on-auraNodeCurrent: var(--_background);
     }

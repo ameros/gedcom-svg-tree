@@ -81,9 +81,15 @@ input[type="search"] {
     background-color: var(--auraData);
     color: var(--on-auraData);
 }
+input:not([disabled]):not([readonly]):focus-visible {
+    outline: 1px solid var(--accentMarkers);
+}
 .button label.icon:hover {
     background-color: var(--actionHover);
     color: var(--action);
+}
+input[type=range] {
+    accent-color: var(--accentMarkers);
 }
 /* Palette => Divisions
 --------------------------------- */
