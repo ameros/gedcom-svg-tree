@@ -82,7 +82,7 @@ input[type="search"] {
     color: var(--on-auraData);
 }
 input:not([disabled]):not([readonly]):focus-visible {
-    outline: 1px solid var(--accentMarkers);
+    border: 1px solid var(--accentMarkers);
 }
 .button label.icon:hover {
     background-color: var(--actionHover);
