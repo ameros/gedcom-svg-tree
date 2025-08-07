@@ -134,9 +134,6 @@ ul {
 #personList ul li {
     cursor: pointer;
 }
-#personList ul li:hover {
-    font-weight: bolder;
-}
 /* Typography => Images
 --------------------------------- */
 #header p.logo img {
