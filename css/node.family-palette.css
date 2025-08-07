@@ -5,6 +5,9 @@ body {
 }
 /* Palette => Paragraphs
 --------------------------------- */
+#searchSize {
+    color: var(--accent);
+}
 
 /* Palette => Anchors
 --------------------------------- */
