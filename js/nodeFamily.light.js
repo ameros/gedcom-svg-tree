@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.5.3 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.5.4 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -517,7 +517,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         _config = config;
     }
 
-    this.visualize = function(startPoint, restored) {
+    this.visualize = function(startPoint, omitPushState) {
         let start = startPoint;
         if (typeof _startPersonId === 'undefined') {
             for (let key of Object.keys(_familyData)) {
@@ -554,7 +554,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
             }
             start = _startPersonId;
         }
-        if (!restored) {
+        if (!omitPushState) {
             history.pushState({"start": start}, "");
         }
         _d3.select("svg > g > *").remove();
@@ -629,7 +629,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         }
         this.setConfig(config);
         const start = _startFamilyId ? _startFamilyId : _startPersonId;
-        this.visualize(start);
+        this.visualize(start, true);
     }
 
     const formToObj = (obj, arr, val) => {
