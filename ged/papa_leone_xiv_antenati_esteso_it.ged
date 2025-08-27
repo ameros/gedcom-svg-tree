@@ -1,0 +1,418 @@
+0 HEAD
+1 SOUR ChatGPT
+2 NAME GPT-5 Thinking
+2 VERS 1.0
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 DATE 27 AUG 2025
+1 SUBM @U1@
+0 @U1@ SUBM
+1 NAME Utente
+0 @I1@ INDI
+1 NAME Roberto Francesco /Prevost/
+2 GIVN Roberto Francesco
+2 SURN Prevost
+1 SEX M
+1 TITL Papa Leone XIV
+1 WWW https://it.wikipedia.org/wiki/Papa_Leone_XIV
+1 BIRT
+2 DATE 14 SEP 1955
+2 PLAC Chicago, Illinois, Stati Uniti
+1 FAMC @F1@
+0 @I2@ INDI
+1 NAME Louis Marius /Prevost/
+2 GIVN Louis Marius
+2 SURN Prevost
+1 SEX M
+1 NOTE Padre di Papa Leone XIV; veterano della Marina degli Stati Uniti nella Seconda guerra mondiale; educatore e sovrintendente scolastico.
+1 BIRT
+2 DATE 28 JUL 1920
+2 PLAC Chicago, Illinois, Stati Uniti
+1 DEAT
+2 DATE 08 NOV 1997
+2 PLAC Homewood, Illinois, Stati Uniti
+1 FAMC @F2@
+0 @I3@ INDI
+1 NAME Mildred Agnes /Martínez/
+2 GIVN Mildred Agnes
+2 SURN Martínez
+1 SEX F
+1 NOTE Madre di Papa Leone XIV; famiglia creola di New Orleans; bibliotecaria ed educatrice.
+1 BIRT
+2 DATE 30 DEC 1911
+2 PLAC Chicago, Illinois, Stati Uniti
+1 DEAT
+2 DATE 18 JUN 1990
+2 PLAC Illinois, Stati Uniti
+1 FAMC @F3@
+0 @I4@ INDI
+1 NAME Salvatore Giovanni Gaetano /Riggitano/
+2 GIVN Salvatore Giovanni Gaetano
+2 SURN Riggitano
+1 NAME John /Prevost/
+2 TYPE alias
+1 SEX M
+1 NOTE Nonno paterno; nato a Milazzo (Sicilia); emigrato negli USA e adottò il cognome Prevost.
+1 BIRT
+2 DATE 24 JUN 1876
+2 PLAC Milazzo, Sicilia, Italia
+1 DEAT
+2 DATE 22 MAY 1960
+2 PLAC Detroit, Michigan, Stati Uniti
+1 FAMC @F4@
+0 @I5@ INDI
+1 NAME Suzanne Louise Marie /Fontaine/
+2 GIVN Suzanne Louise Marie
+2 SURN Fontaine
+1 SEX F
+1 NOTE Nonna paterna; nata a Le Havre (Normandia); immigrata negli USA.
+1 BIRT
+2 DATE 02 FEB 1894
+2 PLAC Le Havre, Normandia, Francia
+1 DEAT
+2 DATE 10 OCT 1979
+2 PLAC Detroit, Michigan, Stati Uniti
+1 FAMC @F5@
+0 @I6@ INDI
+1 NAME Joseph Nerval /Martínez/
+2 GIVN Joseph Nerval
+2 SURN Martínez
+1 SEX M
+1 NOTE Nonno materno; nato a Hispaniola (prob. Santo Domingo); fabbricante di sigari.
+1 BIRT
+2 DATE 08 JAN 1864
+2 PLAC Santo Domingo (Hispaniola)
+1 DEAT
+2 DATE 31 JUL 1926
+2 PLAC Louisiana, Stati Uniti
+1 FAMC @F6@
+0 @I7@ INDI
+1 NAME Louise /Baquié/
+2 GIVN Louise
+2 SURN Baquié
+1 SEX F
+1 NOTE Nonna materna; creola di New Orleans.
+1 BIRT
+2 DATE 04 FEB 1868
+2 PLAC New Orleans, Louisiana, Stati Uniti
+1 DEAT
+2 DATE 17 NOV 1945
+2 PLAC Des Plaines, Illinois, Stati Uniti
+1 FAMC @F7@
+0 @I8@ INDI
+1 NAME Santi /Riggitano/
+2 GIVN Santi
+2 SURN Riggitano
+1 SEX M
+1 NOTE Bisnonno paterno.
+1 FAMS @F4@
+0 @I9@ INDI
+1 NAME Maria /Alioto/
+2 GIVN Maria
+2 SURN Alioto
+1 SEX F
+1 NOTE Bisnonna paterna.
+1 FAMS @F4@
+0 @I10@ INDI
+1 NAME Ernest Auguste /Fontaine/
+2 GIVN Ernest Auguste
+2 SURN Fontaine
+1 SEX M
+1 NOTE Bisnonno paterno.
+1 BIRT
+2 DATE 17 SEP 1857
+2 PLAC Saint-Pierre-sur-Dives, Normandia, Francia
+1 DEAT
+2 DATE 1919
+1 FAMS @F5@
+0 @I11@ INDI
+1 NAME Jeanne Eugénie /Prévost/
+2 GIVN Jeanne Eugénie
+2 SURN Prévost
+1 SEX F
+1 NOTE Bisnonna paterna.
+1 FAMS @F5@
+0 @I12@ INDI
+1 NAME Jacques /Martínez/
+2 GIVN Jacques
+2 SURN Martínez
+1 SEX M
+1 NOTE Bisnonno materno.
+1 FAMS @F6@
+0 @I13@ INDI
+1 NAME Marie Rose /Ramos/
+2 GIVN Marie Rose
+2 SURN Ramos
+1 SEX F
+1 NOTE Bisnonna materna.
+1 FAMS @F6@
+0 @I14@ INDI
+1 NAME Ferdinand David /Baquié/
+2 GIVN Ferdinand David
+2 SURN Baquié
+1 SEX M
+1 NOTE Bisnonno materno.
+1 BIRT
+2 DATE 10 OCT 1837
+2 PLAC New Orleans, Louisiana, Stati Uniti
+1 DEAT
+2 DATE 18 JAN 1883
+2 PLAC New Orleans, Louisiana, Stati Uniti
+1 FAMC @F8@
+1 FAMS @F7@
+0 @I15@ INDI
+1 NAME Eugénie /Granbois/
+2 GIVN Eugénie
+2 SURN Granbois
+1 SEX F
+1 NOTE Bisnonna materna.
+1 BIRT
+2 DATE 28 DEC 1838
+2 PLAC New Orleans, Louisiana, Stati Uniti
+1 DEAT
+2 DATE 08 JUL 1907
+2 PLAC New Orleans, Louisiana, Stati Uniti
+1 FAMS @F7@
+0 @I16@ INDI
+1 NAME Céleste /Lemelle/
+2 GIVN Céleste
+2 SURN Lemelle
+1 SEX F
+1 NOTE Trisavola materna; figlia di Louis Lemelle e Céleste Olimpie Grandpré.
+1 FAMS @F8@
+1 FAMC @F9@
+0 @I18@ INDI
+1 NAME Joseph Aristide Fleury /Baquié/
+2 GIVN Joseph Aristide Fleury
+2 SURN Baquié
+1 SEX M
+1 NOTE Trisavolo materno.
+1 FAMS @F8@
+0 @I19@ INDI
+1 NAME Louis /Lemelle/
+2 GIVN Louis
+2 SURN Lemelle
+1 SEX M
+1 NOTE 4º bisavolo materno.
+1 FAMS @F9@
+0 @I20@ INDI
+1 NAME Céleste Olimpie /Grandpré/
+2 GIVN Céleste Olimpie
+2 SURN Grandpré
+1 SEX F
+1 NOTE 4ª bisavola materna; linea che collega ai Boucher de Grandpré e a Pierre Boucher.
+1 FAMC @F10@
+1 FAMS @F9@
+0 @I21@ INDI
+1 NAME Charles Louis /Boucher de Grandpré/
+2 GIVN Charles Louis
+2 SURN Boucher de Grandpré
+1 SEX M
+1 TITL Governatore spagnolo del Distretto di Baton Rouge e Florida Occidentale
+1 WWW https://en.wikipedia.org/wiki/Carlos_de_Grand_Pr%C3%A9
+1 BIRT
+2 DATE 25 OCT 1745
+2 PLAC New Orleans, Louisiana (Nuova Francia)
+1 DEAT
+2 DATE 1809
+2 PLAC (prob.) New Orleans, Louisiana
+1 FAMS @F10@
+1 FAMC @F11@
+0 @I23@ INDI
+1 NAME Louis Antoine /Boucher de Grandpré/
+2 GIVN Louis Antoine
+2 SURN Boucher de Grandpré
+1 SEX M
+1 WWW https://fr.wikipedia.org/wiki/Joseph_Louis_Boucher_de_Grandpr%C3%A9
+1 BIRT
+2 DATE 03 JUL 1695
+2 PLAC Trois-Rivières, Nuova Francia (Quebec)
+1 DEAT
+2 DATE 1763
+2 PLAC La Nouvelle-Orléans, Louisiana, Nuova Francia
+1 FAMS @F11@
+1 FAMC @F12@
+0 @I24@ INDI
+1 NAME Thérèse /Gallard/
+2 GIVN Thérèse
+2 SURN Gallard
+1 SEX F
+1 NOTE Moglie di Louis Antoine Boucher de Grandpré.
+1 FAMS @F11@
+0 @I25@ INDI
+1 NAME Lambert /Boucher de Grandpré/
+2 GIVN Lambert
+2 SURN Boucher de Grandpré
+1 SEX M
+1 NOTE Maggiore di Trois-Rivières.
+1 WWW https://www.biographi.ca/en/bio/boucher_de_grandpre_lambert_1E.html
+1 BIRT
+2 DATE 12 AUG 1656
+2 PLAC Trois-Rivières, Nuova Francia (Quebec)
+1 DEAT
+2 DATE 03 APR 1699
+2 PLAC Trois-Rivières, Nuova Francia (Quebec)
+1 FAMS @F12@
+1 FAMC @F13@
+0 @I26@ INDI
+1 NAME Marie Marguerite /Vauvril de Blason/
+2 GIVN Marie Marguerite
+2 SURN Vauvril de Blason
+1 SEX F
+1 WWW https://en.wikipedia.org/wiki/Pierre_Boucher
+1 NOTE Figlia di Charles Vauvril e Marie Françoise Lepellé (secondo fonti genealogiche). Spesso collegata alla famiglia Boucher nelle fonti canadesi.
+1 BIRT
+2 DATE 30 JUN 1672
+2 PLAC Trois-Rivières, Nuova Francia (Quebec)
+1 DEAT
+2 DATE 07 JAN 1730
+2 PLAC Trois-Rivières, Nuova Francia (Quebec)
+1 FAMS @F12@
+0 @I27@ INDI
+1 NAME Pierre /Boucher/
+2 GIVN Pierre
+2 SURN Boucher
+1 SEX M
+1 TITL Governatore di Trois-Rivières; Signore di Boucherville
+1 WWW https://en.wikipedia.org/wiki/Pierre_Boucher
+1 BIRT
+2 DATE 01 AUG 1622
+2 PLAC Mortagne-au-Perche, Francia
+1 DEAT
+2 DATE 19 APR 1717
+2 PLAC Boucherville, Canada (Nuova Francia)
+1 FAMS @F13@
+1 FAMC @F14@
+0 @I28@ INDI
+1 NAME Jeanne /Crevier/
+2 GIVN Jeanne
+2 SURN Crevier
+1 SEX F
+1 NOTE Moglie di Pierre Boucher.
+1 BIRT
+2 DATE 04 JUN 1636
+2 PLAC Rouen, Normandia, Francia
+1 DEAT
+2 DATE 11 DEC 1727
+2 PLAC Boucherville, Canada (Nuova Francia)
+1 FAMS @F13@
+0 @I29@ INDI
+1 NAME Gaspard /Boucher/
+2 GIVN Gaspard
+2 SURN Boucher
+1 SEX M
+1 NOTE Padre di Pierre Boucher.
+1 BIRT
+2 DATE ABT 1599
+2 PLAC Mortagne-au-Perche, Francia
+1 DEAT
+2 DATE ABT 1663
+2 PLAC Canada (Nuova Francia)
+1 FAMS @F14@
+0 @I30@ INDI
+1 NAME Nicole /Lemaire/
+2 GIVN Nicole
+2 SURN Lemaire
+1 SEX F
+1 NOTE Madre di Pierre Boucher.
+1 BIRT
+2 DATE 10 MAR 1595
+2 PLAC Mamers, Maine, Francia
+1 DEAT
+2 DATE BEF 1666
+2 PLAC Canada (Nuova Francia)
+1 FAMS @F14@
+0 @I31@ INDI
+1 NAME Jacques /Boucher/
+2 GIVN Jacques
+2 SURN Boucher
+1 SEX M
+1 NOTE Nonno di Pierre Boucher.
+1 BIRT
+2 DATE ABT 1560
+2 PLAC Mortagne-au-Perche, Francia
+1 DEAT
+2 DATE BEF 30 JUL 1611
+2 PLAC Mortagne-au-Perche, Francia
+1 FAMS @F15@
+0 @I32@ INDI
+1 NAME Françoise /Paigné/
+2 GIVN Françoise
+2 SURN Paigné
+1 SEX F
+1 NOTE Nonna di Pierre Boucher.
+1 BIRT
+2 DATE ABT 1560
+2 PLAC Perche, Francia
+1 DEAT
+2 DATE ABT 1611
+2 PLAC Perche, Francia
+1 FAMS @F15@
+0 @I33@ INDI
+1 NAME Madre sconosciuta di /Céleste Olimpie Grandpré/
+1 SEX F
+1 NOTE Madre non identificata nelle fonti disponibili.
+1 FAMS @F10@
+0 @F1@ FAM
+1 HUSB @I2@
+1 WIFE @I3@
+1 CHIL @I1@
+0 @F2@ FAM
+1 HUSB @I4@
+1 WIFE @I5@
+1 CHIL @I2@
+0 @F3@ FAM
+1 HUSB @I6@
+1 WIFE @I7@
+1 CHIL @I3@
+0 @F4@ FAM
+1 HUSB @I8@
+1 WIFE @I9@
+1 CHIL @I4@
+0 @F5@ FAM
+1 HUSB @I10@
+1 WIFE @I11@
+1 CHIL @I5@
+0 @F6@ FAM
+1 HUSB @I12@
+1 WIFE @I13@
+1 CHIL @I6@
+0 @F7@ FAM
+1 HUSB @I14@
+1 WIFE @I15@
+1 CHIL @I7@
+0 @F8@ FAM
+1 HUSB @I18@
+1 WIFE @I16@
+1 CHIL @I14@
+0 @F9@ FAM
+1 HUSB @I19@
+1 WIFE @I20@
+1 CHIL @I16@
+0 @F10@ FAM
+1 HUSB @I21@
+1 WIFE @I33@
+1 CHIL @I20@
+0 @F11@ FAM
+1 HUSB @I23@
+1 WIFE @I24@
+1 CHIL @I21@
+0 @F12@ FAM
+1 HUSB @I25@
+1 WIFE @I26@
+1 CHIL @I23@
+0 @F13@ FAM
+1 HUSB @I27@
+1 WIFE @I28@
+1 CHIL @I25@
+0 @F14@ FAM
+1 HUSB @I29@
+1 WIFE @I30@
+1 CHIL @I27@
+0 @F15@ FAM
+1 HUSB @I31@
+1 WIFE @I32@
+1 CHIL @I29@
+0 TRLR

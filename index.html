@@ -60,6 +60,9 @@ if (params.has("ged")) {
     if (params.get("ged") == "carl-gustaf") {
         file = "ged/carl_xvi_gustaf_ancestors_sv.ged";
     }
+   if (params.get("ged") == "pope-leo") {
+        file = "ged/papa_leone_xiv_antenati_esteso_it.ged";
+    }
     NodeFamily.init('', lang, function() {
         document.getElementById("intro").style.display = "none";
         fetch(file)
