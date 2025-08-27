@@ -28,7 +28,7 @@ it is important to accept everything in the input and **NOT LOSE** anything in t
 which is quite a unique approach
 
 ## HOW TO USE IT
-- Just go to [live version](https://ameros.github.io/gedcom-svg-tree/) (or choose [its polish version](https://ameros.github.io/gedcom-svg-tree/?lang=pl)) and open the GEDCOM file
+- Just go to [live version](https://ameros.github.io/gedcom-svg-tree/) (or choose its [polish](https://ameros.github.io/gedcom-svg-tree/?lang=pl), [swedish](https://ameros.github.io/gedcom-svg-tree/?lang=sv) or [italian](https://ameros.github.io/gedcom-svg-tree/?lang=it) version) and open the GEDCOM file
 - or just [download lastest version](https://github.com/ameros/gedcom-svg-tree/releases/latest) and open with your browser
 
 ### EXAMPLES
