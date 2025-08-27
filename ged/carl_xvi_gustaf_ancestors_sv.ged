@@ -1,0 +1,338 @@
+0 HEAD
+1 SOUR ChatGPT
+2 NAME GPT-5 Thinking
+2 VERS 1.0
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 DATE 27 AUG 2025
+1 SUBM @U1@
+0 @U1@ SUBM
+1 NAME Användare
+0 @I1@ INDI
+1 NAME Carl Gustaf Folke Hubertus /Bernadotte/
+1 WWW https://sv.wikipedia.org/wiki/Carl_XVI_Gustaf
+1 SEX M
+1 TITL Kung Carl XVI Gustaf av Sverige
+1 BIRT
+2 DATE 30 APR 1946
+2 PLAC Hagapalatset, Solna, Stockholms län, Sverige
+1 FAMC @F1@
+0 @I2@ INDI
+1 NAME Gustaf Adolf Oscar Fredrik Arthur Edmund /Bernadotte/
+1 WWW https://sv.wikipedia.org/wiki/Gustaf_Adolf,_prins_av_Sverige
+1 SEX M
+1 TITL Prins av Sverige, Hertig av Västerbotten
+1 BIRT
+2 DATE 22 APR 1906
+2 PLAC Stockholms slott, Stockholm, Sverige
+1 DEAT
+2 DATE 26 JAN 1947
+2 PLAC Kastrups flygplats, Köpenhamn, Danmark
+1 FAMC @F2@
+1 FAMS @F1@
+0 @I3@ INDI
+1 NAME Sibylla Calma Marie Alice Bathildis Feodora /Sachsen-Coburg och Gotha/
+1 WWW https://sv.wikipedia.org/wiki/Sibylla_av_Sachsen-Coburg-Gotha
+1 SEX F
+1 TITL Prinsessa av Sachsen-Coburg och Gotha; Hertiginna av Västerbotten
+1 BIRT
+2 DATE 18 JAN 1908
+2 PLAC Schloss Friedenstein, Gotha, Tyska riket
+1 DEAT
+2 DATE 28 NOV 1972
+2 PLAC Stockholm, Sverige
+1 FAMC @F3@
+1 FAMS @F1@
+0 @I4@ INDI
+1 NAME Oscar Fredrik Wilhelm Olaf Gustaf Adolf /Bernadotte/
+1 WWW https://sv.wikipedia.org/wiki/Gustaf_VI_Adolf
+1 SEX M
+1 TITL Kung Gustaf VI Adolf av Sverige
+1 BIRT
+2 DATE 11 NOV 1882
+2 PLAC Stockholms slott, Stockholm, Sverige
+1 DEAT
+2 DATE 15 SEP 1973
+2 PLAC Helsingborg, Sverige
+1 FAMS @F2@
+1 FAMC @F4@
+0 @I5@ INDI
+1 NAME Margareta Victoria Charlotte Augusta Norah /av Connaught/
+1 WWW https://sv.wikipedia.org/wiki/Margareta_av_Connaught
+1 SEX F
+1 TITL Prinsessan Margareta av Connaught; Kronprinsessa av Sverige
+1 BIRT
+2 DATE 15 JAN 1882
+2 PLAC Bagshot Park, Surrey, England
+1 DEAT
+2 DATE 01 MAY 1920
+2 PLAC Stockholms slott, Stockholm, Sverige
+1 FAMS @F2@
+1 FAMC @F5@
+0 @I6@ INDI
+1 NAME Leopold Karl Eduard Georg Albert /Sachsen-Coburg och Gotha/
+1 WWW https://sv.wikipedia.org/wiki/Karl_Eduard_av_Sachsen-Coburg-Gotha
+1 SEX M
+1 TITL Karl Eduard, Hertig av Sachsen-Coburg och Gotha
+1 BIRT
+2 DATE 19 JUL 1884
+2 PLAC Claremont House, Esher, Surrey, England
+1 DEAT
+2 DATE 06 MAR 1954
+2 PLAC Coburg, Bayern, Västtyskland
+1 FAMS @F3@
+1 FAMC @F6@
+0 @I7@ INDI
+1 NAME Viktoria Adelaide Helene Louise Marie Friederike /av Schleswig-Holstein/
+1 WWW https://sv.wikipedia.org/wiki/Victoria_Adelaide_av_Schleswig-Holstein
+1 SEX F
+1 TITL Prinsessan Viktoria Adelaide av Schleswig-Holstein; Hertiginna av Sachsen-Coburg och Gotha
+1 BIRT
+2 DATE 31 DEC 1885
+2 PLAC Grünholz, Schleswig-Holstein, Preussen
+1 DEAT
+2 DATE 03 OCT 1970
+2 PLAC Greinburg, Österrike
+1 FAMS @F3@
+1 FAMC @F7@
+0 @I8@ INDI
+1 NAME Oscar Gustaf Adolf /Bernadotte/
+1 WWW https://sv.wikipedia.org/wiki/Gustaf_V
+1 SEX M
+1 TITL Kung Gustaf V av Sverige
+1 BIRT
+2 DATE 16 JUN 1858
+2 PLAC Stockholm, Sverige
+1 DEAT
+2 DATE 29 OCT 1950
+2 PLAC Stockholm, Sverige
+1 FAMS @F4@
+0 @I9@ INDI
+1 NAME Sofia Marie Viktoria /av Baden/
+1 WWW https://sv.wikipedia.org/wiki/Victoria_av_Baden
+1 SEX F
+1 TITL Viktoria av Baden, Drottning av Sverige
+1 BIRT
+2 DATE 07 AUG 1862
+2 PLAC Baden-Baden, Storhertigdömet Baden
+1 DEAT
+2 DATE 04 APR 1930
+2 PLAC Rom, Italien
+1 FAMS @F4@
+0 @I10@ INDI
+1 NAME Arthur William Patrick Albert /av Connaught/
+1 WWW https://sv.wikipedia.org/wiki/Arthur,_hertig_av_Connaught_och_Strathearn
+1 SEX M
+1 TITL Prins Arthur, Hertig av Connaught och Strathearn
+1 BIRT
+2 DATE 01 MAY 1850
+2 PLAC Buckingham Palace, London, England
+1 DEAT
+2 DATE 16 JAN 1942
+2 PLAC Bagshot Park, Surrey, England
+1 FAMS @F5@
+1 FAMC @F8@
+0 @I11@ INDI
+1 NAME Luise Margarete Alexandra Viktoria Agnes /av Preussen/
+1 WWW https://sv.wikipedia.org/wiki/Louise_Margareta_av_Preussen
+1 SEX F
+1 TITL Prinsessan Luise Margarete av Preussen, Hertiginna av Connaught
+1 BIRT
+2 DATE 25 JUL 1860
+2 PLAC Potsdam, Preussen
+1 DEAT
+2 DATE 14 MAR 1917
+2 PLAC Clarence House, London, England
+1 FAMS @F5@
+0 @I12@ INDI
+1 NAME Leopold Georg Duncan Albert /Sachsen-Coburg och Gotha/
+1 WWW https://sv.wikipedia.org/wiki/Leopold,_hertig_av_Albany
+1 SEX M
+1 TITL Prins Leopold, Hertig av Albany
+1 BIRT
+2 DATE 07 APR 1853
+2 PLAC Buckingham Palace, London, England
+1 DEAT
+2 DATE 28 MAR 1884
+2 PLAC Cannes, Frankrike
+1 FAMS @F6@
+1 FAMC @F8@
+0 @I13@ INDI
+1 NAME Helene Friederike Auguste /av Waldeck och Pyrmont/
+1 WWW https://sv.wikipedia.org/wiki/Helena_av_Waldeck_och_Pyrmont
+1 SEX F
+1 TITL Prinsessan Helena av Waldeck och Pyrmont, Hertiginna av Albany
+1 BIRT
+2 DATE 17 FEB 1861
+2 PLAC Arolsen, Waldeck och Pyrmont
+1 DEAT
+2 DATE 01 SEP 1922
+2 PLAC Hinterriß, Tyrolen, Österrike
+1 FAMS @F6@
+0 @I14@ INDI
+1 NAME Friedrich Ferdinand Georg Christian Karl Wilhelm /av Schleswig-Holstein/
+1 WWW https://sv.wikipedia.org/wiki/Friedrich_Ferdinand_av_Schleswig-Holstein
+1 SEX M
+1 TITL Friedrich Ferdinand, Hertig av Schleswig-Holstein
+1 BIRT
+2 DATE 12 OCT 1855
+2 PLAC Kiel, Holstein
+1 DEAT
+2 DATE 21 JAN 1934
+2 PLAC Glücksburg, Schleswig-Holstein, Tyskland
+1 FAMS @F7@
+1 FAMC @F10@
+0 @I15@ INDI
+1 NAME Karoline Mathilde /av Schleswig-Holstein-Sonderburg-Augustenburg/
+1 WWW https://de.wikipedia.org/wiki/Caroline_Mathilde_von_Schleswig-Holstein-Sonderburg-Augustenburg
+1 SEX F
+1 TITL Prinsessan Karoline Mathilde av Schleswig-Holstein-Sonderburg-Augustenburg
+1 BIRT
+2 DATE 25 JAN 1860
+2 PLAC Augustenborg, Danmark
+1 DEAT
+2 DATE 20 FEB 1932
+2 PLAC Grünholz, Schleswig-Holstein, Tyskland
+1 FAMS @F7@
+0 @I16@ INDI
+1 NAME Alexandrina Victoria /Windsor/
+1 WWW https://sv.wikipedia.org/wiki/Victoria_av_Storbritannien
+1 SEX F
+1 TITL Drottning Viktoria av Storbritannien
+1 BIRT
+2 DATE 24 MAY 1819
+2 PLAC Kensington Palace, London, England
+1 DEAT
+2 DATE 22 JAN 1901
+2 PLAC Osborne House, Isle of Wight, England
+1 FAMS @F8@
+0 @I17@ INDI
+1 NAME Franz Albert August Karl Emanuel /Sachsen-Coburg och Gotha/
+1 WWW https://sv.wikipedia.org/wiki/Albert_av_Sachsen-Coburg-Gotha
+1 SEX M
+1 TITL Prins Albert av Sachsen-Coburg och Gotha, Prinsgemål
+1 BIRT
+2 DATE 26 AUG 1819
+2 PLAC Schloss Rosenau, Coburg, Sachsen-Coburg-Saalfeld
+1 DEAT
+2 DATE 14 DEC 1861
+2 PLAC Windsor Castle, Berkshire, England
+1 FAMS @F8@
+0 @I18@ INDI
+1 NAME Friedrich Wilhelm Paul Leopold /av Schleswig-Holstein/
+1 SEX M
+1 TITL Friedrich Wilhelm, Hertig av Schleswig-Holstein-Sonderburg-Glücksburg
+1 BIRT
+2 DATE 04 JAN 1785
+2 PLAC Lindenau, Ostpreussen
+1 DEAT
+2 DATE 17 FEB 1831
+2 PLAC Gottorp, Schleswig
+1 FAMS @F9@
+0 @I19@ INDI
+1 NAME Louise Caroline /av Hessen-Kassel/
+1 SEX F
+1 TITL Prinsessan Louise Caroline av Hessen-Kassel
+1 BIRT
+2 DATE 28 SEP 1789
+2 PLAC Gottorp, Schleswig
+1 DEAT
+2 DATE 13 MAR 1867
+2 PLAC Ballenstedt, Anhalt
+1 FAMS @F9@
+0 @I20@ INDI
+1 NAME Friedrich /av Schleswig-Holstein/
+1 SEX M
+1 TITL Friedrich, Hertig av Schleswig-Holstein-Sonderburg-Glücksburg
+1 BIRT
+2 DATE 23 OCT 1814
+2 PLAC Schleswig, Hertigdömet Schleswig
+1 DEAT
+2 DATE 27 NOV 1885
+2 PLAC Glücksburg, Schleswig-Holstein, Tyskland
+1 FAMC @F9@
+1 FAMS @F10@
+0 @I21@ INDI
+1 NAME Christian /av Schleswig-Holstein/
+1 WWW https://sv.wikipedia.org/wiki/Christian_IX_av_Danmark
+1 SEX M
+1 TITL Christian IX, Kung av Danmark
+1 BIRT
+2 DATE 08 APR 1818
+2 PLAC Gottorp slott, Schleswig, Danmark–Norge
+1 DEAT
+2 DATE 29 JAN 1906
+2 PLAC Amalienborgs slott, Köpenhamn, Danmark
+1 FAMC @F9@
+1 FAMS @F11@
+0 @I22@ INDI
+1 NAME Louise /av Hessen-Kassel/
+1 WWW https://sv.wikipedia.org/wiki/Louise_av_Hessen-Kassel
+1 SEX F
+1 TITL Louise av Hessen-Kassel, Drottning av Danmark (gemål)
+1 BIRT
+2 DATE 07 SEP 1817
+2 PLAC Kassel, Hessen
+1 DEAT
+2 DATE 29 SEP 1898
+2 PLAC Bernstorff slott, Gentofte, Danmark
+1 FAMS @F11@
+0 @I23@ INDI
+1 NAME Adelheid /av Schaumburg-Lippe/
+1 SEX F
+1 TITL Prinsessan Adelheid av Schaumburg-Lippe
+1 BIRT
+2 DATE 09 MAR 1821
+2 PLAC Bückeburg, Schaumburg-Lippe, Tyskland
+1 DEAT
+2 DATE 30 JUL 1899
+2 PLAC Itzehoe, Schleswig-Holstein, Tyskland
+1 FAMS @F10@
+0 @F1@ FAM
+1 HUSB @I2@
+1 WIFE @I3@
+1 CHIL @I1@
+0 @F2@ FAM
+1 HUSB @I4@
+1 WIFE @I5@
+1 CHIL @I2@
+0 @F3@ FAM
+1 HUSB @I6@
+1 WIFE @I7@
+1 CHIL @I3@
+0 @F4@ FAM
+1 HUSB @I8@
+1 WIFE @I9@
+1 CHIL @I4@
+0 @F5@ FAM
+1 HUSB @I10@
+1 WIFE @I11@
+1 CHIL @I5@
+0 @F6@ FAM
+1 HUSB @I12@
+1 WIFE @I13@
+1 CHIL @I6@
+0 @F7@ FAM
+1 HUSB @I14@
+1 WIFE @I15@
+1 CHIL @I7@
+0 @F8@ FAM
+1 HUSB @I17@
+1 WIFE @I16@
+1 CHIL @I10@
+1 CHIL @I12@
+0 @F9@ FAM
+1 HUSB @I18@
+1 WIFE @I19@
+1 CHIL @I20@
+1 CHIL @I21@
+0 @F10@ FAM
+1 HUSB @I20@
+1 WIFE @I23@
+1 CHIL @I14@
+0 @F11@ FAM
+1 HUSB @I21@
+1 WIFE @I22@
+0 TRLR

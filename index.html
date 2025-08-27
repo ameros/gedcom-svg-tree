@@ -57,6 +57,9 @@ if (params.has("ged")) {
     if (params.get("ged") == "usa") {
         file = "ged/usa-presidents2025-03-07.ged";
     }
+    if (params.get("ged") == "carl-gustaf") {
+        file = "ged/carl_xvi_gustaf_ancestors_sv.ged";
+    }
     NodeFamily.init('', lang, function() {
         document.getElementById("intro").style.display = "none";
         fetch(file)

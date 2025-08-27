@@ -33,6 +33,7 @@ which is quite a unique approach
 
 ### EXAMPLES
 - [Piast Dynasty](https://ameros.github.io/gedcom-svg-tree/?lang=pl&ged) - with `lang=pl`
+- [Ancestors of Carl XVI Gustaf](https://ameros.github.io/gedcom-svg-tree/?lang=sv&ged=carl-gustaf) - with `lang=sv`
 - [USA Presidents](https://ameros.github.io/gedcom-svg-tree/?ged=usa&id=I1604) - showing images from relative path _(data folder)_
 - [Royal Families](https://ameros.github.io/gedcom-svg-tree/?ged=royals)
 
