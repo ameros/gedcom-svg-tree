@@ -1,5 +1,5 @@
 @import url(RS3CBP_grid.css); /* RS3CBP grid */
 @import url(node.family-structure.css); /* Site Structure */
-@import url(node.family-theme.css); /* Layout theme */
-@import url(node.family-palette.css);
+@import url(node.family-color.css); /* Colors def */
+@import url(node.family-palette.css); /* Layout theme */
 @import url(node.family-typography.css); /* Fonts */
