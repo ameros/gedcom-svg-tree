@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.5.4 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.5.5 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -949,6 +949,9 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         const img = _formSection.querySelector('#photo img');
         img.style.display = "none";
         const icon = _formSection.querySelector('#photo i');
+        icon.classList.remove("M");
+        icon.classList.remove("F");
+        icon.classList.remove("U");
         icon.style.display = "block";
         const caption = _formSection.querySelector('#photo figcaption');
         caption.innerHTML = "";
@@ -1017,6 +1020,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                     if (inputName == "SEX.nfValue") {
                         _formSection.querySelector("#SEX").value = value;
                         _formSection.querySelector("#SEX").classList.add("active");
+                        _formSection.querySelector("i").classList.add(value);
                     }
                     if (inputName == "SUBM.nfValue") {
                         _formSection.querySelector("#submitterName").innerHTML = _presenter.getName(value.replace(/@/g, ""));

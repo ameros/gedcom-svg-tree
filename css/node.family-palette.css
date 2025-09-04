@@ -140,6 +140,15 @@ input[type=range] {
 .fa-user::before, .fa-user-friends::before {
     color: var(--auraInfo);
 }
+.fa-user-friends::before {
+    color: var(--accentFamilyIcon);
+}
+.fa-user.M::before {
+    color: var(--accentMaleIcon);
+}
+.fa-user.F::before {
+    color: var(--accentFemaleIcon);
+}
 svg {
     background-color: transparent;
 }
