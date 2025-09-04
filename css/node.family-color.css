@@ -6,7 +6,7 @@
   --_red-h: 348;
   --_green-h: 88;
   --_greenLighter-h: 64;
-  --_blue-h: 195;
+  --_blue-h: 205;
   --_yellow-h: 52;
 
   --_gray: hsl(264, 8%, 64%);
@@ -18,7 +18,7 @@
  /* colors
  --------------------------------- */
   --_red: hsl(var(--_red-h), 80%, 53%);
-  --_redLighter: hsl(var(--_red-h), 80%, 83%);
+  --_redLighter: hsl(var(--_red-h), 100%, 83%);
   --_redLighter2: hsl(var(--_red-h), 80%, 98%);
   --_green: hsl(var(--_green-h), 86%, 35%);
   --_greenLighter: hsl(var(--_greenLighter-h), 100%, 42%);
