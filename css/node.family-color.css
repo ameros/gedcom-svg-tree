@@ -25,7 +25,7 @@
   --_greenLighter: hsl(var(--_greenLighter-h), 100%, 42%);
   --_greenLighter2: hsl(var(--_greenLighter-h), 70%, 82%);
   --_blue: hsl(var(--_blue-h), 100%, 80%);
-  --_blueLighter: hsl(var(--_blue-h), 100%, 96%);
+  --_blueLighter: hsl(var(--_blue-h), 100%, 95%);
   --_yellow: hsl(var(--_yellow-h), 100%, 49%);
   --_yellowLighter: hsl(var(--_yellow-h), 100%, 85%);
   --_grayLighter: hsl(var(--_grayLighter-hs), 94%);
@@ -66,11 +66,12 @@
       --_red: hsl(var(--_red-h), 50%, 53%);
       --_redLighter: hsl(var(--_red-h), 70%, 83%);
       --_redLighter2: hsl(var(--_red-h), 50%, 98%);
+      --_redLighter3: hsl(var(--_red-h), 50%, 86%);
       --_green: hsl(var(--_green-h), 56%, 35%);
       --_greenLighter: hsl(var(--_greenLighter-h), 70%, 43%);
       --_greenLighter2: hsl(var(--_greenLighter-h), 40%, 22%);
       --_blue: hsl(var(--_blue-h), 70%, 80%);
-      --_blueLighter: hsl(var(--_blue-h), 70%, 96%);
+      --_blueLighter: hsl(var(--_blue-h), 50%, 86%);
       --_yellow: hsl(var(--_yellow-h), 70%, 49%);
       --_yellowLighter: hsl(var(--_yellow-h), 70%, 85%);
       --_grayLighter: hsl(var(--grayLighter-hs), 4%);
