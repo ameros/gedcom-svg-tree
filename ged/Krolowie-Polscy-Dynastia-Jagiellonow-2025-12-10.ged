@@ -1,0 +1,350 @@
+0 HEAD
+1 SOUR ChatGPT
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 FILE Krolowie-Polscy-Dynastia-Jagiellonow-2025-12-10.ged
+0 @I1@ INDI
+1 NAME Władysław II /Jagiełło/
+1 TITL Król Polski; Wielki Książę Litewski
+1 SEX M
+1 FAMS @F1@
+1 FAMS @F2@
+1 BIRT
+2 DATE ABT 1362
+2 PLAC Litwa
+1 DEAT
+2 DATE 1 JUN 1434
+2 PLAC Gródek
+1 BURI
+2 DATE 1434
+2 PLAC Katedra Wawelska, Kraków
+1 WWW https://pl.wikipedia.org/wiki/Władysław_II_Jagiełło
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Wladyslaw_Jagiello.jpg
+0 @I2@ INDI
+1 NAME Jadwiga /Andegaweńska/
+1 TITL Król Polski
+1 SEX F
+1 FAMS @F1@
+1 BIRT
+2 DATE BETWEEN 3 OCT 1373 AND 18 FEB 1374
+2 PLAC Buda
+1 DEAT
+2 DATE 17 JUL 1399
+2 PLAC Kraków
+1 BURI
+2 DATE 1399
+2 PLAC Katedra Wawelska, Kraków
+1 WWW https://pl.wikipedia.org/wiki/Jadwiga_Andegaweńska
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Hedvig_of_Poland.jpg
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 MARR
+2 DATE 15 FEB 1386
+2 PLAC Kraków
+0 @I3@ INDI
+1 NAME Zofia /Holszańska/
+1 TITL Królowa Polski
+1 SEX F
+1 FAMS @F2@
+1 BIRT
+2 DATE ABT 1405
+2 PLAC Holsza
+1 DEAT
+2 DATE 21 SEP 1461
+2 PLAC Kraków
+1 BURI
+2 DATE 1461
+2 PLAC Katedra Wawelska, Kraków
+1 WWW https://pl.wikipedia.org/wiki/Zofia_Holszańska
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Zofia_Holsza%C5%84ska.jpg
+0 @F2@ FAM
+1 HUSB @I1@
+1 WIFE @I3@
+1 MARR
+2 DATE FEB 1422
+2 PLAC Kraków
+1 CHIL @I4@
+1 CHIL @I5@
+0 @I4@ INDI
+1 NAME Władysław III /Warneńczyk/
+1 TITL Król Polski; Król Węgier
+1 SEX M
+1 FAMC @F2@
+1 BIRT
+2 DATE 31 OCT 1424
+2 PLAC Kraków
+1 DEAT
+2 DATE 10 NOV 1444
+2 PLAC Warna
+1 BURI
+2 DATE 1444
+2 PLAC Warna (poległ pod Warną)
+1 WWW https://pl.wikipedia.org/wiki/Władysław_III_Warneńczyk
+0 @I5@ INDI
+1 NAME Kazimierz IV /Jagiellończyk/
+1 TITL Król Polski; Wielki Książę Litewski
+1 SEX M
+1 FAMS @F3@
+1 FAMC @F2@
+1 BIRT
+2 DATE 30 NOV 1427
+2 PLAC Kraków
+1 DEAT
+2 DATE 7 JUN 1492
+2 PLAC Grodno
+1 BURI
+2 DATE 1492
+2 PLAC Katedra Wawelska, Kraków (Kaplica Świętokrzyska)
+1 WWW https://pl.wikipedia.org/wiki/Kazimierz_IV_Jagiellończyk
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Casimir_IV_Jagiellon.PNG
+0 @I6@ INDI
+1 NAME Elżbieta /Rakuszanka/
+1 TITL Królowa Polski
+1 SEX F
+1 FAMS @F3@
+1 FAMC @F30@
+1 BIRT
+2 DATE ABT 1436
+2 PLAC Wiedeń
+1 DEAT
+2 DATE 30 AUG 1505
+2 PLAC Kraków
+1 BURI
+2 DATE 1505
+2 PLAC Katedra Wawelska, Kraków
+1 WWW https://pl.wikipedia.org/wiki/Elżbieta_Rakuszanka
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/El%C5%BCbieta_Rakuszanka.JPG
+0 @F3@ FAM
+1 HUSB @I5@
+1 WIFE @I6@
+1 MARR
+2 DATE 10 FEB 1454
+2 PLAC Kraków
+1 CHIL @I7@
+1 CHIL @I8@
+1 CHIL @I9@
+1 CHIL @I10@
+1 CHIL @I11@
+0 @I7@ INDI
+1 NAME Władysław II /Jagiellończyk/
+1 TITL Król Węgier; Król Czech
+1 SEX M
+1 FAMC @F3@
+1 BIRT
+2 DATE 1 MAR 1456
+2 PLAC Kraków
+1 DEAT
+2 DATE 13 MAR 1516
+2 PLAC Buda
+1 BURI
+2 DATE 1516
+2 PLAC Katedra Wawelska, Kraków (częściowo przeniesiony)
+1 WWW https://pl.wikipedia.org/wiki/Władysław_II_Jagiellończyk
+0 @I8@ INDI
+1 NAME Kazimierz /Jagiellończyk/
+1 SEX M
+1 FAMC @F3@
+1 BIRT
+2 DATE 1458
+2 PLAC Kraków
+1 DEAT
+2 DATE 1484
+2 PLAC Grodno
+0 @I9@ INDI
+1 NAME Jan I /Olbracht/
+1 TITL Król Polski
+1 SEX M
+1 FAMC @F3@
+1 BIRT
+2 DATE 27 DEC 1459
+2 PLAC Kraków
+1 DEAT
+2 DATE 17 JUN 1501
+2 PLAC Toruń
+1 BURI
+2 DATE 1501
+2 PLAC Katedra Wawelska, Kraków
+1 WWW https://pl.wikipedia.org/wiki/Jan_I_Olbracht
+0 @I10@ INDI
+1 NAME Aleksander /Jagiellończyk/
+1 TITL Król Polski; Wielki Książę Litewski
+1 SEX M
+1 FAMC @F3@
+1 BIRT
+2 DATE 5 AUG 1461
+2 PLAC Kraków
+1 DEAT
+2 DATE 19 AUG 1506
+2 PLAC Wilno
+1 BURI
+2 DATE 1506
+2 PLAC Bazylika katedralna we Wileńskim Ostrej Bramie (pochówek symboliczny)
+1 WWW https://pl.wikipedia.org/wiki/Aleksander_Jagiellończyk
+0 @I11@ INDI
+1 NAME Zygmunt I /Stary/
+1 TITL Król Polski; Wielki Książę Litewski
+1 SEX M
+1 FAMS @F4@
+1 FAMC @F3@
+1 BIRT
+2 DATE 1 JAN 1467
+2 PLAC Kozienice
+1 DEAT
+2 DATE 1 APR 1548
+2 PLAC Kraków
+1 BURI
+2 DATE 1548
+2 PLAC Kaplica Zygmuntowska, Katedra Wawelska, Kraków
+1 WWW https://pl.wikipedia.org/wiki/Zygmunt_I_Stary
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Zygmunt_Stary.JPG
+0 @I12@ INDI
+1 NAME Bona /Sforza/
+1 TITL Królowa Polski
+1 SEX F
+1 FAMS @F4@
+1 BIRT
+2 DATE 2 FEB 1494
+2 PLAC Vigevano
+1 DEAT
+2 DATE 19 NOV 1557
+2 PLAC Bari
+1 BURI
+2 DATE 1557
+2 PLAC Bazylika św. Mikołaja, Bari
+1 WWW https://pl.wikipedia.org/wiki/Bona_Sforza
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Bona_Sforza_portrait.jpg
+0 @F4@ FAM
+1 HUSB @I11@
+1 WIFE @I12@
+1 MARR
+2 DATE 1518
+2 PLAC Kraków
+1 CHIL @I13@
+1 CHIL @I14@
+1 CHIL @I15@
+0 @I13@ INDI
+1 NAME Izabela /Jagiellonka/
+1 SEX F
+1 FAMC @F4@
+1 BIRT
+2 DATE 1519
+2 PLAC Kraków
+1 DEAT
+2 DATE 1559
+2 PLAC Alba Iulia
+1 WWW https://pl.wikipedia.org/wiki/Izabela_Jagiellonka
+0 @I14@ INDI
+1 NAME Zygmunt II /August/
+1 TITL Król Polski; Wielki Książę Litewski
+1 SEX M
+1 FAMC @F4@
+1 BIRT
+2 DATE 1 AUG 1520
+2 PLAC Kraków
+1 DEAT
+2 DATE 7 JUL 1572
+2 PLAC Knyszyn
+1 BURI
+2 DATE 1572
+2 PLAC Katedra Wawelska, Kraków
+1 WWW https://pl.wikipedia.org/wiki/Zygmunt_II_August
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Sigismund_II_Augustus_portrait.jpg
+0 @I15@ INDI
+1 NAME Anna /Jagiellonka/
+1 TITL Królowa Polski (cesarzowa nie)
+1 SEX F
+1 FAMS @F40@
+1 FAMC @F4@
+1 BIRT
+2 DATE 18 OCT 1523
+2 PLAC Kraków
+1 DEAT
+2 DATE 9 SEP 1596
+2 PLAC Warszawa
+1 BURI
+2 DATE 1596
+2 PLAC Katedra Wawelska, Kraków
+1 WWW https://pl.wikipedia.org/wiki/Anna_Jagiellonka
+0 @I50@ INDI
+1 NAME Stefan /Batory/
+1 TITL Król Polski; Książę Siedmiogrodu
+1 SEX M
+1 FAMS @F40@
+1 BIRT
+2 DATE 1533
+2 PLAC Szlachta Węgierska
+1 DEAT
+2 DATE 1586
+2 PLAC Suczawa
+1 BURI
+2 DATE 1586
+2 PLAC Katedra Wawelska, Kraków
+1 WWW https://pl.wikipedia.org/wiki/Stefan_Batory
+0 @F40@ FAM
+1 HUSB @I50@
+1 WIFE @I15@
+1 MARR
+2 DATE 1576
+2 PLAC Kraków
+0 @I20@ INDI
+1 NAME Albrecht II /Habsburg/
+1 TITL Cesarz Rzymski; Król Węgier; Król Czech
+1 SEX M
+1 FAMS @F30@
+1 BIRT
+2 DATE 1397
+2 PLAC Wiedeń
+1 DEAT
+2 DATE 27 OCT 1439
+2 PLAC Neszmély
+1 WWW https://pl.wikipedia.org/wiki/Albrecht_II_Habsburg
+0 @I21@ INDI
+1 NAME Elżbieta /Luksemburska/
+1 TITL Królowa Czech; Królowa Węgier
+1 SEX F
+1 FAMS @F30@
+1 BIRT
+2 DATE 1409
+2 PLAC Wyszehrad
+1 DEAT
+2 DATE 1442
+2 PLAC Wiedeń
+1 WWW https://pl.wikipedia.org/wiki/Elżbieta_Luksemburska
+0 @F30@ FAM
+1 HUSB @I20@
+1 WIFE @I21@
+1 CHIL @I6@
+0 @I60@ INDI
+1 NAME Władysław IV /Waza/
+1 TITL Król Polski; Król Szwecji
+1 SEX M
+1 BIRT
+2 DATE 1595
+2 PLAC Kraków
+1 DEAT
+2 DATE 1648
+2 PLAC Warszawa
+1 WWW https://pl.wikipedia.org/wiki/Władysław_IV_Waza
+0 @I61@ INDI
+1 NAME Michał /Korybut Wiśniowiecki/
+1 TITL Król Polski
+1 SEX M
+1 BIRT
+2 DATE 1640
+2 PLAC Wiśniowiec
+1 DEAT
+2 DATE 1673
+2 PLAC Warszawa
+1 WWW https://pl.wikipedia.org/wiki/Michał_Korybut_Wiśniowiecki
+0 TRLR

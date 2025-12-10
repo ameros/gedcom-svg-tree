@@ -37,6 +37,7 @@ which is quite a unique approach
 - [Ancestors of Pope Leo XIV](https://ameros.github.io/gedcom-svg-tree/?lang=it&ged=pope-leo) - with `lang=it`
 - [USA Presidents](https://ameros.github.io/gedcom-svg-tree/?ged=usa&id=I1604) - showing images from relative path _(data folder)_
 - [Royal Families](https://ameros.github.io/gedcom-svg-tree/?ged=royals)
+- [Jagiellonian dynasty](https://ameros.github.io/gedcom-svg-tree/?lang=pl&ged=jagiello)
 
 ---
 
