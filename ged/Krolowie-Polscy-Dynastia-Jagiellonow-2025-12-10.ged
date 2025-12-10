@@ -299,7 +299,7 @@
 1 MARR
 2 DATE 1576
 2 PLAC Kraków
-0 @I18@ INDI
+0 @I17@ INDI
 1 NAME Albrecht II /Habsburg/
 1 TITL Cesarz Rzymski; Król Węgier; Król Czech
 1 SEX M
@@ -311,7 +311,7 @@
 2 DATE 27 OCT 1439
 2 PLAC Neszmély
 1 WWW https://pl.wikipedia.org/wiki/Albrecht_II_Habsburg
-0 @I19@ INDI
+0 @I18@ INDI
 1 NAME Elżbieta /Luksemburska/
 1 TITL Królowa Czech; Królowa Węgier
 1 SEX F
@@ -324,29 +324,7 @@
 2 PLAC Wiedeń
 1 WWW https://pl.wikipedia.org/wiki/Elżbieta_Luksemburska
 0 @F30@ FAM
-1 HUSB @I18@
-1 WIFE @I19@
+1 HUSB @I17@
+1 WIFE @I18@
 1 CHIL @I6@
-0 @I17@ INDI
-1 NAME Władysław IV /Waza/
-1 TITL Król Polski; Król Szwecji
-1 SEX M
-1 BIRT
-2 DATE 1595
-2 PLAC Kraków
-1 DEAT
-2 DATE 1648
-2 PLAC Warszawa
-1 WWW https://pl.wikipedia.org/wiki/Władysław_IV_Waza
-0 @I20@ INDI
-1 NAME Michał /Korybut Wiśniowiecki/
-1 TITL Król Polski
-1 SEX M
-1 BIRT
-2 DATE 1640
-2 PLAC Wiśniowiec
-1 DEAT
-2 DATE 1673
-2 PLAC Warszawa
-1 WWW https://pl.wikipedia.org/wiki/Michał_Korybut_Wiśniowiecki
 0 TRLR
