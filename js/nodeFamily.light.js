@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.5.5 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.5.6 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -28,7 +28,7 @@ const NF_VALUE = "nfValue";
 const NF_KEYS = [NF_TYPE, NF_RECORD, NF_VALUE];
 const Gedcom = function(gedcomData) {
     const _contents = gedcomData;
-    const lines = _contents.replace(/\r\n/g,'\n').split('\n')
+    const lines = _contents.replace(/[\r\n]+/g,'\n').split('\n')
     let _tags = [];
     for (let i = 0; i < lines.length; i++) {
         _tags.push(new Gedcom.Tag(lines[i], lines[i+1]));
