@@ -1,4 +1,11 @@
 # gedcom-svg-tree
+**GEDCOM → SVG Family Tree Visualizer (Client-side, Open Source)**
+
+Convert any GEDCOM genealogy file into a clean, scalable SVG tree.
+Runs fully in the browser — no backend, no data uploads.
+
+---
+
 This is simple, yet UNIQUE way of presenting family tree. Each parents become a node of the tree.
 
 ![](img/vertical.png)
