@@ -262,7 +262,7 @@
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Sigismund_II_Augustus_portrait.jpg
 0 @I15@ INDI
 1 NAME Anna /Jagiellonka/
-1 TITL Królowa Polski (cesarzowa nie)
+1 TITL Królowa Polski
 1 SEX F
 1 FAMS @F40@
 1 FAMC @F4@
@@ -276,6 +276,8 @@
 2 DATE 1596
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Anna_Jagiellonka
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Cranach_the_Younger_Anna_Jagiellon.jpg
 0 @I50@ INDI
 1 NAME Stefan /Batory/
 1 TITL Król Polski; Książę Siedmiogrodu
