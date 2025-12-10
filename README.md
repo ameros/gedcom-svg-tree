@@ -4,13 +4,41 @@
 Convert any GEDCOM genealogy file into a clean, scalable SVG tree.
 Runs fully in the browser — no backend, no data uploads.
 
+## Features
+
+- 100% client-side (privacy-first)
+- Supports: FAMS, FAMC, CHIL, BIRT, DEAT, MARR, BURI, OCCU, TITL, WWW, SOUR
+- Handles large trees with smooth rendering
+- Clean, uncluttered SVG output (perfect for printing and embedding)
+- Works from GitHub Pages
+- Supports multiple languages (including Polish and English)
+
+## Demo
+https://ameros.github.io/gedcom-svg-tree/
+
+## How to use it
+- Just go to [live version](https://ameros.github.io/gedcom-svg-tree/) (or choose its [polish](https://ameros.github.io/gedcom-svg-tree/?lang=pl), [swedish](https://ameros.github.io/gedcom-svg-tree/?lang=sv) or [italian](https://ameros.github.io/gedcom-svg-tree/?lang=it) version) and open the GEDCOM file
+- or just [download lastest version](https://github.com/ameros/gedcom-svg-tree/releases/latest) and open with your browser
+
+## Example Trees
+
+- [Piast Dynasty](https://ameros.github.io/gedcom-svg-tree/?lang=pl&ged) - with `lang=pl`
+- [USA Presidents](https://ameros.github.io/gedcom-svg-tree/?ged=usa&id=I1604) - showing images from relative path _(data folder)_
+- [Royal Families](https://ameros.github.io/gedcom-svg-tree/?ged=royals)
+- With help of ChatGPT:
+    - [Ancestors of Carl XVI Gustaf](https://ameros.github.io/gedcom-svg-tree/?lang=sv&ged=carl-gustaf) - with `lang=sv`
+    - [Ancestors of Pope Leo XIV](https://ameros.github.io/gedcom-svg-tree/?lang=it&ged=pope-leo) - with `lang=it`
+    - [Jagiellonian dynasty](https://ameros.github.io/gedcom-svg-tree/?lang=pl&ged=jagiello) - with `lang=pl`
+
 ---
+
+## Description
 
 This is simple, yet UNIQUE way of presenting family tree. Each parents become a node of the tree.
 
 ![](img/vertical.png)
 
-## PURPOSE
+### Purpose
 The idea initially was as simple as:
 - to visualize own family tree
 - quite privately without passing data to any online system out there
@@ -19,39 +47,26 @@ The idea initially was as simple as:
 This is a completely secure tool. Visualization is done on the client (your) side, in the browser, using JavaScript, without transferring data to any server.
 There is no backend that holds, manipulate or process any data. It does not look for, match, examine, track or even collect any person data from your tree.
 
-## DESIGN ASSUMPTIONS
+### Design Assumptions
 
-### 1. FOCUS ON DATA
+#### 1. FOCUS ON DATA
 - first of all on that **INFORMATION** important from the point of view of graphical presentation of the tree and relationships _(title, names, birth and death data)_
 - secondly making this data more important (**EMPHASE**) than any graphical presentation
 
-### 2. RESPECTING STRUCTURE
+#### 2. RESPECTING STRUCTURE
 - where, in GEDCOM, both person and relationship constitute a separate unique entity, both semantic and technical (**NODE**), carrying information meaningful in their own common context
 - enabling exploration of relationships through intuitive navigation between them
 
-### 3. LOSSLESS CONVERSION
+#### 3. LOSSLESS CONVERSION
 finally, due to the lack of consensus on the standard, and due to the extension of the GEDCOM format with interpreter and version-specific properties,
 it is important to accept everything in the input and **NOT LOSE** anything in the output _(the so-called "more tags" section on the displayed data card)_,
 which is quite a unique approach
 
-## HOW TO USE IT
-- Just go to [live version](https://ameros.github.io/gedcom-svg-tree/) (or choose its [polish](https://ameros.github.io/gedcom-svg-tree/?lang=pl), [swedish](https://ameros.github.io/gedcom-svg-tree/?lang=sv) or [italian](https://ameros.github.io/gedcom-svg-tree/?lang=it) version) and open the GEDCOM file
-- or just [download lastest version](https://github.com/ameros/gedcom-svg-tree/releases/latest) and open with your browser
-
-### EXAMPLES
-- [Piast Dynasty](https://ameros.github.io/gedcom-svg-tree/?lang=pl&ged) - with `lang=pl`
-- [USA Presidents](https://ameros.github.io/gedcom-svg-tree/?ged=usa&id=I1604) - showing images from relative path _(data folder)_
-- [Royal Families](https://ameros.github.io/gedcom-svg-tree/?ged=royals)
-- With help of ChatGPT:
-  - [Ancestors of Carl XVI Gustaf](https://ameros.github.io/gedcom-svg-tree/?lang=sv&ged=carl-gustaf) - with `lang=sv`
-  - [Ancestors of Pope Leo XIV](https://ameros.github.io/gedcom-svg-tree/?lang=it&ged=pope-leo) - with `lang=it`
-  - [Jagiellonian dynasty](https://ameros.github.io/gedcom-svg-tree/?lang=pl&ged=jagiello) - with `lang=pl`
-
 ---
 
-## SPECS
+### SPECS
 
-### Input
+#### Input
 GEDCOM file (.ged) is the de facto standard for exchanging genealogical data between different software. It is a plain text file containing information
 about individuals and links between them. It's specification is wide and eventually it is not ideal so the various systems expand it on their own.
 You can read more about it on the Internet. We focus on some excerpt of it - the data suitable for visualization on the tree.
@@ -86,21 +101,21 @@ The tool makes use of such GEDCOM records and tags:
 
 It does however try to display all the data of those records.
 
-### Output
+#### Output
 
-#### SVG
+##### SVG
 SVG is a universal format of two-dimensional vector graphics, which was created for use on WWW.
 
 The tool uses SVG to visualize the tree and allows to save the generated graphics as a .svg file so that the user can freely use it.
 
-#### TSV
+##### TSV
 TSV is a tab-separated values file, convenient for a spreadsheet use. The GEDCOM level, pointer / tag and value are separated by tab character.  
 
 After import to spreadsheet using tab separator it looks like this:
 
 ![](img/spreadsheet.png)
 
-#### JSON
+##### JSON
 JSON, used as intermediate format while parsing GEDCOM file and building a tree, is also exposed
 for download as possible benefit for developers. Sample:
 
@@ -198,7 +213,7 @@ where:
 
 ---
 
-## Dependencies and Credits
+### Dependencies and Credits
 After some research:
 - GEDCOM (5.5.1) as a de facto standard to store family tree data https://en.wikipedia.org/wiki/GEDCOM
 - D3.js to draw a tree in a browser https://d3js.org/
