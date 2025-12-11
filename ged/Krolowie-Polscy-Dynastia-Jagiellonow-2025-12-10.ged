@@ -42,7 +42,7 @@
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Jadwiga_Andegaweńska
 1 OBJE
-2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Hedvig_of_Poland.jpg
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Jadwiga_by_Bacciarelli.jpg
 0 @F1@ FAM
 1 HUSB @I1@
 1 WIFE @I2@
@@ -66,7 +66,7 @@
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Zofia_Holszańska
 1 OBJE
-2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Zofia_Holsza%C5%84ska.jpg
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Marceli_Krajewski_-_Zofia_Holsza%C5%84ska.jpg
 0 @F2@ FAM
 1 HUSB @I1@
 1 WIFE @I3@
@@ -91,6 +91,8 @@
 2 DATE 1444
 2 PLAC Warna (poległ pod Warną)
 1 WWW https://pl.wikipedia.org/wiki/Władysław_III_Warneńczyk
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Wladislaus_III_of_Poland_and_Hungary_(89922013).jpg
 0 @I5@ INDI
 1 NAME Kazimierz IV /Jagiellończyk/
 1 TITL Król Polski, Wielki Książę Litewski
@@ -108,7 +110,7 @@
 2 PLAC Katedra Wawelska, Kraków (Kaplica Świętokrzyska)
 1 WWW https://pl.wikipedia.org/wiki/Kazimierz_IV_Jagiellończyk
 1 OBJE
-2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Casimir_IV_Jagiellon.PNG
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Kazimierz_IV_Jagiellonczyk_(275186).jpg
 0 @I6@ INDI
 1 NAME Elżbieta /Rakuszanka/
 1 TITL Królowa Polski
@@ -343,6 +345,8 @@
 2 DATE ABT 1296
 1 DEAT
 2 DATE 1377
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Algierd._%D0%90%D0%BB%D1%8C%D0%B3%D0%B5%D1%80%D0%B4_(1578).jpg
 
 0 @I20@ INDI
 1 NAME Uliana/Twerska/
@@ -364,6 +368,8 @@
 1 DEAT
 2 DATE 1341
 1 FAMS @F42@
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Giedzimin._%D0%93%D0%B5%D0%B4%D0%B7%D1%96%D0%BC%D1%96%D0%BD_(1709).jpg
 
 0 @I22@ INDI
 1 NAME Jewna //
@@ -416,6 +422,8 @@
 2 DATE BET 20 MAR 1416 AND 21 MAR 1416
 2 PLAC Kraków
 1 FAMS @F44@
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Marceli_Krajewski_-_Anna_Cylejska.jpg
 
 0 @I26@ INDI
 1 NAME Jadwiga /Jagiellonka/
@@ -445,6 +453,8 @@
 2 DATE 12 MAY 1420
 2 PLAC Kraków
 1 FAMS @F45@
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Marceli_Krajewski_-_El%C5%BCbieta_Pilecka.jpg
 
 0 @I28@ INDI
 1 NAME Elżbieta Bonifacja /Jagiellonka/
