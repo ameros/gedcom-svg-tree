@@ -7,10 +7,12 @@
 1 FILE Krolowie-Polscy-Dynastia-Jagiellonow-2025-12-10.ged
 0 @I1@ INDI
 1 NAME Władysław II /Jagiełło/
-1 TITL Król Polski; Wielki Książę Litewski
+1 TITL Król Polski, Wielki Książę Litewski
 1 SEX M
 1 FAMC @F41@
 1 FAMS @F1@
+1 FAMS @F44@
+1 FAMS @F45@
 1 FAMS @F2@
 1 BIRT
 2 DATE ABT 1362
@@ -47,6 +49,7 @@
 1 MARR
 2 DATE 15 FEB 1386
 2 PLAC Kraków
+1 CHIL @I28@
 0 @I3@ INDI
 1 NAME Zofia /Holszańska/
 1 TITL Królowa Polski
@@ -71,10 +74,11 @@
 2 DATE FEB 1422
 2 PLAC Kraków
 1 CHIL @I4@
+1 CHIL @I29@
 1 CHIL @I5@
 0 @I4@ INDI
 1 NAME Władysław III /Warneńczyk/
-1 TITL Król Polski; Król Węgier
+1 TITL Król Polski, Król Węgier
 1 SEX M
 1 FAMC @F2@
 1 BIRT
@@ -89,7 +93,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Władysław_III_Warneńczyk
 0 @I5@ INDI
 1 NAME Kazimierz IV /Jagiellończyk/
-1 TITL Król Polski; Wielki Książę Litewski
+1 TITL Król Polski, Wielki Książę Litewski
 1 SEX M
 1 FAMS @F3@
 1 FAMC @F2@
@@ -136,7 +140,7 @@
 1 CHIL @I11@
 0 @I7@ INDI
 1 NAME Władysław II /Jagiellończyk/
-1 TITL Król Węgier; Król Czech
+1 TITL Król Węgier, Król Czech
 1 SEX M
 1 FAMC @F3@
 1 BIRT
@@ -176,7 +180,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Jan_I_Olbracht
 0 @I10@ INDI
 1 NAME Aleksander /Jagiellończyk/
-1 TITL Król Polski; Wielki Książę Litewski
+1 TITL Król Polski, Wielki Książę Litewski
 1 SEX M
 1 FAMC @F3@
 1 BIRT
@@ -191,7 +195,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Aleksander_Jagiellończyk
 0 @I11@ INDI
 1 NAME Zygmunt I /Stary/
-1 TITL Król Polski; Wielki Książę Litewski
+1 TITL Król Polski, Wielki Książę Litewski
 1 SEX M
 1 FAMS @F4@
 1 FAMC @F3@
@@ -246,7 +250,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Izabela_Jagiellonka
 0 @I14@ INDI
 1 NAME Zygmunt II /August/
-1 TITL Król Polski; Wielki Książę Litewski
+1 TITL Król Polski, Wielki Książę Litewski
 1 SEX M
 1 FAMC @F4@
 1 BIRT
@@ -281,7 +285,7 @@
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Cranach_the_Younger_Anna_Jagiellon.jpg
 0 @I16@ INDI
 1 NAME Stefan /Batory/
-1 TITL Król Polski; Książę Siedmiogrodu
+1 TITL Król Polski, Książę Siedmiogrodu
 1 SEX M
 1 FAMS @F40@
 1 BIRT
@@ -302,7 +306,7 @@
 2 PLAC Kraków
 0 @I17@ INDI
 1 NAME Albrecht II /Habsburg/
-1 TITL Cesarz Rzymski; Król Węgier; Król Czech
+1 TITL Cesarz Rzymski, Król Węgier, Król Czech
 1 SEX M
 1 FAMS @F30@
 1 BIRT
@@ -314,7 +318,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Albrecht_II_Habsburg
 0 @I18@ INDI
 1 NAME Elżbieta /Luksemburska/
-1 TITL Królowa Czech; Królowa Węgier
+1 TITL Królowa Czech, Królowa Węgier
 1 SEX F
 1 FAMS @F30@
 1 BIRT
@@ -401,5 +405,73 @@
 1 HUSB @I23@
 1 WIFE @I24@
 1 CHIL @I20@
+
+0 @I25@ INDI
+1 NAME Anna /Cylejska/
+1 SEX F
+1 BIRT
+2 DATE BET 1380 AND 1381
+1 DEAT
+2 DATE BET 20 MAR 1416 AND 21 MAR 1416
+2 PLAC Kraków
+1 FAMS @F44@
+
+0 @I26@ INDI
+1 NAME Jadwiga /Jagiellonka/
+1 TITL królewna Polski, księżniczka litewska
+1 SEX F
+1 BIRT
+2 DATE 8 APR 1408
+1 DEAT
+2 DATE 8 DEC 1431
+1 FAMC @F44@
+
+0 @F44@ FAM
+1 HUSB @I1@
+1 WIFE @I25@
+1 CHIL @I26@
+1 MARR
+2 DATE 29 JAN 1402
+2 PLAC Kraków
+
+0 @I27@ INDI
+1 NAME Elżbieta /Granowska/
+1 TITL Królowa Polski
+1 SEX F
+1 BIRT
+2 DATE ABT 1370
+1 DEAT
+2 DATE 12 MAY 1420
+2 PLAC Kraków
+1 FAMS @F45@
+
+0 @I28@ INDI
+1 NAME Elżbieta Bonifacja /Jagiellonka/
+1 TITL królewna Polski
+1 SEX F
+1 BIRT
+2 DATE 22 JUN 1399
+2 PLAC Kraków
+1 DEAT
+2 DATE 13 JUL 1399
+2 PLAC Kraków
+1 FAMC @F1@
+
+0 @F45@ FAM
+1 HUSB @I1@
+1 WIFE @I27@
+1 MARR
+2 DATE 2 MAY 1417
+2 PLAC Sanok
+
+0 @I29@ INDI
+1 NAME Kazimierz /Jagiellończyk/
+1 TITL królewicz Polski
+1 SEX M
+1 BIRT
+2 DATE 1426
+1 DEAT
+2 DATE 1427
+1 FAMC @F2@
 
 0 TRLR
