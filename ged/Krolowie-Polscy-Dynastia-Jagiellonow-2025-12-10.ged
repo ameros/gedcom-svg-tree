@@ -266,6 +266,37 @@
 1 TITL królewna polska, księżniczka litewska, księżna legnicka
 1 FAMC @F3@
 
+0 @I39@ INDI
+1 NAME Katarzyna /Jagiellonka/
+1 SEX F
+1 BIRT
+2 DATE 1 NOV 1526
+2 PLAC Kraków
+1 DEAT
+2 DATE 16 SEP 1583
+2 PLAC Sztokholm
+1 TITL królewna polska, księżniczka litewska, księżna Finlandii, królowa Szwecji
+1 FAMC @F4@
+1 FAMS @F47@
+
+0 @I40@ INDI
+1 NAME Jan /III Waza/
+1 SEX M
+1 BIRT
+2 DATE 20 DEC 1537
+2 PLAC Stegeborg
+1 DEAT
+2 DATE 27 NOV 1592
+2 PLAC Sztokholm
+1 TITL książę Finlandii, król Szwecji
+1 FAMS @F47@
+
+0 @F47@ FAM
+1 HUSB @I40@
+1 WIFE @I39@
+1 MARR
+2 DATE 4 OCT 1562
+
 0 @I8@ INDI
 1 NAME Kazimierz /Jagiellończyk/
 1 TITL Święty
@@ -376,6 +407,7 @@
 1 CHIL @I13@
 1 CHIL @I14@
 1 CHIL @I15@
+1 CHIL @I39@
 0 @I13@ INDI
 1 NAME Izabela /Jagiellonka/
 1 SEX F
