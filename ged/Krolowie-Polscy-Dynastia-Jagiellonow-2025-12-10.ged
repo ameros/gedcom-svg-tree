@@ -299,7 +299,9 @@
 1 HUSB @I40@
 1 WIFE @I39@
 1 MARR
+1 CHIL @I51@
 1 CHIL @I41@
+1 CHIL @I52@
 2 DATE 4 OCT 1562
 
 0 @I41@ INDI
@@ -443,6 +445,7 @@
 2 DATE 1559
 2 PLAC Alba Iulia
 1 WWW https://pl.wikipedia.org/wiki/Izabela_Jagiellonka
+1 FAMS @F50@
 0 @I14@ INDI
 1 NAME Zygmunt II /August/
 1 TITL Król Polski, Wielki Książę Litewski
@@ -788,5 +791,53 @@
 1 DEAT
 2 DATE 20 SEP 1527
 1 FAMC @F4@
+
+0 @I51@ INDI
+1 NAME Izabella /Wazówna/
+2 NICK Isabella Johansdotter Vasa
+1 TITL królewna szwedzka
+1 SEX F
+1 BIRT
+2 DATE 1564
+1 DEAT
+2 DATE 1566
+1 FAMC @F47@
+
+0 @I52@ INDI
+1 NAME Anna /Wazówna/
+2 NICK Anna Vasa
+1 TITL królewna szwedzka
+1 SEX F
+1 BIRT
+2 DATE 17 MAY 1568
+1 DEAT
+2 DATE 26 FEB 1625
+1 FAMC @F47@
+
+0 @I53@ INDI
+1 NAME Jan /Zápolya/
+1 TITL Król Węgier
+1 SEX M
+1 BIRT
+2 DATE 2 FEB 1487
+1 DEAT
+2 DATE 22 JUL 1540
+1 FAMS @F50@
+
+0 @F50@ FAM
+1 HUSB @I53@
+1 WIFE @I13@
+1 MARR
+2 DATE 23 FEB 1539
+1 CHIL @I54@
+
+0 @I54@ INDI
+1 NAME Jan II Zygmunt /Zápolya/
+2 TITL pierwszy książę Siedmiogrodu
+1 BIRT
+2 DATE 7 JUL 1540
+1 DEAT
+2 DATE 14 MAR 1571
+1 FAMC @F50@
 
 0 TRLR
