@@ -278,6 +278,8 @@
 1 TITL królewna polska, księżniczka litewska, księżna Finlandii, królowa Szwecji
 1 FAMC @F4@
 1 FAMS @F47@
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Cranach_the_Younger_Catherine_Jagiellon.jpg
 
 0 @I40@ INDI
 1 NAME Jan /III Waza/
@@ -290,6 +292,8 @@
 2 PLAC Sztokholm
 1 TITL książę Finlandii, król Szwecji
 1 FAMS @F47@
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/John_III_of_Sweden.jpg
 
 0 @F47@ FAM
 1 HUSB @I40@
