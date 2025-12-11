@@ -70,7 +70,6 @@
 2 DATE 21 SEP 1461
 2 PLAC Kraków
 1 BURI
-2 DATE 1461
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Zofia_Holszańska
 1 OBJE
@@ -97,7 +96,6 @@
 2 PLAC Warna
 2 CAUS poległ w bitwie
 1 BURI
-2 DATE 1444
 2 PLAC Warna
 1 WWW https://pl.wikipedia.org/wiki/Władysław_III_Warneńczyk
 1 OBJE
@@ -119,7 +117,6 @@
 2 DATE 7 JUN 1492
 2 PLAC Grodno
 1 BURI
-2 DATE 1492
 2 PLAC Katedra Wawelska, Kraków (Kaplica Świętokrzyska)
 1 WWW https://pl.wikipedia.org/wiki/Kazimierz_IV_Jagiellończyk
 1 OBJE
@@ -141,7 +138,6 @@
 2 DATE 30 AUG 1505
 2 PLAC Kraków
 1 BURI
-2 DATE 1505
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Elżbieta_Rakuszanka
 1 OBJE
@@ -169,7 +165,6 @@
 2 DATE 13 MAR 1516
 2 PLAC Buda
 1 BURI
-2 DATE 1516
 2 PLAC Katedra Wawelska, Kraków (częściowo przeniesiony)
 1 WWW https://pl.wikipedia.org/wiki/Władysław_II_Jagiellończyk
 0 @I8@ INDI
@@ -194,7 +189,6 @@
 2 DATE 17 JUN 1501
 2 PLAC Toruń
 1 BURI
-2 DATE 1501
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Jan_I_Olbracht
 0 @I10@ INDI
@@ -209,7 +203,6 @@
 2 DATE 19 AUG 1506
 2 PLAC Wilno
 1 BURI
-2 DATE 1506
 2 PLAC Bazylika katedralna we Wileńskim Ostrej Bramie (pochówek symboliczny)
 1 WWW https://pl.wikipedia.org/wiki/Aleksander_Jagiellończyk
 0 @I11@ INDI
@@ -225,7 +218,6 @@
 2 DATE 1 APR 1548
 2 PLAC Kraków
 1 BURI
-2 DATE 1548
 2 PLAC Kaplica Zygmuntowska, Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Zygmunt_I_Stary
 1 OBJE
@@ -242,7 +234,6 @@
 2 DATE 19 NOV 1557
 2 PLAC Bari
 1 BURI
-2 DATE 1557
 2 PLAC Bazylika św. Mikołaja, Bari
 1 WWW https://pl.wikipedia.org/wiki/Bona_Sforza
 1 OBJE
@@ -279,7 +270,6 @@
 2 DATE 7 JUL 1572
 2 PLAC Knyszyn
 1 BURI
-2 DATE 1572
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Zygmunt_II_August
 1 OBJE
@@ -297,7 +287,6 @@
 2 DATE 9 SEP 1596
 2 PLAC Warszawa
 1 BURI
-2 DATE 1596
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Anna_Jagiellonka
 1 OBJE
@@ -314,7 +303,6 @@
 2 DATE 1586
 2 PLAC Suczawa
 1 BURI
-2 DATE 1586
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Stefan_Batory
 0 @F40@ FAM
