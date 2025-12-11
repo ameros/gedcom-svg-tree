@@ -428,8 +428,10 @@
 2 PLAC Kraków
 1 CHIL @I13@
 1 CHIL @I14@
+1 CHIL @I49@
 1 CHIL @I15@
 1 CHIL @I39@
+1 CHIL @I50@
 0 @I13@ INDI
 1 NAME Izabela /Jagiellonka/
 1 SEX F
@@ -766,5 +768,25 @@
 1 DEAT
 2 DATE 8 MAY 1520
 1 FAMC @F49@
+
+0 @I49@ INDI
+1 NAME Zofia /Jagiellonka/
+1 TITL królewna polska, księżniczka litewska, księżna brunszwicka
+1 SEX F
+1 BIRT
+2 DATE 13 JUL 1522
+1 DEAT
+2 DATE 28 MAY 1575
+1 FAMC @F4@
+
+0 @I50@ INDI
+1 NAME Olbracht /Jagiellończyk/
+1 TITL królewicz polski, książę litewski
+1 SEX M
+1 BIRT
+2 DATE 20 SEP 1527
+1 DEAT
+2 DATE 20 SEP 1527
+1 FAMC @F4@
 
 0 TRLR
