@@ -299,7 +299,22 @@
 1 HUSB @I40@
 1 WIFE @I39@
 1 MARR
+1 CHIL @I41@
 2 DATE 4 OCT 1562
+
+0 @I41@ INDI
+1 NAME Zygmunt /III Waza/
+1 SEX M
+1 BIRT
+2 DATE 20 JUN 1566
+2 PLAC Gripsholm
+1 DEAT
+2 DATE 30 APR 1632
+2 PLAC Warszawa
+1 TITL król Polski, wielki książę litweski, król Szwecji, książę Finlandii
+1 FAMC @F47@
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Soutman_Sigismund_III_Vasa_in_coronation_robes.jpg
 
 0 @I8@ INDI
 1 NAME Kazimierz /Jagiellończyk/
