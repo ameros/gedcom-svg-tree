@@ -689,6 +689,7 @@
 2 TYPE związek nieformalny
 1 CHIL @I43@
 1 CHIL @I44@
+1 CHIL @I45@
 
 0 @I43@ INDI
 1 NAME Jan /z Książąt Litewskich/
@@ -717,5 +718,14 @@
 2 DATE 20 MAY 1526
 1 FAMC @F48@
 
+0 @I45@ INDI
+1 NAME Katarzyna //
+1 TITL hrabina Montfort
+1 SEX F
+1 BIRT
+2 DATE ABT 1503
+1 DEAT
+2 DATE AFT 9 SEP 1548
+1 FAMC @F48@
 
 0 TRLR
