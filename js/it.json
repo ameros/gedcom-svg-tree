@@ -111,5 +111,7 @@
   "FACT": "Fatto:",
   "FACT.TYPE": "Tipo di fatto:",
   "FACT.DATE": "Data del fatto:",
-  "FACT.SOUR": "Fonte del fatto:"
+  "FACT.SOUR": "Fonte del fatto:",
+  "EVEN.TYPE": "Evento:",
+  "EVEN.DATE": "Data del evento:"
 }

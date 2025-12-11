@@ -111,5 +111,7 @@
   "FACT": "Faktum:",
   "FACT.TYPE": "Typ av fakta:",
   "FACT.DATE": "Faktadatum:",
-  "FACT.SOUR": "Faktakälla:"
+  "FACT.SOUR": "Faktakälla:",
+  "EVEN.TYPE": "Händelse:",
+  "EVEN.DATE": "Händelsedatum:"
 }
