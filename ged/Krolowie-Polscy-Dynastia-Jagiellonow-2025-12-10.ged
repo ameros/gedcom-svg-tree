@@ -153,6 +153,8 @@
 1 CHIL @I8@
 1 CHIL @I9@
 1 CHIL @I10@
+1 CHIL @I32@
+1 CHIL @I33@
 1 CHIL @I11@
 0 @I7@ INDI
 1 NAME Władysław II /Jagiellończyk/
@@ -180,6 +182,28 @@
 1 FAMC @F3@
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/JadwigaJagiellonka.jpg
+
+0 @I32@ INDI
+1 NAME Zofia /Jagiellonka/
+1 SEX F
+1 BIRT
+2 DATE 6 MAY 1464
+1 DEAT
+2 DATE 5 OCT 1512
+1 TITL królewna polska, księżna litewska, margrabina brandenburska
+1 FAMC @F3@
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Sophia_von_Polen.jpg
+
+0 @I32@ INDI
+1 NAME Elżbieta /Jagiellonka/
+1 SEX F
+1 BIRT
+2 DATE 9 MAY 1465
+1 DEAT
+2 DATE 9 MAY 1466
+1 TITL królewna polska, księżna litewska
+1 FAMC @F3@
 
 0 @I8@ INDI
 1 NAME Kazimierz /Jagiellończyk/
