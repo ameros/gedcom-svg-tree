@@ -160,6 +160,7 @@
 1 CHIL @I35@
 1 CHIL @I36@
 1 CHIL @I37@
+1 CHIL @I38@
 0 @I7@ INDI
 1 NAME Władysław II /Jagiellończyk/
 1 TITL Król Czech, Król Węgier i Chorwacji
@@ -254,6 +255,16 @@
 1 FAMC @F3@
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Lucas_Cranach_d.%C3%84._-_Bildnis_Barbara_von_Sachsen_(Gem%C3%A4ldegalerie,_Berlin).jpg
+
+0 @I38@ INDI
+1 NAME Elżbieta /Jagiellonka/
+1 SEX F
+1 BIRT
+2 DATE 13 NOV 1482
+1 DEAT
+2 DATE 16 FEB 1517
+1 TITL królewna polska, księżniczka litewska, księżna legnicka
+1 FAMC @F3@
 
 0 @I8@ INDI
 1 NAME Kazimierz /Jagiellończyk/
