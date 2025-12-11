@@ -9,6 +9,7 @@
 1 NAME Władysław II /Jagiełło/
 1 TITL Król Polski; Wielki Książę Litewski
 1 SEX M
+1 FAMC @F41@
 1 FAMS @F1@
 1 FAMS @F2@
 1 BIRT
@@ -327,4 +328,78 @@
 1 HUSB @I17@
 1 WIFE @I18@
 1 CHIL @I6@
+
+0 @I19@ INDI
+1 NAME Olgierd //
+1 TITL Wielki Książę Litewski
+1 FAMC @F42@
+1 FAMS @F41@
+1 SEX M
+1 BIRT
+2 DATE ABT 1296
+1 DEAT
+2 DATE 1377
+
+0 @I20@ INDI
+1 NAME Uliana/Twerska/
+1 TITL Księżna Twerska
+1 FAMS @F41@
+1 FAMC @F43@
+1 SEX F
+1 BIRT
+2 DATE ABT 1325
+1 DEAT
+2 DATE 1392
+
+0 @I21@ INDI
+1 NAME Giedymin //
+1 TITL Wielki Książę Litewski
+1 SEX M
+1 BIRT
+2 DATE ABT 1275
+1 DEAT
+2 DATE 1341
+1 FAMS @F42@
+
+0 @I22@ INDI
+1 NAME Jewna //
+1 SEX F
+1 BIRT
+2 DATE ABT 1280
+1 DEAT
+2 DATE 1344
+1 FAMS @F42@
+
+0 @I23@ INDI
+1 NAME Aleksander/Twerski/
+1 TITL Książę Twerski
+1 SEX M
+1 BIRT
+2 DATE ABT 1301
+1 DEAT
+2 DATE 1339
+1 FAMS @F43@
+
+0 @I24@ INDI
+1 NAME Anastazja/Halicka/
+1 SEX F
+1 DEAT
+2 DATE 20 NOV 1339
+1 FAMS @F43@
+
+0 @F41@ FAM
+1 HUSB @I19@
+1 WIFE @I20@
+1 CHIL @I1@
+
+0 @F42@ FAM
+1 HUSB @I21@
+1 WIFE @I22@
+1 CHIL @I19@
+
+0 @F43@ FAM
+1 HUSB @I23@
+1 WIFE @I24@
+1 CHIL @I20@
+
 0 TRLR
