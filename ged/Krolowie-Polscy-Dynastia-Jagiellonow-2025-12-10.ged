@@ -156,6 +156,7 @@
 1 CHIL @I32@
 1 CHIL @I33@
 1 CHIL @I11@
+1 CHIL @I34@
 0 @I7@ INDI
 1 NAME Władysław II /Jagiellończyk/
 1 TITL Król Czech, Król Węgier i Chorwacji
@@ -204,6 +205,18 @@
 2 DATE 9 MAY 1466
 1 TITL królewna polska, księżna litewska
 1 FAMC @F3@
+
+0 @I34@ INDI
+1 NAME Fryderyk /Jagiellończyk/
+1 SEX M
+1 BIRT
+2 DATE 27 APR 1468
+1 DEAT
+2 DATE 14 MAR 1503
+1 TITL królewicz polski, książę litewski, kardynał, arcybiskup gnieźnieński, prymas Polski, biskup krakowski
+1 FAMC @F3@
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Fryderyk_Jagiello%C5%84czyk.PNG
 
 0 @I8@ INDI
 1 NAME Kazimierz /Jagiellończyk/
