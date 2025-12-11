@@ -149,6 +149,7 @@
 2 DATE 10 FEB 1454
 2 PLAC Kraków
 1 CHIL @I7@
+1 CHIL @I31@
 1 CHIL @I8@
 1 CHIL @I9@
 1 CHIL @I10@
@@ -167,6 +168,19 @@
 1 BURI
 2 PLAC Katedra Wawelska, Kraków (częściowo przeniesiony)
 1 WWW https://pl.wikipedia.org/wiki/Władysław_II_Jagiellończyk
+
+0 @I31@ INDI
+1 NAME Jadwiga /Jagiellonka/
+1 SEX F
+1 BIRT
+2 DATE 21 SEP 1457
+1 DEAT
+2 DATE 18 FEB 1502
+1 TITL królewna polska, księżna litewska
+1 FAMC @F3@
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/JadwigaJagiellonka.jpg
+
 0 @I8@ INDI
 1 NAME Kazimierz /Jagiellończyk/
 1 TITL Święty
