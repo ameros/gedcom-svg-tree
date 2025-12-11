@@ -744,5 +744,27 @@
 1 WIFE @I46@
 1 MARR
 2 DATE 8 FEB 1512
+1 CHIL @I47@
+1 CHIL @I48@
+
+0 @I47@ INDI
+1 NAME Jadwiga /Jagiellonka/
+1 TITL królewna polska, księżna litewska
+1 SEX F
+1 BIRT
+2 DATE 15 MAR 1513
+1 DEAT
+2 DATE 7 FEB 1573
+1 FAMC @F49@
+
+0 @I48@ INDI
+1 NAME Anna /Jagiellonka/
+1 TITL królewna polska
+1 SEX F
+1 BIRT
+2 DATE JUL 1515
+1 DEAT
+2 DATE 8 MAY 1520
+1 FAMC @F49@
 
 0 TRLR
