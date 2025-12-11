@@ -27,7 +27,7 @@
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Wladyslaw_Jagiello.jpg
 1 EVEN
-2 TYPE Coronation
+2 TYPE koronacja
 2 DATE 1 MAR 1386
 
 0 @I2@ INDI
@@ -48,7 +48,7 @@
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Jadwiga_by_Bacciarelli.jpg
 1 EVEN
-2 TYPE Coronation
+2 TYPE koronacja
 2 DATE 1 MAR 1384
 
 0 @F1@ FAM
@@ -95,14 +95,15 @@
 1 DEAT
 2 DATE 10 NOV 1444
 2 PLAC Warna
+2 CAUS poległ w bitwie
 1 BURI
 2 DATE 1444
-2 PLAC Warna (poległ pod Warną)
+2 PLAC Warna
 1 WWW https://pl.wikipedia.org/wiki/Władysław_III_Warneńczyk
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Wladislaus_III_of_Poland_and_Hungary_(89922013).jpg
 1 EVEN
-2 TYPE Coronation
+2 TYPE koronacja
 2 DATE 25 JUL 1434
 
 0 @I5@ INDI
@@ -124,7 +125,7 @@
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Kazimierz_IV_Jagiellonczyk_(275186).jpg
 1 EVEN
-2 TYPE Coronation
+2 TYPE koronacja
 2 DATE 25 JUN 1447
 
 0 @I6@ INDI
