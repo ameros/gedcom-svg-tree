@@ -388,6 +388,7 @@
 1 NAME Zygmunt I /Stary/
 1 TITL Król Polski, Wielki Książę Litewski
 1 SEX M
+1 FAMS @F48@
 1 FAMS @F4@
 1 FAMC @F3@
 1 BIRT
@@ -401,6 +402,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Zygmunt_I_Stary
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Zygmunt_Stary.JPG
+
 0 @I12@ INDI
 1 NAME Bona /Sforza/
 1 TITL Królowa Polski
@@ -669,5 +671,38 @@
 1 DEAT
 2 DATE 1427
 1 FAMC @F2@
+
+0 @I42@ INDI
+1 NAME Katarzyna /Telniczanka/
+1 SEX F
+1 BIRT
+2 DATE ABT 1480
+1 DEAT
+2 DATE 1528
+1 FAMS @F48@
+
+0 @F48@ FAM
+1 HUSB @I11@
+1 WIFE @I42@
+1 MARR
+2 DATE 1498
+2 TYPE związek nieformalny
+1 CHIL @I43@
+
+0 @I43@ INDI
+1 NAME Jan /z Książąt Litewskich/
+1 NICK Jan Ochstat, Jan de Thelnicz
+1 TITL biskup wileński, biskup poznański
+1 SEX M
+1 BIRT
+2 DATE 8 JAN 1499
+1 DEAT
+2 DATE 18 FEB 1538
+2 PLAC Poznań
+1 BURI
+2 PLAC Bazylika archikatedralna św. Stanisława Biskupa i św. Władysława w Wilnie
+1 FAMC @F48@
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/John_from_Lithuanian_Dukes.PNG
 
 0 TRLR
