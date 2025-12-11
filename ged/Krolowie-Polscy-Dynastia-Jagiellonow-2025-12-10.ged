@@ -688,6 +688,7 @@
 2 DATE 1498
 2 TYPE związek nieformalny
 1 CHIL @I43@
+1 CHIL @I44@
 
 0 @I43@ INDI
 1 NAME Jan /z Książąt Litewskich/
@@ -700,9 +701,21 @@
 2 DATE 18 FEB 1538
 2 PLAC Poznań
 1 BURI
-2 PLAC Bazylika archikatedralna św. Stanisława Biskupa i św. Władysława w Wilnie
+2 PLAC Bazylika archikatedralna św. Stanisława Biskupa i św. Władysława, Wilno
 1 FAMC @F48@
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/John_from_Lithuanian_Dukes.PNG
+
+0 @I44@ INDI
+1 NAME Regina /Szafraniec/
+1 NICK Jan Ochstat, Jan de Thelnicz
+1 TITL biskup wileński, biskup poznański
+1 SEX F
+1 BIRT
+2 DATE BET 1500 AND 1501
+1 DEAT
+2 DATE 20 MAY 1526
+1 FAMC @F48@
+
 
 0 TRLR
