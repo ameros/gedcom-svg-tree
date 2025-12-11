@@ -155,7 +155,7 @@
 1 CHIL @I11@
 0 @I7@ INDI
 1 NAME Władysław II /Jagiellończyk/
-1 TITL Król Węgier, Król Czech
+1 TITL Król Czech, Król Węgier i Chorwacji
 1 SEX M
 1 FAMC @F3@
 1 BIRT
@@ -169,14 +169,22 @@
 1 WWW https://pl.wikipedia.org/wiki/Władysław_II_Jagiellończyk
 0 @I8@ INDI
 1 NAME Kazimierz /Jagiellończyk/
+1 TITL Święty
 1 SEX M
 1 FAMC @F3@
 1 BIRT
-2 DATE 1458
+2 DATE 3 OCT 1458
 2 PLAC Kraków
 1 DEAT
-2 DATE 1484
+2 DATE 4 MAR 1484
 2 PLAC Grodno
+1 EVEN
+2 TYPE kanonizacja
+2 DATE 7 NOV 1602
+2 PLAC Rzym
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/%C5%A0ventasis_Kazimieras,_1594.jpg
+
 0 @I9@ INDI
 1 NAME Jan I /Olbracht/
 1 TITL Król Polski
@@ -191,11 +199,15 @@
 1 BURI
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Jan_I_Olbracht
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Jan_I_Olbracht_(275201).jpg
+
 0 @I10@ INDI
 1 NAME Aleksander /Jagiellończyk/
 1 TITL Król Polski, Wielki Książę Litewski
 1 SEX M
 1 FAMC @F3@
+1 FAMS @F46@
 1 BIRT
 2 DATE 5 AUG 1461
 2 PLAC Kraków
@@ -205,6 +217,24 @@
 1 BURI
 2 PLAC Bazylika katedralna we Wileńskim Ostrej Bramie (pochówek symboliczny)
 1 WWW https://pl.wikipedia.org/wiki/Aleksander_Jagiellończyk
+1 OBJE
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Aleksander_Jagiellonczyk_(275208).jpg
+
+0 @I30@ INDI
+1 NAME Helena /Moskiewska/
+1 SEX F
+1 FAMS @F46@
+1 BIRT
+2 DATE 19 MAY 1476
+1 DEAT
+2 DATE 20 I 1513
+
+0 @F46@ FAM
+1 HUSB @I10@
+1 WIFE @I30
+1 MARR
+2 DATE 18 FEB 1495
+
 0 @I11@ INDI
 1 NAME Zygmunt I /Stary/
 1 TITL Król Polski, Wielki Książę Litewski
