@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.5.6 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.6.0 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -937,6 +937,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         if (!_form) {
             return;
         }
+        _form.querySelectorAll('.B').forEach(function(node) {node.classList.remove("active")});
         _form.reset();
         const hidden = _form.querySelectorAll('input[type="hidden"]');
         hidden.forEach(function(hidden) {
@@ -985,6 +986,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
             if (typeof value === 'string' || value instanceof String) {
                 let inputElement = _form[inputName];
                 if (inputElement) {
+                    inputElement.closest(".B").classList.add("active");
                     inputElement.classList.add("active");
                     NodeFamily.form.fillPhoto("photo", inputName, value);
                     inputElement.value = value;
@@ -1006,7 +1008,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                         const el = _form['DEAT.nfValue'];
                         el.value = "N";
                         el.dispatchEvent(new Event('change'));
-                        _formSection.querySelector("#isDEAT").value = value;
+                        _formSection.querySelector("#isDEAT").value = "Y";
                     }
                     if (inputName == "DEAT.DATE.nfValue") {
                         NodeFamily.form.fillDatePhrase("DEAT.DATE", value);
@@ -1041,6 +1043,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                         span.innerHTML = name;
                         div.appendChild(span);
                         _formSection.querySelector('#spouses').appendChild(div);
+                        _formSection.querySelector('#spouses').closest(".B").classList.add("active");
                     } else {
                         let label = document.createElement("label");
                         let labelValue = inputName.replace(".nfValue", "");
@@ -1054,6 +1057,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                         }
                         label.innerHTML = labelValue;
                         _formSection.querySelector('#extraGedcomFields').appendChild(label);
+                        _formSection.querySelector('#extraGedcomFields').closest(".B").classList.add("active");
                         let extraInput = document.createElement("textarea");
                         extraInput.setAttribute("readonly", "");
                         extraInput.setAttribute("type", "text");
@@ -1370,6 +1374,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
             return;
         }
         _form.reset();
+         _form.querySelectorAll('.B').forEach(function(node) {node.classList.remove("active")});
         const hidden = _form.querySelectorAll('input[type="hidden"]');
         hidden.forEach(function(hidden) {
             hidden.value = "";
@@ -1412,6 +1417,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                 if (inputElement) {
                     NodeFamily.form.fillPhoto("photoFamily", inputName, value);
                     inputElement.value = value;
+                    inputElement.closest(".B").classList.add("active");
                     inputElement.classList.add("active");
                     if (inputName == "HUSB.nfValue") {
                         const husbandName = _formSection.querySelector('#husbandName');
@@ -1446,6 +1452,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                         span.innerHTML = name;
                         div.appendChild(span);
                         _formSection.querySelector('#children').appendChild(div);
+                        _formSection.querySelector('#children').closest(".B").classList.add("active");
                     } else {
                         let label = document.createElement("label");
                         let labelValue = inputName.replace(".nfValue", "");
@@ -1466,6 +1473,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                         }
                         extraInput.value = val;
                         _formSection.querySelector('#extraFamilyFields').appendChild(extraInput);
+                        _formSection.closest(".B").classList.add("active");
                     }
                 }
             } else if (!Array.isArray(value)) {

@@ -229,7 +229,10 @@ aside input, aside textarea, aside select {
     display: none;
     appearance: none;
 }
-aside input.active, aside textarea.active, aside select.active {
+form div.B {
+    display: none;
+}
+aside input.active, aside textarea.active, aside select.active, form div.B.active {
     display: inline-block;
 }
 .B {

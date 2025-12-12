@@ -69,7 +69,7 @@
   "marriagePlace": "Marriage place: ",
   "wife": "Wife: ",
   "husband": "Husband: ",
-  "extraTags": "More tags: <span class=\"fas fa-tags\"></span>",
+  "extraTags": "Additional info:",
   "submitterName": "Submitter name (you ?)",
   "fileName": "File name:",
   "saveGedcom": "Save GEDCOM",

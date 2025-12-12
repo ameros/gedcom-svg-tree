@@ -52,7 +52,7 @@ figure img {
 /* Palette => Forms
 --------------------------------- */
 fieldset {
-    border: 1px dashed var(--on-action);
+    border: 1px dotted var(--accentMarkers);
 }
 #exportForm input  {
     background-color: var(--auraData);
