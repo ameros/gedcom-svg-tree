@@ -1021,7 +1021,8 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                     }
                     if (inputName == "SEX.nfValue") {
                         _formSection.querySelector("#SEX").value = value;
-                        _formSection.querySelector("#SEX").classList.add("active");
+                        inputElement.closest(".B").classList.remove("active");
+//                        _formSection.querySelector("#SEX").classList.add("active");
                         _formSection.querySelector("i").classList.add(value);
                     }
                     if (inputName == "SUBM.nfValue") {
