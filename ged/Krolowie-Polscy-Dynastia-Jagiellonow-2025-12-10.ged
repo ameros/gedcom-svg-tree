@@ -336,8 +336,10 @@
 2 PLAC Warszawa
 1 TITL Król Polski, Wielki Książę Litweski, Król Szwecji, książę Finlandii
 1 FAMC @F47@
+1 WWW https://pl.wikipedia.org/wiki/Zygmunt_III_Waza
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Soutman_Sigismund_III_Vasa_in_coronation_robes.jpg
+2 TITL Soutman Sigismund III Vasa in coronation robes
 
 0 @I8@ INDI
 1 NAME Kazimierz /Jagiellończyk/
@@ -354,8 +356,10 @@
 2 TYPE kanonizacja
 2 DATE 7 NOV 1602
 2 PLAC Rzym
+1 WWW https://pl.wikipedia.org/wiki/Kazimierz_(%C5%9Bwi%C4%99ty)
 1 OBJE
-2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/%C5%A0ventasis_Kazimieras,_1594.jpg
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Šventasis_Kazimieras,_1594.jpg
+2 TITL Św. Kazimierz na obrazie w katedrze wileńskiej (ok. 1520)
 
 0 @I9@ INDI
 1 NAME Jan I /Olbracht/
@@ -373,6 +377,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Jan_I_Olbracht
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Jan_I_Olbracht_(275201).jpg
+2 TITL Jan I Olbracht Adres wydawniczy: Królowie i książęta : rysunki Jana Matejki, Wiedeń : nakład Maurycego Perlesa, [ca 1893]
 
 0 @I10@ INDI
 1 NAME Aleksander /Jagiellończyk/
@@ -391,6 +396,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Aleksander_Jagiellończyk
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Aleksander_Jagiellonczyk_(275208).jpg
+2 TITL Aleksander Jagiellończyk Adres wydawniczy: Królowie i książęta : rysunki Jana Matejki, Wiedeń : nakład Maurycego Perlesa, [ca 1893]
 
 0 @I30@ INDI
 1 NAME Helena /Moskiewska/
@@ -425,7 +431,8 @@
 2 PLAC Kaplica Zygmuntowska, Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Zygmunt_I_Stary
 1 OBJE
-2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Zygmunt_Stary.JPG
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Zygmunt_I_Stary_(275217).jpg
+2 TITL Zygmunt I Stary – rysunek Jana Matejki z cyklu Poczet królów i książąt polskich
 
 0 @I12@ INDI
 1 NAME Bona /Sforza/
@@ -443,6 +450,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Bona_Sforza
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Cranach_the_Younger_Bona_Sforza.jpg
+2 TITL Portret Bony Sforza (1494–1557), żony Zygmunta Starego, Lucas Cranach the Younger
 0 @F4@ FAM
 1 HUSB @I11@
 1 WIFE @I12@
@@ -482,7 +490,8 @@
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Zygmunt_II_August
 1 OBJE
-2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Sigismund_II_Augustus_portrait.jpg
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Žygimont_Aŭgust,_Pahonia._Жыгімонт_Аўгуст,_Пагоня_(M._Bacciarelli,_XIX).jpg
+
 0 @I15@ INDI
 1 NAME Anna /Jagiellonka/
 1 TITL Królowa Polski
@@ -500,6 +509,8 @@
 1 WWW https://pl.wikipedia.org/wiki/Anna_Jagiellonka
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Cranach_the_Younger_Anna_Jagiellon.jpg
+2 TITL Miniatura Anny Jagiellonki, warsztat Lucasa Cranacha Młodszego, 1555 r.
+
 0 @I16@ INDI
 1 NAME Stefan /Batory/
 1 TITL Król Polski, Książę Siedmiogrodu
@@ -558,9 +569,11 @@
 1 BIRT
 2 DATE ABT 1296
 1 DEAT
-2 DATE 1377
+2 DATE 24 MAY 1377
+1 WWW https://pl.wikipedia.org/wiki/Olgierd_Giedyminowicz
 1 OBJE
-2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Algierd._%D0%90%D0%BB%D1%8C%D0%B3%D0%B5%D1%80%D0%B4_(1578).jpg
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Algierd._Альгерд_(1578).jpg
+2 TITL Olgierd, autorstwa Bartosza Paprockiego (1578)
 
 0 @I20@ INDI
 1 NAME Uliana/Twerska/
@@ -580,10 +593,13 @@
 1 BIRT
 2 DATE ABT 1275
 1 DEAT
-2 DATE 1341
+2 DATE DEC 1341
+2 PLAC Wieloma
 1 FAMS @F42@
+1 WWW https://pl.wikipedia.org/wiki/Giedymin
 1 OBJE
-2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Giedzimin._%D0%93%D0%B5%D0%B4%D0%B7%D1%96%D0%BC%D1%96%D0%BD_(1709).jpg
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Giedzimin._Гедзімін_(1709).jpg
+2 TITL Alternatywny portret Giedymina z 1709 roku, autor nieznany
 
 0 @I22@ INDI
 1 NAME Jewna //
@@ -636,8 +652,10 @@
 2 DATE BET 20 MAR 1416 AND 21 MAR 1416
 2 PLAC Kraków
 1 FAMS @F44@
+1 WWW https://pl.wikipedia.org/wiki/Anna_Cylejska
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Marceli_Krajewski_-_Anna_Cylejska.jpg
+2 TITL Anna Cylejska
 
 0 @I26@ INDI
 1 NAME Jadwiga /Jagiellonka/
@@ -667,8 +685,10 @@
 2 DATE 12 MAY 1420
 2 PLAC Kraków
 1 FAMS @F45@
+1 WWW https://pl.wikipedia.org/wiki/El%C5%BCbieta_Granowska
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Marceli_Krajewski_-_El%C5%BCbieta_Pilecka.jpg
+2 TITL Elżbieta Pilecka (Elżbieta z Pilczy (Pilicy) Granowska)
 
 0 @I28@ INDI
 1 NAME Elżbieta Bonifacja /Jagiellonka/
@@ -731,8 +751,10 @@
 1 BURI
 2 PLAC Bazylika archikatedralna św. Stanisława Biskupa i św. Władysława, Wilno
 1 FAMC @F48@
+1 WWW https://pl.wikipedia.org/wiki/Jan_z_Ksi%C4%85%C5%BC%C4%85t_Litewskich
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/John_from_Lithuanian_Dukes.PNG
+2 TITL Jan z Książąt Litewskich, anonimowy obraz z XVII wieku
 
 0 @I44@ INDI
 1 NAME Regina /Szafraniec/
