@@ -25,7 +25,8 @@
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Władysław_II_Jagiełło
 1 OBJE
-2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Wladyslaw_Jagiello.jpg
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Wladyslaw_II_Jagiello_(275169).jpg
+2 TITL Wyobrażenie Władysława Jagiełły. Rys. Jan Matejko (XIX w.).
 1 EVEN
 2 TYPE koronacja
 2 DATE 1 MAR 1386
@@ -47,6 +48,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Jadwiga_Andegaweńska
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Jadwiga_by_Bacciarelli.jpg
+2 TITL Jadwiga Andegaweńska (obraz Marcella Bacciarellego ok. 1770)
 1 EVEN
 2 TYPE koronacja
 2 DATE 1 MAR 1384
@@ -74,6 +76,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Zofia_Holszańska
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Marceli_Krajewski_-_Zofia_Holsza%C5%84ska.jpg
+2 TITL Portret Królowej Zofii Holszańskiej autorstwa Marcela Krajewskiego
 0 @F2@ FAM
 1 HUSB @I1@
 1 WIFE @I3@
@@ -100,6 +103,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Władysław_III_Warneńczyk
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Wladislaus_III_of_Poland_and_Hungary_(89922013).jpg
+2 TITL Władysław Warneńczyk z wizerunków królów polskich autorstwa Aleksandra Lessera z XIX w.
 1 EVEN
 2 TYPE koronacja
 2 DATE 25 JUL 1434
@@ -121,6 +125,7 @@
 1 WWW https://pl.wikipedia.org/wiki/Kazimierz_IV_Jagiellończyk
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Kazimierz_IV_Jagiellonczyk_(275186).jpg
+2 TITL Rysunek Jana Matejki z cyklu Poczet królów i książąt polskich
 1 EVEN
 2 TYPE koronacja
 2 DATE 25 JUN 1447
@@ -141,7 +146,8 @@
 2 PLAC Katedra Wawelska, Kraków
 1 WWW https://pl.wikipedia.org/wiki/Elżbieta_Rakuszanka
 1 OBJE
-2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/El%C5%BCbieta_Rakuszanka.JPG
+2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Marceli_Krajewski_-_Elżbieta_Rakuszanka.jpg
+2 TITL Elżbieta Rakuszanka
 0 @F3@ FAM
 1 HUSB @I5@
 1 WIFE @I6@
@@ -185,8 +191,10 @@
 2 DATE 18 FEB 1502
 1 TITL królewna polska, księżna litewska
 1 FAMC @F3@
+1 WWW https://pl.wikipedia.org/wiki/Jadwiga_Jagiellonka_(1457%E2%80%931502)
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/JadwigaJagiellonka.jpg
+2 TITL Portret Jadwigi Jagiellonki autorstwa Maira von Landshut
 
 0 @I32@ INDI
 1 NAME Zofia /Jagiellonka/
@@ -197,8 +205,10 @@
 2 DATE 5 OCT 1512
 1 TITL królewna polska, księżna litewska, margrabina brandenburska
 1 FAMC @F3@
+1 WWW https://pl.wikipedia.org/wiki/Zofia_Jagiellonka_(1464%E2%80%931512)
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Sophia_von_Polen.jpg
+2 TITL Portrait von Sophia von Polen. Ausschnitt aus dem Dreikönigsaltar zu Heilsbronn.
 
 0 @I33@ INDI
 1 NAME Elżbieta /Jagiellonka/
@@ -219,8 +229,10 @@
 2 DATE 14 MAR 1503
 1 TITL prymas Polski i Litwy, arcybiskup gnieźnieński, królewicz polski, książę litewski
 1 FAMC @F3@
+1 WWW https://pl.wikipedia.org/wiki/Fryderyk_Jagiello%C5%84czyk
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Fryderyk_Jagiello%C5%84czyk.PNG
+2 TITL Fryderyk Jagiellończyk primate of Poland
 
 0 @I35@ INDI
 1 NAME Elżbieta /Jagiellonka/
@@ -241,20 +253,26 @@
 2 DATE 12 AUG 1503
 1 TITL królewna polska, księżniczka litewska
 1 FAMC @F3@
+1 WWW https://pl.wikipedia.org/wiki/Anna_Jagiellonka_(1476%E2%80%931503)
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Anna_of_Poland.jpg
+2 TITL Anna Jagiellonka (fragment drzewa genealogicznego książąt pomorskich autorstwa Corneliusa Krommenego (1598), zbiory Muzeum Narodowego w Szczecinie
 
 0 @I37@ INDI
 1 NAME Barbara /Jagiellonka/
 1 SEX F
 1 BIRT
 2 DATE 15 JUL 1478
+2 PLAC Sandomierz
 1 DEAT
 2 DATE 15 FEB 1534
+2 PLAC Drezno
 1 TITL królewna polska, księżniczka litewska, księżna Saksonii
+1 WWW https://pl.wikipedia.org/wiki/Barbara_Jagiellonka
 1 FAMC @F3@
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Lucas_Cranach_d.%C3%84._-_Bildnis_Barbara_von_Sachsen_(Gem%C3%A4ldegalerie,_Berlin).jpg
+2 TITLE Lucas Cranach d.Ä. - Bildnis Barbara von Sachsen (Gemäldegalerie, Berlin)
 
 0 @I38@ INDI
 1 NAME Elżbieta /Jagiellonka/
@@ -278,8 +296,10 @@
 1 TITL królewna polska, księżniczka litewska, księżna Finlandii, Królowa Szwecji
 1 FAMC @F4@
 1 FAMS @F47@
+1 WWW https://pl.wikipedia.org/wiki/Katarzyna_Jagiellonka
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/Cranach_the_Younger_Catherine_Jagiellon.jpg
+2 TITL Miniatura Katarzyny Jagiellonki, warsztat Lucasa Cranacha Młodszego (1555)
 
 0 @I40@ INDI
 1 NAME Jan /III Waza/
@@ -294,6 +314,7 @@
 1 FAMS @F47@
 1 OBJE
 2 FILE https://commons.wikimedia.org/wiki/Special:FilePath/John_III_of_Sweden.jpg
+2 TITL Portret Jana III Wazy autorstwa Johana Baptisty van Uthera (1582, zbiory Nationalmuseum w Sztokholmie)
 
 0 @F47@ FAM
 1 HUSB @I40@

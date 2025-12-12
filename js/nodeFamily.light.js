@@ -938,6 +938,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
             return;
         }
         _form.querySelectorAll('.B').forEach(function(node) {node.classList.remove("active")});
+        _form.querySelector("#isDEAT").closest(".B").classList.add("active");
         _form.reset();
         const hidden = _form.querySelectorAll('input[type="hidden"]');
         hidden.forEach(function(hidden) {
@@ -1012,6 +1013,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                     }
                     if (inputName == "DEAT.DATE.nfValue") {
                         NodeFamily.form.fillDatePhrase("DEAT.DATE", value);
+                        _formSection.querySelector("#isDEAT").closest('.B').classList.remove("active")
                     }
                     if (inputName == "BURI.nfValue") {
                         const el = _form['BURI.nfValue'];
