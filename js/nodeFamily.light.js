@@ -987,7 +987,9 @@ NodeFamily.PersonForm = function(presenter, formSection) {
             if (typeof value === 'string' || value instanceof String) {
                 let inputElement = _form[inputName];
                 if (inputElement) {
-                    inputElement.closest(".B").classList.add("active");
+                    if (inputName != "OBJE.FILE.nfValue" && inputName != "OBJE.TITL.nfValue" && inputName != "SEX.nfValue") {
+                        inputElement.closest(".B").classList.add("active");
+                    }
                     inputElement.classList.add("active");
                     NodeFamily.form.fillPhoto("photo", inputName, value);
                     inputElement.value = value;
@@ -1023,7 +1025,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                     }
                     if (inputName == "SEX.nfValue") {
                         _formSection.querySelector("#SEX").value = value;
-                        inputElement.closest(".B").classList.remove("active");
+//                        inputElement.closest(".B").classList.remove("active");
 //                        _formSection.querySelector("#SEX").classList.add("active");
                         _formSection.querySelector("i").classList.add(value);
                     }
@@ -1272,7 +1274,11 @@ NodeFamily.form.fillPhoto = function(prefix, dataKey, value) {
                 img.setAttribute("id", value);
                 document.body.appendChild(img);
             }
-            figure.insertBefore(document.getElementById(value), figure.firstChild);
+            const anchor = document.createElement("a");
+            anchor.setAttribute("href", value);
+            anchor.setAttribute("target", "_blank");
+            anchor.appendChild(document.getElementById(value));
+            figure.insertBefore(anchor, figure.firstChild);
             document.getElementById(value).style.display = "";
         }
         if (dataKey == "OBJE.TITL.nfValue" || dataKey == "OBJE.0.TITL.nfValue") {
