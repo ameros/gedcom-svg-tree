@@ -119,26 +119,31 @@
             <div class="B">
                     <label class="t9n" t9n-key="title"></label>
                     <input class="data" type="text" name="TITL.nfValue" readonly/>
+                    <span class="TITL-nfValue"></span>
             </div>
             <div class="B" style="display: none">
-                    <label class="t9n" t9n-key="name"></label>
-                    <input class="data" type="text" name="NAME.nfValue" readonly/>
+                <label class="t9n" t9n-key="name"></label>
+                <input class="data" type="text" name="NAME.nfValue" readonly/>
+                <span class="NAME-nfValue"></span>
             </div>
             <div class="B">
                 <label class="t9n" t9n-key="nick"></label>
                 <input class="data" type="text" name="NAME.NICK.nfValue" readonly/>
+                <span class="NAME-NICK-nfValue"></span>
             </div>
             <div class="B">
-                    <label class="t9n" t9n-key="given"></label>
-                    <input class="data" type="text" name="NAME.GIVN.nfValue" readonly/>
+                <label class="t9n" t9n-key="given"></label>
+                <input class="data" type="text" name="NAME.GIVN.nfValue" readonly/>
+                <span class="NAME-GIVN-nfValue"></span>
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="surname"></label>
                     <input class="data" type="text" name="NAME.SURN.nfValue" readonly/>
+                    <span class="NAME-SURN-nfValue"></span>
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="sex">Sex</label>
-                    <div style="display:inline-block; width:66%; float:left; padding: 1%">
+                    <div>
                         <select id="SEX" disabled>
                             <option value="M" class="t9n" t9n-key="male"></option>
                             <option value="F" class="t9n" t9n-key="female"></option>
@@ -149,7 +154,7 @@
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="birthDate"></label>
-                    <div style="display:inline-block; width:66%; float:left; padding: 1%">
+                    <div>
                         <select id="BIRT.DATE.ACCU" onchange="NodeFamily.form.changeDate('BIRT.DATE')" disabled>
                             <option value=""></option>
                             <option value="ABT" class="t9n" t9n-key="abt"></option>
@@ -179,6 +184,7 @@
                         <input id="BIRT.DATE.YYYY" name="BIRT-DATE-YYYY" type="text" maxlength="4" size="4" style="width:auto"
                                onchange="NodeFamily.form.changeDate('BIRT.DATE')" readonly>
                         <input class="data" type="hidden" name="BIRT.DATE.nfValue"/>
+                        <span class="BIRT-DATE"></span>
                     </div>
             </div>
             <div class="B" id="BIRT-DATE-AND">
@@ -206,6 +212,7 @@
             <div class="B">
                     <label class="t9n" t9n-key="birthPlace"></label>
                     <input class="data" type="text" name="BIRT.PLAC.nfValue" readonly/>
+                    <span class="BIRT-PLAC-nfValue"></span>
             </div>
             <div class="B active">
                 <label class="t9n" t9n-key="isLiving"></label>
@@ -218,7 +225,7 @@
             <div id="DEAT" class="B">
                 <div class="B">
                     <label class="t9n" t9n-key="deathDate"></label>
-                    <div style="width:66%; float:left; padding: 1%">
+                    <div>
                         <select id="DEAT.DATE.ACCU" onchange="NodeFamily.form.changeDate('DEAT.DATE')" disabled>
                             <option value=""></option>
                             <option value="ABT" class="t9n" t9n-key="abt"></option>
@@ -248,6 +255,7 @@
                         <input id="DEAT.DATE.YYYY" name="DEAT-DATE-YYYY" type="text" maxlength="4" size="4" style="width:auto"
                                onchange="NodeFamily.form.changeDate('DEAT.DATE')" readonly>
                         <input class="data" type="hidden" name="DEAT.DATE.nfValue"/>
+                        <span class="DEAT-DATE"></span>
                     </div>
                 </div>
                 <div class="B" id="DEAT-DATE-AND">
@@ -275,6 +283,7 @@
                 <div class="B">
                     <label class="t9n" t9n-key="deathPlace"></label>
                     <input class="data" type="text" name="DEAT.PLAC.nfValue" readonly/>
+                    <span class="DEAT-PLAC-nfValue"></span>
                 </div>
                 <div class="B" style="display:none">
                     <label class="t9n" t9n-key="buried"></label>
@@ -284,14 +293,16 @@
                     </select>
                     <input class="data" type="hidden" name="BURI.nfValue"/>
                 </div>
-                <div class="B" id="BURI" style="width:100%; float:left; padding: 1%">
+                <div class="B" id="BURI">
                     <label class="t9n" t9n-key="burialPlace"></label>
                     <input class="data" type="text" name="BURI.PLAC.nfValue" readonly/>
+                    <span class="BURI-PLAC-nfValue"></span>
                 </div>
             </div>
             <div class="B">
-                    <label class="t9n" t9n-key="occupation"></label>
-                    <input class="data" type="text" name="OCCU.nfValue" readonly/>
+                <label class="t9n" t9n-key="occupation"></label>
+                <input class="data" type="text" name="OCCU.nfValue" readonly/>
+                <span class="OCCU-nfValue"></span>
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="photoFile"></label>
@@ -382,6 +393,7 @@
                         <input id="MARR.DATE.YYYY" name="MARR-DATE-YYYY" type="text" maxlength="4" size="4" placeholder="" style="width:auto"
                                onchange="NodeFamily.form.changeDate('MARR.DATE')" readonly>
                         <input class="data" type="hidden" name="MARR.DATE.nfValue"/>
+                        <span class="MARR-DATE"></span>
                     </div>
             </div>
             <div class="B" id="MARR-DATE-AND">
@@ -409,6 +421,7 @@
             <div class="B">
                     <label class="t9n" t9n-key="marriagePlace"></label>
                     <input class="data"  type="text" name="MARR.PLAC.nfValue" readonly/>
+                    <span class="MARR-PLAC-nfValue"></span>
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="photoFile"></label>

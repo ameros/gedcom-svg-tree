@@ -182,6 +182,12 @@ form label, legend {
 .button label.icon {
     font-size: 1.2em;
 }
+form span {
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.6em;
+    display: flex;
+}
 @media only screen and (orientation: portrait) {
     #header .logo::after {
         content: 'GST';

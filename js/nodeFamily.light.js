@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.6.0 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.7.0 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -987,12 +987,12 @@ NodeFamily.PersonForm = function(presenter, formSection) {
             if (typeof value === 'string' || value instanceof String) {
                 let inputElement = _form[inputName];
                 if (inputElement) {
-                    if (inputName != "OBJE.FILE.nfValue" && inputName != "OBJE.TITL.nfValue" && inputName != "SEX.nfValue") {
+                    if (inputName != "OBJE.FILE.nfValue" && inputName != "OBJE.TITL.nfValue" && inputName != "SEX.nfValue" && inputName) {
                         inputElement.closest(".B").classList.add("active");
                     }
-                    inputElement.classList.add("active");
                     NodeFamily.form.fillPhoto("photo", inputName, value);
                     inputElement.value = value;
+                    inputElement.dispatchEvent(new Event('change'));
                     if (inputName == "NAME.nfValue") {
                         const name = value.replace(/\/(.+?)\//g,(match) => match.toUpperCase()).replace(/\//g, "");
                         inputElement.value = name;
@@ -1025,8 +1025,6 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                     }
                     if (inputName == "SEX.nfValue") {
                         _formSection.querySelector("#SEX").value = value;
-//                        inputElement.closest(".B").classList.remove("active");
-//                        _formSection.querySelector("#SEX").classList.add("active");
                         _formSection.querySelector("i").classList.add(value);
                     }
                     if (inputName == "SUBM.nfValue") {
@@ -1061,20 +1059,23 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                             }
                         }
                         label.innerHTML = labelValue;
-                        _formSection.querySelector('#extraGedcomFields').appendChild(label);
                         _formSection.querySelector('#extraGedcomFields').closest(".B").classList.add("active");
-                        let extraInput = document.createElement("textarea");
-                        extraInput.setAttribute("readonly", "");
-                        extraInput.setAttribute("type", "text");
-                        extraInput.setAttribute("name", inputName);
+                        let extraInput = document.createElement("span");
                         extraInput.setAttribute("class", "active");
                         let val = value;
                         if (val.includes("@")) {
                             const sour = _presenter.getSource(val.replaceAll("@", ""));
                             val = val + " (" + sour + ")";
                         }
-                        extraInput.value = val;
-                        _formSection.querySelector('#extraGedcomFields').appendChild(extraInput);
+                        if (inputName.indexOf("DATE") != -1) {
+                            val = NodeFamily.Tree.changeDate(value, true);
+                        }
+                        extraInput.innerHTML = val;
+                        const box = document.createElement("div");
+                        box.setAttribute("class", "B active");
+                        box.appendChild(label);
+                        box.appendChild(extraInput);
+                        _formSection.querySelector('#extraGedcomFields').appendChild(box);
                     }
                 }
             } else if (!Array.isArray(value)) {
@@ -1093,6 +1094,14 @@ NodeFamily.PersonForm = function(presenter, formSection) {
     _formSection.querySelector("input[name='DEAT.nfValue']").addEventListener('change', this.changeIsLiving, true);
     _formSection.querySelector("input[name='BURI.nfValue']").addEventListener('change', this.changeIsBuried, true);
     _formSection.querySelector("#SEX").addEventListener('change', this.changeSex, true);
+    _formSection.querySelectorAll("input").forEach(el => {
+        el.addEventListener('change', (event) => {
+            const span = _formSection.querySelector("span." + el.name.replaceAll(".", "-"));
+            if (span) {
+                span.textContent = event.target.value;
+            }
+        });
+      });
 }
 
 NodeFamily.PersonList = function(presenter, personListSection) {
@@ -1294,26 +1303,10 @@ NodeFamily.form.fillPhoto = function(prefix, dataKey, value) {
 NodeFamily.form.fillDate = function(prefix, value) {
     const dateElements = value.split(" ");
     const month = dateElements.find(el => ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"].includes(el));
-    if (month) {
-        document.getElementById(prefix + '.MM').classList.add("active");
-        document.getElementById(prefix + '.MM').value = month;
-//        document.getElementById(prefix + '.MM').width =
-    } else {
-        document.getElementById(prefix + '.MM').classList.remove("active");
-    }
-    const day = dateElements.find(el => el.length <= 2);
-    if (day) {
-        document.getElementById(prefix + '.DD').classList.add("active");
-        document.getElementById(prefix + '.DD').value = day;
-    } else {
-        document.getElementById(prefix + '.DD').classList.remove("active");
-    }
-    const year = dateElements.find(el => el.length >= 3 && !isNaN(parseInt(el)));
-    if (year) {
-        document.getElementById(prefix + '.YYYY').classList.add("active");
-        document.getElementById(prefix + '.YYYY').value = year;
-    } else {
-        document.getElementById(prefix + '.YYYY').classList.remove("active");
+    const clazz = (prefix).replaceAll(".", "-");
+    const span = document.querySelector("span." + clazz);
+    if (span) {
+        span.innerHTML = NodeFamily.Tree.changeDate(value, true);
     }
 }
 
@@ -1322,17 +1315,12 @@ NodeFamily.form.fillDatePhrase = function(prefix, value) {
     const phrase = dateElements.find(el => ["ABT", "AFT", "BEF", "BET", "CAL", "EST"].includes(el));
     NodeFamily.form.fillDate(prefix, value);
     if (phrase) {
-        document.getElementById(prefix + '.ACCU').classList.add("active");
         document.getElementById(prefix + '.ACCU').value = phrase;
         if (phrase == "BET") {
-            document.getElementById(prefix.replace(".", "-") + '-AND').classList.add('active');
             NodeFamily.form.fillDate(prefix + '.AND', value.substr(value.indexOf('AND'), value.length));
         } else {
             document.getElementById(prefix.replace(".", "-") + '-AND').classList.remove('active');
         }
-    } else {
-        document.getElementById(prefix + '.ACCU').classList.remove("active");
-        document.getElementById(prefix.replace(".", "-") + '-AND').classList.remove('active');
     }
 }
 
@@ -1426,8 +1414,8 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                 if (inputElement) {
                     NodeFamily.form.fillPhoto("photoFamily", inputName, value);
                     inputElement.value = value;
+                    inputElement.dispatchEvent(new Event('change'));
                     inputElement.closest(".B").classList.add("active");
-                    inputElement.classList.add("active");
                     if (inputName == "HUSB.nfValue") {
                         const husbandName = _formSection.querySelector('#husbandName');
                         husbandName.innerHTML = _presenter.getName(value);
@@ -1482,7 +1470,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                         }
                         extraInput.value = val;
                         _formSection.querySelector('#extraFamilyFields').appendChild(extraInput);
-                        _formSection.closest(".B").classList.add("active");
+                        _formSection.querySelector('#extraFamilyFields').closest(".B").classList.add("active");
                     }
                 }
             } else if (!Array.isArray(value)) {
@@ -1511,6 +1499,15 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
         }
         header.innerHTML = names;
     }
+    _formSection.querySelectorAll("input").forEach(el => {
+        el.addEventListener('change', (event) => {
+            const span = _formSection.querySelector("span." + el.name.replaceAll(".", "-"));
+            console.log(el);
+            if (span) {
+                span.textContent = event.target.value;
+            }
+        });
+      });
 }
 
 NodeFamily.addVectorWithFrom = function(from, to, tree) {
@@ -1804,18 +1801,21 @@ NodeFamily.Tree = function() {
     }
 }
 
-NodeFamily.Tree.changeDate = function(date) {
-    const lang = params.get("lang");
+NodeFamily.Tree.changeDate = function(date, long) {
+    const lang = params.get("lang") || "en";
     let newDate = date;
-    if (lang && lang != "en") {
-        const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-        months.forEach(function(month, idx) {
-            if (date.indexOf(month) != -1) {
-                const translated = new Date(2020, idx).toLocaleString(lang, { month: 'short'}).toUpperCase();
-                newDate = date.replace(month, translated);
+    const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    months.forEach(function(month, idx) {
+        if (date.indexOf(month) != -1) {
+            let translated = new Date(2020, idx);
+            if (long) {
+                translated = translated.toLocaleString(lang, { month: 'long'});
+            } else {
+                translated = translated.toLocaleString(lang, { month: 'short'}).toUpperCase();
             }
-        });
-    }
+            newDate = newDate.replace(month, translated);
+        }
+    });
     return newDate.replace("ABT", "&#8776;").replace("EST", "&#916;").replace("CAL", "&#177;").replace("AFT", "&#8805;").replace("BEF", "&#8804;").replace("BET", "").replace("AND", "&#8660;");
 }
 
