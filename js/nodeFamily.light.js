@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.7.0 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.7.1 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1521,7 +1521,7 @@ NodeFamily.addVectorWithTo = function(from, to, tree) {
 }
 
 NodeFamily.addSiblings = function(data, parentsId, startPoint, config, tree) {
-    let siblings =  data[parentsId].CHIL || [];
+    let siblings =  data[parentsId] && data[parentsId].CHIL || [];
     siblings.forEach(function(sibling) {
         if (sibling != startPoint) {
             let numberOfOtherGens = config.numberOfOtherGens;
