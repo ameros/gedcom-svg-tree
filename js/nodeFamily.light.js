@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.7.1 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.7.2 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -398,6 +398,13 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         return "";
     }
 
+    this.getSurname = function(id) {
+        if (_familyData[id] && _familyData[id].NAME.SURN) {
+            return _familyData[id].NAME.GIVN[NF_VALUE].split(" ")[0] + " " + _familyData[id].NAME.SURN[NF_VALUE];
+        }
+        else return this.getName(id);
+    }
+
     this.getSource = function(id) {
         if (_familyData[id]) {
             if (_familyData[id].TITL) {
@@ -429,7 +436,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         const husbandId = _familyData[id].HUSB;
         if (wifeId && _familyData[wifeId[NF_VALUE]].NAME) {
             if (_familyData[wifeId[NF_VALUE]].NAME.GIVN && _familyData[wifeId[NF_VALUE]].NAME.SURN) {
-                names += _familyData[wifeId[NF_VALUE]].NAME.GIVN[NF_VALUE] + " " +_familyData[wifeId[NF_VALUE]].NAME.SURN[NF_VALUE];
+                names += _familyData[wifeId[NF_VALUE]].NAME.GIVN[NF_VALUE].split(" ")[0];
             } else {
                 names += _familyData[wifeId[NF_VALUE]].NAME[NF_VALUE].replace(/\//g, " ");
             }
@@ -1424,7 +1431,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                     }
                     if (inputName == "WIFE.nfValue") {
                         const wifeName = _formSection.querySelector('#wifeName');
-                        wifeName.innerHTML = _presenter.getName(value);
+                        wifeName.innerHTML = _presenter.getSurname(value);
                         wifeName.classList.add("filled");
                         wifeName.setAttribute("data-id", value);
                     }
@@ -1487,17 +1494,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
         _form["id"].value = id;
         fillData(personNode);
         const header = document.getElementById("familyHeader");
-        let names = "";
-        if (personNode.WIFE) {
-            names = names + _presenter.getName(personNode.WIFE[NF_VALUE]);
-        }
-        if (personNode.WIFE && personNode.HUSB) {
-            names = names + "<br/>&<br/>";
-        }
-        if (personNode.HUSB) {
-            names = names + _presenter.getName(personNode.HUSB[NF_VALUE]);
-        }
-        header.innerHTML = names;
+        header.innerHTML = _presenter.getFamilyNames(id);
     }
     _formSection.querySelectorAll("input").forEach(el => {
         el.addEventListener('change', (event) => {
