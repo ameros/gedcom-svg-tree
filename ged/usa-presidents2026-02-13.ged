@@ -7,7 +7,7 @@
 2 VERS 5.5.1
 2 FORM LINEAGE-LINKED
 1 CHAR UTF-8
-1 DATE 7 Mar 2025
+1 DATE 13 Feb 2026
 1 SUBM @SUB1@
 2 NAME Brian Tompsett
 1 FILE usa-presidents-2020-05-07.ged
@@ -12953,7 +12953,10 @@
 1 BURI Y
 2 PLAC Arlington National Cemetery
 0 @I1605@ INDI
-1 NAME Jacqueline Lee /Bouvier/
+1 NAME Jacqueline / Kennedy Onassis /
+2 GIVN Jacqueline Lee
+2 SURN Bouvier
+2 NICK Jackie Kennedy, Jackie O
 1 SEX F
 1 BIRT
 2 DATE 28 JUL 1929
