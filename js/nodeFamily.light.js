@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.7.2 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.7.3 | (c) 2025 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1422,7 +1422,9 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                     NodeFamily.form.fillPhoto("photoFamily", inputName, value);
                     inputElement.value = value;
                     inputElement.dispatchEvent(new Event('change'));
-                    inputElement.closest(".B").classList.add("active");
+                    if (inputName != "OBJE.FILE.nfValue" && inputName != "OBJE.TITL.nfValue" && inputName) {
+                        inputElement.closest(".B").classList.add("active");
+                    }
                     if (inputName == "HUSB.nfValue") {
                         const husbandName = _formSection.querySelector('#husbandName');
                         husbandName.innerHTML = _presenter.getName(value);
