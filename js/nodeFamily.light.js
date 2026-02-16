@@ -1868,6 +1868,7 @@ NodeFamily.init = function(path, lang, callback) {
     .then(response => response.text())
     .then((data) => {
         document.body.innerHTML = data;
+        document.getElementById("homeLink").setAttribute("href", "index.html?lang=" + lang);
         fetch(path + 'js/' + lang + '.json')
         .then(response => response.json())
         .then((data) => {
