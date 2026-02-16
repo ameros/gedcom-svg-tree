@@ -9,6 +9,7 @@ body {
 p.logo {
     font-size: 2em;
     text-transform: none;
+    text-align: center;
 }
 p {
     font-size:1.2em;
@@ -133,6 +134,9 @@ ul {
 }
 #personList ul li {
     cursor: pointer;
+}
+#intro ul li {
+    font-size: 1.4em;
 }
 /* Typography => Images
 --------------------------------- */

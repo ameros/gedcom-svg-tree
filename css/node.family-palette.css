@@ -2,6 +2,7 @@
 /* Palette
 --------------------------------- */
 body {
+    background: var(--auraTree);
     color: var(--on-auraData);
 }
 /* Palette => Paragraphs
@@ -158,4 +159,7 @@ svg {
 .edgePath path {
     stroke: var(--on-auraTree);
     fill: var(--on-auraTree);
+}
+hr {
+    color: var(--accentOutline);
 }

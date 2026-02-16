@@ -1,6 +1,9 @@
 body {
     margin:0;
 }
+#intro.R .S .C {
+    width: 50%;
+}
 .button a {
     padding: 0.6em;
     border-radius: 1.2em;
@@ -44,11 +47,14 @@ ul {
   padding: 0;
   list-style: none;
 }
+#intro ul li {
+  list-style: inside;
+}
 #header .C.C2:first-child {
     width: 33%;
 }
 .B H1, .B H2, .B H3, .B H4, .B P{
-    padding-left: 1em;
+    padding-left: 0;
 }
 #header .C.C1 .B, #header .C.C2 .B {
     padding-top: 0.4em;
@@ -304,7 +310,7 @@ fieldset {
     padding-bottom: 0.5em;
 }
 @media only screen and (max-width: 1023px) {
-   .R .S, .R .S .C.C1, .R .S .C.C2, .R .S .C.C3{
+   .R .S, .R .S .C.C1, .R .S .C.C2, .R .S .C.C3, #intro.R .S .C {
       width: 100%;
    }
    #editForm.active, #exportForm.active, #editFamilyForm.active, #personList.active {

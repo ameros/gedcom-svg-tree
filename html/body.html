@@ -63,24 +63,69 @@
 <div class="R" id="intro">
     <div class="S" style="width:100%">
         <div class="C C1" style="padding:0">
-            <div class="B" style="position:absolute; z-index:1; text-align:center;">
+            <div class="B">
                 <h1 class="t9n" t9n-key="visualizeTree"></h1>
                 <p class="logo"><img src="img/Node.Family-Logo-180x180.png" height=130 style="border-radius:65px"/></p>
-                <p><i class="fas fa-network-wired"></i></p>
-                <h2 class="wait t9n" t9n-key="clickToLoadGedcom"></h2>
-                <h2 class="pointer t9n" t9n-key="clickToExpand"></h2>
-                <h2 class="zoomIn t9n" t9n-key="clickToZoom"></h2>
-                <h2 class="contextMenu t9n" t9n-key="useOptions"></h2>
-                <h2 class="pointer t9n" t9n-key="saveBack"></h2>
-                <i class="fas fa-desktop"></i> <i class="fas fa-tablet-alt"></i> <i class="fas fa-mobile-alt"></i> <i class="fas fa-moon"></i>
-                <p><i style="font-size: smaller">Responsive Design / Dark mode supported</i></p>
-                <hr/>
-                <p><a href="https://github.com/ameros/gedcom-svg-tree" title="Read Me"><i class="fas fa-question-circle"></i></a></p>
+                <h2 class="wait t9n" t9n-key="withGST"></h2>
+            </div>
+        </div>
+        <div class="C C2" style="padding:0">
+            <div class="B">
+                <ul>
+                  <li class="wait t9n" t9n-key="clickToLoadGedcom"></li>
+                  <li class="pointer t9n" t9n-key="clickToExpand"></li>
+                  <li class="zoomIn t9n" t9n-key="clickToZoom"></li>
+                  <li class="contextMenu t9n" t9n-key="useOptions"></li>
+                  <ul style="padding-top:0px;">
+                    <li class="contextMenu t9n" t9n-key="decideNrNodes"></li>
+                    <li class="contextMenu t9n" t9n-key="changeView"></li>
+                    <li class="contextMenu t9n" t9n-key="displayCard"></li>
+                    <li class="contextMenu t9n" t9n-key="displayList"></li>
+                    <li class="contextMenu t9n" t9n-key="search-placeholder"></li>
+                  </ul>
+                  <li class="pointer t9n" t9n-key="saveBack"></li>
+                </ul>
             </div>
         </div>
     </div>
+    <div class="S" style="width:100%">
+    <div class="C C1" style="padding:0">
+      <div class="B">
+        <p style="text-align:center"><img src="https://github.com/ameros/gedcom-svg-tree/raw/main/img/vertical.png" style="width:75%; border-radius: 1em"></p>
+      </div>
+    </div>
+    <div class="C C2" style="padding:0">
+      <div class="B">
+        <h1 class="t9n" t9n-key="inUniqueWay"></h1>
+        <h2 class="t9n" t9n-key="parentsAsNodes"></h2>
+        <h2 class="t9n" t9n-key="tryExamples"></h2>
+        <ul>
+          <li><a href="https://ameros.github.io/gedcom-svg-tree/?ged=usa&id=I1604" class="t9n" t9n-key="usaPresidents"></a></li>
+          <li><a href="https://ameros.github.io/gedcom-svg-tree/?ged=royals" class="t9n" t9n-key="royalFamilies"></a></li>
+          <li><a href="https://ameros.github.io/gedcom-svg-tree/?lang=it&ged=pope-leo" class="t9n" t9n-key="popeAncestors"></a></li>
+          <li><a href="https://ameros.github.io/gedcom-svg-tree/?lang=pl&ged=jagiello" class="t9n" t9n-key="jagiellonian"></a></li>
+          <li><a href="https://ameros.github.io/gedcom-svg-tree/?lang=pl&ged" class="t9n" t9n-key="piastDynasty"></a></li>
+        </ul>
+      </div>
+      <div class="B">
+        <h1 class="t9n" t9n-key="privFirst"></h1>
+        <p class="t9n" t9n-key="privacyInfo"></p>
+      </div>
+    </div>
+  </div>
+    <div class="S" style="width:100%">
+    <div class="C" style="padding:0; width: 100%; text-align: center">
+      <div class="B">
+        <hr/>
+        <i class="fas fa-desktop"></i> <i class="fas fa-tablet-alt"></i> <i class="fas fa-mobile-alt"></i> <i class="fas fa-moon"></i>
+        <p><i style="font-size: smaller">Responsive Design / Dark mode supported</i></p>
+        <hr/>
+        <p><a href="https://github.com/ameros/gedcom-svg-tree" title="Read Me / More"><i class="fas fa-code"></i></a></p>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="R workspace" id="content">
+<div class="R workspace" id="content" style="display:none">
     <div class="S" style="width:100%; display:flex">
         <div class="C C2" style="z-index:1; flex-direction:column" id="personList">
             <div class="B">
