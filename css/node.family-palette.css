@@ -40,6 +40,7 @@ h1 {
     background-color: var(--actionHover);
     color: var(--action);
     border-radius: 1em;
+    border: 1px solid var(--accentOutline);
 }
 /* Palette => Images
 --------------------------------- */
