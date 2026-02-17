@@ -53,7 +53,7 @@ figure img {
 /* Palette => Forms
 --------------------------------- */
 fieldset {
-    border: 1px dotted var(--accentMarkers);
+    border: 1px solid var(--accentOutline);
 }
 #exportForm input  {
     background-color: var(--auraData);

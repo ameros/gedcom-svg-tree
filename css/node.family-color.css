@@ -10,8 +10,8 @@
   --_yellow-h: 52;
 
   --_gray: hsl(264, 8%, 64%);
-  --_grayLighter-hs: 270, 31%;
-  --_grayLighter2-hs: 25, 7%;
+  --_grayLighter-hs: 264, 31%;
+  --_grayLighter2-hs: 264, 7%;
 
   --_background: hsl(0, 0%, 100%);
   --_foreground: hsl(213, 13%, 14%);
@@ -74,12 +74,12 @@
       --_blueLighter: hsl(var(--_blue-h), 50%, 86%);
       --_yellow: hsl(var(--_yellow-h), 70%, 49%);
       --_yellowLighter: hsl(var(--_yellow-h), 70%, 85%);
-      --_grayLighter: hsl(var(--grayLighter-hs), 4%);
-      --_grayLighter2: hsl(var(--_grayLighter2-hs), 8%);
+      --_grayLighter: hsl(var(--_grayLighter-hs), 4%);
+      --_grayLighter2: hsl(var(--_grayLighter2-hs), 28%);
  /* functions
  --------------------------------- */
       --auraTree: hsl(0, 0%, 0%);
-      --accentOutline: var(--auraTree);
+      --accentOutline: var(--_grayLighter2);
       --actionHover: var(--_grayLighter);
       --on-auraNodeCurrent: var(--_background);
     }
