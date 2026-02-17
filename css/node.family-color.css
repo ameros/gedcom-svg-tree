@@ -83,14 +83,7 @@
       --actionHover: var(--_grayLighter2);
       --on-auraNodeCurrent: var(--_background);
     }
-
-    img {
-        filter: brightness(.8) contrast(1.2);
-    }
     .logo img {
         content: url("../img/Node.Family-Logo-2-inverted.png")
-    }
-    #intro .logo img {
-        filter: brightness(.8) contrast(1.2) blur(0.03rem);
     }
 }
