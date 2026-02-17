@@ -75,7 +75,7 @@
       --_yellow: hsl(var(--_yellow-h), 70%, 49%);
       --_yellowLighter: hsl(var(--_yellow-h), 70%, 85%);
       --_grayLighter: hsl(var(--_grayLighter-hs), 4%);
-      --_grayLighter2: hsl(var(--_grayLighter2-hs), 22%);
+      --_grayLighter2: hsl(var(--_grayLighter2-hs), 30%);
  /* functions
  --------------------------------- */
       --auraTree: hsl(0, 0%, 0%);
