@@ -10,8 +10,7 @@
   --_yellow-h: 52;
 
   --_gray: hsl(264, 8%, 64%);
-  --_grayLighter-hs: 264, 31%;
-  --_grayLighter2-hs: 264, 7%;
+  --_grayLighter-hs: 264, 7%;
 
   --_background: hsl(0, 0%, 100%);
   --_foreground: hsl(213, 13%, 14%);
@@ -29,7 +28,7 @@
   --_yellow: hsl(var(--_yellow-h), 100%, 49%);
   --_yellowLighter: hsl(var(--_yellow-h), 100%, 85%);
   --_grayLighter: hsl(var(--_grayLighter-hs), 94%);
-  --_grayLighter2: hsl(var(--_grayLighter2-hs), 68%);
+  --_grayLighter2: hsl(var(--_grayLighter-hs), 88%);
  /* functions - aura,action,accent
  --------------------------------- */
   --auraTree: linear-gradient(65deg, var(--_blueLighter) 0%, var(--_redLighter2) 100%);
@@ -51,7 +50,7 @@
   --accentFemaleIcon: var(--_redLighter3);
   --accentFamily: var(--_yellow);
   --accentFamilyIcon: var(--_yellowLighter);
-  --accentOutline: var(--_grayLighter);
+  --accentOutline: var(--_grayLighter2);
   --accentShadow: var(--_grayLighter2);
   --accentMarkers: var(--_greenLighter);
 }
@@ -74,13 +73,13 @@
       --_blueLighter: hsl(var(--_blue-h), 50%, 86%);
       --_yellow: hsl(var(--_yellow-h), 70%, 49%);
       --_yellowLighter: hsl(var(--_yellow-h), 70%, 85%);
-      --_grayLighter: hsl(var(--_grayLighter-hs), 4%);
-      --_grayLighter2: hsl(var(--_grayLighter2-hs), 30%);
+      --_grayLighter: hsl(var(--_grayLighter-hs), 20%);
+      --_grayLighter2: hsl(var(--_grayLighter-hs), 30%);
  /* functions
  --------------------------------- */
       --auraTree: hsl(0, 0%, 0%);
       --accentOutline: var(--_grayLighter2);
-      --actionHover: var(--_grayLighter2);
+      --actionHover: var(--_grayLighter);
       --on-auraNodeCurrent: var(--_background);
     }
     .logo img {
