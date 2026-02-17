@@ -55,6 +55,7 @@ figure img {
 --------------------------------- */
 fieldset {
     border: 1px solid var(--accentOutline);
+    border-radius: 1em;
 }
 #exportForm input  {
     background-color: var(--auraData);
