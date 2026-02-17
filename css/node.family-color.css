@@ -69,7 +69,7 @@
       --_redLighter3: hsl(var(--_red-h), 50%, 86%);
       --_green: hsl(var(--_green-h), 56%, 35%);
       --_greenLighter: hsl(var(--_greenLighter-h), 70%, 43%);
-      --_greenLighter2: hsl(var(--_greenLighter-h), 40%, 22%);
+      --_greenLighter2: hsl(var(--_greenLighter-h), 70%, 15%);
       --_blue: hsl(var(--_blue-h), 70%, 80%);
       --_blueLighter: hsl(var(--_blue-h), 50%, 86%);
       --_yellow: hsl(var(--_yellow-h), 70%, 49%);
