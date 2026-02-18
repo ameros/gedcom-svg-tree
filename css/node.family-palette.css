@@ -13,7 +13,7 @@ body {
 
 /* Palette => Anchors
 --------------------------------- */
-a, a:hover, a:visited {
+a, a:hover, a:visited, .clickable {
     color: var(--action);
 }
 .button a, .button a:hover {
@@ -164,4 +164,9 @@ svg {
 }
 hr {
     color: var(--accentOutline);
+}
+dialog, dialog:focus-visible {
+  border: 0px;
+  border-radius: 1em;
+  outline: 0px;
 }

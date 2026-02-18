@@ -30,6 +30,9 @@ a, a:hover, a:visited, .button a, .button label {
 #header a.home {
     font-weight: 300;
 }
+.clickable {
+    cursor: pointer;
+}
 /* Typography => Headings
 --------------------------------- */
 body, h1, h2, text, .B h3, h4 {
@@ -191,6 +194,9 @@ form span {
     font-weight: 400;
     line-height: 1.6em;
     display: flex;
+}
+.dialogLink {
+    text-align: center;
 }
 @media only screen and (orientation: portrait) {
     #header .logo::after {

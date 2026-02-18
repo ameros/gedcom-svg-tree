@@ -12952,6 +12952,21 @@
 2 PLAC Dallas, Texas, U.S.
 1 BURI Y
 2 PLAC Arlington National Cemetery
+
+1 EVEN
+2 TYPE inauguration
+2 DATE 20 JAN 1961
+2 SOUR @S1@
+
+0 @S1@ SOUR
+1 TITL inaugural address
+1 OBJE
+2 FILE https://upload.wikimedia.org/wikipedia/commons/d/d5/JFK_inaugural_address.ogg
+3 FORM ogg
+1 TEXT Quote:
+2 CONT And so, my fellow Americans: ask not what your country can do for you--ask what you can do for your country.
+1 WWW https://en.wikipedia.org/wiki/File:JFK_inaugural_address.ogg
+
 0 @I1605@ INDI
 1 NAME Jacqueline / Kennedy Onassis /
 2 GIVN Jacqueline Lee

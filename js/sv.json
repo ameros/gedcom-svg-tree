@@ -129,5 +129,9 @@
   "carlGustafAncestors": "Förfäder till Carl XVI Gustaf",
   "jagiellonian": "Jagiellonska dynastin",
   "piastDynasty": "Piastdynastin",
-  "privFirst": "Integritet först"
+  "privFirst": "Integritet först",
+  "whatsNew": "NYTT:",
+  "newHomePage": "Du njuter just av den nya hemsidan med direkta länkar till exempel och språkstöd.",
+  "changelog173": "Version 1.7.3 introducerade några justeringar av datavisning och användarupplevelse",
+  "changelog180": "1.8.0 länkade källhänvisningar med öppningsdialogruta som visar dess detaljer"
 }

@@ -123,11 +123,15 @@
   "inUniqueWay": "In Unique way",
   "parentsAsNodes": "where each parents become a node of the tree",
   "tryExamples": "Just try it with some examples below:",
-  "usaPresidents": "USA Presidents",
+  "usaPresidents": "USA Presidents (med länkad KÄLLA)",
   "royalFamilies": "Royal Families",
   "popeAncestors": "Ancestors of Pope Leo XIV",
   "carlGustafAncestors": "Ancestors of Carl XVI Gustaf",
   "jagiellonian": "Jagiellonian dynasty",
   "piastDynasty": "Piast Dynasty",
-  "privFirst": "Privacy-First"
+  "privFirst": "Privacy-First",
+  "whatsNew": "What's NEW:",
+  "newHomePage": "You are just enjoying new home page with direct links to examples and showing language support.",
+  "changelog173": "1.7.3 version introduced some adjustments to data display and UX",
+  "changelog180": "1.8.0 linked up source citation with opening dialog displaying its details"
 }

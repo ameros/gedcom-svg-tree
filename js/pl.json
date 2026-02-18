@@ -122,11 +122,15 @@
   "inUniqueWay": "W unikalny sposób",
   "parentsAsNodes": "gdzie rodzicce stają się węzłem drzewa",
   "tryExamples": "Wypróbuj przykłady:",
-  "usaPresidents": "Prezydenci USA",
+  "usaPresidents": "Prezydenci USA (z podłączonym źródłem)",
   "royalFamilies": "Rodziny królewskie",
   "popeAncestors": "Przodkowie papieża Leona XIV",
   "carlGustafAncestors": "Przodkowie Carla XVI Gustafa",
   "jagiellonian": "Dynastia Jagiellonów",
   "piastDynasty": "Dynastia Piastów",
-  "privFirst": "Prywatność-Najpierw"
+  "privFirst": "Prywatność-Najpierw",
+  "whatsNew": "Co NOWEGO:",
+  "newHomePage": "Właśnie cieszysz się nową stroną główną z bezpośrednimi linkami do przykładów i obsługą różnych języków.",
+  "changelog173": "Wersja 1.7.3 wprowadziła pewne zmiany w wyświetlaniu danych i UX",
+  "changelog180": "Wersja 1.8.0 połączyła cytowanie źródła z otwartym oknem dialogowym wyświetlającym jego szczegóły"
 }

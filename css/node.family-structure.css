@@ -17,8 +17,9 @@ h1 img {
     padding-bottom: 0.6em;
 }
 figure {
-  display: inline-block;
+  display: block;
   vertical-align: top;
+  text-align: center;
 }
 figure img {
     width: 60%;
@@ -299,15 +300,28 @@ fieldset {
     vertical-align: sub;
     padding-left: 0.4em;
 }
-#editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before {
+#editForm .fa-times::before, #exportForm .fa-times::before, #editFamilyForm .fa-times::before, #personList .fa-times::before, #sourceDialog .fa-times::before {
     position: absolute;
     left: 31.3%;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+}
+#sourceDialog .fa-times::before {
+    position: absolute;
+    left: 96%;
     padding-top: 0.5em;
     padding-right: 0.5em;
 }
 #personList ul li {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+}
+dialog {
+    width: 75%;
+}
+dialog img {
+    max-width: 800px;
+    width: 100%;
 }
 @media only screen and (max-width: 1023px) {
    .R .S, .R .S .C.C1, .R .S .C.C2, .R .S .C.C3, #intro.R .S .C {

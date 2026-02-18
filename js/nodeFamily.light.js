@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.7.3 | (c) 2025 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.8.0 | (c) 2026 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -109,7 +109,7 @@ Gedcom.Tag = function(line, nextLine) {
 
     const _IDENTIFIERS = ["FAM","INDI","OBJE","REPO","SOUR","SUBM","SUBN"]; // "NOTE" ?
     const _OBJECT_TAGS = ["ADDR","BIRT","BURI","DEAT","MARR","NAME","NOTE","SOUR", "FAMC", "CHIL", "FAMS"];
-    const _COLLECTION_TAGS = ["CONT"]; // SUBM, EVEN ?
+    const _COLLECTION_TAGS = ["CONT", "CONC"]; // SUBM, EVEN ?
     const _AT = "@";
 
     this.isHead = function() {
@@ -390,6 +390,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
     let _exportForm;
     let _familyForm;
     let _personList;
+    let _sourceDialog;
 
     this.getName = function(id) {
         if (_familyData[id] && _familyData[id].NAME) {
@@ -406,6 +407,13 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
     }
 
     this.getSource = function(id) {
+        if (_familyData[id]) {
+            return _familyData[id];
+        }
+        return "";
+    }
+
+    this.getSourceTitle = function(id) {
         if (_familyData[id]) {
             if (_familyData[id].TITL) {
                 return _familyData[id].TITL[NF_VALUE];
@@ -450,6 +458,10 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         return names;
     }
 
+    this.subscribeSourceDialog = function(sourceDialog) {
+        _sourceDialog = sourceDialog;
+    }
+
     this.subscribePersonForm = function(personForm) {
        _personForm = personForm;
     }
@@ -466,6 +478,13 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         _personList = personList;
         _personList.setData(_lunrIndex, _familyData);
         _personList.fill(0);
+    }
+
+    this.openSource = function(event) {
+      const id = event.target.getAttribute("data-id");
+      if (id && _familyData[id]) {
+        _sourceDialog.open(_familyData[id]);
+      }
     }
 
     this.openDataCard = function() {
@@ -889,6 +908,69 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
 
 
 }
+NodeFamily.SourceDialog = function(presenter, dialogElement) {
+    const _presenter = presenter;
+    const _dialogElement = dialogElement;
+    const _container = _dialogElement.querySelector("div");
+    _presenter.subscribeSourceDialog(this);
+
+    this.reset = function() {
+        _container.innerHTML = "";
+        _dialogElement.querySelector("h3").innerHTML = "";
+        _dialogElement.querySelector("figure img").setAttribute("src", "");
+        _dialogElement.querySelector("figcaption").innerHTML = "";
+    }
+    this.open = function(sourceNode) {
+        this.reset();
+        let title = sourceNode.TITL[NF_VALUE];
+        _dialogElement.querySelector("h3").innerHTML = title;
+        if (sourceNode.OBJE && sourceNode.OBJE.FILE) {
+            if (sourceNode.OBJE.FILE.FORM && sourceNode.OBJE.FILE.FORM[NF_VALUE] == "ogg") {
+                _dialogElement.querySelector("audio").style.display = "block";
+                _dialogElement.querySelector("figure").style.display = "none";
+                _dialogElement.querySelector("audio source").setAttribute("src", sourceNode.OBJE.FILE[NF_VALUE]);
+                _dialogElement.querySelector("audio").load();
+            } else {
+                _dialogElement.querySelector("audio").style.display = "none";
+                _dialogElement.querySelector("figure").style.display = "block";
+                _dialogElement.querySelector("figure img").setAttribute("src", sourceNode.OBJE.FILE[NF_VALUE]);
+                if (sourceNode.OBJE.TITL) {
+                    _dialogElement.querySelector("figcaption").innerHTML = sourceNode.OBJE.TITL[NF_VALUE];
+                }
+            }
+        }
+        if (sourceNode.TEXT) {
+            const paragraph = document.createElement("p");
+            paragraph.innerHTML = sourceNode.TEXT[NF_VALUE];
+            _container.appendChild(paragraph);
+            if (sourceNode.TEXT.CONT) {
+                sourceNode.TEXT.CONT.forEach(function(node) {
+                    const cont = document.createElement("p");
+                    cont.innerHTML = node[NF_VALUE];
+                    _container.appendChild(cont);
+                });
+            }
+            if (sourceNode.TEXT.CONC) {
+                sourceNode.TEXT.CONC.forEach(function(node) {
+                    const cont = document.createTextNode(" " + node[NF_VALUE]);
+                    paragraph.appendChild(cont);
+                });
+            }
+        }
+        if (sourceNode.WWW) {
+            const paragraph = document.createElement("p");
+            paragraph.setAttribute("class", "dialogLink");
+            const link = document.createElement("a");
+            paragraph.appendChild(link);
+            link.innerHTML = sourceNode.WWW[NF_VALUE]
+            link.setAttribute("href", sourceNode.WWW[NF_VALUE]);
+            link.setAttribute("target", "_blank");
+            _container.appendChild(paragraph);
+        }
+        _dialogElement.showModal();
+    }
+}
+
 NodeFamily.PersonForm = function(presenter, formSection) {
     const _presenter = presenter;
     const _formSection = formSection;
@@ -979,7 +1061,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         el.value = "Y";
         el.dispatchEvent(new Event('change'));
     }
-
+    const _that = this;
     const fillData = function(personNode, previous) {
         for (const [key, value] of Object.entries(personNode)) {
             if (key == NF_RECORD) {
@@ -1071,8 +1153,11 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                         extraInput.setAttribute("class", "active");
                         let val = value;
                         if (val.includes("@")) {
-                            const sour = _presenter.getSource(val.replaceAll("@", ""));
+                            extraInput.setAttribute("data-id", val.replaceAll("@", ""));
+                            extraInput.setAttribute("class", "clickable");
+                            const sour = _presenter.getSourceTitle(val.replaceAll("@", ""));
                             val = val + " (" + sour + ")";
+                            extraInput.addEventListener('click', _presenter.openSource, true);
                         }
                         if (inputName.indexOf("DATE") != -1) {
                             val = NodeFamily.Tree.changeDate(value, true);
@@ -1474,7 +1559,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                         extraInput.setAttribute("disabled", "");
                         let val = value;
                         if (val.includes("@")) {
-                            const sour = _presenter.getSource(val.replaceAll("@", ""));
+                            const sour = _presenter.getSourceTitle(val.replaceAll("@", ""));
                             val = val + " (" + sour + ")";
                         }
                         extraInput.value = val;
@@ -1501,7 +1586,6 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
     _formSection.querySelectorAll("input").forEach(el => {
         el.addEventListener('change', (event) => {
             const span = _formSection.querySelector("span." + el.name.replaceAll(".", "-"));
-            console.log(el);
             if (span) {
                 span.textContent = event.target.value;
             }
@@ -1846,6 +1930,7 @@ NodeFamily.fromData = function(data, id, graphConfig, config) {
     const familyForm = new NodeFamily.FamilyForm(nodeFamily, document.getElementById('editFamilyForm'));
     const exportForm = new NodeFamily.ExportForm(nodeFamily, document.getElementById('exportForm'));
     const personList = new NodeFamily.PersonList(nodeFamily, document.getElementById('personList'));
+    const sourceDialog = new NodeFamily.SourceDialog(nodeFamily, document.getElementById('sourceDialog'));
     document.querySelector('#toggleForm').addEventListener('click', nodeFamily.openDataCard, true);
     document.querySelector('#toggleExportForm').addEventListener('click', nodeFamily.toggleExportForm, true);
     document.querySelector('#togglePersonList').addEventListener('click', nodeFamily.togglePersonList, true);
