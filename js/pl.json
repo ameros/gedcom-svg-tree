@@ -132,5 +132,8 @@
   "whatsNew": "Co NOWEGO:",
   "newHomePage": "Właśnie cieszysz się nową stroną główną z bezpośrednimi linkami do przykładów i obsługą różnych języków.",
   "changelog173": "Wersja 1.7.3 wprowadziła pewne zmiany w wyświetlaniu danych i UX",
-  "changelog180": "Wersja 1.8.0 połączyła cytowanie źródła z otwartym oknem dialogowym wyświetlającym jego szczegóły"
+  "changelog180": "Wersja 1.8.0 połączyła cytowanie źródła z otwartym oknem dialogowym wyświetlającym jego szczegóły",
+  "linkCopied": "Link skopiowany",
+  "justShare": "Teraz po prostu go wklej / udostępnij.",
+  "changelog190": "Wersja 1.9.0 wprowadziła możliwość udostępniania linka (przedstawiony na karcie osoby) i pokazuje niektóre dane z HEAD"
 }

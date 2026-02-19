@@ -59,6 +59,14 @@
             </div>
         </div>
     </div>
+  <div class="S">
+    <div class="C C1" style="width:100%">
+      <div class="B" id="head">
+        <span class="fas fa-info-circle" style="display:none"></span>
+        <span class="data" style="padding:0; font-size: small"></span> <span style="cursor: pointer; display:none" class="fas fa-times" onclick="document.getElementById('head').style.display = 'none'">&nbsp;</span>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="R" id="intro">
     <div class="S" style="width:100%">
@@ -120,6 +128,7 @@
         <h1 class="t9n" t9n-key="whatsNew"></h1>
         <h2 class="t9n" t9n-key="newHomePage"></h2>
         <ul>
+          <li class="t9n" t9n-key="changelog190"></li>
           <li class="t9n" t9n-key="changelog180"></li>
           <li class="t9n" t9n-key="changelog173"></li>
         </ul>
@@ -168,6 +177,7 @@
         </div>
         <aside class="C C2" id="editForm">
             <div class="B">
+                <span id="share" class="fas fa-share-alt" onclick='document.getElementById("editForm").classList.toggle("active")'>&nbsp;</span>
                 <span class="fas fa-times" onclick='document.getElementById("editForm").classList.toggle("active")'>&nbsp;</span>
                 <h3 class="t9n" t9n-key="person" id="personHeader"></h3>
                 <div class="B">

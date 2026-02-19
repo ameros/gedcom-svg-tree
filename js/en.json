@@ -133,5 +133,8 @@
   "whatsNew": "What's NEW:",
   "newHomePage": "You are just enjoying new home page with direct links to examples and showing language support.",
   "changelog173": "1.7.3 version introduced some adjustments to data display and UX",
-  "changelog180": "1.8.0 linked up source citation with opening dialog displaying its details"
+  "changelog180": "1.8.0 linked up source citation with opening dialog displaying its details",
+  "linkCopied": "Link copied",
+  "justShare": "Just paste / share it.",
+  "changelog190": "1.9.0 introduced the ability to share a link (presented on person card) and shows some data from HEAD"
 }

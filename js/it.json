@@ -133,5 +133,8 @@
   "whatsNew": "Cosa c'è di nuovo:",
   "newHomePage": "Stai semplicemente godendoti la nuova home page con link diretti agli esempi e che mostra il supporto linguistico.",
   "changelog173": "La versione 1.7.3 ha introdotto alcune modifiche alla visualizzazione dei dati e all'esperienza utente",
-  "changelog180": "1.8.0 ha collegato la citazione della fonte con la finestra di dialogo di apertura che ne mostra i dettagli"
+  "changelog180": "1.8.0 ha collegato la citazione della fonte con la finestra di dialogo di apertura che ne mostra i dettagli",
+  "linkCopied": "Collegamento copiato",
+  "justShare": "Basta incollarlo/condividerlo.",
+  "changelog190": "La versione 1.9.0 ha introdotto la possibilità di condividere un collegamento (presentato sulla tessera personale) e mostra alcuni dati da HEAD"
 }

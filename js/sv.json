@@ -133,5 +133,8 @@
   "whatsNew": "NYTT:",
   "newHomePage": "Du njuter just av den nya hemsidan med direkta länkar till exempel och språkstöd.",
   "changelog173": "Version 1.7.3 introducerade några justeringar av datavisning och användarupplevelse",
-  "changelog180": "1.8.0 länkade källhänvisningar med öppningsdialogruta som visar dess detaljer"
+  "changelog180": "1.8.0 linked up source citation with opening dialog displaying its details",
+  "linkCopied": "Länk kopierad",
+  "justShare": "Bara klistra in/dela \u200B\u200Bdet.",
+  "changelog190": "Version 1.9.0 introducerade möjligheten att dela en länk (visas på personkortet) och visar viss data från HEAD"
 }

@@ -7,10 +7,11 @@
 2 VERS 5.5.1
 2 FORM LINEAGE-LINKED
 1 CHAR UTF-8
-1 DATE 13 Feb 2026
+1 DATE 18 Feb 2026
 1 SUBM @SUB1@
 2 NAME Brian Tompsett
 1 FILE usa-presidents-2020-05-07.ged
+1 LANG English
 0 @SUB1@ SUBM
 1 NAME $$http://dsa-slave1.hull.ac.uk:8888/Rcn%%3dBrian%%20C%%20Tompsett%%2c%%20ou%%3dComputer%%20Science%%2c%%20o%%3dUniversity%%20of%%20Hull%%2c%%20c%%3dGB Brian Tompsett
 1 ADDR $$http://www.dcs.hull.ac.uk/ Department of Computer Science
@@ -33,8 +34,6 @@
 2 CONT Click here to obtain a copy of the
 2 CONT $$ftp://www.dcs.hull.ac.uk/public/genealogy/presidents.ged original gedcom file
 2 CONT from this server.
-0 @SUB2@ SUBM
-1 NAME Michał Amerek
 0 @I1@ INDI
 1 NAME William /Clinton/
 2 NICK Bill

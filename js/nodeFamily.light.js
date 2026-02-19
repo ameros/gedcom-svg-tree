@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.8.0 | (c) 2026 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.9.0 | (c) 2026 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -404,13 +404,6 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
             return _familyData[id].NAME.GIVN[NF_VALUE].split(" ")[0] + " " + _familyData[id].NAME.SURN[NF_VALUE];
         }
         else return this.getName(id);
-    }
-
-    this.getSource = function(id) {
-        if (_familyData[id]) {
-            return _familyData[id];
-        }
-        return "";
     }
 
     this.getSourceTitle = function(id) {
@@ -823,6 +816,38 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
 
     }
 
+    this.fillHead = function() {
+        const head = _familyData.HEAD;
+        let msg = "";
+        if (head.FILE) {
+            msg += head.FILE[NF_VALUE] + ":";
+        }
+        if (head.GEDC) {
+            msg += " GEDCOM";
+            if (head.GEDC.VERS) {
+                msg += " " + head.GEDC.VERS[NF_VALUE];
+            }
+            if (head.GEDC.FORM) {
+                msg += ", " + head.GEDC.FORM[NF_VALUE];
+            }
+        }
+        if (head.SOUR) {
+            msg += ", " + head.SOUR[NF_VALUE];
+        }
+        if (head.SUBM && head.SUBM.NAME) {
+            msg += ", " + head.SUBM.NAME[NF_VALUE];
+        }
+        if (head.LANG) {
+            msg += ", " + head.LANG[NF_VALUE];
+        }
+        if (head.DATE) {
+            msg += ", " + head.DATE[NF_VALUE];
+        }
+        document.querySelector("#head span.data").innerHTML = msg;
+        document.querySelector("#head span.fa-times").style.display = "inline";
+        document.querySelector("#head span.fa-info-circle").style.display = "inline";
+    }
+
     this.startFrom = function(event) {
         let id = event.target.value;
         if (event.target.tagName.toLowerCase() == "li") {
@@ -1181,8 +1206,28 @@ NodeFamily.PersonForm = function(presenter, formSection) {
     }
     this.fill = function(id, personNode) {
         _form["id"].value = id;
+        const shareButton = document.getElementById("share");
+        shareButton.setAttribute("data-id", id);
+        shareButton.setAttribute("data-lang", lang);
         fillData(personNode);
     }
+
+    this.share = function(event) {
+        const id = event.target.getAttribute("data-id");
+        const lang = event.target.getAttribute("data-lang");
+        const href = location.href;
+        let link = href.substring(0, href.indexOf("?")) + "?id=" + id + "&lang=" + lang;
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("ged")) {
+            link += "&ged";
+            if (params.get("ged") != "") {
+                link += "=" + params.get("ged");
+            }
+        }
+        navigator.clipboard.writeText(link);
+        alert(dict["linkCopied"] + ": " + link + ". " + dict["justShare"]);
+    }
+
     _formSection.querySelector("input[name='DEAT.nfValue']").addEventListener('change', this.changeIsLiving, true);
     _formSection.querySelector("input[name='BURI.nfValue']").addEventListener('change', this.changeIsBuried, true);
     _formSection.querySelector("#SEX").addEventListener('change', this.changeSex, true);
@@ -1194,6 +1239,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
             }
         });
       });
+    document.getElementById("share").addEventListener('click', this.share, true);
 }
 
 NodeFamily.PersonList = function(presenter, personListSection) {
@@ -1917,6 +1963,7 @@ NodeFamily.fromFile = function(file) {
     }
     fileReader.readAsText(file);
 }
+
 NodeFamily.fromData = function(data, id, graphConfig, config) {
     let gConfig = graphConfig || {rankdir: 'TB', edgesep: 10, ranksep: 25, nodesep: 10};
     const gedcom = new Gedcom(data);
@@ -1947,6 +1994,7 @@ NodeFamily.fromData = function(data, id, graphConfig, config) {
             nodeFamily.visualize(event.state.start, true);
         }
     }, true);
+    nodeFamily.fillHead();
 }
 NodeFamily.init = function(path, lang, callback) {
     fetch(path + 'html/body.html')

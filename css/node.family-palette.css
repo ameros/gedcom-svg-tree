@@ -114,6 +114,7 @@ input[type=range] {
     box-shadow: 0px 0px 6px 0px var(--accentShadow);
 }
 #gedcomFileLabel,
+.fa-share-alt::before,
 .fa-times::before, .switch.active:before,
 .filled, .spouse, .child {
     color: var(--action);
