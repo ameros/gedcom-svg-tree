@@ -1216,7 +1216,11 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         const id = event.target.getAttribute("data-id");
         const lang = event.target.getAttribute("data-lang");
         const href = location.href;
-        let link = href.substring(0, href.indexOf("?")) + "?id=" + id + "&lang=" + lang;
+        let link = href;
+        if (location.href.indexOf("?") !== -1) {
+            link += href.substring(0, href.indexOf("?"));
+        }
+        link += "?id=" + id + "&lang=" + lang;
         const params = new URLSearchParams(window.location.search);
         if (params.has("ged")) {
             link += "&ged";
