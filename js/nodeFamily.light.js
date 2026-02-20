@@ -1218,7 +1218,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         const href = location.href;
         let link = href;
         if (location.href.indexOf("?") !== -1) {
-            link += href.substring(0, href.indexOf("?"));
+            link = href.substring(0, href.indexOf("?"));
         }
         link += "?id=" + id + "&lang=" + lang;
         const params = new URLSearchParams(window.location.search);
