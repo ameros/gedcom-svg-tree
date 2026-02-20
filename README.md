@@ -29,6 +29,7 @@ https://ameros.github.io/gedcom-svg-tree/
     - [Ancestors of Carl XVI Gustaf](https://ameros.github.io/gedcom-svg-tree/?lang=sv&ged=carl-gustaf) - with `lang=sv`
     - [Ancestors of Pope Leo XIV](https://ameros.github.io/gedcom-svg-tree/?lang=it&ged=pope-leo) - with `lang=it`
     - [Jagiellonian dynasty](https://ameros.github.io/gedcom-svg-tree/?lang=pl&ged=jagiello) - with `lang=pl`
+    - [Maria Skłodowska - Curie](https://ameros.github.io/gedcom-svg-tree/?lang=pl&ged=sklodowska) - with `lang=pl`
 
 ---
 

@@ -1,0 +1,1247 @@
+0 HEAD
+1 DATE 20 Feb 2026
+1 CHAR UTF-8
+1 FILE sklodowska-curie.ged
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+0 @I1@ INDI
+1 NAME Maria Salomea /Skłodowska/
+2 GIVN Maria
+2 NICK Manya
+2 SURN Skłodowska
+1 SEX F
+1 BIRT
+2 DATE 7 Nov 1867
+2 PLAC Warszawa, Warszawskie, Polska
+1 DEAT
+2 DATE 4 Jul 1934
+2 PLAC Sancellemoz, Passy, Haute-Savoie, France
+1 WWW https://pl.wikipedia.org/wiki/Maria_Sk%C5%82odowska-Curie
+1 FAMC @F1@
+1 FAMS @F5@
+1 OBJE
+2 FILE https://upload.wikimedia.org/wikipedia/commons/c/c8/Marie_Curie_c._1920s.jpg
+2 TITL Henri Manuel, Public domain, via Wikimedia Commons
+2 FORM Image
+2 DATE 1920
+0 @I2@ INDI
+1 NAME Władysław  /Skłodowski/
+2 GIVN Władysław
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE 22 Apr 1832
+2 PLAC Kielce, Świętokrzyskie, Poland
+1 DEAT
+2 DATE 14 May 1902
+2 PLAC Warsaw, Poland
+1 FAMC @F2@
+1 FAMS @F1@
+0 @I3@ INDI
+1 NAME Bronisława Marianna /Boguska/
+2 GIVN Bronisława
+2 SURN Boguska
+1 SEX F
+1 BIRT
+2 DATE 15 Aug 1835
+2 PLAC Ruchna, Węgrów County, Warsaw, Poland
+1 DEAT
+2 DATE 9 May 1878
+2 PLAC Warsaw, Poland
+1 FAMC @F3@
+1 FAMS @F1@
+0 @I4@ INDI
+1 NAME Pierre  /Curie/
+2 GIVN Pierre
+2 SURN Curie
+1 SEX M
+1 BIRT
+2 DATE 15 May 1859
+2 PLAC Paris, Seine, France
+1 DEAT
+2 DATE 19 Apr 1906
+2 PLAC Paris VI, Paris, Seine, France
+1 FAMC @F4@
+1 FAMS @F5@
+0 @I5@ INDI
+1 NAME Irène  /Curie/
+2 GIVN Irène
+2 SURN Curie
+1 SEX F
+1 BIRT
+2 DATE 12 Sep 1897
+2 PLAC Paris XIII, Paris, Seine, France
+1 DEAT
+2 DATE 17 Mar 1956
+2 PLAC Paris V, Paris, Seine, France
+1 FAMC @F5@
+1 FAMS @F32@
+1 OBJE
+2 FORM Image
+2 TITL Irène Joliot-Curie Image 1
+0 @I6@ INDI
+1 NAME Ève Denise /Curie/
+2 GIVN Ève
+2 SURN Curie
+1 SEX F
+1 BIRT
+2 DATE 6 Dec 1904
+2 PLAC Paris XIII, Paris, Seine, France
+1 DEAT
+2 DATE 22 Oct 2007
+2 PLAC Manhattan, New York, New York, USA
+1 FAMC @F5@
+1 FAMS @F33@
+0 @I7@ INDI
+1 NAME Zofia Maria /Skłodowska/
+2 GIVN Zofia
+2 SURN Skłodowska
+1 SEX F
+1 BIRT
+2 DATE 1 Aug 1861
+2 PLAC Warsaw, Poland
+1 DEAT
+2 DATE 31 Jan 1876
+2 PLAC Warszawa, Poland
+1 FAMC @F1@
+0 @I8@ INDI
+1 NAME Józef Władysław /Skłodowski/
+2 GIVN Józef
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE 26 Apr 1863
+2 PLAC Warszawa, Polska
+1 DEAT
+2 DATE 19 Oct 1937
+2 PLAC Warszawa, Polska
+1 FAMC @F1@
+1 FAMS @F34@
+1 FAMS @F35@
+0 @I9@ INDI
+1 NAME Bronisława Maria /Skłodowska/
+2 GIVN Bronisława
+2 NICK Bronia
+2 SURN Skłodowska
+1 SEX F
+1 BIRT
+2 DATE 18 Mar 1865
+2 PLAC Warsaw, Poland
+1 DEAT
+2 DATE 15 Apr 1939
+2 PLAC Warsaw, Poland
+1 FAMC @F1@
+1 FAMS @F36@
+0 @I10@ INDI
+1 NAME Helena  /Skłodowska/
+2 GIVN Helena
+2 SURN Skłodowska
+1 SEX F
+1 BIRT
+2 DATE 20 Apr 1866
+2 PLAC Warsaw, Warsaw, Poland
+1 DEAT
+2 DATE 6 Feb 1961
+2 PLAC Warszawa, Poland
+1 FAMC @F1@
+1 FAMS @F37@
+0 @I11@ INDI
+1 NAME Józef  /Skłodowski/
+2 GIVN Józef
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE ABT 16 Mar 1804
+2 PLAC Sklodach-Piotrowicach, Masowie, Polska, Pologne
+1 DEAT
+2 DATE 21 Aug 1882
+2 PLAC Zawieprzycach, Lubelskie, Polska, Pologne
+1 FAMC @F6@
+1 FAMS @F2@
+0 @I12@ INDI
+1 NAME Salomea  /Sagtyńska/
+2 GIVN Salomea
+2 SURN Sagtyńska
+1 SEX F
+1 BIRT
+2 DATE 1802
+2 PLAC Bukovina, Ukraine, Soviet Union
+1 DEAT
+2 DATE 21 Feb 1882
+2 PLAC Leszczyny, Górno, Kielce, Świętokrzyskie, Poland
+1 FAMC @F7@
+1 FAMS @F2@
+0 @I13@ INDI
+1 NAME Bolesława  /Skłodowska/
+2 GIVN Bolesława
+2 SURN Skłodowska
+1 SEX F
+1 BIRT
+2 DATE 29 Mar 1834
+2 PLAC Warszawa, mazowieckie, Polska
+1 DEAT
+2 DATE 23 Oct 1914
+2 PLAC Krakow, Lesser Poland Voivodeship, Poland
+1 FAMC @F2@
+1 FAMS @F38@
+0 @I14@ INDI
+1 NAME Bronisława  /Skłodowska/
+2 GIVN Bronisława
+2 SURN Skłodowska
+1 SEX F
+1 BIRT
+2 DATE ABT 1837
+2 PLAC Łomża, podlaskie, Polska
+1 DEAT
+2 DATE 14 Jan 1885
+2 PLAC Warszawa, mazowieckie, Polska
+1 FAMC @F2@
+1 FAMS @F39@
+0 @I15@ INDI
+1 NAME Wanda  /Skłodowska/
+2 GIVN Wanda
+2 SURN Skłodowska
+1 SEX F
+1 BIRT
+2 DATE 1837
+2 PLAC Łomża, Podlaskie, Poland
+1 DEAT
+2 DATE 1922
+2 PLAC Kielce, Świętokrzyskie, Poland
+1 FAMC @F2@
+0 @I16@ INDI
+1 NAME Przemysław  /Skłodowski/
+2 GIVN Przemysław
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE 1838
+2 PLAC Łomża, Podlaskie, Poland
+1 DEAT
+2 DATE 24 Apr 1864
+2 PLAC Lubartów, Lublin, Poland
+1 FAMC @F2@
+0 @I17@ INDI
+1 NAME Zdzisław Józef /Skłodowski/
+2 GIVN Zdzisław
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE 1841
+2 PLAC Łukowie, Lubelskie, Poland
+1 DEAT
+2 DATE 23 Jun 1914
+2 PLAC Kielcach, Świętokrzyskie, Poland
+1 FAMC @F2@
+1 FAMS @F40@
+0 @I18@ INDI
+1 NAME Wiesława Julia /Skłodowska/
+2 GIVN Wiesława
+2 SURN Skłodowska
+1 SEX F
+1 BIRT
+2 DATE 15 May 1843
+2 PLAC Łuków, Lublin, Poland
+1 DEAT
+2 DATE 1928
+2 PLAC Lodz, Łódź, Poland
+1 FAMC @F2@
+1 FAMS @F41@
+0 @I19@ INDI
+1 NAME Urban  /Skłodowski/
+2 GIVN Urban
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE 25 May 1771
+1 DEAT
+2 DATE AFT 1820
+2 PLAC Skłody, Zaręby Kościelne, Ostrów, Masovia, Poland
+1 FAMC @F8@
+1 FAMS @F6@
+0 @I20@ INDI
+1 NAME Elżbieta Małgorzata /Rykaczewska/
+2 GIVN Elżbieta
+2 SURN Rykaczewska
+1 SEX F
+1 BIRT
+2 DATE 7 Jul 1786
+2 PLAC Zclazy
+1 DEAT
+2 DATE 13 Jul 1876
+2 PLAC Ostrów, Greater Poland, Poland
+1 FAMS @F6@
+0 @I21@ INDI
+1 NAME Rozalia  /Skłodowska/
+2 GIVN Rozalia
+2 SURN Skłodowska
+1 SEX F
+1 BIRT
+2 DATE ABT 1805
+2 PLAC Skłody, Zaręby Kościelne, Ostrów, Masovia, Poland
+1 FAMC @F6@
+1 FAMS @F42@
+0 @I22@ INDI
+1 NAME Feliks  /Skłodowski/
+2 GIVN Feliks
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE 19 Jan 1809
+2 PLAC Skłody, Zaręby Kościelne, Ostrów, Masovia, Poland
+1 FAMC @F6@
+1 FAMS @F43@
+0 @I23@ INDI
+1 NAME Jan  /Skłodowski/
+2 GIVN Jan
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE 23 May 1819
+2 PLAC Skłody, Zaręby Kościelne, Ostrów, Masovia, Poland
+1 FAMC @F6@
+0 @I24@ INDI
+1 NAME Jan  /Skłodowski/
+2 GIVN Jan
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE 3 Nov 1743
+2 PLAC Skłody, Zaręby Kościelne, Ostrów, Masovia, Poland
+1 DEAT
+2 DATE 15 Aug 1803
+1 FAMC @F9@
+1 FAMS @F8@
+0 @I25@ INDI
+1 NAME Barbara  /Nowakowska/
+2 GIVN Barbara
+2 SURN Nowakowska
+1 SEX F
+1 BIRT
+2 DATE ABT 1743
+1 FAMS @F8@
+0 @I26@ INDI
+1 NAME Antoni  /Skłodowski/
+2 GIVN Antoni
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE AFT 1765
+2 PLAC Poland
+1 FAMC @F8@
+0 @I27@ INDI
+1 NAME Piotr  /Skłodowski/
+2 GIVN Piotr
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE AFT 1765
+2 PLAC Polska
+1 FAMC @F8@
+0 @I28@ INDI
+1 NAME Franciszek  /Skłodowski/
+2 GIVN Franciszek
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE ABT 1770
+2 PLAC Polska
+1 DEAT
+2 DATE 23 Jul 1843
+1 FAMC @F8@
+1 FAMS @F44@
+0 @I29@ INDI
+1 NAME Józef  /Skłodowski/
+2 GIVN Józef
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE AFT 1770
+1 FAMC @F8@
+0 @I30@ INDI
+1 NAME Jakub  /Skłodowski/
+2 GIVN Jakub
+2 NICK Paluch
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE ABT 1715
+1 DEAT
+2 DATE ABT 1759
+1 FAMC @F10@
+1 FAMS @F9@
+0 @I31@ INDI
+1 NAME Kunegunda  /Godlewska/
+2 GIVN Kunegunda
+2 SURN Godlewska
+1 SEX F
+1 BIRT
+2 DATE AFT 1681
+1 DEAT
+2 DATE 2 Jun 1759
+1 FAMS @F9@
+0 @I32@ INDI
+1 NAME Jan  /Skłodowski/
+2 GIVN Jan
+2 NICK Paluch
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE 9 Jun 1686
+1 DEAT
+2 DATE ABT 1726
+1 FAMC @F11@
+1 FAMS @F10@
+0 @I33@ INDI
+1 NAME Seweryn  /Skłodowski/
+2 GIVN Seweryn
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE AFT 1632
+1 FAMC @F12@
+1 FAMS @F11@
+0 @I34@ INDI
+1 NAME Katarzyna  /Gudzianka/
+2 GIVN Katarzyna
+2 SURN Gudzianka
+1 SEX F
+1 BIRT
+2 DATE AFT 1632
+1 FAMS @F11@
+0 @I35@ INDI
+1 NAME Maciej  /Skłodowski/
+2 GIVN Maciej
+2 SURN Skłodowski
+1 SEX M
+1 BIRT
+2 DATE ABT 1612
+1 FAMS @F12@
+0 @I36@ INDI
+1 NAME Aleksander  /Sagtyński/
+2 GIVN Aleksander
+2 SURN Sagtyński
+1 SEX M
+1 BIRT
+2 DATE ABT 1770
+1 FAMS @F7@
+0 @I37@ INDI
+1 NAME Julianna  /Michałowska/
+2 GIVN Julianna
+2 SURN Michałowska
+1 SEX F
+1 BIRT
+2 DATE ABT 1770
+1 FAMS @F7@
+0 @I38@ INDI
+1 NAME Feliks  /Boguski/
+2 GIVN Feliks
+2 SURN Boguski
+1 SEX M
+1 BIRT
+2 DATE 1799
+2 PLAC Boguszyce, Dolnoslaskie, Poland
+1 DEAT
+2 DATE 1872
+2 PLAC Boguszyce, Dolnoslaskie, Poland
+1 FAMC @F13@
+1 FAMS @F3@
+0 @I39@ INDI
+1 NAME Marianna  /Zaruska/
+2 GIVN Marianna
+2 SURN Zaruska
+1 SEX F
+1 BIRT
+1 FAMC @F14@
+1 FAMS @F3@
+1 FAMS @F15@
+0 @I40@ INDI
+1 NAME Henryk Daniel /Boguski/
+2 GIVN Henryk
+2 SURN Boguski
+1 SEX M
+1 BIRT
+2 DATE 21 Jul 1831
+1 DEAT
+2 DATE 13 Mar 1913
+2 PLAC Warszawa, Mazowieckie, Polska
+1 FAMC @F3@
+0 @I41@ INDI
+1 NAME Henryk Daniel /Boguski h. Topór/
+2 GIVN Henryk
+2 SURN Boguski h. Topór
+1 SEX M
+1 BIRT
+2 DATE 21 Jul 1831
+2 PLAC Grodzisk, Czerwin, Ostrołęcki, Mazowiecki, Polska
+1 DEAT
+2 DATE 13 Mar 1913
+2 PLAC Warsaw, Masovian Voivodeship, Poland
+1 FAMC @F15@
+0 @I42@ INDI
+1 NAME Władysław  /Boguski/
+2 GIVN Władysław
+2 SURN Boguski
+1 SEX M
+1 BIRT
+2 DATE 1832
+2 PLAC Gmina Gniewoszów, Kozienice County, Masovian Voivodeship, Poland
+1 DEAT
+2 DATE 28 Mar 1913
+2 PLAC Gniewoszów, Mazowieckie, Polska
+1 FAMC @F15@
+0 @I43@ INDI
+1 NAME Ludwika  /Boguska h. Topór/
+2 GIVN Ludwika
+2 SURN Boguska h. Topór
+1 SEX F
+1 BIRT
+2 DATE 1836
+1 DEAT
+2 DATE 7 Oct 1885
+2 PLAC Warszawa, Polska
+1 FAMC @F15@
+0 @I44@ INDI
+1 NAME Ludwika  /Boguski/
+2 GIVN Ludwika
+2 NICK Lucia
+2 SURN Boguski
+1 SEX F
+1 BIRT
+2 DATE ABT 1840
+2 PLAC Boguszyce, Szczepanowska, Poland
+1 DEAT
+2 DATE 1885
+2 PLAC Warsaw, Poland
+1 FAMC @F3@
+1 FAMS @F45@
+0 @I45@ INDI
+1 NAME Mateusz  /Boguski/
+2 GIVN Mateusz
+2 SURN Boguski
+1 SEX M
+1 BIRT
+2 DATE ABT 1770
+2 PLAC Poland
+1 FAMC @F16@
+1 FAMS @F13@
+0 @I46@ INDI
+1 NAME Katarzyna  /Chojnowska/
+2 GIVN Katarzyna
+2 SURN Chojnowska
+1 SEX F
+1 BIRT
+2 DATE ABT 1770
+2 PLAC Grzymały Szczepankowskie, Podlaskie, Poland
+1 FAMS @F13@
+0 @I47@ INDI
+1 NAME Franciszek  /Boguski/
+2 GIVN Franciszek
+2 SURN Boguski
+1 SEX M
+1 BIRT
+2 DATE ABT 1740
+1 FAMS @F16@
+0 @I48@ INDI
+1 NAME Katarzyna  /Kisielnicka/
+2 GIVN Katarzyna
+2 SURN Kisielnicka
+1 SEX F
+1 BIRT
+2 DATE 1740
+1 FAMC @F17@
+1 FAMS @F16@
+0 @I49@ INDI
+1 NAME Bartłomiej Kisielnicki  /Kisielnicki/
+2 GIVN Bartłomiej Kisielnicki
+2 SURN Kisielnicki
+1 SEX M
+1 BIRT
+2 DATE ABT 1710
+1 FAMC @F18@
+1 FAMS @F17@
+0 @I50@ INDI
+1 NAME Stanisław  /Kisielnicki/
+2 GIVN Stanisław
+2 SURN Kisielnicki
+1 SEX M
+1 BIRT
+2 DATE ABT 1690
+1 FAMC @F19@
+1 FAMS @F18@
+0 @I51@ INDI
+1 NAME Zofia  /Białobrzeska/
+2 GIVN Zofia
+2 SURN Białobrzeska
+1 SEX F
+1 BIRT
+2 DATE ABT 1690
+1 FAMS @F18@
+0 @I52@ INDI
+1 NAME Adryjan  /Kisielnicki/
+2 GIVN Adryjan
+2 SURN Kisielnicki
+1 SEX M
+1 BIRT
+2 DATE ABT 1670
+1 FAMC @F20@
+1 FAMS @F19@
+0 @I53@ INDI
+1 NAME Idzi  /Kisielnicki/
+2 GIVN Idzi
+2 SURN Kisielnicki
+1 SEX M
+1 BIRT
+2 DATE ABT 1650
+1 FAMS @F20@
+0 @I54@ INDI
+1 NAME Anna  /Rakowska/
+2 GIVN Anna
+2 SURN Rakowska
+1 SEX F
+1 BIRT
+2 DATE ABT 1650
+1 FAMS @F20@
+0 @I55@ INDI
+1 NAME Franciszek Ksawery /Zaruski/
+2 GIVN Franciszek
+2 SURN Zaruski
+1 SEX M
+1 BIRT
+2 DATE ABT 1770
+1 FAMC @F21@
+1 FAMS @F14@
+0 @I56@ INDI
+1 NAME Tekla Gostkowska /Damięcka/
+2 GIVN Tekla
+2 SURN Damięcka
+1 SEX F
+1 BIRT
+2 PLAC Boniecki
+1 DEAT
+2 PLAC Drogoszewo, Miastkowo, Podlaskie, Polska
+1 FAMC @F22@
+1 FAMS @F14@
+1 FAMS @F46@
+1 FAMS @F24@
+0 @I57@ INDI
+1 NAME Feliks  /Boguski h. Topór/
+2 GIVN Feliks
+2 SURN Boguski h. Topór
+1 SEX M
+1 BIRT
+2 DATE 29 May 1799
+2 PLAC Jarnuty, powiat łomżyński
+1 DEAT
+2 DATE 22 May 1872
+2 PLAC Warszawa
+1 FAMC @F23@
+1 FAMS @F15@
+0 @I58@ INDI
+1 NAME Domicella  /Majewski/
+2 GIVN Domicella
+2 SURN Majewski
+1 SEX F
+1 BIRT
+2 DATE ABT 1803
+2 PLAC Trzcianka pow.przasnyski
+1 DEAT
+2 DATE 3 Dec 1846
+2 PLAC Warszawa
+1 FAMC @F14@
+0 @I59@ INDI
+1 NAME Piotr Paweł /Gostkowski/
+2 GIVN Piotr
+2 SURN Gostkowski
+1 SEX M
+1 BIRT
+2 DATE 29 Jun 1815
+2 PLAC Drogoszewo, Miastkowo, Podlaskie, Polska
+1 FAMC @F24@
+0 @I60@ INDI
+1 NAME Jakub Krzysztof /Gostkowski/
+2 GIVN Jakub
+2 SURN Gostkowski
+1 SEX M
+1 BIRT
+2 DATE 24 Jul 1816
+2 PLAC Drogoszewo, Miastkowo, Podlaskie, Polska
+1 FAMC @F24@
+0 @I61@ INDI
+1 NAME Albin  /Zaruski h Grabie/
+2 GIVN Albin
+2 SURN Zaruski h Grabie
+1 SEX M
+1 BIRT
+2 DATE ABT 1750
+1 FAMS @F21@
+0 @I62@ INDI
+1 NAME Kazimierz  /Zaruski/
+2 GIVN Kazimierz
+2 SURN Zaruski
+1 SEX M
+1 BIRT
+1 DEAT
+2 DATE 25 May 1793
+2 PLAC Janochy par. Rzekuń
+1 FAMC @F21@
+0 @I63@ INDI
+1 NAME Grzegorz  /Damięcki/
+2 GIVN Grzegorz
+2 SURN Damięcki
+1 SEX M
+1 BIRT
+1 FAMC @F25@
+1 FAMS @F22@
+0 @I64@ INDI
+1 NAME Wiktoria  /Celińska/
+2 GIVN Wiktoria
+2 SURN Celińska
+1 SEX F
+1 BIRT
+1 FAMC @F26@
+1 FAMS @F22@
+0 @I65@ INDI
+1 NAME Walenty  /Gostkowski/
+2 GIVN Walenty
+2 SURN Gostkowski
+1 SEX M
+1 BIRT
+2 DATE ABT 1770
+1 DEAT
+2 DATE ABT 1836
+1 FAMS @F46@
+0 @I66@ INDI
+1 NAME Tomasz  /Damięcki/
+2 GIVN Tomasz
+2 SURN Damięcki
+1 SEX M
+1 BIRT
+1 FAMC @F22@
+1 FAMS @F47@
+0 @I67@ INDI
+1 NAME Leonard  /Damięcki/
+2 GIVN Leonard
+2 SURN Damięcki
+1 SEX M
+1 BIRT
+2 DATE 1763
+2 PLAC Damięty-Przasty
+1 DEAT
+2 DATE 1832
+1 FAMC @F22@
+0 @I68@ INDI
+1 NAME Sebastian  /Damięcki h. Dąbrowa/
+2 GIVN Sebastian
+2 SURN Damięcki h. Dąbrowa
+1 SEX M
+1 BIRT
+2 DATE ABT 1735
+1 FAMC @F27@
+1 FAMS @F48@
+1 FAMS @F25@
+0 @I69@ INDI
+1 NAME Marianna  /Mieszkowska/
+2 GIVN Marianna
+2 SURN Mieszkowska
+1 SEX F
+1 BIRT
+2 DATE ABT 1735
+1 FAMS @F25@
+0 @I70@ INDI
+1 NAME Tomasz  /Damięcki h. Dąbrowa/
+2 GIVN Tomasz
+2 SURN Damięcki h. Dąbrowa
+1 SEX M
+1 BIRT
+2 DATE ABT 1715
+1 FAMC @F28@
+1 FAMS @F27@
+0 @I71@ INDI
+1 NAME Joanna  /Dzbyńska/
+2 GIVN Joanna
+2 SURN Dzbyńska
+1 SEX F
+1 BIRT
+2 DATE ABT 1735
+1 FAMC @F29@
+1 FAMS @F48@
+0 @I72@ INDI
+1 NAME Wojciech  /Damięcki h. Dąbrowa/
+2 GIVN Wojciech
+2 SURN Damięcki h. Dąbrowa
+1 SEX M
+1 BIRT
+2 DATE ABT 1695
+1 FAMC @F30@
+1 FAMS @F28@
+0 @I73@ INDI
+1 NAME Piotr  /Damięcki h. Dąbrowa/
+2 GIVN Piotr
+2 SURN Damięcki h. Dąbrowa
+1 SEX M
+1 BIRT
+2 DATE ABT 1675
+1 FAMS @F30@
+0 @I74@ INDI
+1 NAME Ewa  /Wyrzykowska/
+2 GIVN Ewa
+2 SURN Wyrzykowska
+1 SEX F
+1 BIRT
+2 DATE ABT 1675
+1 FAMC @F31@
+1 FAMS @F30@
+0 @I75@ INDI
+1 NAME Jan  /Wyrzykowski/
+2 GIVN Jan
+2 SURN Wyrzykowski
+1 SEX M
+1 BIRT
+2 DATE ABT 1655
+1 FAMS @F31@
+0 @I76@ INDI
+1 NAME Wawrzyniec  /Celiński/
+2 GIVN Wawrzyniec
+2 SURN Celiński
+1 SEX M
+1 BIRT
+2 DATE ABT 1755
+1 FAMS @F26@
+0 @I77@ INDI
+1 NAME Katarzyna  /Wodzianowska/
+2 GIVN Katarzyna
+2 SURN Wodzianowska
+1 SEX F
+1 BIRT
+2 DATE ABT 1755
+1 FAMS @F26@
+0 @I79@ INDI
+1 NAME Eugène  /Curie/
+2 GIVN Eugène
+2 SURN Curie
+1 SEX M
+1 BIRT
+2 DATE 28 Aug 1827
+1 DEAT
+2 DATE 25 Feb 1910
+0 @I80@ INDI
+1 NAME Sophie-Claire  /Depouilly/
+2 GIVN Sophie-Claire
+2 SURN Depouilly
+1 SEX F
+1 BIRT
+2 DATE 15 Jan 1832
+1 DEAT
+2 DATE 27 Sep 1897
+0 @I81@ INDI
+1 NAME Maciej  /Boguski/
+2 GIVN Maciej
+2 SURN Boguski
+1 SEX M
+1 BIRT
+2 DATE ABT 1770
+0 @I82@ INDI
+1 NAME Katarzyna  /Choynowska/
+2 GIVN Katarzyna
+2 SURN Choynowska
+1 SEX F
+1 BIRT
+2 DATE ABT 1770
+0 @I83@ INDI
+1 NAME Piotr  /Dzbyński/
+2 GIVN Piotr
+2 SURN Dzbyński
+1 SEX M
+1 BIRT
+2 DATE ABT 1715
+0 @I84@ INDI
+1 NAME Jean Frédéric  /Joliot/
+2 GIVN Jean Frédéric
+2 SURN Joliot
+1 SEX M
+1 BIRT
+2 DATE 19 Mar 1900
+1 DEAT
+2 DATE 14 Aug 1958
+0 @I85@ INDI
+1 NAME Henry Richardson /Labouisse/
+2 GIVN Henry
+2 SURN Labouisse
+2 NSFX Jr.
+1 SEX M
+1 BIRT
+2 DATE 11 Feb 1904
+1 DEAT
+2 DATE 25 Mar 1987
+0 @I86@ INDI
+1 NAME Jadwiga Rozalia Zofia /Kamieńska/
+2 GIVN Jadwiga
+2 SURN Kamieńska
+1 SEX F
+1 BIRT
+2 DATE ABT 1867
+1 DEAT
+2 DATE 9 May 1928
+0 @I87@ INDI
+1 NAME Maria Lucyna /Kamieńska/
+2 GIVN Maria
+2 SURN Kamieńska
+1 SEX F
+1 BIRT
+2 DATE 29 Jun 1872
+0 @I88@ INDI
+1 NAME Kazimierz Jan /Dłuski/
+2 GIVN Kazimierz
+2 SURN Dłuski
+1 SEX M
+1 BIRT
+2 DATE 1 Nov 1855
+1 DEAT
+2 DATE 6 Sep 1930
+0 @I89@ INDI
+1 NAME Stanisław  /Szalay/
+2 GIVN Stanisław
+2 SURN Szalay
+1 SEX M
+1 BIRT
+2 DATE 1867
+1 DEAT
+2 DATE 25 Jan 1920
+0 @I90@ INDI
+1 NAME Karol Wilhelm /Heńdemith/
+2 GIVN Karol
+2 SURN Heńdemith
+1 SEX M
+1 BIRT
+2 DATE 12 Sep 1810
+1 DEAT
+2 DATE 19 Feb 1890
+0 @I91@ INDI
+1 NAME Florian Stanisław /Dąbrowski/
+2 GIVN Florian
+2 SURN Dąbrowski
+1 SEX M
+1 BIRT
+2 DATE 1822
+1 DEAT
+2 DATE 21 Dec 1906
+0 @I92@ INDI
+1 NAME Maria Waleria /Rogowska/
+2 GIVN Maria
+2 SURN Rogowska
+1 SEX F
+1 BIRT
+2 DATE 9 Dec 1845
+0 @I93@ INDI
+1 NAME Henryk Mikołaj /Felauer/
+2 GIVN Henryk
+2 SURN Felauer
+1 SEX M
+1 BIRT
+2 DATE ABT 1836
+1 DEAT
+2 DATE 1 Jun 1898
+0 @I94@ INDI
+1 NAME Maciej  /Wyszomierski/
+2 GIVN Maciej
+2 SURN Wyszomierski
+1 SEX M
+1 BIRT
+2 DATE ABT 1796
+0 @I95@ INDI
+1 NAME Marcjanna Agnieszka Karolina /Budziszewska/
+2 GIVN Marcjanna
+2 SURN Budziszewska
+1 SEX F
+1 BIRT
+2 DATE 1812
+1 DEAT
+2 DATE 8 May 1896
+0 @I96@ INDI
+1 NAME Marianna  /Tymińska/
+2 GIVN Marianna
+2 SURN Tymińska
+1 SEX F
+1 BIRT
+2 DATE ABT 1780
+0 @I97@ INDI
+1 NAME Paul Theodor Martin /Laska/
+2 GIVN Paul
+2 SURN Laska
+2 NSFX II
+1 SEX M
+1 BIRT
+2 DATE 1 Jan 1841
+1 DEAT
+2 DATE 14 Jun 1889
+0 @I98@ INDI
+1 NAME Justyna  /Rogowska/
+2 GIVN Justyna
+2 SURN Rogowska
+1 SEX F
+1 BIRT
+2 DATE 1746
+0 @F1@ FAM
+1 HUSB @I2@
+1 WIFE @I3@
+1 CHIL @I1@
+1 CHIL @I7@
+1 CHIL @I8@
+1 CHIL @I9@
+1 CHIL @I10@
+1 MARR
+2 DATE 3 Jul 1860
+2 PLAC Warsaw, Poland
+0 @F2@ FAM
+1 HUSB @I11@
+1 WIFE @I12@
+1 CHIL @I2@
+1 CHIL @I13@
+1 CHIL @I14@
+1 CHIL @I15@
+1 CHIL @I16@
+1 CHIL @I17@
+1 CHIL @I18@
+1 MARR
+2 DATE 5 Feb 1832
+2 PLAC Holy Cross Church, Warsaw, Poland
+0 @F3@ FAM
+1 HUSB @I38@
+1 WIFE @I39@
+1 CHIL @I3@
+1 CHIL @I40@
+1 CHIL @I44@
+1 MARR
+0 @F4@ FAM
+1 HUSB @I79@
+1 WIFE @I80@
+1 CHIL @I4@
+0 @F5@ FAM
+1 HUSB @I4@
+1 WIFE @I1@
+1 CHIL @I5@
+1 CHIL @I6@
+1 MARR
+2 DATE 26 Jul 1895
+2 PLAC Sceaux, Seine, France
+0 @F6@ FAM
+1 HUSB @I19@
+1 WIFE @I20@
+1 CHIL @I11@
+1 CHIL @I21@
+1 CHIL @I22@
+1 CHIL @I23@
+1 MARR
+0 @F7@ FAM
+1 HUSB @I36@
+1 WIFE @I37@
+1 CHIL @I12@
+1 MARR
+0 @F8@ FAM
+1 HUSB @I24@
+1 WIFE @I25@
+1 CHIL @I19@
+1 CHIL @I26@
+1 CHIL @I27@
+1 CHIL @I28@
+1 CHIL @I29@
+1 MARR
+2 DATE 1764
+0 @F9@ FAM
+1 HUSB @I30@
+1 WIFE @I31@
+1 CHIL @I24@
+1 MARR
+0 @F10@ FAM
+1 HUSB @I32@
+1 CHIL @I30@
+0 @F11@ FAM
+1 HUSB @I33@
+1 WIFE @I34@
+1 CHIL @I32@
+1 MARR
+0 @F12@ FAM
+1 HUSB @I35@
+1 CHIL @I33@
+0 @F13@ FAM
+1 HUSB @I45@
+1 WIFE @I46@
+1 CHIL @I38@
+1 MARR
+0 @F14@ FAM
+1 HUSB @I55@
+1 WIFE @I56@
+1 CHIL @I39@
+1 CHIL @I58@
+1 MARR
+0 @F15@ FAM
+1 HUSB @I57@
+1 WIFE @I39@
+1 CHIL @I41@
+1 CHIL @I42@
+1 CHIL @I43@
+1 MARR
+0 @F16@ FAM
+1 HUSB @I47@
+1 WIFE @I48@
+1 CHIL @I45@
+1 MARR
+0 @F17@ FAM
+1 HUSB @I49@
+1 CHIL @I48@
+0 @F18@ FAM
+1 HUSB @I50@
+1 WIFE @I51@
+1 CHIL @I49@
+1 MARR
+0 @F19@ FAM
+1 HUSB @I52@
+1 CHIL @I50@
+0 @F20@ FAM
+1 HUSB @I53@
+1 WIFE @I54@
+1 CHIL @I52@
+1 MARR
+0 @F21@ FAM
+1 HUSB @I61@
+1 CHIL @I55@
+1 CHIL @I62@
+0 @F22@ FAM
+1 HUSB @I63@
+1 WIFE @I64@
+1 CHIL @I56@
+1 CHIL @I66@
+1 CHIL @I67@
+1 MARR
+0 @F23@ FAM
+1 HUSB @I81@
+1 WIFE @I82@
+1 CHIL @I57@
+0 @F24@ FAM
+1 WIFE @I56@
+1 CHIL @I59@
+1 CHIL @I60@
+0 @F25@ FAM
+1 HUSB @I68@
+1 WIFE @I69@
+1 CHIL @I63@
+1 MARR
+0 @F26@ FAM
+1 HUSB @I76@
+1 WIFE @I77@
+1 CHIL @I64@
+1 MARR
+0 @F27@ FAM
+1 HUSB @I70@
+1 CHIL @I68@
+0 @F28@ FAM
+1 HUSB @I72@
+1 CHIL @I70@
+0 @F29@ FAM
+1 HUSB @I83@
+1 CHIL @I71@
+0 @F30@ FAM
+1 HUSB @I73@
+1 WIFE @I74@
+1 CHIL @I72@
+1 MARR
+0 @F31@ FAM
+1 HUSB @I75@
+1 CHIL @I74@
+0 @F32@ FAM
+1 HUSB @I84@
+1 WIFE @I5@
+1 MARR
+2 DATE 9 Oct 1926
+2 PLAC Paris IV, Paris, Seine, France
+0 @F33@ FAM
+1 HUSB @I85@
+1 WIFE @I6@
+1 MARR
+2 DATE 19 Nov 1954
+2 PLAC New York City, New York, USA
+0 @F34@ FAM
+1 HUSB @I8@
+1 WIFE @I86@
+1 MARR
+2 DATE 7 Nov 1891
+2 PLAC Holy Cross Church, Warsaw, Poland
+0 @F35@ FAM
+1 HUSB @I8@
+1 WIFE @I87@
+1 MARR
+2 DATE 10 Dec 1928
+2 PLAC Warszawa, Polska
+0 @F36@ FAM
+1 HUSB @I88@
+1 WIFE @I9@
+1 MARR
+2 DATE 4 Sep 1890
+2 PLAC Paris V, Paris, Seine, France
+0 @F37@ FAM
+1 HUSB @I89@
+1 WIFE @I10@
+1 MARR
+2 DATE 1896
+2 PLAC Warsaw, Poland
+0 @F38@ FAM
+1 HUSB @I90@
+1 WIFE @I13@
+1 MARR
+2 DATE 18 Jun 1867
+2 PLAC Czyżew, Wysokie Mazowieckie, Podlaskie, Poland
+0 @F39@ FAM
+1 HUSB @I91@
+1 WIFE @I14@
+1 MARR
+0 @F40@ FAM
+1 HUSB @I17@
+1 WIFE @I92@
+1 MARR
+2 DATE 1867
+2 PLAC Łomża, Podlaskie, Poland
+0 @F41@ FAM
+1 HUSB @I93@
+1 WIFE @I18@
+1 MARR
+2 DATE 5 Jun 1870
+2 PLAC Czyżew, Wysokie Mazowieckie, Podlaskie, Poland
+0 @F42@ FAM
+1 HUSB @I94@
+1 WIFE @I21@
+1 MARR
+2 DATE 1827
+2 PLAC Zaręby Kościelne, Ostrów, Masovia, Poland
+0 @F43@ FAM
+1 HUSB @I22@
+1 WIFE @I95@
+1 MARR
+2 DATE 1828
+2 PLAC Andrzejewo, Ostrów, Masovia, Poland
+0 @F44@ FAM
+1 HUSB @I28@
+1 WIFE @I96@
+1 MARR
+2 DATE 1810
+2 PLAC Smolewo, Szulborze Wielkie, Ostrów, Masovia, Poland
+0 @F45@ FAM
+1 HUSB @I97@
+1 WIFE @I44@
+1 MARR
+2 DATE 1862
+2 PLAC Poland
+0 @F46@ FAM
+1 HUSB @I65@
+1 WIFE @I56@
+1 MARR
+0 @F47@ FAM
+1 HUSB @I66@
+1 WIFE @I98@
+1 MARR
+0 @F48@ FAM
+1 HUSB @I68@
+1 WIFE @I71@
+1 MARR
+0 TRLR

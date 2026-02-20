@@ -66,6 +66,9 @@ if (params.has("ged")) {
     if (params.get("ged") == "jagiello") {
       file = "ged/Krolowie-Polscy-Dynastia-Jagiellonow-2025-12-10.ged";
     }
+    if (params.get("ged") == "sklodowska") {
+      file = "ged/sklodowska-curie.ged";
+    }
     NodeFamily.init('', lang, function() {
         document.getElementById("intro").style.display = "none";
         fetch(file)
