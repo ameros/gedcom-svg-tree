@@ -1,5 +1,5 @@
 0 HEAD
-1 DATE 20 Feb 2026
+1 DATE 20 FEB 2026
 1 CHAR UTF-8
 1 FILE sklodowska-curie.ged
 1 GEDC
@@ -12,10 +12,10 @@
 2 SURN Skłodowska
 1 SEX F
 1 BIRT
-2 DATE 7 Nov 1867
+2 DATE 7 NOV 1867
 2 PLAC Warszawa, Warszawskie, Polska
 1 DEAT
-2 DATE 4 Jul 1934
+2 DATE 4 JUL 1934
 2 PLAC Sancellemoz, Passy, Haute-Savoie, France
 1 WWW https://pl.wikipedia.org/wiki/Maria_Sk%C5%82odowska-Curie
 1 FAMC @F1@
@@ -31,7 +31,7 @@
 2 SURN Skłodowski
 1 SEX M
 1 BIRT
-2 DATE 22 Apr 1832
+2 DATE 22 APR 1832
 2 PLAC Kielce, Świętokrzyskie, Poland
 1 DEAT
 2 DATE 14 May 1902
@@ -44,7 +44,7 @@
 2 SURN Boguska
 1 SEX F
 1 BIRT
-2 DATE 15 Aug 1835
+2 DATE 15 AUG 1835
 2 PLAC Ruchna, Węgrów County, Warsaw, Poland
 1 DEAT
 2 DATE 9 May 1878
@@ -60,7 +60,7 @@
 2 DATE 15 May 1859
 2 PLAC Paris, Seine, France
 1 DEAT
-2 DATE 19 Apr 1906
+2 DATE 19 APR 1906
 2 PLAC Paris VI, Paris, Seine, France
 1 FAMC @F4@
 1 FAMS @F5@
@@ -70,10 +70,10 @@
 2 SURN Curie
 1 SEX F
 1 BIRT
-2 DATE 12 Sep 1897
+2 DATE 12 SEP 1897
 2 PLAC Paris XIII, Paris, Seine, France
 1 DEAT
-2 DATE 17 Mar 1956
+2 DATE 17 MAR1956
 2 PLAC Paris V, Paris, Seine, France
 1 FAMC @F5@
 1 FAMS @F32@
@@ -89,7 +89,7 @@
 2 DATE 6 Dec 1904
 2 PLAC Paris XIII, Paris, Seine, France
 1 DEAT
-2 DATE 22 Oct 2007
+2 DATE 22 OCT 2007
 2 PLAC Manhattan, New York, New York, USA
 1 FAMC @F5@
 1 FAMS @F33@
@@ -99,10 +99,10 @@
 2 SURN Skłodowska
 1 SEX F
 1 BIRT
-2 DATE 1 Aug 1861
+2 DATE 1 AUG 1861
 2 PLAC Warsaw, Poland
 1 DEAT
-2 DATE 31 Jan 1876
+2 DATE 31 JAN 1876
 2 PLAC Warszawa, Poland
 1 FAMC @F1@
 0 @I8@ INDI
@@ -111,10 +111,10 @@
 2 SURN Skłodowski
 1 SEX M
 1 BIRT
-2 DATE 26 Apr 1863
+2 DATE 26 APR 1863
 2 PLAC Warszawa, Polska
 1 DEAT
-2 DATE 19 Oct 1937
+2 DATE 19 OCT 1937
 2 PLAC Warszawa, Polska
 1 FAMC @F1@
 1 FAMS @F34@
@@ -126,10 +126,10 @@
 2 SURN Skłodowska
 1 SEX F
 1 BIRT
-2 DATE 18 Mar 1865
+2 DATE 18 MAR 1865
 2 PLAC Warsaw, Poland
 1 DEAT
-2 DATE 15 Apr 1939
+2 DATE 15 APR 1939
 2 PLAC Warsaw, Poland
 1 FAMC @F1@
 1 FAMS @F36@
@@ -139,10 +139,10 @@
 2 SURN Skłodowska
 1 SEX F
 1 BIRT
-2 DATE 20 Apr 1866
+2 DATE 20 APR 1866
 2 PLAC Warsaw, Warsaw, Poland
 1 DEAT
-2 DATE 6 Feb 1961
+2 DATE 6 FEB 1961
 2 PLAC Warszawa, Poland
 1 FAMC @F1@
 1 FAMS @F37@
@@ -152,10 +152,10 @@
 2 SURN Skłodowski
 1 SEX M
 1 BIRT
-2 DATE ABT 16 Mar 1804
+2 DATE ABT 16 MAR 1804
 2 PLAC Sklodach-Piotrowicach, Masowie, Polska, Pologne
 1 DEAT
-2 DATE 21 Aug 1882
+2 DATE 21 AUG 1882
 2 PLAC Zawieprzycach, Lubelskie, Polska, Pologne
 1 FAMC @F6@
 1 FAMS @F2@
@@ -168,7 +168,7 @@
 2 DATE 1802
 2 PLAC Bukovina, Ukraine, Soviet Union
 1 DEAT
-2 DATE 21 Feb 1882
+2 DATE 21 FEB 1882
 2 PLAC Leszczyny, Górno, Kielce, Świętokrzyskie, Poland
 1 FAMC @F7@
 1 FAMS @F2@
@@ -178,10 +178,10 @@
 2 SURN Skłodowska
 1 SEX F
 1 BIRT
-2 DATE 29 Mar 1834
+2 DATE 29 MAR 1834
 2 PLAC Warszawa, mazowieckie, Polska
 1 DEAT
-2 DATE 23 Oct 1914
+2 DATE 23 OCT 1914
 2 PLAC Krakow, Lesser Poland Voivodeship, Poland
 1 FAMC @F2@
 1 FAMS @F38@
@@ -194,7 +194,7 @@
 2 DATE ABT 1837
 2 PLAC Łomża, podlaskie, Polska
 1 DEAT
-2 DATE 14 Jan 1885
+2 DATE 14 JAN 1885
 2 PLAC Warszawa, mazowieckie, Polska
 1 FAMC @F2@
 1 FAMS @F39@
@@ -219,7 +219,7 @@
 2 DATE 1838
 2 PLAC Łomża, Podlaskie, Poland
 1 DEAT
-2 DATE 24 Apr 1864
+2 DATE 24 APR 1864
 2 PLAC Lubartów, Lublin, Poland
 1 FAMC @F2@
 0 @I17@ INDI
@@ -241,7 +241,7 @@
 2 SURN Skłodowska
 1 SEX F
 1 BIRT
-2 DATE 15 May 1843
+2 DATE 15 MAY 1843
 2 PLAC Łuków, Lublin, Poland
 1 DEAT
 2 DATE 1928
@@ -254,7 +254,7 @@
 2 SURN Skłodowski
 1 SEX M
 1 BIRT
-2 DATE 25 May 1771
+2 DATE 25 MAY 1771
 1 DEAT
 2 DATE AFT 1820
 2 PLAC Skłody, Zaręby Kościelne, Ostrów, Masovia, Poland
@@ -266,10 +266,10 @@
 2 SURN Rykaczewska
 1 SEX F
 1 BIRT
-2 DATE 7 Jul 1786
+2 DATE 7 JUL 1786
 2 PLAC Zclazy
 1 DEAT
-2 DATE 13 Jul 1876
+2 DATE 13 JUL 1876
 2 PLAC Ostrów, Greater Poland, Poland
 1 FAMS @F6@
 0 @I21@ INDI
@@ -288,7 +288,7 @@
 2 SURN Skłodowski
 1 SEX M
 1 BIRT
-2 DATE 19 Jan 1809
+2 DATE 19 JAN 1809
 2 PLAC Skłody, Zaręby Kościelne, Ostrów, Masovia, Poland
 1 FAMC @F6@
 1 FAMS @F43@
@@ -298,7 +298,7 @@
 2 SURN Skłodowski
 1 SEX M
 1 BIRT
-2 DATE 23 May 1819
+2 DATE 23 MAY 1819
 2 PLAC Skłody, Zaręby Kościelne, Ostrów, Masovia, Poland
 1 FAMC @F6@
 0 @I24@ INDI
@@ -307,10 +307,10 @@
 2 SURN Skłodowski
 1 SEX M
 1 BIRT
-2 DATE 3 Nov 1743
+2 DATE 3 NOV 1743
 2 PLAC Skłody, Zaręby Kościelne, Ostrów, Masovia, Poland
 1 DEAT
-2 DATE 15 Aug 1803
+2 DATE 15 AUG 1803
 1 FAMC @F9@
 1 FAMS @F8@
 0 @I25@ INDI
@@ -348,7 +348,7 @@
 2 DATE ABT 1770
 2 PLAC Polska
 1 DEAT
-2 DATE 23 Jul 1843
+2 DATE 23 JUL 1843
 1 FAMC @F8@
 1 FAMS @F44@
 0 @I29@ INDI
@@ -462,9 +462,9 @@
 2 SURN Boguski
 1 SEX M
 1 BIRT
-2 DATE 21 Jul 1831
+2 DATE 21 JUL 1831
 1 DEAT
-2 DATE 13 Mar 1913
+2 DATE 13 MAR 1913
 2 PLAC Warszawa, Mazowieckie, Polska
 1 FAMC @F3@
 0 @I41@ INDI
@@ -473,10 +473,10 @@
 2 SURN Boguski h. Topór
 1 SEX M
 1 BIRT
-2 DATE 21 Jul 1831
+2 DATE 21 JUL 1831
 2 PLAC Grodzisk, Czerwin, Ostrołęcki, Mazowiecki, Polska
 1 DEAT
-2 DATE 13 Mar 1913
+2 DATE 13 MAR 1913
 2 PLAC Warsaw, Masovian Voivodeship, Poland
 1 FAMC @F15@
 0 @I42@ INDI
@@ -488,7 +488,7 @@
 2 DATE 1832
 2 PLAC Gmina Gniewoszów, Kozienice County, Masovian Voivodeship, Poland
 1 DEAT
-2 DATE 28 Mar 1913
+2 DATE 28 MAR 1913
 2 PLAC Gniewoszów, Mazowieckie, Polska
 1 FAMC @F15@
 0 @I43@ INDI
@@ -499,7 +499,7 @@
 1 BIRT
 2 DATE 1836
 1 DEAT
-2 DATE 7 Oct 1885
+2 DATE 7 OCT 1885
 2 PLAC Warszawa, Polska
 1 FAMC @F15@
 0 @I44@ INDI
@@ -631,10 +631,10 @@
 2 SURN Boguski h. Topór
 1 SEX M
 1 BIRT
-2 DATE 29 May 1799
+2 DATE 29 MAY 1799
 2 PLAC Jarnuty, powiat łomżyński
 1 DEAT
-2 DATE 22 May 1872
+2 DATE 22 MAY 1872
 2 PLAC Warszawa
 1 FAMC @F23@
 1 FAMS @F15@
@@ -647,7 +647,7 @@
 2 DATE ABT 1803
 2 PLAC Trzcianka pow.przasnyski
 1 DEAT
-2 DATE 3 Dec 1846
+2 DATE 3 DEC 1846
 2 PLAC Warszawa
 1 FAMC @F14@
 0 @I59@ INDI
@@ -665,7 +665,7 @@
 2 SURN Gostkowski
 1 SEX M
 1 BIRT
-2 DATE 24 Jul 1816
+2 DATE 24 JUL 1816
 2 PLAC Drogoszewo, Miastkowo, Podlaskie, Polska
 1 FAMC @F24@
 0 @I61@ INDI
@@ -683,7 +683,7 @@
 1 SEX M
 1 BIRT
 1 DEAT
-2 DATE 25 May 1793
+2 DATE 25 MAY 1793
 2 PLAC Janochy par. Rzekuń
 1 FAMC @F21@
 0 @I63@ INDI
@@ -823,18 +823,18 @@
 2 SURN Curie
 1 SEX M
 1 BIRT
-2 DATE 28 Aug 1827
+2 DATE 28 AUG 1827
 1 DEAT
-2 DATE 25 Feb 1910
+2 DATE 25 FEB 1910
 0 @I80@ INDI
 1 NAME Sophie-Claire  /Depouilly/
 2 GIVN Sophie-Claire
 2 SURN Depouilly
 1 SEX F
 1 BIRT
-2 DATE 15 Jan 1832
+2 DATE 15 JAN 1832
 1 DEAT
-2 DATE 27 Sep 1897
+2 DATE 27 SEP 1897
 0 @I81@ INDI
 1 NAME Maciej  /Boguski/
 2 GIVN Maciej
@@ -862,9 +862,9 @@
 2 SURN Joliot
 1 SEX M
 1 BIRT
-2 DATE 19 Mar 1900
+2 DATE 19 MAR 1900
 1 DEAT
-2 DATE 14 Aug 1958
+2 DATE 14 AUG 1958
 0 @I85@ INDI
 1 NAME Henry Richardson /Labouisse/
 2 GIVN Henry
@@ -872,9 +872,9 @@
 2 NSFX Jr.
 1 SEX M
 1 BIRT
-2 DATE 11 Feb 1904
+2 DATE 11 FEB 1904
 1 DEAT
-2 DATE 25 Mar 1987
+2 DATE 25 MAR 1987
 0 @I86@ INDI
 1 NAME Jadwiga Rozalia Zofia /Kamieńska/
 2 GIVN Jadwiga
@@ -883,7 +883,7 @@
 1 BIRT
 2 DATE ABT 1867
 1 DEAT
-2 DATE 9 May 1928
+2 DATE 9 MAY 1928
 0 @I87@ INDI
 1 NAME Maria Lucyna /Kamieńska/
 2 GIVN Maria
@@ -897,9 +897,9 @@
 2 SURN Dłuski
 1 SEX M
 1 BIRT
-2 DATE 1 Nov 1855
+2 DATE 1 NOV 1855
 1 DEAT
-2 DATE 6 Sep 1930
+2 DATE 6 SEP 1930
 0 @I89@ INDI
 1 NAME Stanisław  /Szalay/
 2 GIVN Stanisław
@@ -908,16 +908,16 @@
 1 BIRT
 2 DATE 1867
 1 DEAT
-2 DATE 25 Jan 1920
+2 DATE 25 JAN 1920
 0 @I90@ INDI
 1 NAME Karol Wilhelm /Heńdemith/
 2 GIVN Karol
 2 SURN Heńdemith
 1 SEX M
 1 BIRT
-2 DATE 12 Sep 1810
+2 DATE 12 SEP 1810
 1 DEAT
-2 DATE 19 Feb 1890
+2 DATE 19 FEB 1890
 0 @I91@ INDI
 1 NAME Florian Stanisław /Dąbrowski/
 2 GIVN Florian
@@ -926,14 +926,14 @@
 1 BIRT
 2 DATE 1822
 1 DEAT
-2 DATE 21 Dec 1906
+2 DATE 21 DEC 1906
 0 @I92@ INDI
 1 NAME Maria Waleria /Rogowska/
 2 GIVN Maria
 2 SURN Rogowska
 1 SEX F
 1 BIRT
-2 DATE 9 Dec 1845
+2 DATE 9 DEC 1845
 0 @I93@ INDI
 1 NAME Henryk Mikołaj /Felauer/
 2 GIVN Henryk
@@ -958,7 +958,7 @@
 1 BIRT
 2 DATE 1812
 1 DEAT
-2 DATE 8 May 1896
+2 DATE 8 MAY 1896
 0 @I96@ INDI
 1 NAME Marianna  /Tymińska/
 2 GIVN Marianna
@@ -973,9 +973,9 @@
 2 NSFX II
 1 SEX M
 1 BIRT
-2 DATE 1 Jan 1841
+2 DATE 1 JAN 1841
 1 DEAT
-2 DATE 14 Jun 1889
+2 DATE 14 JUN 1889
 0 @I98@ INDI
 1 NAME Justyna  /Rogowska/
 2 GIVN Justyna
@@ -992,7 +992,7 @@
 1 CHIL @I9@
 1 CHIL @I10@
 1 MARR
-2 DATE 3 Jul 1860
+2 DATE 3 JUL 1860
 2 PLAC Warsaw, Poland
 0 @F2@ FAM
 1 HUSB @I11@
@@ -1005,7 +1005,7 @@
 1 CHIL @I17@
 1 CHIL @I18@
 1 MARR
-2 DATE 5 Feb 1832
+2 DATE 5 FEB 1832
 2 PLAC Holy Cross Church, Warsaw, Poland
 0 @F3@ FAM
 1 HUSB @I38@
@@ -1024,7 +1024,7 @@
 1 CHIL @I5@
 1 CHIL @I6@
 1 MARR
-2 DATE 26 Jul 1895
+2 DATE 26 JUL 1895
 2 PLAC Sceaux, Seine, France
 0 @F6@ FAM
 1 HUSB @I19@
@@ -1154,31 +1154,31 @@
 1 HUSB @I84@
 1 WIFE @I5@
 1 MARR
-2 DATE 9 Oct 1926
+2 DATE 9 OCT 1926
 2 PLAC Paris IV, Paris, Seine, France
 0 @F33@ FAM
 1 HUSB @I85@
 1 WIFE @I6@
 1 MARR
-2 DATE 19 Nov 1954
+2 DATE 19 NOV 1954
 2 PLAC New York City, New York, USA
 0 @F34@ FAM
 1 HUSB @I8@
 1 WIFE @I86@
 1 MARR
-2 DATE 7 Nov 1891
+2 DATE 7 NOV 1891
 2 PLAC Holy Cross Church, Warsaw, Poland
 0 @F35@ FAM
 1 HUSB @I8@
 1 WIFE @I87@
 1 MARR
-2 DATE 10 Dec 1928
+2 DATE 10 DEC 1928
 2 PLAC Warszawa, Polska
 0 @F36@ FAM
 1 HUSB @I88@
 1 WIFE @I9@
 1 MARR
-2 DATE 4 Sep 1890
+2 DATE 4 SEP 1890
 2 PLAC Paris V, Paris, Seine, France
 0 @F37@ FAM
 1 HUSB @I89@
@@ -1190,7 +1190,7 @@
 1 HUSB @I90@
 1 WIFE @I13@
 1 MARR
-2 DATE 18 Jun 1867
+2 DATE 18 JUN 1867
 2 PLAC Czyżew, Wysokie Mazowieckie, Podlaskie, Poland
 0 @F39@ FAM
 1 HUSB @I91@
@@ -1206,7 +1206,7 @@
 1 HUSB @I93@
 1 WIFE @I18@
 1 MARR
-2 DATE 5 Jun 1870
+2 DATE 5 JUN 1870
 2 PLAC Czyżew, Wysokie Mazowieckie, Podlaskie, Poland
 0 @F42@ FAM
 1 HUSB @I94@
