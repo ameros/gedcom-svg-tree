@@ -36,6 +36,7 @@
 2 CONT from this server.
 0 @I1@ INDI
 1 NAME William /Clinton/
+2 TYPE adopted
 2 NICK Bill
 2 GIVN William Jefferson
 2 SURN Blythe
@@ -52,8 +53,6 @@
 2 DATE 12 June 1962
 2 PLAC Garland Co., Arkansas
 2 NOTE Changed surname to Clinton at age 15 to match his stepfather, Roger Clinton, Sr.
-1 NAME William /Clinton/
-2 TYPE adopted
 1 FAMS @F1@
 1 FAMC @F2@
 1 OBJE
