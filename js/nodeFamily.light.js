@@ -1597,20 +1597,24 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                             labelValue = dict[labelValue];
                         }
                         label.innerHTML = labelValue;
+                        _formSection.querySelector('#extraFamilyFields').closest(".B").classList.add("active");
                         _formSection.querySelector('#extraFamilyFields').appendChild(label);
-                        let extraInput = document.createElement("input");
-                        extraInput.setAttribute("type", "text");
-                        extraInput.setAttribute("name", inputName);
+                        let extraInput = document.createElement("span");
                         extraInput.setAttribute("class", "active");
-                        extraInput.setAttribute("disabled", "");
                         let val = value;
                         if (val.includes("@")) {
+                            extraInput.setAttribute("data-id", val.replaceAll("@", ""));
+                            extraInput.setAttribute("class", "clickable");
                             const sour = _presenter.getSourceTitle(val.replaceAll("@", ""));
                             val = val + " (" + sour + ")";
+                            extraInput.addEventListener('click', _presenter.openSource, true);
                         }
-                        extraInput.value = val;
-                        _formSection.querySelector('#extraFamilyFields').appendChild(extraInput);
-                        _formSection.querySelector('#extraFamilyFields').closest(".B").classList.add("active");
+                        extraInput.innerHTML = val;
+                        const box = document.createElement("div");
+                        box.setAttribute("class", "B active");
+                        box.appendChild(label);
+                        box.appendChild(extraInput);
+                        _formSection.querySelector('#extraFamilyFields').appendChild(box);
                     }
                 }
             } else if (!Array.isArray(value)) {
