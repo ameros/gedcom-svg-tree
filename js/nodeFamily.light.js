@@ -950,7 +950,7 @@ NodeFamily.SourceDialog = function(presenter, dialogElement) {
         let title = sourceNode.TITL[NF_VALUE];
         _dialogElement.querySelector("h3").innerHTML = title;
         if (sourceNode.OBJE && sourceNode.OBJE.FILE) {
-            if (sourceNode.OBJE.FILE.FORM && sourceNode.OBJE.FILE.FORM[NF_VALUE] == "ogg") {
+            if (sourceNode.OBJE.FILE.FORM && sourceNode.OBJE.FILE.FORM.TYPE && sourceNode.OBJE.FILE.FORM.TYPE[NF_VALUE] == "audio") {
                 _dialogElement.querySelector("audio").style.display = "block";
                 _dialogElement.querySelector("figure").style.display = "none";
                 _dialogElement.querySelector("audio source").setAttribute("src", sourceNode.OBJE.FILE[NF_VALUE]);

@@ -106,7 +106,7 @@ input[type=range] {
 .R#content, .R#intro {
     background: var(--auraTree);
 }
-#editForm, #exportForm, #editFamilyForm, #personList, .R, .slider:before {
+#editForm, #exportForm, #editFamilyForm, #personList, .R, .slider:before, dialog {
     background-color: var(--auraData);
     color: var(--on-auraData);
 }
