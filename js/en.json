@@ -122,6 +122,7 @@
   "privacyInfo": "Remember, using your GEDCOM file is 100% safe. Tree rendering is done client-side, directly in the browser. No data is sent anywhere. Simply open it instead of uploading it.",
   "inUniqueWay": "In Unique way",
   "parentsAsNodes": "where each parents become a node of the tree",
+  "noLost": "and no TAGs from the GEDCOM file are lost when presenting details",
   "tryExamples": "Just try it with some examples below:",
   "usaPresidents": "USA Presidents (with linked SOURce)",
   "royalFamilies": "Royal Families",

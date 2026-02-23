@@ -122,6 +122,7 @@
   "privacyInfo": "Ricorda, utilizzare il tuo file GEDCOM è sicuro al 100%. Il rendering dell'albero viene eseguito lato client, direttamente nel browser. Nessun dato viene inviato a nessuno. Basta aprirlo invece di caricarlo.",
   "inUniqueWay": "In modo unico",
   "parentsAsNodes": "dove ogni genitore diventa un nodo dell'albero",
+  "noLost": "e nessun TAG del file GEDCOM viene perso durante la presentazione dei dettagli",
   "tryExamples": "Provate a fare qualche esempio qui sotto:",
   "usaPresidents": "Presidenti degli Stati Uniti (con FONTE collegata)",
   "royalFamilies": "Famiglie reali",
