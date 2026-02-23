@@ -121,7 +121,7 @@
   "withGST": "med GEDCOM till SVG-träd",
   "privacyInfo": "Kom ihåg att det är 100 % säkert att använda din GEDCOM-fil. Trädrendering sker på klientsidan, direkt i webbläsaren. Ingen data skickas någonstans. Öppna den bara istället för att ladda upp den.",
   "inUniqueWay": "På ett unikt sätt",
-  "parentsAsNodes": "där varje förälder blir en nod i trädet",
+  "parentsAsNodes": "där varje RECORD av familjetyp blir en nod i trädet",
   "noLost": "och inga TAG:er från GEDCOM-filen går förlorade när detaljer presenteras",
   "tryExamples": "Testa bara med några exempel nedan:",
   "usaPresidents": "USA:s presidenter (med länkad KÄLLA)",
