@@ -137,5 +137,6 @@
   "changelog180": "1.8.0 linked up source citation with opening dialog displaying its details",
   "linkCopied": "Länk kopierad",
   "justShare": "Bara klistra in/dela \u200B\u200Bdet.",
-  "changelog190": "Version 1.9.0 introducerade möjligheten att dela en länk (visas på personkortet) och visar viss data från HEAD"
+  "changelog190": "Version 1.9.0 introducerade möjligheten att dela en länk (visas på personkortet) och visar viss data från HEAD",
+  "changelog191": "Version 1.9.1 låter dig behålla SVG-filen i sin ursprungliga storlek."
 }

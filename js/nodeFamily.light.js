@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.9.0 | (c) 2026 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.9.1 | (c) 2026 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -801,7 +801,9 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
                 let fragments = markerEnd.split("#");
                 markerDefs[j].setAttribute("marker-end", "url(#" + fragments[1]);
             }
-            document.querySelector('svg').setAttribute("viewBox","0 0 " + document.querySelector('svg').width.baseVal.value + " " + document.querySelector('svg').height.animVal.value);
+            _svg.call(_zoom.transform, _d3.zoomIdentity.scale(1));
+            _svg.attr("height", _graphlib.graph().height);
+            _svg.attr("width", _graphlib.graph().width);
             const svgString = new XMLSerializer().serializeToString(document.querySelector('svg'));
             const svgBlob = new Blob([svgString], {type:"image/svg+xml;charset=utf-8"});
             const svgUrl = URL.createObjectURL(svgBlob);
@@ -812,6 +814,8 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
             downloadLink.click();
             document.body.removeChild(downloadLink);
             document.getElementById("exportForm").classList.toggle("active");
+            _svg.attr("width","100%");
+            _svg.attr("height",clientHeight - document.getElementById("header").offsetHeight);
         }, 1);
 
     }

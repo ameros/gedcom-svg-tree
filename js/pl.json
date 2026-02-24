@@ -136,5 +136,6 @@
   "changelog180": "Wersja 1.8.0 połączyła cytowanie źródła z otwartym oknem dialogowym wyświetlającym jego szczegóły",
   "linkCopied": "Link skopiowany",
   "justShare": "Teraz po prostu go wklej / udostępnij.",
-  "changelog190": "Wersja 1.9.0 wprowadziła możliwość udostępniania linka (przedstawiony na karcie osoby) i pokazuje niektóre dane z HEAD"
+  "changelog190": "Wersja 1.9.0 wprowadziła możliwość udostępniania linka (przedstawiony na karcie osoby) i pokazuje niektóre dane z HEAD",
+  "changelog191": "Wersja 1.9.1 pozwala zachować plik SVG w jego oryginalnej wielkości"
 }

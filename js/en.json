@@ -137,5 +137,6 @@
   "changelog180": "1.8.0 linked up source citation with opening dialog displaying its details",
   "linkCopied": "Link copied",
   "justShare": "Just paste / share it.",
-  "changelog190": "1.9.0 introduced the ability to share a link (presented on person card) and shows some data from HEAD"
+  "changelog190": "1.9.0 introduced the ability to share a link (presented on person card) and shows some data from HEAD",
+  "changelog191": "1.9.1 allows you to save the SVG file in its original size"
 }
