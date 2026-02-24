@@ -167,7 +167,10 @@ hr {
     color: var(--accentOutline);
 }
 dialog, dialog:focus-visible {
-  border: 0px;
-  border-radius: 1em;
-  outline: 0px;
+    border: 1px solid var(--accentOutline);
+    border-radius: 1em;
+    outline: 0px;
+}
+dialog::backdrop {
+    backdrop-filter: blur(5px);
 }
