@@ -47,9 +47,9 @@ h1 {
 #header p.logo img {
     border-color: var(--auraData);
 }
-figure img {
+a img {
     border-radius: 1em;
-    border: 1px solid var(--accentOutline);
+    border: 1px dashed var(--action);
 }
 /* Palette => Forms
 --------------------------------- */
