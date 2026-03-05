@@ -130,6 +130,9 @@ ul {
     padding-bottom: 0;
     margin: 0;
 }
+div .B foreignObject p {
+    padding: 0;
+}
 .R .S {
     height: 100%;
 }
@@ -328,6 +331,10 @@ dialog {
 dialog img {
     max-width: 800px;
     width: 100%;
+}
+foreignObject div img {
+  width: 80px;
+  border-radius: 1em;
 }
 @media only screen and (max-width: 1023px) {
    .R .S, .R .S .C.C1, .R .S .C.C2, .R .S .C.C3, #intro.R .S .C {

@@ -138,5 +138,6 @@
   "linkCopied": "Link copied",
   "justShare": "Just paste / share it.",
   "changelog190": "1.9.0 introduced the ability to share a link (presented on person card) and shows some data from HEAD",
-  "changelog191": "1.9.1 allows you to save the SVG file in its original size"
+  "changelog191": "1.9.1 allows you to save the SVG file in its original size",
+  "changelog1100": "1.10.0 displays photos on the nodes"
 }

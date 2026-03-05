@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.9.1 | (c) 2026 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.10.0 | (c) 2026 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -385,7 +385,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         });
     let _startPersonId;
     let _startFamilyId;
-    let _config = { numberOfParentGens: 1, numberOfChildGens: 1, numberOfOtherGens: 1 };
+    let _config = { numberOfParentGens: 1, numberOfChildGens: 1, numberOfOtherGens: 1, showPhotos: true };
     let _personForm;
     let _exportForm;
     let _familyForm;
@@ -584,7 +584,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         NodeFamily.addChildren(_familyData, start, _config, tree);
         NodeFamily.addParentsWithSiblings(_familyData, start, _config, tree);
         tree.setEdges(_graphlib);
-        tree.addNodes(_graphlib, _familyData, start);
+        tree.addNodes(_graphlib, _familyData, start, _config);
         _subTree = tree;
         _svg.call(_zoom);
         _Renderer(_inner, _graphlib);
@@ -644,7 +644,8 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         let config = {
             numberOfParentGens: document.getElementById('numberOfParentGens').value,
             numberOfChildGens: document.getElementById('numberOfChildrenGens').value,
-            numberOfOtherGens: document.getElementById('numberOfOtherGens').value
+            numberOfOtherGens: document.getElementById('numberOfOtherGens').value,
+            showPhotos: _config.showPhotos
         }
         this.setConfig(config);
         const start = _startFamilyId ? _startFamilyId : _startPersonId;
@@ -786,14 +787,6 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
             if (fileName.trim() == ""){
                 fileName = "MySVGFamilyTree";
             }
-            let labels = document.querySelectorAll("g > foreignObject");
-            for (let i = 0; i < labels.length; i++) {
-                let el = labels[i];
-                el.style.textAlign = "center";
-                el.style.fontFamily = "poppins";
-                el.style.fontSize = "14px";
-             }
-
             var markerDefs = document.querySelectorAll('g > path');
             for (let j = 0; j < markerDefs.length; j++) {
                 markerDefs[j].setAttribute("style", "fill: transparent; stroke: #aaa");
@@ -802,8 +795,8 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
                 markerDefs[j].setAttribute("marker-end", "url(#" + fragments[1]);
             }
             _svg.call(_zoom.transform, _d3.zoomIdentity.scale(1));
-            _svg.attr("height", _graphlib.graph().height);
-            _svg.attr("width", _graphlib.graph().width);
+            _svg.attr("height", _graphlib.graph().height + 10);
+            _svg.attr("width", _graphlib.graph().width + 10);
             const svgString = new XMLSerializer().serializeToString(document.querySelector('svg'));
             const svgBlob = new Blob([svgString], {type:"image/svg+xml;charset=utf-8"});
             const svgUrl = URL.createObjectURL(svgBlob);
@@ -1835,23 +1828,33 @@ NodeFamily.Tree = function() {
         });
     }
 
-    this.addNodes = function(graphlib, data, startPoint) {
+    this.addNodes = function(graphlib, data, startPoint, config) {
         _tree.nodes.forEach(function(id) {
             const node = {};
             const value = data[id];
             node.labelType="html";
             const isPerson = value[NF_TYPE] == 'INDI';
             const isFamily = value[NF_TYPE] == 'FAM';
+            let placeHolder = '<p>';
             if (isPerson) {
                 node.label = "";
-                if (value.TITL) {
-                    node.label += value.TITL[NF_VALUE] + "<br/>";
+                if (value.OBJE && value.OBJE.FILE && config.showPhotos) {
+                    node.label += '<div style="float:left; width:30%"><img style="width:100px" src=' + value.OBJE.FILE[NF_VALUE] + '></div>';
+                    node.label += '<div style="float:left; width:70%">';
+                    placeHolder += "&nbsp;";
+                } else {
+                    node.label += '<div style="float:left; width:100%">';
                 }
+                node.label += placeHolder;
+                if (value.TITL) {
+                    node.label += value.TITL[NF_VALUE];
+                }
+                node.label += "</p>" + placeHolder;
                 if (value.SEX && value.SEX[NF_VALUE] == "M") {
                     node.label += " &#9794; ";
                 }
                 if (value.SEX && value.SEX[NF_VALUE] == "F") {
-                    node.label += " &#9792; ";
+                    node.label += "&#9792; ";
                 }
                 if (value.NAME && value.NAME.GIVN && value.NAME.SURN) {
                     node.label += value.NAME.GIVN[NF_VALUE] + " " +  value.NAME.SURN[NF_VALUE];
@@ -1859,11 +1862,13 @@ NodeFamily.Tree = function() {
                 else if (value.NAME) {
                    node.label += value.NAME[NF_VALUE].replace(/\//g, " ");
                 }
+                node.label += "</p>" + placeHolder;
                 if (value.NAME && value.NAME.NICK) {
-                    node.label += "<br/>(" + value.NAME.NICK[NF_VALUE] + ")";
+                    node.label += "(" + value.NAME.NICK[NF_VALUE] + ")";
                 }
+                node.label += "</p>" + placeHolder;
                 if (value.BIRT) {
-                    node.label += "<br/><span class='' style=\"font-size: smaller;font-family:'font-awesome'\">&#xf004</span>";
+                    node.label += "<span class='' style=\"font-size: smaller;font-family:'font-awesome'\">&#xf004</span>";
                 }
                 if (value.BIRT && value.BIRT.DATE) {
                     node.label += " " + NodeFamily.Tree.changeDate(value.BIRT.DATE[NF_VALUE]) + ",";
@@ -1871,8 +1876,9 @@ NodeFamily.Tree = function() {
                 if (value.BIRT && value.BIRT.PLAC) {
                     node.label += " " + value.BIRT.PLAC[NF_VALUE];
                 }
+                node.label += "</p>" + placeHolder;
                 if (value.DEAT) {
-                    node.label += "<br/><span class='' style=\"font-size: smaller;font-family:'font-awesome'\">&#xf4ba</span>";
+                    node.label += "<span class='' style=\"font-size: smaller;font-family:'font-awesome'\">&#xf4ba</span>";
                 }
                 if (value.DEAT && value.DEAT.DATE) {
                     node.label += " " + NodeFamily.Tree.changeDate(value.DEAT.DATE[NF_VALUE]);
@@ -1880,45 +1886,50 @@ NodeFamily.Tree = function() {
                 if (value.DEAT && value.DEAT.PLAC) {
                     node.label += ", " + value.DEAT.PLAC[NF_VALUE];
                 }
+                node.label += "</p>" + placeHolder;
                 if (value.BURI) {
-                    node.label += "<br/> &#10829; ";
+                    node.label += " &#10829; ";
                 }
                 if (value.BURI && value.BURI.PLAC) {
                     node.label += value.BURI.PLAC[NF_VALUE];
                 }
-                node.label += '<div class="fas personLink">&nbsp;</div>';
+                node.label += '</p></div>';
             }
             if (isFamily) {
                 const husband = value.HUSB ? data[value.HUSB[NF_VALUE]] : null;
                 const wife = value.WIFE ? data[value.WIFE[NF_VALUE]] : null;
                 node.label = "";
                 if (wife) {
+                    node.label += "<p>";
                     if (wife.NAME && wife.NAME.GIVN) {
-                        node.label = wife.NAME.GIVN[NF_VALUE].split(" ")[0];
+                        node.label += wife.NAME.GIVN[NF_VALUE].split(" ")[0];
                     } else if(wife.NAME) {
-                        node.label = wife.NAME[NF_VALUE].replace(/\//g, " ");
+                        node.label += wife.NAME[NF_VALUE].replace(/\//g, " ");
                     }
+                    node.label += "</p>";
                 }
                 if (wife && husband) {
-                    node.label += "<br/> & <br/>";
+                    node.label += "<p> & </p>";
                 }
                 if (husband) {
+                    node.label += "<p>";
                     if (husband.NAME && husband.NAME.GIVN && husband.NAME.SURN) {
                         node.label += husband.NAME.GIVN[NF_VALUE].split(" ")[0] + " " + husband.NAME.SURN[NF_VALUE];
                     } else if(husband.NAME){
                         node.label += husband.NAME[NF_VALUE].replace(/\//g, " ");;
                     }
+                    node.label += "</p>";
                 }
                 if (value.MARR) {
                     if (value.MARR.DATE) {
-                        node.label += "</br> &#9901; " + NodeFamily.Tree.changeDate(value.MARR.DATE[NF_VALUE]);
+                        node.label += "<p> &#9901; " + NodeFamily.Tree.changeDate(value.MARR.DATE[NF_VALUE]) + ",</p>";
                     }
                     if (value.MARR.PLAC) {
-                        node.label += ",<br/>" + value.MARR.PLAC[NF_VALUE];
+                        node.label += "<p>" + value.MARR.PLAC[NF_VALUE] + "</p>";
                     }
                 }
                 if (value.DIV && value.DIV.nfValue != "N") {
-                    node.label += "</br>&#9902;";
+                    node.label += "<p>&#9902;</p>";
                 }
             }
             node.rx = node.ry = 10;
