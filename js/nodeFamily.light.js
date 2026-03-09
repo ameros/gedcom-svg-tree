@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.10.0 | (c) 2026 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.10.1 | (c) 2026 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1186,7 +1186,10 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                         }
                         extraInput.innerHTML = val;
                         const box = document.createElement("div");
-                        box.setAttribute("class", "B active");
+                        box.setAttribute("class", "B");
+                        if (inputName != "OBJE.FILE.FORM.nfValue" && inputName != "OBJE.FILE.FORM.TYPE.nfValue" && inputName) {
+                            box.classList.add("active");
+                        }
                         box.appendChild(label);
                         box.appendChild(extraInput);
                         _formSection.querySelector('#extraGedcomFields').appendChild(box);
