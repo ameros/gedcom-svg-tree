@@ -141,5 +141,6 @@
   "justShare": "Teraz po prostu go wklej / udostępnij.",
   "changelog190": "Wersja 1.9.0 wprowadziła możliwość udostępniania linka (przedstawiony na karcie osoby) i pokazuje niektóre dane z HEAD",
   "changelog191": "Wersja 1.9.1 pozwala zachować plik SVG w jego oryginalnej wielkości",
-  "changelog1100": "Wersja 1.10.0 wyświetla zdjęcia na węzłach"
+  "changelog1100": "Wersja 1.10.0 wyświetla zdjęcia na węzłach",
+  "changelog1110": "Wersja 1.11.0  wspiera łącza współrzędnych miejsc z Mapami Google"
 }

@@ -7,7 +7,7 @@ Runs fully in the browser — no backend, no data uploads.
 ## Features
 
 - 100% client-side (privacy-first)
-- Supports: FAMS, FAMC, CHIL, BIRT, DEAT, MARR, BURI, OCCU, TITL, WWW, SOUR
+- Supports: FAMS, FAMC, CHIL, BIRT, DEAT, MARR, BURI, OCCU, TITL, WWW, SOUR, PLAC, MAP
 - Handles large trees with smooth rendering
 - Clean, uncluttered SVG output (perfect for printing and embedding)
 - Works from GitHub Pages
@@ -77,11 +77,20 @@ The tool makes use of such GEDCOM records and tags:
   - BIRT
     - DATE
     - PLAC
+      - MAP
+        - LATI
+        - LONG
   - BURI
     - PLAC
+      - MAP
+        - LATI
+        - LONG
   - DEAT
     - DATE
     - PLAC
+      - MAP
+        - LATI
+        - LONG
   - FAMC
   - FAMS
   - GIVN - _to indicate (more) names given at birth_

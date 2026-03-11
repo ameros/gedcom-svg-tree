@@ -142,5 +142,6 @@
   "justShare": "Basta incollarlo/condividerlo.",
   "changelog190": "La versione 1.9.0 ha introdotto la possibilità di condividere un collegamento (presentato sulla tessera personale) e mostra alcuni dati da HEAD",
   "changelog191": "La versione 1.9.1 consente di mantenere il file SVG nelle sue dimensioni originali",
-  "changelog1100": "La versione 1.10.0 visualizza le foto sui nodi"
+  "changelog1100": "La versione 1.10.0 visualizza le foto sui nodi",
+  "chnagelog1110": "La versione 1.11.0 supporta il collegamento delle coordinate dei luoghi a Google Maps"
 }

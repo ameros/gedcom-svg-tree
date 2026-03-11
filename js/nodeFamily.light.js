@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.10.1 | (c) 2026 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.11.0 | (c) 2026 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1082,6 +1082,18 @@ NodeFamily.PersonForm = function(presenter, formSection) {
         const el = _form['DEAT.nfValue'];
         el.value = "Y";
         el.dispatchEvent(new Event('change'));
+        const birtMap = document.querySelector("span.BIRT-PLAC-nfValue");
+        birtMap.removeAttribute("data-lati");
+        birtMap.removeAttribute("data-long");
+        birtMap.classList.remove("clickable");
+        const deatMap = document.querySelector("span.DEAT-PLAC-nfValue");
+        deatMap.removeAttribute("data-lati");
+        deatMap.removeAttribute("data-long");
+        deatMap.classList.remove("clickable");
+        const buriMap = document.querySelector("span.BURI-PLAC-nfValue");
+        buriMap.removeAttribute("data-lati");
+        buriMap.removeAttribute("data-long");
+        buriMap.classList.remove("clickable");
     }
     const _that = this;
     const fillData = function(personNode, previous) {
@@ -1112,6 +1124,15 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                     if (inputName == "BIRT.DATE.nfValue") {
                           NodeFamily.form.fillDatePhrase("BIRT.DATE", value);
                     }
+                    if (inputName == "BIRT.PLAC.MAP.LATI.nfValue") {
+                          const span = document.querySelector("span.BIRT-PLAC-nfValue");
+                          span.setAttribute("data-lati", value);
+                          span.classList.add("clickable");
+                    }
+                    if (inputName == "BIRT.PLAC.MAP.LONG.nfValue") {
+                          const span = document.querySelector("span.BIRT-PLAC-nfValue");
+                          span.setAttribute("data-long", value)
+                    }
                     if (inputName == "WWW.nfValue" && value && value.trim() != "") {
                         const wwwLink = _formSection.querySelector('#personWww');
                         wwwLink.setAttribute("href", value);
@@ -1128,11 +1149,29 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                         NodeFamily.form.fillDatePhrase("DEAT.DATE", value);
                         _formSection.querySelector("#isDEAT").closest('.B').classList.remove("active")
                     }
+                    if (inputName == "DEAT.PLAC.MAP.LATI.nfValue") {
+                          const span = document.querySelector("span.DEAT-PLAC-nfValue");
+                          span.setAttribute("data-lati", value);
+                          span.classList.add("clickable");
+                    }
+                    if (inputName == "DEAT.PLAC.MAP.LONG.nfValue") {
+                          const span = document.querySelector("span.DEAT-PLAC-nfValue");
+                          span.setAttribute("data-long", value)
+                    }
                     if (inputName == "BURI.nfValue") {
                         const el = _form['BURI.nfValue'];
                         el.value = "";
                         el.dispatchEvent(new Event('change'));
                         _formSection.querySelector("#isBURI").value = value;
+                    }
+                    if (inputName == "BURI.PLAC.MAP.LATI.nfValue") {
+                          const span = document.querySelector("span.BURI-PLAC-nfValue");
+                          span.setAttribute("data-lati", value);
+                          span.classList.add("clickable");
+                    }
+                    if (inputName == "BURI.PLAC.MAP.LONG.nfValue") {
+                          const span = document.querySelector("span.BURI-PLAC-nfValue");
+                          span.setAttribute("data-long", value)
                     }
                     if (inputName == "SEX.nfValue") {
                         _formSection.querySelector("#SEX").value = value;
@@ -1235,6 +1274,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
     _formSection.querySelector("input[name='DEAT.nfValue']").addEventListener('change', this.changeIsLiving, true);
     _formSection.querySelector("input[name='BURI.nfValue']").addEventListener('change', this.changeIsBuried, true);
     _formSection.querySelector("#SEX").addEventListener('change', this.changeSex, true);
+
     _formSection.querySelectorAll("input").forEach(el => {
         el.addEventListener('change', (event) => {
             const span = _formSection.querySelector("span." + el.name.replaceAll(".", "-"));
@@ -1243,7 +1283,35 @@ NodeFamily.PersonForm = function(presenter, formSection) {
             }
         });
       });
+      _formSection.querySelector("span.BIRT-PLAC-nfValue").addEventListener('click', (event) => {
+            const lati = event.target.getAttribute("data-lati");
+            const long = event.target.getAttribute("data-long");
+            if (lati && long) {
+                open(googleMaps(lati, long, 10), "_blank");
+            }
+        }
+      );
+        _formSection.querySelector("span.DEAT-PLAC-nfValue").addEventListener('click', (event) => {
+              const lati = event.target.getAttribute("data-lati");
+              const long = event.target.getAttribute("data-long");
+              if (lati && long) {
+                  open(googleMaps(lati, long, 10), "_blank");
+              }
+          }
+        );
+      _formSection.querySelector("span.BURI-PLAC-nfValue").addEventListener('click', (event) => {
+            const lati = event.target.getAttribute("data-lati");
+            const long = event.target.getAttribute("data-long");
+            if (lati && long) {
+                open(googleMaps(lati, long, 18), "_blank");
+            }
+        }
+      );
     document.getElementById("share").addEventListener('click', this.share, true);
+}
+
+const googleMaps = function(lati, long, zoom) {
+    return "https://google.com/maps/place/" + lati + "," + long + "/@" + lati + "," + long + "," + zoom + "z";
 }
 
 NodeFamily.PersonList = function(presenter, personListSection) {
@@ -1538,6 +1606,10 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
         while (children.children.length > 1) {
             children.removeChild(children.children[1]);
         }
+        const marrMap = document.querySelector("span.MARR-PLAC-nfValue");
+        marrMap.removeAttribute("data-lati");
+        marrMap.removeAttribute("data-long");
+        marrMap.classList.remove("clickable");
     }
 
     const fillData = function(personNode, previous) {
@@ -1574,6 +1646,15 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
                     }
                     if (inputName == "MARR.DATE.nfValue") {
                           NodeFamily.form.fillDatePhrase("MARR.DATE", value);
+                    }
+                    if (inputName == "MARR.PLAC.MAP.LATI.nfValue") {
+                          const span = document.querySelector("span.MARR-PLAC-nfValue");
+                          span.setAttribute("data-lati", value);
+                          span.classList.add("clickable");
+                    }
+                    if (inputName == "MARR.PLAC.MAP.LONG.nfValue") {
+                          const span = document.querySelector("span.MARR-PLAC-nfValue");
+                          span.setAttribute("data-long", value)
                     }
                 } else if(value.trim() != "") {
                     if (inputName.indexOf("CHIL.") != -1 && inputName.split('.').length < 4) {
@@ -1645,6 +1726,14 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
             }
         });
       });
+    _formSection.querySelector("span.MARR-PLAC-nfValue").addEventListener('click', (event) => {
+            const lati = event.target.getAttribute("data-lati");
+            const long = event.target.getAttribute("data-long");
+            if (lati && long) {
+                open(googleMaps(lati, long, 10), "_blank");
+            }
+        }
+    );
 }
 
 NodeFamily.addVectorWithFrom = function(from, to, tree) {

@@ -111,7 +111,7 @@
           </ul>
           <h2 class="t9n" t9n-key="tryExamples"></h2>
           <ul>
-            <li><a href="https://ameros.github.io/gedcom-svg-tree/?ged=usa&id=I1604" class="t9n" t9n-key="usaPresidents"></a> 🔈</li>
+            <li><a href="https://ameros.github.io/gedcom-svg-tree/?ged=usa&id=I1604" class="t9n" t9n-key="usaPresidents"></a> <i class="fas fa-map-marker-alt"></i> 🔈</li>
             <li><a href="https://ameros.github.io/gedcom-svg-tree/?ged=royals" class="t9n" t9n-key="royalFamilies"></a></li>
             <li><a href="https://ameros.github.io/gedcom-svg-tree/?lang=it&ged=pope-leo" class="t9n" t9n-key="popeAncestors"></a> 🇮🇹</li>
             <li><a href="https://ameros.github.io/gedcom-svg-tree/?lang=sv&ged=carl-gustaf" class="t9n" t9n-key="carlGustafAncestors"></a> 🇸🇪</li>
@@ -132,6 +132,7 @@
         <h1 class="t9n" t9n-key="whatsNew"></h1>
         <h2 class="t9n" t9n-key="newHomePage"></h2>
         <ul>
+          <li class="t9n" t9n-key="changelog1110"></li>
           <li class="t9n" t9n-key="changelog1100"></li>
           <li class="t9n" t9n-key="changelog191"></li>
           <li class="t9n" t9n-key="changelog190"></li>
@@ -291,8 +292,11 @@
             <div class="B">
                     <label class="t9n" t9n-key="birthPlace"></label>
                     <input class="data" type="text" name="BIRT.PLAC.nfValue" readonly/>
-                    <span class="BIRT-PLAC-nfValue"></span>
+                    <input class="data" type="text" name="BIRT.PLAC.MAP.LATI.nfValue" readonly/>
+                    <input class="data" type="text" name="BIRT.PLAC.MAP.LONG.nfValue" readonly/>
+                    <span class="BIRT-PLAC-nfValue" data-lati="" data-long=""></span>
             </div>
+
             <div class="B active">
                 <label class="t9n" t9n-key="isLiving"></label>
                 <select id="isDEAT" disabled class="active">
@@ -362,7 +366,9 @@
                 <div class="B">
                     <label class="t9n" t9n-key="deathPlace"></label>
                     <input class="data" type="text" name="DEAT.PLAC.nfValue" readonly/>
-                    <span class="DEAT-PLAC-nfValue"></span>
+                    <input class="data" type="text" name="DEAT.PLAC.MAP.LATI.nfValue" readonly/>
+                    <input class="data" type="text" name="DEAT.PLAC.MAP.LONG.nfValue" readonly/>
+                    <span class="DEAT-PLAC-nfValue" data-lati="" data-long=""></span>
                 </div>
                 <div class="B">
                   <label class="t9n" t9n-key="DEAT.CAUS"></label>
@@ -380,7 +386,11 @@
                 <div class="B" id="BURI">
                     <label class="t9n" t9n-key="burialPlace"></label>
                     <input class="data" type="text" name="BURI.PLAC.nfValue" readonly/>
-                    <span class="BURI-PLAC-nfValue"></span>
+                    <input class="data" type="text" name="BURI.PLAC.MAP.LATI.nfValue" readonly/>
+                    <input class="data" type="text" name="BURI.PLAC.MAP.LONG.nfValue" readonly/>
+                    <span class="BURI-PLAC-nfValue" data-lati="" data-long=""></span>
+                    <input class="data" type="text" name="BURI.PLAC.NOTE.nfValue" readonly/>
+                    <span class="BURI-PLAC-NOTE-nfValue"></span>
                 </div>
             </div>
               <div class="B">
@@ -510,7 +520,9 @@
             <div class="B">
                     <label class="t9n" t9n-key="marriagePlace"></label>
                     <input class="data"  type="text" name="MARR.PLAC.nfValue" readonly/>
-                    <span class="MARR-PLAC-nfValue"></span>
+                    <input class="data" type="text" name="MARR.PLAC.MAP.LATI.nfValue" readonly/>
+                    <input class="data" type="text" name="MARR.PLAC.MAP.LONG.nfValue" readonly/>
+                    <span class="MARR-PLAC-nfValue" data-lati="" data-long=""></span>
             </div>
             <div class="B">
                     <label class="t9n" t9n-key="photoFile"></label>
