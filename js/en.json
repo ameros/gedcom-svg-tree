@@ -144,5 +144,6 @@
   "changelog191": "1.9.1 allows you to save the SVG file in its original size",
   "changelog1100": "1.10.0 displays photos on the nodes",
   "changelog1110": "1.11.0 supports linking place coordinates to Google Maps",
-  "backForward": "and for your convenience, use the \"back\" and \"forward\" buttons in your browser"
+  "backForward": "and for your convenience, use the \"back\" and \"forward\" buttons in your browser",
+  "changelog1120": "1.12.0 allows highlighting of subtrees when hovering over a node"
 }

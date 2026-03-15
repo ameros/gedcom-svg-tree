@@ -143,5 +143,6 @@
   "changelog191": "Wersja 1.9.1 pozwala zachować plik SVG w jego oryginalnej wielkości",
   "changelog1100": "Wersja 1.10.0 wyświetla zdjęcia na węzłach",
   "changelog1110": "Wersja 1.11.0  wspiera łącza współrzędnych miejsc z Mapami Google",
-  "backForward": "a, dla Twojej wygody używaj przycisków \"wstecz\" i \"dalej\" w swojej przeglądarce"
+  "backForward": "a, dla Twojej wygody używaj przycisków \"wstecz\" i \"dalej\" w swojej przeglądarce",
+  "changelog1120": "Wersja 1.12.0 umożliwia podświetlenie poddrzewa po najechaniu myszką na węzeł"
 }

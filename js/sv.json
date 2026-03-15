@@ -144,5 +144,6 @@
   "changelog191": "Version 1.9.1 låter dig behålla SVG-filen i sin ursprungliga storlek.",
   "changelog1100": "Version 1.10.0 visar foton på noder.",
   "changelog1110": "Version 1.11.0 stöder länkning av platskoordinater till Google Maps",
-  "backForward": "och, för din bekvämlighet, använd knapparna \"bakåt\" och \"framåt\" i din webbläsare"
+  "backForward": "och, för din bekvämlighet, använd knapparna \"bakåt\" och \"framåt\" i din webbläsare",
+  "changelog1120": "Version 1.12.0 tillåter markering av underträd när man håller muspekaren över en nod"
 }

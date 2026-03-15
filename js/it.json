@@ -144,5 +144,6 @@
   "changelog191": "La versione 1.9.1 consente di mantenere il file SVG nelle sue dimensioni originali",
   "changelog1100": "La versione 1.10.0 visualizza le foto sui nodi",
   "chnagelog1110": "La versione 1.11.0 supporta il collegamento delle coordinate dei luoghi a Google Maps",
-  "backForward": "e per tua comodità, usa i pulsanti \"indietro\" e \"avanti\" nel tuo browser"
+  "backForward": "e per tua comodità, usa i pulsanti \"indietro\" e \"avanti\" nel tuo browser",
+  "changelog1120": "La versione 1.12.0 consente l'evidenziazione dei sottoalberi quando si passa il mouse sopra un nodo"
 }

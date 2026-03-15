@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.11.0 | (c) 2026 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.12.0 | (c) 2026 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -536,6 +536,34 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         _config = config;
     }
 
+    const getAllAncestors = function(graph, id, result = [], visited = new Set()) {
+      const preds = graph.predecessors(id) || [];
+
+      for (const p of preds) {
+        if (!visited.has(p)) {
+          visited.add(p);
+          result.push(p);
+          getAllAncestors(graph, p, result, visited);
+        }
+      }
+
+      return result;
+    }
+
+    const getAllDescendants = function(graph, id, result = [], visited = new Set()) {
+      const desc = graph.successors(id) || [];
+
+      for (const p of desc) {
+        if (!visited.has(p)) {
+          visited.add(p);
+          result.push(p);
+          getAllDescendants(graph, p, result, visited);
+        }
+      }
+
+      return result;
+    }
+
     this.visualize = function(startPoint, omitPushState) {
         let start = startPoint;
         if (typeof _startPersonId === 'undefined') {
@@ -616,6 +644,34 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         }
         document.querySelectorAll(".spouse").forEach(element => element.addEventListener('click', this.editNode.bind(this), true));
         document.querySelectorAll(".child").forEach(element => element.addEventListener('click', this.editNode.bind(this), true));
+
+        const g = _graphlib;
+        const allnodes = _d3.selectAll("g.nodes .node");
+        const allpaths = _d3.selectAll('g.edgePath').select('.path');
+        _svg.selectAll("g.nodes .label")
+           .on("mouseover",function(label){
+               allpaths.style("opacity", 0.2);
+               allnodes.style("opacity", 0.2);
+               var highlight = [label];
+               highlight = getAllAncestors(g,label,highlight);
+               highlight = getAllDescendants(g,label,highlight);
+               allnodes.each(function(node) {
+                  for (var i = 0; i < highlight.length; i++) {
+                     if (highlight[i] == node) {
+                        _d3.select(this).style("opacity",1);
+                       }
+                    }
+               });
+               allpaths.each(function(path) {
+                    if (highlight.includes(path.w) && highlight.includes(path.v)) {
+                        _d3.select(this).style("opacity",1);
+                    }
+               })
+           })
+           .on("mouseout",function() {
+               allnodes.style("opacity", 1);
+               allpaths.style("opacity", 1);
+           });
     }
 
     const fillPersonDropdown = function(event) {
