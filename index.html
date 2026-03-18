@@ -75,7 +75,7 @@ if (params.has("ged")) {
             .then(response => response.text())
             .then((data) => {
                     NodeFamily.fromData(data, id,
-                        {rankdir: "TB", edgesep: 10, ranksep: 25, nodesep: 10});
+                        {rankdir: "RL", edgesep: 10, ranksep: 25, nodesep: 10});
                     document.getElementById('gedcomFileInput').disabled = true;
                     document.getElementById("gedcomFileInput").parentElement.addEventListener('click',
                     function() {
