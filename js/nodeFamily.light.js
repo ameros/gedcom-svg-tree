@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.12.0 | (c) 2026 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.12.1 | (c) 2026 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -22,10 +22,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-const NF_TYPE = "nfType";
-const NF_RECORD = "nfRecord";
-const NF_VALUE = "nfValue";
-const NF_KEYS = [NF_TYPE, NF_RECORD, NF_VALUE];
+const KEY_LINE = "_nfLINE";
+const KEY_RECORD = "_nfRECORD";
+const KEY_VALUE = "_nfVALUE";
+const NF_KEYS = [KEY_RECORD, KEY_LINE, KEY_VALUE];
 const Gedcom = function(gedcomData) {
     const _contents = gedcomData;
     const lines = _contents.replace(/[\r\n]+/g,'\n').split('\n')
@@ -62,12 +62,12 @@ Gedcom.buildFromJson = function(json, ext) {
         if (NF_KEYS.includes(key)) {
             continue;
         }
-        if (value[NF_RECORD]) {
-            let record = value[NF_RECORD];
+        if (value[KEY_LINE]) {
+            let line = value[KEY_LINE];
             if (ext == ".tsv") {
-                record = record.replace(" ", "\t").replace(" ", "\t");
+                line = line.replace(" ", "\t").replace(" ", "\t");
             }
-            contents += record + "\r\n";
+            contents += line + "\r\n";
         }
         contents += Gedcom.buildFromJson(value, ext);
     }
@@ -194,28 +194,28 @@ Gedcom.Tag.Record.findParent = function(child, levelUp) {
 
 Gedcom.Tag.Record.head = function(tag, parentRecord, context) {
     const c = context['HEAD'] = {}
-    c[NF_TYPE] = "HEAD";
-    c[NF_RECORD] = tag.getLevel() + " " + tag.getTag();
+    c[KEY_RECORD] = "HEAD";
+    c[KEY_LINE] = tag.getLevel() + " " + tag.getTag();
     return new Gedcom.Tag.Record(tag, parentRecord, c);
 }
 
 Gedcom.Tag.Record.identifier = function(tag, parentRecord, context) {
     const id = tag.getTag().replace(/@/g, "");
     const c = context[id] = {};
-    c[NF_TYPE] = tag.getValue();
-    c[NF_RECORD] = tag.getLevel() + " " + tag.getTag() + " " + tag.getValue();
+    c[KEY_RECORD] = tag.getValue();
+    c[KEY_LINE] = tag.getLevel() + " " + tag.getTag() + " " + tag.getValue();
     return new Gedcom.Tag.Record(tag, parentRecord, c);
 }
 
 Gedcom.Tag.Record.object = function(tag, parentRecord, context) {
     const c = {};
-    c[NF_VALUE] = tag.getValue();
+    c[KEY_VALUE] = tag.getValue();
     if (tag.getTag() == "FAMC" || tag.getTag() == "CHIL" || tag.getTag() == "FAMS") {
-        c[NF_VALUE] = c[NF_VALUE].replace(/@/g, "");
+        c[KEY_VALUE] = c[KEY_VALUE].replace(/@/g, "");
     }
-    c[NF_RECORD] = tag.getLevel() + " " + tag.getTag();
+    c[KEY_LINE] = tag.getLevel() + " " + tag.getTag();
     if (tag.getValue().trim() != "") {
-        c[NF_RECORD] += " " + tag.getValue();
+        c[KEY_LINE] += " " + tag.getValue();
     }
     const parentContext = parentRecord.getLocalContext();
     if (parentContext) {
@@ -244,8 +244,8 @@ Gedcom.Tag.Record.collection = function(tag, parentRecord, context) {
     }
     parentContext[tag.getTag()] = parentContext[tag.getTag()] || [];
     const obj = {};
-    obj[NF_VALUE] = value;
-    obj[NF_RECORD] = tag.getLevel() + " " + tag.getTag() + " " + tag.getValue();
+    obj[KEY_VALUE] = value;
+    obj[KEY_LINE] = tag.getLevel() + " " + tag.getTag() + " " + tag.getValue();
     parentContext[tag.getTag()].push(obj);
     return new Gedcom.Tag.Record(tag, parentRecord, {});
 }
@@ -257,10 +257,10 @@ Gedcom.Tag.Record.plain = function(tag, parentRecord, context) {
         value = value.replace(/@/g, "");
     }
     const parentContext = parentRecord.getLocalContext();
-    c[NF_VALUE] = value;
-    c[NF_RECORD] = tag.getLevel() + " " + tag.getTag();
+    c[KEY_VALUE] = value;
+    c[KEY_LINE] = tag.getLevel() + " " + tag.getTag();
     if (value.trim() != "") {
-        c[NF_RECORD] += " " + tag.getValue();
+        c[KEY_LINE] += " " + tag.getValue();
     }
     parentContext[tag.getTag()] = c;
     return new Gedcom.Tag.Record(tag, parentRecord, {});
@@ -273,7 +273,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
     let _maxPersonId = 0;
     const _familyData = jsonFromGedcom;
     const _families = Object.fromEntries(Object.entries(_familyData).filter(function([key, value]) {
-        if (value[NF_TYPE] == 'FAM') {
+        if (value[KEY_RECORD] == 'FAM') {
             let famId = parseInt(key.substring(1, key.length));
             if (!isNaN(famId)) {
                 if (famId > _maxFamilyId) {
@@ -283,7 +283,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         }
     }));
     const _persons = Object.fromEntries(Object.entries(_familyData).filter(function([key, value]) {
-        if (value[NF_TYPE] == 'INDI') {
+        if (value[KEY_RECORD] == 'INDI') {
             let id = parseInt(key.substring(1, key.length));
             if (!isNaN(id)) {
                 if (id > _maxPersonId) {
@@ -293,7 +293,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
             return [key, value];
         }
     }));
-    const _sortedPersons = Object.entries(_persons).sort((a, b) => (a[1].NAME[NF_VALUE].replace(/\//g, " ") > b[1].NAME[NF_VALUE].replace(/\//g, " ")) ? 1 : -1);
+    const _sortedPersons = Object.entries(_persons).sort((a, b) => (a[1].NAME[KEY_VALUE].replace(/\//g, " ") > b[1].NAME[KEY_VALUE].replace(/\//g, " ")) ? 1 : -1);
     const _personsToIndex = [];
     for (let [key, value] of Object.entries(_sortedPersons)) {
         let nick = "";
@@ -307,38 +307,38 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         let title = "";
         let occupation = "";
         if (value[1].NAME.NICK) {
-            nick = value[1].NAME.NICK[NF_VALUE];
+            nick = value[1].NAME.NICK[KEY_VALUE];
         }
         if (value[1].NAME.SURN) {
-            surname = value[1].NAME.SURN[NF_VALUE];
+            surname = value[1].NAME.SURN[KEY_VALUE];
         }
         if (value[1].NAME.GIVN) {
-            givn = value[1].NAME.GIVN[NF_VALUE];
+            givn = value[1].NAME.GIVN[KEY_VALUE];
         }
         if (value[1].BIRT && value[1].BIRT.DATE) {
-            birtDate = value[1].BIRT.DATE[NF_VALUE];
+            birtDate = value[1].BIRT.DATE[KEY_VALUE];
         }
         if (value[1].BIRT && value[1].BIRT.PLAC) {
-            birtPlace = value[1].BIRT.PLAC[NF_VALUE];
+            birtPlace = value[1].BIRT.PLAC[KEY_VALUE];
         }
         if (value[1].DEAT && value[1].DEAT.DATE) {
-            deathDate = value[1].DEAT.DATE[NF_VALUE];
+            deathDate = value[1].DEAT.DATE[KEY_VALUE];
         }
         if (value[1].DEAT && value[1].DEAT.PLAC) {
-            deathPlace = value[1].DEAT.PLAC[NF_VALUE];
+            deathPlace = value[1].DEAT.PLAC[KEY_VALUE];
         }
         if (value[1].BURI && value[1].BURI.PLAC) {
-            burialPlace = value[1].BURI.PLAC[NF_VALUE];
+            burialPlace = value[1].BURI.PLAC[KEY_VALUE];
         }
-        if (value[1].TITL && value[1].TITL[NF_VALUE]) {
-            title = value[1].TITL[NF_VALUE];
+        if (value[1].TITL && value[1].TITL[KEY_VALUE]) {
+            title = value[1].TITL[KEY_VALUE];
         }
-        if (value[1].OCCU && value[1].OCCU[NF_VALUE]) {
-            occupation = value[1].OCCU[NF_VALUE];
+        if (value[1].OCCU && value[1].OCCU[KEY_VALUE]) {
+            occupation = value[1].OCCU[KEY_VALUE];
         }
         _personsToIndex.push({
             "id": value[0],
-            "name": value[1].NAME[NF_VALUE].replace(/\//g, "").trim(),
+            "name": value[1].NAME[KEY_VALUE].replace(/\//g, "").trim(),
             "surname": surname,
             "nick": nick.replace(/"/g, ''),
             "birtDate": birtDate,
@@ -394,14 +394,14 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
 
     this.getName = function(id) {
         if (_familyData[id] && _familyData[id].NAME) {
-            return _familyData[id].NAME[NF_VALUE].replace(/\//g, " ");
+            return _familyData[id].NAME[KEY_VALUE].replace(/\//g, " ");
         }
         return "";
     }
 
     this.getSurname = function(id) {
         if (_familyData[id] && _familyData[id].NAME.SURN) {
-            return _familyData[id].NAME.GIVN[NF_VALUE].split(" ")[0] + " " + _familyData[id].NAME.SURN[NF_VALUE];
+            return _familyData[id].NAME.GIVN[KEY_VALUE].split(" ")[0] + " " + _familyData[id].NAME.SURN[KEY_VALUE];
         }
         else return this.getName(id);
     }
@@ -409,10 +409,10 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
     this.getSourceTitle = function(id) {
         if (_familyData[id]) {
             if (_familyData[id].TITL) {
-                return _familyData[id].TITL[NF_VALUE];
+                return _familyData[id].TITL[KEY_VALUE];
             }
             if (_familyData[id].OBJE && _familyData[id].OBJE.TITL) {
-                return _familyData[id].OBJE.TITL[NF_VALUE];
+                return _familyData[id].OBJE.TITL[KEY_VALUE];
             }
         }
         return "";
@@ -435,18 +435,18 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         }
         const wifeId = _familyData[id].WIFE;
         const husbandId = _familyData[id].HUSB;
-        if (wifeId && _familyData[wifeId[NF_VALUE]].NAME) {
-            if (_familyData[wifeId[NF_VALUE]].NAME.GIVN && _familyData[wifeId[NF_VALUE]].NAME.SURN) {
-                names += _familyData[wifeId[NF_VALUE]].NAME.GIVN[NF_VALUE].split(" ")[0];
+        if (wifeId && _familyData[wifeId[KEY_VALUE]].NAME) {
+            if (_familyData[wifeId[KEY_VALUE]].NAME.GIVN && _familyData[wifeId[KEY_VALUE]].NAME.SURN) {
+                names += _familyData[wifeId[KEY_VALUE]].NAME.GIVN[KEY_VALUE].split(" ")[0];
             } else {
-                names += _familyData[wifeId[NF_VALUE]].NAME[NF_VALUE].replace(/\//g, " ");
+                names += _familyData[wifeId[KEY_VALUE]].NAME[KEY_VALUE].replace(/\//g, " ");
             }
         }
         if (wifeId && husbandId) {
             names += " & ";
         }
-        if (husbandId && _familyData[husbandId[NF_VALUE]].NAME) {
-            names += _familyData[husbandId[NF_VALUE]].NAME[NF_VALUE].replace(/\//g, " ");
+        if (husbandId && _familyData[husbandId[KEY_VALUE]].NAME) {
+            names += _familyData[husbandId[KEY_VALUE]].NAME[KEY_VALUE].replace(/\//g, " ");
         }
         return names;
     }
@@ -568,7 +568,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         let start = startPoint;
         if (typeof _startPersonId === 'undefined') {
             for (let key of Object.keys(_familyData)) {
-              if (_familyData[key][NF_TYPE] == 'INDI') {
+              if (_familyData[key][KEY_RECORD] == 'INDI') {
                 _startPersonId = key;
                 break;
               }
@@ -577,7 +577,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         if (typeof startPoint === 'undefined') {
             start = _startPersonId;
         }
-        if (_familyData[start][NF_TYPE] == 'FAM') {
+        if (_familyData[start][KEY_RECORD] == 'FAM') {
             if (_familyForm) {
                 _familyForm.reset();
                 this.toggleFamilyForm();
@@ -589,7 +589,7 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
                 start = _startFamilyId;
             }
         }
-        if (_familyData[start][NF_TYPE] == 'INDI') {
+        if (_familyData[start][KEY_RECORD] == 'INDI') {
             if (_personForm) {
                 _personForm.reset();
                 this.togglePersonForm();
@@ -686,9 +686,9 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
     }
 
     const toggleOrientation = function(event) {
-        let rankdir = 'TB';
+        let rankdir = 'RL';
         if (event.target.checked) {
-            rankdir = 'RL';
+            rankdir = 'TB';
         }
         event.target.parentNode.classList.toggle("active");
         this.setGraph({rankdir: rankdir, edgesep: 10, ranksep: 25, nodesep: 10});
@@ -715,11 +715,11 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         if (arr.length === 1 && isNaN(key)) {
             if (val.trim() != "") {
                 obj[key] = val;
-                let recordValues = obj[NF_RECORD].split(/\s+/g);
-                obj[NF_RECORD] = recordValues[0] + " " + recordValues[1] + " " + recordValues.slice(2, recordValues.length).join(" ");
+                let recordValues = obj[KEY_LINE].split(/\s+/g);
+                obj[KEY_LINE] = recordValues[0] + " " + recordValues[1] + " " + recordValues.slice(2, recordValues.length).join(" ");
             } else {
                 obj[key] = null;
-                obj[NF_RECORD] = null;
+                obj[KEY_LINE] = null;
             }
             return;
         }
@@ -731,18 +731,18 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         if (!obj[key]) {
             let sub = obj[arr[0]] = {};
             if (restArr.length >= 1  && val.trim() != "") {
-                const lvl = parseInt(obj["nfRecord"].substr(0, obj["nfRecord"].indexOf(" "))) + 1;
-                obj[arr[0]][NF_RECORD] = lvl + " " + arr[0];
+                const lvl = parseInt(obj[KEY_LINE].substr(0, obj[KEY_LINE].indexOf(" "))) + 1;
+                obj[arr[0]][KEY_LINE] = lvl + " " + arr[0];
             }
             if (restArr.length == 1 && val.trim() != "") {
-                obj[arr[0]][NF_RECORD] += " " + val;
+                obj[arr[0]][KEY_LINE] += " " + val;
             }
             for (let i = 0; i < restArr.length - 1; i++) {
                 sub[restArr[i]] = {};
                 let lvl = i+2;
-                sub[restArr[i]][NF_RECORD] = lvl + " " + restArr[i];
+                sub[restArr[i]][KEY_LINE] = lvl + " " + restArr[i];
                 if (i == restArr.length - 2) {
-                    sub[restArr[i]][NF_RECORD] += " " + val;
+                    sub[restArr[i]][KEY_LINE] += " " + val;
                 }
             }
             obj[key] = sub;
@@ -797,38 +797,38 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
             return;
         }
         _familyData.HEAD = {};
-        _familyData.HEAD[NF_RECORD] = "0 HEAD";
+        _familyData.HEAD[KEY_LINE] = "0 HEAD";
         _familyData.HEAD.SOUR = {};
-        _familyData.HEAD.SOUR[NF_RECORD] = "1 SOUR NODE.FAMILY";
+        _familyData.HEAD.SOUR[KEY_LINE] = "1 SOUR NODE.FAMILY";
         _familyData.HEAD.SOUR.NAME = {};
-        _familyData.HEAD.SOUR.NAME[NF_RECORD] = "2 NAME Node.Family";
+        _familyData.HEAD.SOUR.NAME[KEY_LINE] = "2 NAME Node.Family";
         _familyData.HEAD.SOUR.VERS = {};
-        _familyData.HEAD.SOUR.VERS[NF_RECORD] = "2 VERS 0.9.3";
+        _familyData.HEAD.SOUR.VERS[KEY_LINE] = "2 VERS 0.9.3";
         _familyData.HEAD.SOUR.WWW = {};
-        _familyData.HEAD.SOUR.WWW[NF_RECORD] = "2 WWW https://node.family";
+        _familyData.HEAD.SOUR.WWW[KEY_LINE] = "2 WWW https://node.family";
         _familyData.HEAD.GEDC = {};
-        _familyData.HEAD.GEDC[NF_RECORD] = "1 GEDC";
+        _familyData.HEAD.GEDC[KEY_LINE] = "1 GEDC";
         _familyData.HEAD.GEDC.VERS = {};
-        _familyData.HEAD.GEDC.VERS[NF_RECORD] = "2 VERS 5.5.1";
+        _familyData.HEAD.GEDC.VERS[KEY_LINE] = "2 VERS 5.5.1";
         _familyData.HEAD.GEDC.FORM = {};
-        _familyData.HEAD.GEDC.FORM[NF_RECORD] = "2 FORM LINEAGE-LINKED";
+        _familyData.HEAD.GEDC.FORM[KEY_LINE] = "2 FORM KEY_LINEAGE-LINKED";
         _familyData.HEAD.CHAR = {};
-        _familyData.HEAD.CHAR[NF_RECORD] = "1 CHAR UTF-8";
+        _familyData.HEAD.CHAR[KEY_LINE] = "1 CHAR UTF-8";
         _familyData.HEAD.DATE = {};
-        _familyData.HEAD.DATE[NF_RECORD] = "1 DATE " + new Date().toLocaleString('default', { year: 'numeric', month: 'short', day: 'numeric'});
+        _familyData.HEAD.DATE[KEY_LINE] = "1 DATE " + new Date().toLocaleString('default', { year: 'numeric', month: 'short', day: 'numeric'});
         _familyData.HEAD.SUBM = {};
-        _familyData.HEAD.SUBM[NF_RECORD] = "1 SUBM";
+        _familyData.HEAD.SUBM[KEY_LINE] = "1 SUBM";
         const submitterId = document.exportForm.elements['SUBM.nfValue'];
         if (submitterId) {
-            _familyData.HEAD.SUBM[NF_RECORD] += " " + submitterId.value;
+            _familyData.HEAD.SUBM[KEY_LINE] += " " + submitterId.value;
         }
         _familyData.HEAD.SUBM.NAME = {};
-        _familyData.HEAD.SUBM.NAME[NF_RECORD] = "2 NAME " + submitterName.value;
+        _familyData.HEAD.SUBM.NAME[KEY_LINE] = "2 NAME " + submitterName.value;
         _familyData.HEAD.FILE = {};
 
         fileName = fileName.value.replace(/\s/g, '-') + "-" + new Date().toLocaleDateString().split("/").reverse().join('-') + ".ged"
 
-        _familyData.HEAD.FILE[NF_RECORD] = "1 FILE " + fileName;
+        _familyData.HEAD.FILE[KEY_LINE] = "1 FILE " + fileName;
         const contents = Gedcom.fromJson(_familyData);
         Gedcom.download(contents);
         return false;
@@ -873,28 +873,28 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         const head = _familyData.HEAD;
         let msg = "";
         if (head.FILE) {
-            msg += head.FILE[NF_VALUE] + ":";
+            msg += head.FILE[KEY_VALUE] + ":";
         }
         if (head.GEDC) {
             msg += " GEDCOM";
             if (head.GEDC.VERS) {
-                msg += " " + head.GEDC.VERS[NF_VALUE];
+                msg += " " + head.GEDC.VERS[KEY_VALUE];
             }
             if (head.GEDC.FORM) {
-                msg += ", " + head.GEDC.FORM[NF_VALUE];
+                msg += ", " + head.GEDC.FORM[KEY_VALUE];
             }
         }
         if (head.SOUR) {
-            msg += ", " + head.SOUR[NF_VALUE];
+            msg += ", " + head.SOUR[KEY_VALUE];
         }
         if (head.SUBM && head.SUBM.NAME) {
-            msg += ", " + head.SUBM.NAME[NF_VALUE];
+            msg += ", " + head.SUBM.NAME[KEY_VALUE];
         }
         if (head.LANG) {
-            msg += ", " + head.LANG[NF_VALUE];
+            msg += ", " + head.LANG[KEY_VALUE];
         }
         if (head.DATE) {
-            msg += ", " + head.DATE[NF_VALUE];
+            msg += ", " + head.DATE[KEY_VALUE];
         }
         document.querySelector("#head span.data").innerHTML = msg;
         document.querySelector("#head span.fa-times").style.display = "inline";
@@ -909,15 +909,15 @@ const NodeFamily = function(jsonFromGedcom, d3, dagreD3, dagreD3GraphConfig) {
         if (_familyData[id] == undefined) {
             return;
         }
-        if (id == "" || _familyData[id][NF_TYPE] != 'INDI') {
+        if (id == "" || _familyData[id][KEY_RECORD] != 'INDI') {
             return;
         }
-        if (_familyData[id][NF_TYPE] != 'INDI') {
+        if (_familyData[id][KEY_RECORD] != 'INDI') {
             return;
         }
-        let rankdir = 'TB';
+        let rankdir = 'RL';
         if (document.getElementById('orientation').checked) {
-            rankdir = 'RL';
+            rankdir = 'TB';
         }
         this.setGraph({rankdir: rankdir, edgesep: 10, ranksep: 25, nodesep: 10});
         this.visualize(id);
@@ -1000,37 +1000,37 @@ NodeFamily.SourceDialog = function(presenter, dialogElement) {
     }
     this.open = function(sourceNode) {
         this.reset();
-        let title = sourceNode.TITL[NF_VALUE];
+        let title = sourceNode.TITL[KEY_VALUE];
         _dialogElement.querySelector("h3").innerHTML = title;
         if (sourceNode.OBJE && sourceNode.OBJE.FILE) {
-            if (sourceNode.OBJE.FILE.FORM && sourceNode.OBJE.FILE.FORM.TYPE && sourceNode.OBJE.FILE.FORM.TYPE[NF_VALUE] == "audio") {
+            if (sourceNode.OBJE.FILE.FORM && sourceNode.OBJE.FILE.FORM.TYPE && sourceNode.OBJE.FILE.FORM.TYPE[KEY_VALUE] == "audio") {
                 _dialogElement.querySelector("audio").style.display = "block";
                 _dialogElement.querySelector("figure").style.display = "none";
-                _dialogElement.querySelector("audio source").setAttribute("src", sourceNode.OBJE.FILE[NF_VALUE]);
+                _dialogElement.querySelector("audio source").setAttribute("src", sourceNode.OBJE.FILE[KEY_VALUE]);
                 _dialogElement.querySelector("audio").load();
             } else {
                 _dialogElement.querySelector("audio").style.display = "none";
                 _dialogElement.querySelector("figure").style.display = "block";
-                _dialogElement.querySelector("figure img").setAttribute("src", sourceNode.OBJE.FILE[NF_VALUE]);
+                _dialogElement.querySelector("figure img").setAttribute("src", sourceNode.OBJE.FILE[KEY_VALUE]);
                 if (sourceNode.OBJE.TITL) {
-                    _dialogElement.querySelector("figcaption").innerHTML = sourceNode.OBJE.TITL[NF_VALUE];
+                    _dialogElement.querySelector("figcaption").innerHTML = sourceNode.OBJE.TITL[KEY_VALUE];
                 }
             }
         }
         if (sourceNode.TEXT) {
             const paragraph = document.createElement("p");
-            paragraph.innerHTML = sourceNode.TEXT[NF_VALUE];
+            paragraph.innerHTML = sourceNode.TEXT[KEY_VALUE];
             _container.appendChild(paragraph);
             if (sourceNode.TEXT.CONT) {
                 sourceNode.TEXT.CONT.forEach(function(node) {
                     const cont = document.createElement("p");
-                    cont.innerHTML = node[NF_VALUE];
+                    cont.innerHTML = node[KEY_VALUE];
                     _container.appendChild(cont);
                 });
             }
             if (sourceNode.TEXT.CONC) {
                 sourceNode.TEXT.CONC.forEach(function(node) {
-                    const cont = document.createTextNode(" " + node[NF_VALUE]);
+                    const cont = document.createTextNode(" " + node[KEY_VALUE]);
                     paragraph.appendChild(cont);
                 });
             }
@@ -1040,8 +1040,8 @@ NodeFamily.SourceDialog = function(presenter, dialogElement) {
             paragraph.setAttribute("class", "dialogLink");
             const link = document.createElement("a");
             paragraph.appendChild(link);
-            link.innerHTML = sourceNode.WWW[NF_VALUE]
-            link.setAttribute("href", sourceNode.WWW[NF_VALUE]);
+            link.innerHTML = sourceNode.WWW[KEY_VALUE]
+            link.setAttribute("href", sourceNode.WWW[KEY_VALUE]);
             link.setAttribute("target", "_blank");
             _container.appendChild(paragraph);
         }
@@ -1154,7 +1154,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
     const _that = this;
     const fillData = function(personNode, previous) {
         for (const [key, value] of Object.entries(personNode)) {
-            if (key == NF_RECORD) {
+            if (key == KEY_LINE) {
                 continue;
             }
             let inputName = "";
@@ -1392,8 +1392,8 @@ NodeFamily.PersonList = function(presenter, personListSection) {
     this.setData = function(lunrIndex, familyData) {
         _lunrIndex = lunrIndex;
         _familyData = familyData;
-        const persons = Object.fromEntries(Object.entries(familyData).filter(([key, value]) => value[NF_TYPE] == 'INDI'));
-        _allPersons = _persons = Object.entries(persons).sort((a, b) => (a[1].NAME[NF_VALUE].replace(/\//g, " ") > b[1].NAME[NF_VALUE].replace(/\//g, " ")) ? 1 : -1);
+        const persons = Object.fromEntries(Object.entries(familyData).filter(([key, value]) => value[KEY_RECORD] == 'INDI'));
+        _allPersons = _persons = Object.entries(persons).sort((a, b) => (a[1].NAME[KEY_VALUE].replace(/\//g, " ") > b[1].NAME[KEY_VALUE].replace(/\//g, " ")) ? 1 : -1);
     }
 
     this.fill = function(from) {
@@ -1409,12 +1409,12 @@ NodeFamily.PersonList = function(presenter, personListSection) {
             let position = i+1;
             let element = document.createElement("li");
             let person = _persons[i][1];
-            let label = position + ". " + person.NAME[NF_VALUE].replace(/\//g, " ");
+            let label = position + ". " + person.NAME[KEY_VALUE].replace(/\//g, " ");
             if (person.BIRT && person.BIRT.DATE) {
-                label += " " + NodeFamily.Tree.changeDate(person.BIRT.DATE[NF_VALUE]);
+                label += " " + NodeFamily.Tree.changeDate(person.BIRT.DATE[KEY_VALUE]);
             }
             if (person.DEAT && person.DEAT.DATE) {
-                label += " -" + NodeFamily.Tree.changeDate(person.DEAT.DATE[NF_VALUE]);
+                label += " -" + NodeFamily.Tree.changeDate(person.DEAT.DATE[KEY_VALUE]);
             }
             element.innerHTML = label;
             element.setAttribute("data-id", _persons[i][0]);
@@ -1606,9 +1606,9 @@ NodeFamily.ExportForm = function(presenter, formSection) {
 
     this.fill = function(head) {
         if (head.SUBM) {
-            _form['SUBM.nfValue'].value = head.SUBM[NF_VALUE];
+            _form['SUBM.nfValue'].value = head.SUBM[KEY_VALUE];
             if (head.SUBM.NAME) {
-                _form["SUBM.NAME.nfValue"].value = head.SUBM.NAME[NF_VALUE];
+                _form["SUBM.NAME.nfValue"].value = head.SUBM.NAME[KEY_VALUE];
             }
         }
     }
@@ -1670,7 +1670,7 @@ NodeFamily.FamilyForm = function(presenter, formSection) {
 
     const fillData = function(personNode, previous) {
         for (const [key, value] of Object.entries(personNode)) {
-            if (key == NF_RECORD) {
+            if (key == KEY_LINE) {
                 continue;
             }
             let inputName = "";
@@ -1808,12 +1808,12 @@ NodeFamily.addSiblings = function(data, parentsId, startPoint, config, tree) {
         if (sibling != startPoint) {
             let numberOfOtherGens = config.numberOfOtherGens;
             if (numberOfOtherGens > 0) {
-                NodeFamily.addVectorWithTo(parentsId, sibling[NF_VALUE], tree);
+                NodeFamily.addVectorWithTo(parentsId, sibling[KEY_VALUE], tree);
             }
             if (numberOfOtherGens > 1) {
                 const cfg = Object.assign({}, config);
                 cfg.numberOfOtherGens = numberOfOtherGens - 1;
-                NodeFamily.addChildren(data, sibling[NF_VALUE], cfg, tree);
+                NodeFamily.addChildren(data, sibling[KEY_VALUE], cfg, tree);
             }
         }
     });
@@ -1822,10 +1822,10 @@ NodeFamily.addSiblings = function(data, parentsId, startPoint, config, tree) {
 NodeFamily.addFamily = function(family, spouseId, tree) {
     if (family) {
         if (family.HUSB) {
-            NodeFamily.addVectorWithFrom(family.HUSB[NF_VALUE], spouseId, tree);
+            NodeFamily.addVectorWithFrom(family.HUSB[KEY_VALUE], spouseId, tree);
         }
         if (family.WIFE) {
-            NodeFamily.addVectorWithFrom(family.WIFE[NF_VALUE], spouseId, tree);
+            NodeFamily.addVectorWithFrom(family.WIFE[KEY_VALUE], spouseId, tree);
         }
     }
 }
@@ -1834,8 +1834,8 @@ NodeFamily.addParentsWithSiblings = function(data, startPoint, config, tree) {
     const numberOfParentGens = config.numberOfParentGens;// || 1;
     const numberOfOtherGens = config.numberOfOtherGens;// || 0;
     if (data[startPoint] && data[startPoint].FAMC) {
-        const family = data[data[startPoint].FAMC[NF_VALUE]];
-        const parentsId = data[startPoint].FAMC[NF_VALUE];
+        const family = data[data[startPoint].FAMC[KEY_VALUE]];
+        const parentsId = data[startPoint].FAMC[KEY_VALUE];
         NodeFamily.addVectorWithFrom(parentsId, startPoint, tree);
         NodeFamily.addFamily(family, parentsId, tree);
         NodeFamily.addSiblings(data, parentsId, startPoint, config, tree);
@@ -1844,15 +1844,15 @@ NodeFamily.addParentsWithSiblings = function(data, startPoint, config, tree) {
             cfg.numberOfParentGens = numberOfParentGens - 1;
             cfg.numberOfOtherGens = numberOfOtherGens - 1;
             if (family.HUSB) {
-                NodeFamily.addParentsWithSiblings(data, family.HUSB[NF_VALUE], cfg, tree);
+                NodeFamily.addParentsWithSiblings(data, family.HUSB[KEY_VALUE], cfg, tree);
             }
             if (family.WIFE) {
-                NodeFamily.addParentsWithSiblings(data, family.WIFE[NF_VALUE], cfg, tree);
+                NodeFamily.addParentsWithSiblings(data, family.WIFE[KEY_VALUE], cfg, tree);
             }
         }
     }
     if (data[startPoint] && data[startPoint].HUSB) {
-        const parentId = data[startPoint].HUSB[NF_VALUE];
+        const parentId = data[startPoint].HUSB[KEY_VALUE];
         NodeFamily.addVectorWithFrom(parentId, startPoint, tree);
         if (numberOfParentGens > 1) {
             const cfg = Object.assign({}, config);
@@ -1862,7 +1862,7 @@ NodeFamily.addParentsWithSiblings = function(data, startPoint, config, tree) {
         }
     }
     if (data[startPoint] && data[startPoint].WIFE) {
-        const parentId = data[startPoint].WIFE[NF_VALUE];
+        const parentId = data[startPoint].WIFE[KEY_VALUE];
         NodeFamily.addVectorWithFrom(parentId, startPoint, tree);
         if (numberOfParentGens > 1) {
             const cfg = Object.assign({}, config);
@@ -1880,8 +1880,8 @@ NodeFamily.addChildren = function(data, startPoint, config, tree) {
     }
     const spouses = data[startPoint] && data[startPoint].FAMS || [];
     spouses.forEach(function(spouseData) {
-        const spouseId = spouseData[NF_VALUE];
-        const spouse = data[spouseData[NF_VALUE]];
+        const spouseId = spouseData[KEY_VALUE];
+        const spouse = data[spouseData[KEY_VALUE]];
         if (!spouse) {
             return;
         }
@@ -1890,17 +1890,17 @@ NodeFamily.addChildren = function(data, startPoint, config, tree) {
         const childrenIds = spouse && spouse.CHIL || [];
         childrenIds.forEach(function(childrenId) {
             if (numberOfChildGens >= 1) {
-                NodeFamily.addVectorWithTo(spouseId, childrenId[NF_VALUE], tree);
+                NodeFamily.addVectorWithTo(spouseId, childrenId[KEY_VALUE], tree);
                 const cfg = Object.assign({}, config);
                 cfg.numberOfChildGens = numberOfChildGens - 1;
-                NodeFamily.addChildren(data, childrenId[NF_VALUE], cfg, tree);
+                NodeFamily.addChildren(data, childrenId[KEY_VALUE], cfg, tree);
             }
         });
     });
     const children = data[startPoint] && data[startPoint].CHIL || [];
     children.forEach(function(childData) {
-        const childId = childData[NF_VALUE];
-        const child = data[childData[NF_VALUE]];
+        const childId = childData[KEY_VALUE];
+        const child = data[childData[KEY_VALUE]];
         if (!child) {
             return;
         }
@@ -1936,12 +1936,12 @@ NodeFamily.searchPerson = function(idx, familyData, value) {
         let element = result[i];
         let id  = element.ref;
         let node = document.createElement("option");
-        let label = idx + ") " + familyData[id].NAME[NF_VALUE].replace(/\//g, "").trim();
+        let label = idx + ") " + familyData[id].NAME[KEY_VALUE].replace(/\//g, "").trim();
         if (familyData[id].BIRT && familyData[id].BIRT.DATE) {
-            label += " " + NodeFamily.Tree.changeDate(familyData[id].BIRT.DATE[NF_VALUE]);
+            label += " " + NodeFamily.Tree.changeDate(familyData[id].BIRT.DATE[KEY_VALUE]);
         }
         if (familyData[id].DEAT && familyData[id].DEAT.DATE) {
-            label += " - " + NodeFamily.Tree.changeDate(familyData[id].DEAT.DATE[NF_VALUE]);
+            label += " - " + NodeFamily.Tree.changeDate(familyData[id].DEAT.DATE[KEY_VALUE]);
         }
         node.setAttribute("value", id);
         node.innerHTML = label;
@@ -1981,13 +1981,13 @@ NodeFamily.Tree = function() {
             const node = {};
             const value = data[id];
             node.labelType="html";
-            const isPerson = value[NF_TYPE] == 'INDI';
-            const isFamily = value[NF_TYPE] == 'FAM';
+            const isPerson = value[KEY_RECORD] == 'INDI';
+            const isFamily = value[KEY_RECORD] == 'FAM';
             let placeHolder = '<p>';
             if (isPerson) {
                 node.label = "";
                 if (value.OBJE && value.OBJE.FILE && config.showPhotos) {
-                    node.label += '<div style="float:left; width:30%"><img style="width:100px" src=' + value.OBJE.FILE[NF_VALUE] + '></div>';
+                    node.label += '<div style="float:left; width:30%"><img style="width:100px" src=' + value.OBJE.FILE[KEY_VALUE] + '></div>';
                     node.label += '<div style="float:left; width:70%">';
                     placeHolder += "&nbsp;";
                 } else {
@@ -1995,64 +1995,64 @@ NodeFamily.Tree = function() {
                 }
                 node.label += placeHolder;
                 if (value.TITL) {
-                    node.label += value.TITL[NF_VALUE];
+                    node.label += value.TITL[KEY_VALUE];
                 }
                 node.label += "</p>" + placeHolder;
-                if (value.SEX && value.SEX[NF_VALUE] == "M") {
+                if (value.SEX && value.SEX[KEY_VALUE] == "M") {
                     node.label += " &#9794; ";
                 }
-                if (value.SEX && value.SEX[NF_VALUE] == "F") {
+                if (value.SEX && value.SEX[KEY_VALUE] == "F") {
                     node.label += "&#9792; ";
                 }
                 if (value.NAME && value.NAME.GIVN && value.NAME.SURN) {
-                    node.label += value.NAME.GIVN[NF_VALUE] + " " +  value.NAME.SURN[NF_VALUE];
+                    node.label += value.NAME.GIVN[KEY_VALUE] + " " +  value.NAME.SURN[KEY_VALUE];
                 }
                 else if (value.NAME) {
-                   node.label += value.NAME[NF_VALUE].replace(/\//g, " ");
+                   node.label += value.NAME[KEY_VALUE].replace(/\//g, " ");
                 }
                 node.label += "</p>" + placeHolder;
                 if (value.NAME && value.NAME.NICK) {
-                    node.label += "(" + value.NAME.NICK[NF_VALUE] + ")";
+                    node.label += "(" + value.NAME.NICK[KEY_VALUE] + ")";
                 }
                 node.label += "</p>" + placeHolder;
                 if (value.BIRT) {
                     node.label += "<span class='' style=\"font-size: smaller;font-family:'font-awesome'\">&#xf004</span>";
                 }
                 if (value.BIRT && value.BIRT.DATE) {
-                    node.label += " " + NodeFamily.Tree.changeDate(value.BIRT.DATE[NF_VALUE]) + ",";
+                    node.label += " " + NodeFamily.Tree.changeDate(value.BIRT.DATE[KEY_VALUE]) + ",";
                 }
                 if (value.BIRT && value.BIRT.PLAC) {
-                    node.label += " " + value.BIRT.PLAC[NF_VALUE];
+                    node.label += " " + value.BIRT.PLAC[KEY_VALUE];
                 }
                 node.label += "</p>" + placeHolder;
                 if (value.DEAT) {
                     node.label += "<span class='' style=\"font-size: smaller;font-family:'font-awesome'\">&#xf4ba</span>";
                 }
                 if (value.DEAT && value.DEAT.DATE) {
-                    node.label += " " + NodeFamily.Tree.changeDate(value.DEAT.DATE[NF_VALUE]);
+                    node.label += " " + NodeFamily.Tree.changeDate(value.DEAT.DATE[KEY_VALUE]);
                 }
                 if (value.DEAT && value.DEAT.PLAC) {
-                    node.label += ", " + value.DEAT.PLAC[NF_VALUE];
+                    node.label += ", " + value.DEAT.PLAC[KEY_VALUE];
                 }
                 node.label += "</p>" + placeHolder;
                 if (value.BURI) {
                     node.label += " &#10829; ";
                 }
                 if (value.BURI && value.BURI.PLAC) {
-                    node.label += value.BURI.PLAC[NF_VALUE];
+                    node.label += value.BURI.PLAC[KEY_VALUE];
                 }
                 node.label += '</p></div>';
             }
             if (isFamily) {
-                const husband = value.HUSB ? data[value.HUSB[NF_VALUE]] : null;
-                const wife = value.WIFE ? data[value.WIFE[NF_VALUE]] : null;
+                const husband = value.HUSB ? data[value.HUSB[KEY_VALUE]] : null;
+                const wife = value.WIFE ? data[value.WIFE[KEY_VALUE]] : null;
                 node.label = "";
                 if (wife) {
                     node.label += "<p>";
                     if (wife.NAME && wife.NAME.GIVN) {
-                        node.label += wife.NAME.GIVN[NF_VALUE].split(" ")[0];
+                        node.label += wife.NAME.GIVN[KEY_VALUE].split(" ")[0];
                     } else if(wife.NAME) {
-                        node.label += wife.NAME[NF_VALUE].replace(/\//g, " ");
+                        node.label += wife.NAME[KEY_VALUE].replace(/\//g, " ");
                     }
                     node.label += "</p>";
                 }
@@ -2062,18 +2062,18 @@ NodeFamily.Tree = function() {
                 if (husband) {
                     node.label += "<p>";
                     if (husband.NAME && husband.NAME.GIVN && husband.NAME.SURN) {
-                        node.label += husband.NAME.GIVN[NF_VALUE].split(" ")[0] + " " + husband.NAME.SURN[NF_VALUE];
+                        node.label += husband.NAME.GIVN[KEY_VALUE].split(" ")[0] + " " + husband.NAME.SURN[KEY_VALUE];
                     } else if(husband.NAME){
-                        node.label += husband.NAME[NF_VALUE].replace(/\//g, " ");;
+                        node.label += husband.NAME[KEY_VALUE].replace(/\//g, " ");;
                     }
                     node.label += "</p>";
                 }
                 if (value.MARR) {
                     if (value.MARR.DATE) {
-                        node.label += "<p> &#9901; " + NodeFamily.Tree.changeDate(value.MARR.DATE[NF_VALUE]) + ",</p>";
+                        node.label += "<p> &#9901; " + NodeFamily.Tree.changeDate(value.MARR.DATE[KEY_VALUE]) + ",</p>";
                     }
                     if (value.MARR.PLAC) {
-                        node.label += "<p>" + value.MARR.PLAC[NF_VALUE] + "</p>";
+                        node.label += "<p>" + value.MARR.PLAC[KEY_VALUE] + "</p>";
                     }
                 }
                 if (value.DIV && value.DIV.nfValue != "N") {
@@ -2081,9 +2081,9 @@ NodeFamily.Tree = function() {
                 }
             }
             node.rx = node.ry = 10;
-            if (value.SEX && value.SEX[NF_VALUE] == "M") {
+            if (value.SEX && value.SEX[KEY_VALUE] == "M") {
                 node.style = "fill: var(--auraData, hsl(0, 0%, 100%));stroke: var(--accentMale, hsl(195, 100%, 80%)); stroke-width: 2px";
-            } else if (value.SEX && value.SEX[NF_VALUE] == "F") {
+            } else if (value.SEX && value.SEX[KEY_VALUE] == "F") {
                 node.style = "fill: var(--auraData, hsl(0, 0%, 100%));stroke: var(--accentFemale, hsl(348, 80%, 83%)); stroke-width: 2px";
             } else {
                 node.style = "fill: var(--auraData, hsl(0, 0%, 100%)); stroke: url(#gender); stroke-width: 2px";
@@ -2136,7 +2136,7 @@ NodeFamily.fromFile = function(file) {
 }
 
 NodeFamily.fromData = function(data, id, graphConfig, config) {
-    let gConfig = graphConfig || {rankdir: 'TB', edgesep: 10, ranksep: 25, nodesep: 10};
+    let gConfig = graphConfig || {rankdir: 'RL', edgesep: 10, ranksep: 25, nodesep: 10};
     const gedcom = new Gedcom(data);
     const jsonData = gedcom.toJson();
     const nodeFamily = new NodeFamily(jsonData, d3, dagreD3);
