@@ -133,83 +133,111 @@ for download as possible benefit for developers. Sample:
 {
   "HEAD": {},
   "I1": {
-    "nfType": "INDI",
-    "nfRecord": "0 @I1@ INDI",
+    "_nfTYPE": "INDI",
+    "_nfLINE": "0 @I1@ INDI",
     "NAME": {
-      "nfValue": "William Jefferson /CLINTON/",
-      "nfRecord": "1 NAME William Jefferson /CLINTON/"
+      "_nfVALUE": "William /Clinton/",
+      "_nfLINE": "1 NAME William /Clinton/",
+      "TYPE": {
+        "_nfVALUE": "adopted",
+        "_nfLINE": "2 TYPE adopted"
+      },
+      "NICK": {
+        "_nfVALUE": "Bill",
+        "_nfLINE": "2 NICK Bill"
+      },
+      "GIVN": {
+        "_nfVALUE": "William Jefferson",
+        "_nfLINE": "2 GIVN William Jefferson"
+      },
+      "SURN": {
+        "_nfVALUE": "Blythe",
+        "_nfLINE": "2 SURN Blythe"
+      }
+    },
+    "TITL": {
+      "_nfVALUE": "42nd President of the United States",
+      "_nfLINE": "1 TITL 42nd President of the United States"
     },
     "SEX": {
-      "nfValue": "M",
-      "nfRecord": "1 SEX M"
-    },
-    "OCCU": {
-      "nfValue": "US President No. 42",
-      "nfRecord": "1 OCCU US President No. 42"
+      "_nfVALUE": "M",
+      "_nfLINE": "1 SEX M"
     },
     "BIRT": {
-      "nfValue": "",
-      "nfRecord": "1 BIRT",
+      "_nfVALUE": "",
+      "_nfLINE": "1 BIRT",
       "DATE": {
-        "nfValue": "19 AUG 1946",
-        "nfRecord": "2 DATE 19 AUG 1946"
+        "_nfVALUE": "19 AUG 1946",
+        "_nfLINE": "2 DATE 19 AUG 1946"
       },
       "PLAC": {
-        "nfValue": "Hope, Hempstead Co., AR",
-        "nfRecord": "2 PLAC Hope, Hempstead Co., AR"
+        "_nfVALUE": "Hope, Hempstead Co., AR",
+        "_nfLINE": "2 PLAC Hope, Hempstead Co., AR"
       }
     },
     "REFN": {
-      "nfValue": "Clinton-1",
-      "nfRecord": "1 REFN Clinton-1"
+      "_nfVALUE": "Clinton-1",
+      "_nfLINE": "1 REFN Clinton-1"
     },
     "NOTE": {
-      "nfValue": "Bill Clinton was born William Jefferson Blythe IV. His last name was legally",
-      "nfRecord": "1 NOTE Bill Clinton was born William Jefferson Blythe IV. His last name was legally",
+      "_nfVALUE": "Bill Clinton won the 1992 election over then president George Bush.",
+      "_nfLINE": "1 NOTE Bill Clinton won the 1992 election over then president George Bush.",
       "CONT": [
         {
-          "nfValue": "changed to Clinton on 12 June 1962 in Garland Co., Arkansas. Won the 1992",
-          "nfRecord": "2 CONT changed to Clinton on 12 June 1962 in Garland Co., Arkansas. Won the 1992"
-        },
-        {
-          "nfValue": "election over then president George Bush (votes not currently available).",
-          "nfRecord": "2 CONT election over then president George Bush (votes not currently available)."
-        },
-        {
-          "nfValue": "He was inaugurated as the 42nd President of the United States",
-          "nfRecord": "2 CONT He was inaugurated as the 42nd President of the United States"
-        },
-        {
-          "nfValue": "on 20 January 1993.",
-          "nfRecord": "2 CONT on 20 January 1993."
+          "_nfVALUE": "He was inaugurated as the 42nd President of the United States on 20 January 1993.",
+          "_nfLINE": "2 CONT He was inaugurated as the 42nd President of the United States on 20 January 1993."
         }
       ]
     },
+    "EVEN": {
+      "_nfVALUE": "",
+      "_nfLINE": "1 EVEN",
+      "TYPE": {
+        "_nfVALUE": "Name Change",
+        "_nfLINE": "2 TYPE Name Change"
+      },
+      "DATE": {
+        "_nfVALUE": "12 June 1962",
+        "_nfLINE": "2 DATE 12 June 1962"
+      },
+      "AGE": {
+        "_nfVALUE": "15",
+        "_nfLINE": "2 AGE 15"
+      },
+      "PLAC": {
+        "_nfVALUE": "Garland Co., Arkansas",
+        "_nfLINE": "2 PLAC Garland Co., Arkansas"
+      },
+      "NOTE": {
+        "_nfVALUE": "Changed surname to Clinton to match his stepfather, Roger Clinton, Sr.",
+        "_nfLINE": "2 NOTE Changed surname to Clinton to match his stepfather, Roger Clinton, Sr."
+      }
+    },
     "FAMS": [
       {
-        "nfValue": "F1",
-        "nfRecord": "1 FAMS @F1@"
+        "_nfVALUE": "F1",
+        "_nfLINE": "1 FAMS @F1@"
       }
     ],
     "FAMC": {
-      "nfValue": "F2",
-      "nfRecord": "1 FAMC @F2@"
+      "_nfVALUE": "F2",
+      "_nfLINE": "1 FAMC @F2@"
     },
     "OBJE": {
-      "nfValue": "",
-      "nfRecord": "1 OBJE",
+      "_nfVALUE": "",
+      "_nfLINE": "1 OBJE",
       "FILE": {
-        "nfValue": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg",
-        "nfRecord": "2 FILE https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg"
+        "_nfVALUE": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg",
+        "_nfLINE": "2 FILE https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg"
       },
       "TITL": {
-        "nfValue": "Bill CLinton / Bob McNeely, The White House / Public domain",
-        "nfRecord": "2 TITL Bill CLinton / Bob McNeely, The White House / Public domain"
+        "_nfVALUE": "Bill CLinton / Bob McNeely, The White House / Public domain",
+        "_nfLINE": "2 TITL Bill CLinton / Bob McNeely, The White House / Public domain"
       }
     },
     "WWW": {
-      "nfValue": "https://en.wikipedia.org/wiki/Bill_Clinton",
-      "nfRecord": "1 WWW https://en.wikipedia.org/wiki/Bill_Clinton"
+      "_nfVALUE": "https://en.wikipedia.org/wiki/Bill_Clinton",
+      "_nfLINE": "1 WWW https://en.wikipedia.org/wiki/Bill_Clinton"
     }
   },
   "I2": {},
