@@ -133,111 +133,111 @@ for download as possible benefit for developers. Sample:
 {
   "HEAD": {},
   "I1": {
-    "_nfRECORD": "INDI",
-    "_nfLINE": "0 @I1@ INDI",
+    "nfRecord": "INDI",
+    "nfLine": "0 @I1@ INDI",
     "NAME": {
       "nfValue": "William /Clinton/",
-      "_nfLINE": "1 NAME William /Clinton/",
+      "nfLine": "1 NAME William /Clinton/",
       "TYPE": {
         "nfValue": "adopted",
-        "_nfLINE": "2 TYPE adopted"
+        "nfLine": "2 TYPE adopted"
       },
       "NICK": {
         "nfValue": "Bill",
-        "_nfLINE": "2 NICK Bill"
+        "nfLine": "2 NICK Bill"
       },
       "GIVN": {
         "nfValue": "William Jefferson",
-        "_nfLINE": "2 GIVN William Jefferson"
+        "nfLine": "2 GIVN William Jefferson"
       },
       "SURN": {
         "nfValue": "Blythe",
-        "_nfLINE": "2 SURN Blythe"
+        "nfLine": "2 SURN Blythe"
       }
     },
     "TITL": {
       "nfValue": "42nd President of the United States",
-      "_nfLINE": "1 TITL 42nd President of the United States"
+      "nfLine": "1 TITL 42nd President of the United States"
     },
     "SEX": {
       "nfValue": "M",
-      "_nfLINE": "1 SEX M"
+      "nfLine": "1 SEX M"
     },
     "BIRT": {
       "nfValue": "",
-      "_nfLINE": "1 BIRT",
+      "nfLine": "1 BIRT",
       "DATE": {
         "nfValue": "19 AUG 1946",
-        "_nfLINE": "2 DATE 19 AUG 1946"
+        "nfLine": "2 DATE 19 AUG 1946"
       },
       "PLAC": {
         "nfValue": "Hope, Hempstead Co., AR",
-        "_nfLINE": "2 PLAC Hope, Hempstead Co., AR"
+        "nfLine": "2 PLAC Hope, Hempstead Co., AR"
       }
     },
     "REFN": {
       "nfValue": "Clinton-1",
-      "_nfLINE": "1 REFN Clinton-1"
+      "nfLine": "1 REFN Clinton-1"
     },
     "NOTE": {
       "nfValue": "Bill Clinton won the 1992 election over then president George Bush.",
-      "_nfLINE": "1 NOTE Bill Clinton won the 1992 election over then president George Bush.",
+      "nfLine": "1 NOTE Bill Clinton won the 1992 election over then president George Bush.",
       "CONT": [
         {
           "nfValue": "He was inaugurated as the 42nd President of the United States on 20 January 1993.",
-          "_nfLINE": "2 CONT He was inaugurated as the 42nd President of the United States on 20 January 1993."
+          "nfLine": "2 CONT He was inaugurated as the 42nd President of the United States on 20 January 1993."
         }
       ]
     },
     "EVEN": {
       "nfValue": "",
-      "_nfLINE": "1 EVEN",
+      "nfLine": "1 EVEN",
       "TYPE": {
         "nfValue": "Name Change",
-        "_nfLINE": "2 TYPE Name Change"
+        "nfLine": "2 TYPE Name Change"
       },
       "DATE": {
         "nfValue": "12 June 1962",
-        "_nfLINE": "2 DATE 12 June 1962"
+        "nfLine": "2 DATE 12 June 1962"
       },
       "AGE": {
         "nfValue": "15",
-        "_nfLINE": "2 AGE 15"
+        "nfLine": "2 AGE 15"
       },
       "PLAC": {
         "nfValue": "Garland Co., Arkansas",
-        "_nfLINE": "2 PLAC Garland Co., Arkansas"
+        "nfLine": "2 PLAC Garland Co., Arkansas"
       },
       "NOTE": {
         "nfValue": "Changed surname to Clinton to match his stepfather, Roger Clinton, Sr.",
-        "_nfLINE": "2 NOTE Changed surname to Clinton to match his stepfather, Roger Clinton, Sr."
+        "nfLine": "2 NOTE Changed surname to Clinton to match his stepfather, Roger Clinton, Sr."
       }
     },
     "FAMS": [
       {
         "nfValue": "F1",
-        "_nfLINE": "1 FAMS @F1@"
+        "nfLine": "1 FAMS @F1@"
       }
     ],
     "FAMC": {
       "nfValue": "F2",
-      "_nfLINE": "1 FAMC @F2@"
+      "nfLine": "1 FAMC @F2@"
     },
     "OBJE": {
       "nfValue": "",
-      "_nfLINE": "1 OBJE",
+      "nfLine": "1 OBJE",
       "FILE": {
         "nfValue": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg",
-        "_nfLINE": "2 FILE https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg"
+        "nfLine": "2 FILE https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg"
       },
       "TITL": {
         "nfValue": "Bill CLinton / Bob McNeely, The White House / Public domain",
-        "_nfLINE": "2 TITL Bill CLinton / Bob McNeely, The White House / Public domain"
+        "nfLine": "2 TITL Bill CLinton / Bob McNeely, The White House / Public domain"
       }
     },
     "WWW": {
       "nfValue": "https://en.wikipedia.org/wiki/Bill_Clinton",
-      "_nfLINE": "1 WWW https://en.wikipedia.org/wiki/Bill_Clinton"
+      "nfLine": "1 WWW https://en.wikipedia.org/wiki/Bill_Clinton"
     }
   },
   "I2": {},
@@ -246,7 +246,7 @@ for download as possible benefit for developers. Sample:
 
 ```
 where:
-  - `_nfLINE`, `_nfRECORD` and `nfValue` are this tool native markers as a primal split of each GEDCOM line
+  - `nfLine`, `nfRecord` and `nfValue` are this tool native markers as a primal split of each GEDCOM line
   - `I1`, `I2`, `F1`... etc are the actual record pointers _(id / reference)_
 
 ---

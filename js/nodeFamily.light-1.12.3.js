@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.12.2 | (c) 2026 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.12.3 | (c) 2026 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -22,8 +22,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-const KEY_LINE = "_nfLINE";
-const KEY_RECORD = "_nfRECORD";
+const KEY_LINE = "nfLine";
+const KEY_RECORD = "nfRecord";
 const KEY_VALUE = "nfValue";
 const NF_KEYS = [KEY_RECORD, KEY_LINE, KEY_VALUE];
 const Gedcom = function(gedcomData) {
