@@ -133,7 +133,7 @@ for download as possible benefit for developers. Sample:
 {
   "HEAD": {},
   "I1": {
-    "_nfTYPE": "INDI",
+    "_nfRECORD": "INDI",
     "_nfLINE": "0 @I1@ INDI",
     "NAME": {
       "_nfVALUE": "William /Clinton/",
