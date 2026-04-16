@@ -18,7 +18,7 @@ https://ameros.github.io/gedcom-svg-tree/
 
 ## How to use it
 - Just go to [live version](https://ameros.github.io/gedcom-svg-tree/) (or choose its [polish](https://ameros.github.io/gedcom-svg-tree/?lang=pl), [swedish](https://ameros.github.io/gedcom-svg-tree/?lang=sv) or [italian](https://ameros.github.io/gedcom-svg-tree/?lang=it) version) and open the GEDCOM file
-- or just [download lastest version](https://github.com/ameros/gedcom-svg-tree/releases/latest) and open with your browser on some local server (you can find setup instructions on the Internet).
+- or just [download lastest version](https://github.com/ameros/gedcom-svg-tree/releases/latest) and open with your browser on some local server (you can find instructions how to set it up on the Internet).
 
 ## Example Trees
 
