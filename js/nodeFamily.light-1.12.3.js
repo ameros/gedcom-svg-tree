@@ -1,6 +1,6 @@
 'use strict'
 /**
- * nodeFamily.light v1.12.4 | (c) 2026 Michał Amerek, nodeFamily
+ * nodeFamily.light v1.12.3 | (c) 2026 Michał Amerek, nodeFamily
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this file and associated files (the "Software"), unless otherwise specified,
@@ -1003,7 +1003,7 @@ NodeFamily.SourceDialog = function(presenter, dialogElement) {
         let title = sourceNode.TITL[KEY_VALUE];
         _dialogElement.querySelector("h3").innerHTML = title;
         if (sourceNode.OBJE && sourceNode.OBJE.FILE) {
-            if (sourceNode.OBJE.FILE.FORM && sourceNode.OBJE.FILE.FORM.MEDI && sourceNode.OBJE.FILE.FORM.MEDI[KEY_VALUE] == "audio") {
+            if (sourceNode.OBJE.FILE.FORM && sourceNode.OBJE.FILE.FORM.TYPE && sourceNode.OBJE.FILE.FORM.TYPE[KEY_VALUE] == "audio") {
                 _dialogElement.querySelector("audio").style.display = "block";
                 _dialogElement.querySelector("figure").style.display = "none";
                 _dialogElement.querySelector("audio source").setAttribute("src", sourceNode.OBJE.FILE[KEY_VALUE]);
@@ -1282,7 +1282,7 @@ NodeFamily.PersonForm = function(presenter, formSection) {
                         extraInput.innerHTML = val;
                         const box = document.createElement("div");
                         box.setAttribute("class", "B");
-                        if (inputName != "OBJE.FILE.FORM.nfValue" && inputName != "OBJE.FILE.FORM.MEDI.nfValue" && inputName) {
+                        if (inputName != "OBJE.FILE.FORM.nfValue" && inputName != "OBJE.FILE.FORM.TYPE.nfValue" && inputName) {
                             box.classList.add("active");
                         }
                         box.appendChild(label);
